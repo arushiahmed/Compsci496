@@ -54,11 +54,13 @@ class Popular extends React.Component {
          <h1>Popular</h1>
       <form>
       <div class="form-group">
-        <label for="exampleFormControlTextarea1">Write A Post</label>
+      <div class="mb-3">
+        <label for="validationTextarea">Textarea</label>
         <br></br>
-        <textarea class="form-control" id="text"></textarea>
+        <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+        </div>
+      <a className="btn btn-dark" href="/" role="button">Submit</a>
       </div>
-      <a className="btn btn-info" href="/view03.html" role="button">Submit</a>
     </form>    
     </center>  
       );

@@ -639,17 +639,21 @@ var Popular = function (_React$Component) {
             'div',
             { 'class': 'form-group' },
             _react2.default.createElement(
-              'label',
-              { 'for': 'exampleFormControlTextarea1' },
-              'Write A Post'
+              'div',
+              { 'class': 'mb-3' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'validationTextarea' },
+                'Textarea'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control is-invalid', id: 'validationTextarea', placeholder: 'Required example textarea', required: true })
             ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement('textarea', { 'class': 'form-control', id: 'text' })
-          ),
-          _react2.default.createElement(
-            'a',
-            { className: 'btn btn-info', href: '/view03.html', role: 'button' },
-            'Submit'
+            _react2.default.createElement(
+              'a',
+              { className: 'btn btn-dark', href: '/', role: 'button' },
+              'Submit'
+            )
           )
         )
       );
