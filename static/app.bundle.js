@@ -526,35 +526,230 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Dissusion = function (_React$Component) {
-  _inherits(Dissusion, _React$Component);
+var Welcome = function (_React$createClass) {
+  _inherits(Welcome, _React$createClass);
 
-  function Dissusion() {
-    _classCallCheck(this, Dissusion);
+  function Welcome() {
+    _classCallCheck(this, Welcome);
 
-    return _possibleConstructorReturn(this, (Dissusion.__proto__ || Object.getPrototypeOf(Dissusion)).call(this));
+    return _possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).apply(this, arguments));
   }
 
-  _createClass(Dissusion, [{
+  return Welcome;
+}(_react2.default.createClass({
+  displayName: 'Welcome',
+
+  getInitialState: function getInitialState() {
+    return { housing: false, ride: false, food: false, homesickness: false, popular: true };
+  },
+  switch: function _switch(word) {
+    var popular = void 0,
+        housing = void 0,
+        ride = void 0,
+        food = void 0,
+        homesickness = void 0;
+    if (word == "housing") {
+      housing = true;ride = false;food = false;homesickness = false;popular = false;
+    } else if (word == "ride") {
+      ride = true;housing = false;food = false;homesickness = false;popular = false;
+    } else if (word == "food") {
+      food = true;ride = false;housing = false;homesickness = false;popular = false;
+    } else if (word == "homesickness") {
+      homesickness = true;food = false;ride = false;housing = false;popular = false;
+    } else {
+      popular = true;homesickness = false;food = false;ride = false;housing = false;
+    }
+    return this.setState({ popular: popular, housing: housing, ride: ride, food: food, homesickness: homesickness });
+  },
+
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(_SearchBar2.default, null),
+      _react2.default.createElement(
+        'h1',
+        null,
+        'Discussion App'
+      ),
+      _react2.default.createElement(
+        'div',
+        { id: 'buttons' },
+        _react2.default.createElement(
+          'button',
+          { id: 'popularButton', onClick: this.switch.bind(null, "popular"), className: this.state.popular },
+          'Popular'
+        ),
+        _react2.default.createElement(
+          'button',
+          { id: 'housingButton', onClick: this.switch.bind(null, "housing"), className: this.state.housing },
+          'Housing'
+        ),
+        _react2.default.createElement(
+          'button',
+          { id: 'transportationButton', onClick: this.switch.bind(null, "ride"), className: this.state.ride },
+          'Transportation'
+        ),
+        _react2.default.createElement(
+          'button',
+          { id: 'foodButton', onClick: this.switch.bind(null, "food"), className: this.state.food },
+          'Food'
+        ),
+        _react2.default.createElement(
+          'button',
+          { id: 'homesicknessButton', onClick: this.switch.bind(null, "homesickness"), className: this.state.homesickness },
+          'Home Sickness'
+        )
+      ),
+      this.state.popular ? _react2.default.createElement(Popular, null) : null,
+      this.state.housing ? _react2.default.createElement(Housing, null) : null,
+      this.state.ride ? _react2.default.createElement(Transportation, null) : null,
+      this.state.food ? _react2.default.createElement(Food, null) : null,
+      this.state.homesickness ? _react2.default.createElement(HomeSickness, null) : null
+    );
+  }
+}));
+
+exports.default = Welcome;
+
+var Popular = function (_React$Component) {
+  _inherits(Popular, _React$Component);
+
+  function Popular() {
+    _classCallCheck(this, Popular);
+
+    return _possibleConstructorReturn(this, (Popular.__proto__ || Object.getPrototypeOf(Popular)).call(this));
+  }
+
+  _createClass(Popular, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        'center',
         null,
-        _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
           'h1',
           null,
-          'Discussion App'
+          'Popular'
+        ),
+        _react2.default.createElement(
+          'form',
+          null,
+          _react2.default.createElement(
+            'div',
+            { 'class': 'form-group' },
+            _react2.default.createElement(
+              'label',
+              { 'for': 'exampleFormControlTextarea1' },
+              'Write A Post'
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement('textarea', { 'class': 'form-control', id: 'text' })
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: 'btn btn-info', href: '/view03.html', role: 'button' },
+            'Submit'
+          )
         )
       );
     }
   }]);
 
-  return Dissusion;
+  return Popular;
 }(_react2.default.Component);
 
-exports.default = Dissusion;
+var Housing = function (_React$Component2) {
+  _inherits(Housing, _React$Component2);
+
+  function Housing() {
+    _classCallCheck(this, Housing);
+
+    return _possibleConstructorReturn(this, (Housing.__proto__ || Object.getPrototypeOf(Housing)).call(this));
+  }
+
+  _createClass(Housing, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'h1',
+        null,
+        'Housing'
+      );
+    }
+  }]);
+
+  return Housing;
+}(_react2.default.Component);
+
+var Transportation = function (_React$Component3) {
+  _inherits(Transportation, _React$Component3);
+
+  function Transportation() {
+    _classCallCheck(this, Transportation);
+
+    return _possibleConstructorReturn(this, (Transportation.__proto__ || Object.getPrototypeOf(Transportation)).call(this));
+  }
+
+  _createClass(Transportation, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'h1',
+        null,
+        'Transportation '
+      );
+    }
+  }]);
+
+  return Transportation;
+}(_react2.default.Component);
+
+var Food = function (_React$Component4) {
+  _inherits(Food, _React$Component4);
+
+  function Food() {
+    _classCallCheck(this, Food);
+
+    return _possibleConstructorReturn(this, (Food.__proto__ || Object.getPrototypeOf(Food)).call(this));
+  }
+
+  _createClass(Food, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'h1',
+        null,
+        'Food'
+      );
+    }
+  }]);
+
+  return Food;
+}(_react2.default.Component);
+
+var HomeSickness = function (_React$Component5) {
+  _inherits(HomeSickness, _React$Component5);
+
+  function HomeSickness() {
+    _classCallCheck(this, HomeSickness);
+
+    return _possibleConstructorReturn(this, (HomeSickness.__proto__ || Object.getPrototypeOf(HomeSickness)).call(this));
+  }
+
+  _createClass(HomeSickness, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'h1',
+        null,
+        'HomeSickness'
+      );
+    }
+  }]);
+
+  return HomeSickness;
+}(_react2.default.Component);
 
 /***/ }),
 
