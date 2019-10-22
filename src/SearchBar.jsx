@@ -7,7 +7,6 @@ import Profile from './Profile.jsx';
 import IssueFilter from './IssueFilter.jsx';
 import Welcome from './Welcome.jsx'
 
-
 export default class SearchBar extends React.Component {    
   constructor() {
     super();

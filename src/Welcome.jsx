@@ -13,6 +13,7 @@ export default class Welcome extends React.createClass ({
       return this.setState({login:login,signup:signup})
       },
       
+      
       render:function(){
               return (
                 <div>
