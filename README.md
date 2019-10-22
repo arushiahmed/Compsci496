@@ -1,4 +1,4 @@
-# compsci496
+# Compsci496: Independent Study
 
 # Application Initialization
 
