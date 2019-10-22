@@ -827,7 +827,11 @@ var SearchBar = function (_React$Component) {
             _react2.default.createElement(
               'a',
               { className: 'btn btn-dark', role: 'button' },
-              'About'
+              _react2.default.createElement(
+                _reactRouter.Link,
+                { to: '/', style: { textDecoration: 'none', color: 'white' } },
+                'About'
+              )
             ),
             _react2.default.createElement(
               'a',

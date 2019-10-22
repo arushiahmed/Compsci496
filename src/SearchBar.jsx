@@ -19,7 +19,7 @@ export default class SearchBar extends React.Component {
               <div className= "container">
                 <nav className="navbar navbar-dark">
                 <a className="navbar-brand"></a>
-                  <a className="btn btn-dark" role="button">About</a>
+                  <a className="btn btn-dark" role="button"><Link to="/" style={{ textDecoration: 'none', color: 'white' }}>About</Link></a>
                     <a className="btn btn-dark" role="button"><Link to="/discussion" style={{ textDecoration: 'none', color: 'white' }}>Community Dissusion</Link></a>
                     <a className="btn btn-dark" href="/view04.html" role="button">Connect With Students</a>
                     <a className="btn btn-dark" role="button"><Link to="/profile" style={{ textDecoration: 'none', color: 'white' }}>Profile</Link></a>
