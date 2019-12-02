@@ -1,6 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+const bodyPage = {
+  width: '100%',
+	height: '700px',
+	margin: '0'
+
+};
+
+const content = 
+{
+  width: '550px',
+  margin: 'auto',
+  marginTop: '5%',
+  marginBottom: '5%',
+};
+
+const divStyle = {
+  width: '100%',
+  height: '250px',
+  marginTop: '20px',
+
+};
+
+const signUp = {
+  height: '$height',
+  marginLeft: '25px',
+  marginTop: '20px'
+};
+
+const loginPage = {
+  height: '$height/2',
+  marginLeft: '25%',
+  marginTop: '20px'
+}
+
+
 export default class Welcome extends React.createClass ({
     getInitialState:function(){
       return {signup:false,login:true}
@@ -16,12 +51,13 @@ export default class Welcome extends React.createClass ({
       
       render:function(){
               return (
-                <div>
-                  <center>
+                <div style={bodyPage}>
+                  <center style={content}>
                       <div id="buttons">
-                        <button id="signupButton" className="btn btn-dark" onClick={this.switch.bind(null,"signup")} className={this.state.signup}>Sign Up</button>
-                        <button id="loginButton" className="btn btn-dark" onClick={this.switch.bind(null,"login")} className={this.state.login}>Login</button>
+                        <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Sign Up</button>
+                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Login</button>
                        </div>
+                       <br></br><br></br><br></br>
                         {this.state.signup?<Signup/>:null}
                         {this.state.login?<Login />:null}
                   </center>
@@ -39,54 +75,51 @@ export default class Welcome extends React.createClass ({
     }
     render(){
       return (
-            <center>
-        <form>
-        <div className = "form-group">
-        <label for = "inputName">Name</label>
-          <div className = "row">
-            <div className="col">
-              <input type="name" className = "form-control" id="inputName" placeholder=" First Name"/>
-           </div> 
-            <div className="col">
-             <input  type="name" className = "form-control" id="inputName" placeholder=" Last Name"/>
+          <center >
+        <form >
+          <div className = "form-group">
+          <label for = "inputName">Name</label>
+            <div className = "row">
+              <div className="col">
+                <input type="name" className = "form-control" id="inputName" placeholder=" First Name"/>
             </div> 
-         </div>              
-      </div>
-      <div className = "form-group">  
-           <label for = "inputEmail">Email</label>
-            <input type="email" className = "form-control" id="inputEmail" placeholder="Email"/>
-          </div>
-      <div className = "form-group">  
-        <label for = "inputEmail">School</label>
-        <input type="school" className = "form-control" id="inputschool" placeholder="School"/>
-      </div>
-      <div class="form-group">
-      <label for="exampleFormControlSelect1">What Type of Student Are You</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>International</option>
-        <option>United States</option>
-        </select>
+              <div className="col">
+              <input  type="name" className = "form-control" id="inputName" placeholder=" Last Name"/>
+              </div> 
+          </div>              
         </div>
-  
-      <div className = "form-group">  
-        <label for = "inputEmail">Country</label>
-        <input type="country" className = "form-control" id="inputcountry" placeholder="Country"/>
-      </div>
-  
+        <br></br>
         <div className = "form-group">  
-           <label for = "inputEmail">Username</label>
-            <input type="email" className = "form-control" id="inputEmail" placeholder=" Username"/>
-          </div>
-      <div className = "form-group">
-        <label for = "inputPassword">Password</label>
-        <input type="password" className = "form-control" id="inputPassword"placeholder=" Password"/>
-      </div>  
-      <div className = "form-group">
-        <label for = "inputPassword">Confirm Password</label>
-        <input type="password" className= "form-control" id="inputPassword"placeholder=" Password"/>
-      </div>  
-      <a className="btn btn-dark"role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></a>
-    </form>
+            <label for = "inputEmail">Email</label>
+              <input type="email" className = "form-control" id="inputEmail" placeholder="Email"/>
+            </div>
+            <br></br>
+        <div className = "form-group">  
+          <label for = "inputEmail">School</label>
+          <input type="school" className = "form-control" id="inputschool" placeholder="School"/>
+        </div>
+          <br></br>
+        <div className = "form-group">  
+          <label for = "inputEmail">Country</label>
+          <input type="country" className = "form-control" id="inputcountry" placeholder="Country"/>
+        </div>
+        <br></br>
+          <div className = "form-group">  
+            <label for = "inputEmail">Username</label>
+              <input type="email" className = "form-control" id="inputEmail" placeholder=" Username"/>
+            </div>
+            <br></br>
+        <div className = "form-group">
+          <label for = "inputPassword">Password</label>
+          <input type="password" className = "form-control" id="inputPassword"placeholder=" Password"/>
+        </div>  
+        <br></br>
+        <div className = "form-group">
+          <label for = "inputPassword">Confirm Password</label>
+          <input type="password" className= "form-control" id="inputPassword"placeholder=" Password"/>
+        </div>  
+        <a className="btn btn-dark"role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></a>
+      </form>
     </center>
           );
         }
@@ -98,19 +131,20 @@ export default class Welcome extends React.createClass ({
          }
          render(){
           return (
-                <center>
-                    <form>
+                <center >
+                    <form >
                     <div className = "form-group">
                       <label for = "inputEmail">Username</label>
                       <input type="email" className = "form-control" id="inputEmail" placeholder=" Username"/>
                     </div>
+                    <br></br>
                     <div className = "form-group">
                       <label for = "inputPassword">Password</label>
                       <input type="password" className = "form-control" id="inputPassword" placeholder=" Password"/>
                     </div>  
                     <a className="btn btn-dark" role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>Login</Link></a>
                   </form>
-                  </center>
+                </center>
               );
             }
     }

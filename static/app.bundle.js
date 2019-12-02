@@ -20,7 +20,7 @@ __webpack_require__(30);
 
 var _reactRouter = __webpack_require__(21);
 
-var _Profile = __webpack_require__(79);
+var _Profile = __webpack_require__(50);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -88,13 +88,44 @@ var _reactRouter = __webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var bodyPage = {
+  width: '100%',
+  height: '700px',
+  margin: '0'
+
+};
+
+var content = {
+  width: '550px',
+  margin: 'auto',
+  marginTop: '5%',
+  marginBottom: '5%'
+};
+
+var divStyle = {
+  width: '100%',
+  height: '250px',
+  marginTop: '20px'
+
+};
+
+var signUp = {
+  height: '$height',
+  marginLeft: '25px',
+  marginTop: '20px'
+};
+
+var loginPage = {
+  height: '$height/2',
+  marginLeft: '25%',
+  marginTop: '20px'
+};
 
 var Welcome = function (_React$createClass) {
   _inherits(Welcome, _React$createClass);
@@ -126,24 +157,27 @@ var Welcome = function (_React$createClass) {
   render: function render() {
     return _react2.default.createElement(
       'div',
-      null,
+      { style: bodyPage },
       _react2.default.createElement(
         'center',
-        null,
+        { style: content },
         _react2.default.createElement(
           'div',
           { id: 'buttons' },
           _react2.default.createElement(
             'button',
-            _defineProperty({ id: 'signupButton', className: 'btn btn-dark', onClick: this.switch.bind(null, "signup") }, 'className', this.state.signup),
+            { id: 'signupButton', onClick: this.switch.bind(null, "signup"), className: 'btn btn-dark', style: signUp },
             'Sign Up'
           ),
           _react2.default.createElement(
             'button',
-            _defineProperty({ id: 'loginButton', className: 'btn btn-dark', onClick: this.switch.bind(null, "login") }, 'className', this.state.login),
+            { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark', style: loginPage },
             'Login'
           )
         ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
         this.state.signup ? _react2.default.createElement(Signup, null) : null,
         this.state.login ? _react2.default.createElement(Login, null) : null
       )
@@ -194,6 +228,7 @@ var Signup = function (_React$Component) {
               )
             )
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -204,6 +239,7 @@ var Signup = function (_React$Component) {
             ),
             _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: 'Email' })
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -214,29 +250,7 @@ var Signup = function (_React$Component) {
             ),
             _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputschool', placeholder: 'School' })
           ),
-          _react2.default.createElement(
-            'div',
-            { 'class': 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'exampleFormControlSelect1' },
-              'What Type of Student Are You'
-            ),
-            _react2.default.createElement(
-              'select',
-              { 'class': 'form-control', id: 'exampleFormControlSelect1' },
-              _react2.default.createElement(
-                'option',
-                null,
-                'International'
-              ),
-              _react2.default.createElement(
-                'option',
-                null,
-                'United States'
-              )
-            )
-          ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -247,6 +261,7 @@ var Signup = function (_React$Component) {
             ),
             _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputcountry', placeholder: 'Country' })
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -257,6 +272,7 @@ var Signup = function (_React$Component) {
             ),
             _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: ' Username' })
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -267,6 +283,7 @@ var Signup = function (_React$Component) {
             ),
             _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: ' Password' })
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -322,6 +339,7 @@ var Login = function (_React$Component2) {
             ),
             _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: ' Username' })
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -523,6 +541,74 @@ exports.default = Question;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(30);
+
+var _reactRouter = __webpack_require__(21);
+
+var _Profile = __webpack_require__(50);
+
+var _Profile2 = _interopRequireDefault(_Profile);
+
+var _SearchBar = __webpack_require__(37);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_React$Component) {
+  _inherits(About, _React$Component);
+
+  function About() {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
+  }
+
+  _createClass(About, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement(
+          'h1',
+          null,
+          'About'
+        )
+      );
+    }
+  }]);
+
+  return About;
+}(_react2.default.Component);
+
+exports.default = About;
+
+/***/ }),
+
+/***/ 126:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
@@ -549,11 +635,11 @@ var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-var _Profile = __webpack_require__(79);
+var _Profile = __webpack_require__(50);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
-var _About = __webpack_require__(242);
+var _About = __webpack_require__(125);
 
 var _About2 = _interopRequireDefault(_About);
 
@@ -618,74 +704,6 @@ _reactDom2.default.render(_react2.default.createElement(RoutedApp, null), conten
 
 /***/ }),
 
-/***/ 242:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(30);
-
-var _reactRouter = __webpack_require__(21);
-
-var _Profile = __webpack_require__(79);
-
-var _Profile2 = _interopRequireDefault(_Profile);
-
-var _SearchBar = __webpack_require__(37);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var About = function (_React$Component) {
-  _inherits(About, _React$Component);
-
-  function About() {
-    _classCallCheck(this, About);
-
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
-  }
-
-  _createClass(About, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_SearchBar2.default, null),
-        _react2.default.createElement(
-          'h1',
-          null,
-          'About'
-        )
-      );
-    }
-  }]);
-
-  return About;
-}(_react2.default.Component);
-
-exports.default = About;
-
-/***/ }),
-
 /***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -706,7 +724,7 @@ __webpack_require__(30);
 
 var _reactRouter = __webpack_require__(21);
 
-var _Profile = __webpack_require__(79);
+var _Profile = __webpack_require__(50);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -722,7 +740,7 @@ var _Connect = __webpack_require__(122);
 
 var _Connect2 = _interopRequireDefault(_Connect);
 
-var _About = __webpack_require__(242);
+var _About = __webpack_require__(125);
 
 var _About2 = _interopRequireDefault(_About);
 
@@ -825,7 +843,7 @@ exports.default = SearchBar;
 
 /***/ }),
 
-/***/ 79:
+/***/ 50:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -890,5 +908,5 @@ exports.default = Profile;
 
 /***/ })
 
-},[125]);
+},[126]);
 //# sourceMappingURL=app.bundle.js.map
