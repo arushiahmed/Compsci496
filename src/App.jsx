@@ -4,10 +4,10 @@ import { Router, Route, hashHistory, withRouter, IndexRoute, Link } from 'react-
 
 import Connect from './Connect.jsx';
 import Question from './Question.jsx';
-import About from './About.jsx/';
 import Welcome from './Welcome.jsx';
 import SearchBar from './SearchBar.jsx'
 import Profile from './Profile.jsx'
+import About from './About.jsx'
 
 var contentNode = document.getElementById("contents");
 
@@ -44,6 +44,7 @@ const RoutedApp = () => (
     <Route path="/" component={App} >
       <IndexRoute component={Welcome} />
       <Route path="/home" component={withRouter(SearchBar)} />
+      <Route path="/about" component={About} />
       <Route path="/connect" component={Connect} />
       <Route path="/question" component={Question} />
       <Route path="/profile" component={Profile} />

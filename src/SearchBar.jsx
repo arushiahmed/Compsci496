@@ -7,7 +7,7 @@ import Profile from './Profile.jsx';
 import Welcome from './Welcome.jsx';
 import Question from './Question.jsx';
 import Connect from './Connect.jsx';
-import About from './About.jsx';
+import About from './About.jsx'
 
 export default class SearchBar extends React.Component {    
   constructor() {
@@ -20,7 +20,7 @@ export default class SearchBar extends React.Component {
               <div className= "container">
                 <nav className="navbar navbar-dark">
                 <a className="navbar-brand"></a>
-                  <a className="btn btn-dark" role="button"><Link to="/" style={{ textDecoration: 'none', color: 'white' }}>About</Link></a>
+                  <a className="btn btn-dark" role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>About</Link></a>
                     <a className="btn btn-dark" role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }}>Connect With Students</Link></a>
                     <a className="btn btn-dark" role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }}>Question Air</Link></a>
                     <a className="btn btn-dark" role="button"><Link to="/profile" style={{ textDecoration: 'none', color: 'white' }}>Profile</Link></a>

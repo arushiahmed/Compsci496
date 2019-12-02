@@ -282,7 +282,7 @@ var Signup = function (_React$Component) {
             { className: 'btn btn-dark', role: 'button' },
             _react2.default.createElement(
               _reactRouter.Link,
-              { to: '/home', style: { textDecoration: 'none', color: 'white' } },
+              { to: '/about', style: { textDecoration: 'none', color: 'white' } },
               'Sign Up'
             )
           )
@@ -337,7 +337,7 @@ var Login = function (_React$Component2) {
             { className: 'btn btn-dark', role: 'button' },
             _react2.default.createElement(
               _reactRouter.Link,
-              { to: '/home', style: { textDecoration: 'none', color: 'white' } },
+              { to: '/about', style: { textDecoration: 'none', color: 'white' } },
               'Login'
             )
           )
@@ -541,10 +541,6 @@ var _Question = __webpack_require__(124);
 
 var _Question2 = _interopRequireDefault(_Question);
 
-var _About = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./About.jsx/\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-var _About2 = _interopRequireDefault(_About);
-
 var _Welcome = __webpack_require__(123);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
@@ -556,6 +552,10 @@ var _SearchBar2 = _interopRequireDefault(_SearchBar);
 var _Profile = __webpack_require__(79);
 
 var _Profile2 = _interopRequireDefault(_Profile);
+
+var _About = __webpack_require__(242);
+
+var _About2 = _interopRequireDefault(_About);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -604,6 +604,7 @@ var RoutedApp = function RoutedApp() {
       { path: '/', component: App },
       _react2.default.createElement(_reactRouter.IndexRoute, { component: _Welcome2.default }),
       _react2.default.createElement(_reactRouter.Route, { path: '/home', component: (0, _reactRouter.withRouter)(_SearchBar2.default) }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
       _react2.default.createElement(_reactRouter.Route, { path: '/connect', component: _Connect2.default }),
       _react2.default.createElement(_reactRouter.Route, { path: '/question', component: _Question2.default }),
       _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default }),
@@ -636,6 +637,10 @@ var _react2 = _interopRequireDefault(_react);
 __webpack_require__(30);
 
 var _reactRouter = __webpack_require__(21);
+
+var _Profile = __webpack_require__(79);
+
+var _Profile2 = _interopRequireDefault(_Profile);
 
 var _SearchBar = __webpack_require__(37);
 
@@ -756,7 +761,7 @@ var SearchBar = function (_React$Component) {
               { className: 'btn btn-dark', role: 'button' },
               _react2.default.createElement(
                 _reactRouter.Link,
-                { to: '/', style: { textDecoration: 'none', color: 'white' } },
+                { to: '/about', style: { textDecoration: 'none', color: 'white' } },
                 'About'
               )
             ),
