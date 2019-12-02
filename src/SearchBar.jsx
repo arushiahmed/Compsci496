@@ -6,6 +6,8 @@ import { LinkContainer } from 'react-router';
 import Profile from './Profile.jsx';
 import IssueFilter from './IssueFilter.jsx';
 import Welcome from './Welcome.jsx'
+import Question from './Question.jsx'
+import Connect from './Connect.jsx'
 
 export default class SearchBar extends React.Component {    
   constructor() {
@@ -19,8 +21,8 @@ export default class SearchBar extends React.Component {
                 <nav className="navbar navbar-dark">
                 <a className="navbar-brand"></a>
                   <a className="btn btn-dark" role="button"><Link to="/" style={{ textDecoration: 'none', color: 'white' }}>About</Link></a>
-                    <a className="btn btn-dark" role="button"><Link to="/discussion" style={{ textDecoration: 'none', color: 'white' }}>Community Dissusion</Link></a>
-                    <a className="btn btn-dark" href="/view04.html" role="button">Connect With Students</a>
+                    <a className="btn btn-dark" role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }}>Connect With Students</Link></a>
+                    <a className="btn btn-dark" role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }}>Question Air</Link></a>
                     <a className="btn btn-dark" role="button"><Link to="/profile" style={{ textDecoration: 'none', color: 'white' }}>Profile</Link></a>
                     <a className="btn btn-dark" role="button" ><Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Sign Out</Link></a>
                     <form className="form-inline">

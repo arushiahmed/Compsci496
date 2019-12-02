@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, withRouter, IndexRoute, Link } from 'react-router';
 
-import Dissusion from './Dissusion.jsx';
-import IssueEdit from './IssueEdit.jsx';
+import Connect from './Connect.jsx';
+import Question from './Question.jsx';
 import Dashboard from './Dashboard.jsx';
 import Welcome from './Welcome.jsx';
 import SearchBar from './SearchBar.jsx'
@@ -44,7 +44,8 @@ const RoutedApp = () => (
     <Route path="/" component={App} >
       <IndexRoute component={Welcome} />
       <Route path="/home" component={withRouter(SearchBar)} />
-      <Route path="/discussion" component={Dissusion} />
+      <Route path="/connect" component={Connect} />
+      <Route path="/question" component={Question} />
       <Route path="/profile" component={Profile} />
       <Route path="*" component={NoMatch} />
     </Route>
