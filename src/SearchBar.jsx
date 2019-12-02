@@ -4,10 +4,10 @@ import { Link } from 'react-router';
 import { LinkContainer } from 'react-router';
 
 import Profile from './Profile.jsx';
-import IssueFilter from './IssueFilter.jsx';
-import Welcome from './Welcome.jsx'
-import Question from './Question.jsx'
-import Connect from './Connect.jsx'
+import Welcome from './Welcome.jsx';
+import Question from './Question.jsx';
+import Connect from './Connect.jsx';
+import About from './About.jsx';
 
 export default class SearchBar extends React.Component {    
   constructor() {

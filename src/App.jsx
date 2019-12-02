@@ -4,7 +4,7 @@ import { Router, Route, hashHistory, withRouter, IndexRoute, Link } from 'react-
 
 import Connect from './Connect.jsx';
 import Question from './Question.jsx';
-import Dashboard from './Dashboard.jsx';
+import About from './About.jsx/';
 import Welcome from './Welcome.jsx';
 import SearchBar from './SearchBar.jsx'
 import Profile from './Profile.jsx'

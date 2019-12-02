@@ -49,6 +49,7 @@ export default class Question extends React.Component {
               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type Answer Here" />
           </div>
           </form>
+          <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Submit</Link></a>
         </center>
       </div>
     );

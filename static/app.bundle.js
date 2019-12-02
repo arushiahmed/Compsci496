@@ -16,7 +16,17 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(19);
+__webpack_require__(30);
+
+var _reactRouter = __webpack_require__(21);
+
+var _Profile = __webpack_require__(79);
+
+var _Profile2 = _interopRequireDefault(_Profile);
+
+var _SearchBar = __webpack_require__(37);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,81 +36,35 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IssueFilter = function (_React$Component) {
-  _inherits(IssueFilter, _React$Component);
+var Connect = function (_React$Component) {
+  _inherits(Connect, _React$Component);
 
-  function IssueFilter() {
-    _classCallCheck(this, IssueFilter);
+  function Connect() {
+    _classCallCheck(this, Connect);
 
-    var _this = _possibleConstructorReturn(this, (IssueFilter.__proto__ || Object.getPrototypeOf(IssueFilter)).call(this));
-
-    _this.clearFilter = _this.clearFilter.bind(_this);
-    _this.setFilterOpen = _this.setFilterOpen.bind(_this);
-    _this.setFilterAssigned = _this.setFilterAssigned.bind(_this);
-    return _this;
+    return _possibleConstructorReturn(this, (Connect.__proto__ || Object.getPrototypeOf(Connect)).call(this));
   }
 
-  _createClass(IssueFilter, [{
-    key: 'setFilterOpen',
-    value: function setFilterOpen(e) {
-      e.preventDefault();
-      this.props.setFilter({ status: 'Open' });
-    }
-  }, {
-    key: 'setFilterAssigned',
-    value: function setFilterAssigned(e) {
-      e.preventDefault();
-      this.props.setFilter({ status: 'Assigned' });
-    }
-  }, {
-    key: 'clearFilter',
-    value: function clearFilter(e) {
-      e.preventDefault();
-      this.props.setFilter({});
-    }
-  }, {
+  _createClass(Connect, [{
     key: 'render',
     value: function render() {
-      var Separator = function Separator() {
-        return _react2.default.createElement(
-          'span',
-          null,
-          ' | '
-        );
-      };
       return _react2.default.createElement(
         'div',
         null,
+        _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'a',
-          { href: '#', onClick: this.clearFilter },
-          'All Issues'
-        ),
-        _react2.default.createElement(Separator, null),
-        _react2.default.createElement(
-          'a',
-          { href: '#', onClick: this.setFilterOpen },
-          'Open Issues'
-        ),
-        _react2.default.createElement(Separator, null),
-        _react2.default.createElement(
-          'a',
-          { href: '#', onClick: this.setFilterAssigned },
-          'Assigned Issues'
+          'h1',
+          null,
+          'Connect with Students'
         )
       );
     }
   }]);
 
-  return IssueFilter;
+  return Connect;
 }(_react2.default.Component);
 
-exports.default = IssueFilter;
-
-
-IssueFilter.propTypes = {
-  setFilter: _react2.default.PropTypes.func.isRequired
-};
+exports.default = Connect;
 
 /***/ }),
 
@@ -120,7 +84,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -403,11 +367,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(36);
+__webpack_require__(30);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
-var _SearchBar = __webpack_require__(49);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -531,6 +495,15 @@ var Question = function (_React$Component) {
                             ),
                             _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput2', placeholder: 'Type Answer Here' })
                         )
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'btn btn-dark', role: 'button' },
+                        _react2.default.createElement(
+                            _reactRouter.Link,
+                            { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                            'Submit'
+                        )
                     )
                 )
             );
@@ -558,9 +531,9 @@ var _reactDom = __webpack_require__(86);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
-var _Connect = __webpack_require__(245);
+var _Connect = __webpack_require__(122);
 
 var _Connect2 = _interopRequireDefault(_Connect);
 
@@ -568,15 +541,15 @@ var _Question = __webpack_require__(124);
 
 var _Question2 = _interopRequireDefault(_Question);
 
-var _Dashboard = __webpack_require__(243);
+var _About = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./About.jsx/\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
-var _Dashboard2 = _interopRequireDefault(_Dashboard);
+var _About2 = _interopRequireDefault(_About);
 
 var _Welcome = __webpack_require__(123);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
 
-var _SearchBar = __webpack_require__(49);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -644,7 +617,7 @@ _reactDom2.default.render(_react2.default.createElement(RoutedApp, null), conten
 
 /***/ }),
 
-/***/ 243:
+/***/ 242:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -660,85 +633,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(19);
+__webpack_require__(30);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _reactRouter = __webpack_require__(21);
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Dashboard = function (_React$Component) {
-  _inherits(Dashboard, _React$Component);
-
-  function Dashboard() {
-    _classCallCheck(this, Dashboard);
-
-    return _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).apply(this, arguments));
-  }
-
-  _createClass(Dashboard, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'h2',
-          null,
-          'Issue Tracker Dashboard'
-        ),
-        _react2.default.createElement(
-          'ul',
-          null,
-          _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouter.Link,
-              { to: '/issues' },
-              'Login'
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Dashboard;
-}(_react2.default.Component);
-
-exports.default = Dashboard;
-
-/***/ }),
-
-/***/ 245:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(36);
-
-var _reactRouter = __webpack_require__(19);
-
-var _Profile = __webpack_require__(79);
-
-var _Profile2 = _interopRequireDefault(_Profile);
-
-var _SearchBar = __webpack_require__(49);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -750,16 +649,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Connect = function (_React$Component) {
-  _inherits(Connect, _React$Component);
+var About = function (_React$Component) {
+  _inherits(About, _React$Component);
 
-  function Connect() {
-    _classCallCheck(this, Connect);
+  function About() {
+    _classCallCheck(this, About);
 
-    return _possibleConstructorReturn(this, (Connect.__proto__ || Object.getPrototypeOf(Connect)).call(this));
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
   }
 
-  _createClass(Connect, [{
+  _createClass(About, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -769,20 +668,20 @@ var Connect = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           null,
-          'Connect with Students'
+          'About'
         )
       );
     }
   }]);
 
-  return Connect;
+  return About;
 }(_react2.default.Component);
 
-exports.default = Connect;
+exports.default = About;
 
 /***/ }),
 
-/***/ 49:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -798,17 +697,13 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(36);
+__webpack_require__(30);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
 var _Profile = __webpack_require__(79);
 
 var _Profile2 = _interopRequireDefault(_Profile);
-
-var _IssueFilter = __webpack_require__(122);
-
-var _IssueFilter2 = _interopRequireDefault(_IssueFilter);
 
 var _Welcome = __webpack_require__(123);
 
@@ -818,9 +713,13 @@ var _Question = __webpack_require__(124);
 
 var _Question2 = _interopRequireDefault(_Question);
 
-var _Connect = __webpack_require__(245);
+var _Connect = __webpack_require__(122);
 
 var _Connect2 = _interopRequireDefault(_Connect);
+
+var _About = __webpack_require__(242);
+
+var _About2 = _interopRequireDefault(_About);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -937,11 +836,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(36);
+__webpack_require__(30);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
-var _SearchBar = __webpack_require__(49);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
