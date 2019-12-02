@@ -3,6 +3,16 @@ import 'isomorphic-fetch';
 import { Link } from 'react-router';
 import SearchBar from './SearchBar.jsx';
 
+const inputStyle = {
+  width: '50%'
+}
+
+const textStyle = {
+  fontSize: '22px',
+  fontFamily: 'Athelas'
+
+}
+
 export default class Question extends React.Component {
   constructor() {
     super();
@@ -14,44 +24,60 @@ export default class Question extends React.Component {
         <SearchBar> </SearchBar>
         <center>
         <h1>Question Air</h1>
-          <form>
-          <div class="form-group">
-              <label for="formGroupExampleInput2">What do you like to do?</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type Answer Here" />
+        <br></br>
+        <form >
+        <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>What do you like to do?</label>
+          <br></br>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
         </div>
-        <p></p>
-          <div class="form-group">
-              <label for="formGroupExampleInput2">What struggles are you facing?</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type Answer Here" />
+        <br></br>
+        <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>What struggles are you facing?</label>
+          <br></br>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
+        </div>
+        <br></br>
+        <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>What are you looking for in a person?</label>
+          <br></br>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
+        </div>
+        <br></br>
+        <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>How can someone help you?</label>
+          <br></br>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
+        </div>
+        <br></br>
+        <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>Why do you want to connect with someone?</label>
+          <br></br>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
+        </div>
+        <br></br>
+        <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to meet in person or online?</label>
+          <br></br>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
+        </div>
+        <br></br>
+        <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people from the same country?</label>
+          <br></br>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
+        </div>
+        <br></br>
+        <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people who share the same ethnicity?</label>
+          <br></br>
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
+        </div>
+        <br></br>
+        </form>
+        <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
+          </center>
           </div>
-          <div class="form-group">
-              <label for="formGroupExampleInput">What are you looking for in a person?</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Type Answer Here" />
-          </div>
-          <div class="form-group">
-              <label for="formGroupExampleInput2">How can someone help you?</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type Answer Here" />
-          </div>
-          <div class="form-group">
-              <label for="formGroupExampleInput2">WHy do you want to connect with someone?</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type Answer Here" />
-          </div>
-          <div class="form-group">
-              <label for="formGroupExampleInput2">Do you want to meet in person or online?</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type Answer Here" />
-          </div>
-          <div class="form-group">
-              <label for="formGroupExampleInput2">Do you want to connect with people from the same country?</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type Answer Here" />
-          </div>
-          <div class="form-group">
-              <label for="formGroupExampleInput2">Do you want to connect with people who share the same ethnicity?</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type Answer Here" />
-          </div>
-          </form>
-          <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Submit</Link></a>
-        </center>
-      </div>
     );
   }
 }

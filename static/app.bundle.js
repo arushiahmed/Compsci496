@@ -376,7 +376,7 @@ var Login = function (_React$Component2) {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -401,134 +401,160 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var inputStyle = {
+  width: '50%'
+};
+
+var textStyle = {
+  fontSize: '22px',
+  fontFamily: 'Athelas'
+
+};
+
 var Question = function (_React$Component) {
-    _inherits(Question, _React$Component);
+  _inherits(Question, _React$Component);
 
-    function Question() {
-        _classCallCheck(this, Question);
+  function Question() {
+    _classCallCheck(this, Question);
 
-        return _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).call(this));
+    return _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).call(this));
+  }
+
+  _createClass(Question, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          _SearchBar2.default,
+          null,
+          ' '
+        ),
+        _react2.default.createElement(
+          'center',
+          null,
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Question Air'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'form',
+            null,
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'exampleFormControlTextarea1', style: textStyle },
+                'What do you like to do?'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'exampleFormControlTextarea1', style: textStyle },
+                'What struggles are you facing?'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'exampleFormControlTextarea1', style: textStyle },
+                'What are you looking for in a person?'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'exampleFormControlTextarea1', style: textStyle },
+                'How can someone help you?'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'exampleFormControlTextarea1', style: textStyle },
+                'Why do you want to connect with someone?'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'exampleFormControlTextarea1', style: textStyle },
+                'Do you want to meet in person or online?'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'exampleFormControlTextarea1', style: textStyle },
+                'Do you want to connect with people from the same country?'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'label',
+                { 'for': 'exampleFormControlTextarea1', style: textStyle },
+                'Do you want to connect with people who share the same ethnicity?'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
+            ),
+            _react2.default.createElement('br', null)
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: 'btn btn-dark', role: 'button' },
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+              'Find Friends'
+            )
+          )
+        )
+      );
     }
+  }]);
 
-    _createClass(Question, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    _SearchBar2.default,
-                    null,
-                    ' '
-                ),
-                _react2.default.createElement(
-                    'center',
-                    null,
-                    _react2.default.createElement(
-                        'h1',
-                        null,
-                        'Question Air'
-                    ),
-                    _react2.default.createElement(
-                        'form',
-                        null,
-                        _react2.default.createElement(
-                            'div',
-                            { 'class': 'form-group' },
-                            _react2.default.createElement(
-                                'label',
-                                { 'for': 'formGroupExampleInput2' },
-                                'What do you like to do?'
-                            ),
-                            _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput2', placeholder: 'Type Answer Here' })
-                        ),
-                        _react2.default.createElement('p', null),
-                        _react2.default.createElement(
-                            'div',
-                            { 'class': 'form-group' },
-                            _react2.default.createElement(
-                                'label',
-                                { 'for': 'formGroupExampleInput2' },
-                                'What struggles are you facing?'
-                            ),
-                            _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput2', placeholder: 'Type Answer Here' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { 'class': 'form-group' },
-                            _react2.default.createElement(
-                                'label',
-                                { 'for': 'formGroupExampleInput' },
-                                'What are you looking for in a person?'
-                            ),
-                            _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput', placeholder: 'Type Answer Here' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { 'class': 'form-group' },
-                            _react2.default.createElement(
-                                'label',
-                                { 'for': 'formGroupExampleInput2' },
-                                'How can someone help you?'
-                            ),
-                            _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput2', placeholder: 'Type Answer Here' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { 'class': 'form-group' },
-                            _react2.default.createElement(
-                                'label',
-                                { 'for': 'formGroupExampleInput2' },
-                                'WHy do you want to connect with someone?'
-                            ),
-                            _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput2', placeholder: 'Type Answer Here' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { 'class': 'form-group' },
-                            _react2.default.createElement(
-                                'label',
-                                { 'for': 'formGroupExampleInput2' },
-                                'Do you want to meet in person or online?'
-                            ),
-                            _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput2', placeholder: 'Type Answer Here' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { 'class': 'form-group' },
-                            _react2.default.createElement(
-                                'label',
-                                { 'for': 'formGroupExampleInput2' },
-                                'Do you want to connect with people from the same country?'
-                            ),
-                            _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput2', placeholder: 'Type Answer Here' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { 'class': 'form-group' },
-                            _react2.default.createElement(
-                                'label',
-                                { 'for': 'formGroupExampleInput2' },
-                                'Do you want to connect with people who share the same ethnicity?'
-                            ),
-                            _react2.default.createElement('input', { type: 'text', 'class': 'form-control', id: 'formGroupExampleInput2', placeholder: 'Type Answer Here' })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'btn btn-dark', role: 'button' },
-                        _react2.default.createElement(
-                            _reactRouter.Link,
-                            { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-                            'Submit'
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Question;
+  return Question;
 }(_react2.default.Component);
 
 exports.default = Question;
