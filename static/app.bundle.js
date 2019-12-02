@@ -902,6 +902,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // NEW: added the import for react.
 
 
+var profile = {
+  border: "2px solid black",
+  marginTop: "10px",
+  borderRadius: "50%",
+  textAlign: "center",
+  fontFamily: "cursive",
+  fontSize: "50px",
+  height: "350px",
+  width: "350px",
+  lineHeight: "350px"
+};
+var formStyle = {
+  width: '500px'
+};
+
 var Profile = function (_React$Component) {
   _inherits(Profile, _React$Component);
 
@@ -917,12 +932,159 @@ var Profile = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'h1',
+          _SearchBar2.default,
           null,
-          'Profile'
-        )
+          ' '
+        ),
+        _react2.default.createElement(
+          'center',
+          null,
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Profile'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'picture', style: profile },
+            'Profile picture'
+          ),
+          _react2.default.createElement('br', null),
+          ' ',
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'form',
+            null,
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'row' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'exampleFormControlInput1' },
+                    'Email address'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('input', { type: 'text', readonly: true, 'class': 'form-control-plaintext', id: 'staticEmail', value: 'email@example.com', style: formStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'row' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'exampleFormControlInput1' },
+                    'School'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('input', { type: 'email', 'class': 'form-control', id: 'school', style: formStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'row' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'exampleFormControlInput1' },
+                    'Ethencity'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('input', { type: 'email', 'class': 'form-control', id: 'ethencity', style: formStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'row' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'exampleFormControlInput1' },
+                    'Country'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('input', { type: 'email', 'class': 'form-control', id: 'country', style: formStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'form-group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'row' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'exampleFormControlInput1' },
+                    'Bio:'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: formStyle })
+                )
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'a',
+            { className: 'btn btn-dark', role: 'button' },
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: '*', style: { textDecoration: 'none', color: 'white' } },
+              'Edit'
+            )
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null)
       );
     }
   }]);
