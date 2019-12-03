@@ -8,67 +8,55 @@ app.use(bodyParser.json());
 
 const MongoClient = require('mongodb').MongoClient;
 
-const validIssueStatus = {
-  New: true,
-  Open: true,
-  Assigned: true,
-  Fixed: true,
-  Verified: true,
-  Closed: true,
+const friendFieldType = {
+    "name" : 'required',
+    "school": 'required',
+    "year" : 'required',
+    "bio": 'required',
+    "rate":  'required',
 };
 
-const issueFieldType = {
-  status: 'required',
-  owner: 'required',
-  effort: 'optional',
-  created: 'required',
-  completionDate: 'optional',
-  title: 'required',
-};
-
-function validateIssue(issue) {
-  for (const field in issueFieldType) {
-    const type = issueFieldType[field];
-    if (!type) {
-      delete issue[field];
-    } else if (type === 'required' && !issue[field]) {
-      return `${field} is required.`;
+function validateFriend(friend) {
+  for (const field in friendFieldType) {
+    if(friendFieldType.hasOwnProperty(field)){
+         const type = friendFieldType[field];
+          if (!type) {
+            delete friend[field];
+          } else if (type === 'required' && !friend[field]) {
+            return `${field} is required.`;
+          }
     }
-  }
-  if (!validIssueStatus[issue.status])
-    return `${issue.status} is not a valid status.`;
+   }
   return null;
 }
 
-app.get('/api/issues', (req, res) => {
-  const filter = {};
-  if (req.query.status) filter.status = req.query.status;
-
-  db.collection('issues').find(filter).toArray().then(issues => {
-    const metadata = { total_count: issues.length };
-    res.json({ _metadata: metadata, records: issues })
+app.get('/api/friends', (req, res) => {
+  db.collection('friends').find().toArray().then(friends => {
+    const metadata = { total_count: friends.length };
+    res.json({ success: true, _metadata: metadata, records: friends })
   }).catch(error => {
     console.log(error);
-    res.status(500).json({ message: `Internal Server Error: ${error}` });
+    res.status(500).json({ success:false, message: `Internal Server Error: ${error}` });
   });
 });
 
-app.post('/api/issues', (req, res) => {
-  const newIssue = req.body;
-  newIssue.created = new Date();
-  if (!newIssue.status)
-    newIssue.status = 'New';
+app.post('/api/friends', (req, res) => {
+  console.log(req)
+  const newFriend = req.body;
 
-  const err = validateIssue(newIssue);
+  newFriend.date = new Date();
+
+  const err = validateFriend(newFriend);
   if (err) {
     res.status(422).json({ message: `Invalid request: ${err}` });
     return;
   }
 
-  db.collection('issues').insertOne(newIssue).then(result =>
-    db.collection('issues').find({ _id: result.insertedId }).limit(1).next()
-  ).then(newIssue => {
-    res.json(newIssue);
+  db.collection('friends').insertOne(newFriend).then(result =>
+
+    db.collection('friends').find({ _id: result.insertedId }).limit(1).next()
+  ).then(newFriend => {
+    res.json(newFriend);
   }).catch(error => {
     console.log(error);
     res.status(500).json({ message: `Internal Server Error: ${error}` });
@@ -77,7 +65,7 @@ app.post('/api/issues', (req, res) => {
 
 let db;
 MongoClient.connect('mongodb://localhost', { useNewUrlParser: true }).then(connection => {
-  db = connection.db('issuetracker');
+  db = connection.db('friendslist');
   app.listen(3000, () => {
     console.log('App started on port 3000');
   });

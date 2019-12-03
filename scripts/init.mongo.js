@@ -1,29 +1,46 @@
-// NEW
+db = new Mongo().getDB('friendslist');
 
-// Connect to the issuetracker database. Note, if the issuetracker database
-// does not exist, it will create it with this call.
-db = new Mongo().getDB('issuetracker');
+db.friends.remove({});
 
-// Next, we remove everything inside it. This is helpful to ensure that the
-// database starts from a known state.
-db.issues.remove({});
-
-// Now, we insert some mock data that mirrors the data that we have in the
-// in-memory version of the `server.js` code.
-db.issues.insert([
+db.friends.insert([
   {
-    status: 'Open', owner: 'Ravan',
-    created: new Date('2016-08-15'), effort: 5, completionDate: undefined,
-    title: 'Error in console when clicking Add',
-  }, {
-    status: 'Assigned', owner: 'Eddie',
-    created: new Date('2016-08-16'), effort: 14, completionDate: new Date('2016-08-30'),
-    title: 'Missing bottom border on panel',
-  },]);
+    "name" : "Abigail Adams",
+    "school": "University of Massachusetts Amherst",
+    "year" : "2020",
+    "rate":  "4.5",
+    "bio": "I am a biology and chemestry majory from Hong Kong. I like to bake, take photos, and watch movies",
+  },
 
-// Lastly, we create "indexes" to make searching faster. For this particular
-// application we know that searching on the status, owner, and created properties
-// will be common, so we create indexes on those.
-db.issues.createIndex({ status: 1 });
-db.issues.createIndex({ owner: 1 });
-db.issues.createIndex({ created: 1 });
+  {
+    "name" : "Caroline Baker",
+    "school": "University of Massachusetts Amherst",
+    "year" : "2022",
+    "rate": "4",
+    "bio": "I am computer enginnering major from Japan, I like shopping, watching movies, and eating. I am looking for someone who could help me with my english and show me around campus", 
+  },
+
+  {
+    "name" : "Caroline Baker",
+    "school": "University of Massachusetts Amherst",
+    "year" : "2020",
+    "rate":  "4",
+    "bio": "I am computer enginnering major from Japan, I like shopping, watching movies, and eating. I am looking for someone who could help me with my english and show me around campus", 
+  },
+  
+  {
+    "name" : "Molly Miller",
+    "school": "University of Massachusetts Amherst",
+    "year" : "2021",
+    "rate":  "5",
+    "bio": "I am computer science major from Ireland, I am looking to make some new friends who know the aera and can drive. In my free time I like to watch Netflex, listen to music, and go on random advantures",
+  },
+
+  {
+    "name" : "Tracy Young",
+    "school": "University of Massachusetts Amherst",
+    "year" : "2020",
+    "rate": "5",
+    "bio": "I am computer science major from Itlay, I am looking to make some new friends who know the aera and can drive. In my free time I like to watch Netflex, listen to music, and go on random advantures",
+  },
+
+]);

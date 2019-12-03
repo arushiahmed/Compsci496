@@ -20,10 +20,6 @@ __webpack_require__(30);
 
 var _reactRouter = __webpack_require__(21);
 
-var _Profile = __webpack_require__(50);
-
-var _Profile2 = _interopRequireDefault(_Profile);
-
 var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
@@ -36,16 +32,129 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var FriendList = function FriendList(props) {
+  return _react2.default.createElement(
+    'tr',
+    null,
+    _react2.default.createElement(
+      'td',
+      null,
+      props.friend.name
+    ),
+    _react2.default.createElement(
+      'td',
+      null,
+      props.friend.school
+    ),
+    _react2.default.createElement(
+      'td',
+      null,
+      props.friend.year
+    ),
+    _react2.default.createElement(
+      'td',
+      null,
+      props.friend.rate
+    ),
+    _react2.default.createElement(
+      'td',
+      null,
+      props.friend.bio
+    )
+  );
+};
+
+function FriendTable(props) {
+  var issueRows = props.friends.map(function (friend) {
+    return _react2.default.createElement(FriendList, { key: friend._id, friend: friend });
+  });
+
+  return _react2.default.createElement(
+    'table',
+    { id: 'bordered-table' },
+    _react2.default.createElement(
+      'thead',
+      null,
+      _react2.default.createElement(
+        'tr',
+        null,
+        _react2.default.createElement(
+          'th',
+          null,
+          'Name:'
+        ),
+        _react2.default.createElement(
+          'th',
+          null,
+          'School:'
+        ),
+        _react2.default.createElement(
+          'th',
+          null,
+          'Year:'
+        ),
+        _react2.default.createElement(
+          'th',
+          null,
+          'Rate:'
+        ),
+        _react2.default.createElement(
+          'th',
+          null,
+          'Bio:'
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'tbody',
+      null,
+      issueRows
+    )
+  );
+}
+
 var Connect = function (_React$Component) {
   _inherits(Connect, _React$Component);
 
   function Connect() {
     _classCallCheck(this, Connect);
 
-    return _possibleConstructorReturn(this, (Connect.__proto__ || Object.getPrototypeOf(Connect)).call(this));
+    var _this = _possibleConstructorReturn(this, (Connect.__proto__ || Object.getPrototypeOf(Connect)).call(this));
+
+    _this.loadData = _this.loadData.bind(_this);
+
+    _this.state = {
+      friends: []
+    };
+    return _this;
   }
 
   _createClass(Connect, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.loadData();
+    }
+  }, {
+    key: 'loadData',
+    value: function loadData() {
+      var _this2 = this;
+
+      var friend = this.state.friends;
+      fetch("api/friends").then(function (res) {
+        if (res.ok) {
+          res.json().then(function (json) {
+            var friends = [];
+            json.records.forEach(function (friend) {
+              friends.push(friend);
+            });
+            _this2.setState({ friends: friends });
+          });
+        }
+      }).catch(function (err) {
+        alert("There was a problem: " + err.message);
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -56,7 +165,9 @@ var Connect = function (_React$Component) {
           'h1',
           null,
           'Connect with Students'
-        )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(FriendTable, { friends: this.state.friends })
       );
     }
   }]);
@@ -581,7 +692,7 @@ __webpack_require__(30);
 
 var _reactRouter = __webpack_require__(21);
 
-var _Profile = __webpack_require__(50);
+var _Profile = __webpack_require__(79);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -661,7 +772,7 @@ var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-var _Profile = __webpack_require__(50);
+var _Profile = __webpack_require__(79);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -750,7 +861,7 @@ __webpack_require__(30);
 
 var _reactRouter = __webpack_require__(21);
 
-var _Profile = __webpack_require__(50);
+var _Profile = __webpack_require__(79);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -869,7 +980,7 @@ exports.default = SearchBar;
 
 /***/ }),
 
-/***/ 50:
+/***/ 79:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
