@@ -39,7 +39,11 @@ var FriendList = function FriendList(props) {
     _react2.default.createElement(
       'td',
       null,
-      props.friend.name
+      _react2.default.createElement(
+        _reactRouter.Link,
+        { to: '/profile' },
+        props.friend.name
+      )
     ),
     _react2.default.createElement(
       'td',

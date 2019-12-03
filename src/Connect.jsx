@@ -7,7 +7,7 @@ import SearchBar from './SearchBar.jsx';
 
 const FriendList = (props) => (
  <tr>
-      <td >{props.friend.name}</td>
+      <td><Link to="/profile">{props.friend.name}</Link></td>
       <td>{props.friend.school}</td>
       <td>{props.friend.year}</td>
       <td >{props.friend.rate}</td>
