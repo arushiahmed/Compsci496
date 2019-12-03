@@ -12,7 +12,6 @@ const content =
 {
   width: '550px',
   margin: 'auto',
-  marginTop: '5%',
   marginBottom: '5%',
 };
 
@@ -35,6 +34,18 @@ const loginPage = {
   marginTop: '20px'
 }
 
+const titleName = {
+	border: "2px solid black",    
+  marginTop: "10px",
+  borderRadius: "50%",
+  textAlign: "center",
+  fontFamily: "cursive", 
+  fontSize: "50px",
+  height: "350px", 
+  width: "350px",
+  lineHeight: "350px"
+}
+
 
 export default class Welcome extends React.createClass ({
     getInitialState:function(){
@@ -53,9 +64,13 @@ export default class Welcome extends React.createClass ({
               return (
                 <div style={bodyPage}>
                   <center style={content}>
+                  <div className="picture" style={titleName}>
+                  Website title
+                </div>
+              <br></br> <br></br>
                       <div id="buttons">
-                        <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Sign Up</button>
-                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Login</button>
+                        <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark " style={signUp}>Sign Up</button>
+                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark btn-lg" style={loginPage}>Login</button>
                        </div>
                        <br></br><br></br><br></br>
                         {this.state.signup?<Signup/>:null}

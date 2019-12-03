@@ -223,7 +223,6 @@ var bodyPage = {
 var content = {
   width: '550px',
   margin: 'auto',
-  marginTop: '5%',
   marginBottom: '5%'
 };
 
@@ -244,6 +243,18 @@ var loginPage = {
   height: '$height/2',
   marginLeft: '25%',
   marginTop: '20px'
+};
+
+var titleName = {
+  border: "2px solid black",
+  marginTop: "10px",
+  borderRadius: "50%",
+  textAlign: "center",
+  fontFamily: "cursive",
+  fontSize: "50px",
+  height: "350px",
+  width: "350px",
+  lineHeight: "350px"
 };
 
 var Welcome = function (_React$createClass) {
@@ -282,15 +293,23 @@ var Welcome = function (_React$createClass) {
         { style: content },
         _react2.default.createElement(
           'div',
+          { className: 'picture', style: titleName },
+          'Website title'
+        ),
+        _react2.default.createElement('br', null),
+        ' ',
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
           { id: 'buttons' },
           _react2.default.createElement(
             'button',
-            { id: 'signupButton', onClick: this.switch.bind(null, "signup"), className: 'btn btn-dark', style: signUp },
+            { id: 'signupButton', onClick: this.switch.bind(null, "signup"), className: 'btn btn-dark ', style: signUp },
             'Sign Up'
           ),
           _react2.default.createElement(
             'button',
-            { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark', style: loginPage },
+            { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark btn-lg', style: loginPage },
             'Login'
           )
         ),
