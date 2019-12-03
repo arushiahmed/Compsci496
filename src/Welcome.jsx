@@ -69,8 +69,8 @@ export default class Welcome extends React.createClass ({
                 </div>
               <br></br> <br></br>
                       <div id="buttons">
-                        <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark " style={signUp}>Sign Up</button>
-                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark btn-lg" style={loginPage}>Login</button>
+                        <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Sign Up</button>
+                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Login</button>
                        </div>
                        <br></br><br></br><br></br>
                         {this.state.signup?<Signup/>:null}

@@ -304,12 +304,12 @@ var Welcome = function (_React$createClass) {
           { id: 'buttons' },
           _react2.default.createElement(
             'button',
-            { id: 'signupButton', onClick: this.switch.bind(null, "signup"), className: 'btn btn-dark ', style: signUp },
+            { id: 'signupButton', onClick: this.switch.bind(null, "signup"), className: 'btn btn-dark', style: signUp },
             'Sign Up'
           ),
           _react2.default.createElement(
             'button',
-            { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark btn-lg', style: loginPage },
+            { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark', style: loginPage },
             'Login'
           )
         ),
