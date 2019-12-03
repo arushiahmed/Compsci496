@@ -77,10 +77,11 @@ export default class Connect extends React.Component {
     return (
       <div>
         <SearchBar></SearchBar>
+        <center>
         <h1>Connect with Students</h1>
         <br></br>
         <FriendTable friends={this.state.friends} />
-
+        </center>
       </div>
     );
   }

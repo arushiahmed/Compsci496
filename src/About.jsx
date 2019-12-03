@@ -15,7 +15,9 @@ export default class About extends React.Component {
       <div>
         <SearchBar>
         </SearchBar>
+        <center>
         <h1>About</h1>
+        </center>
       </div>
     );
   }

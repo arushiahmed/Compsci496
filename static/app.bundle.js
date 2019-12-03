@@ -166,12 +166,16 @@ var Connect = function (_React$Component) {
         null,
         _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'h1',
+          'center',
           null,
-          'Connect with Students'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(FriendTable, { friends: this.state.friends })
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Connect with Students'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(FriendTable, { friends: this.state.friends })
+        )
       );
     }
   }]);
@@ -729,9 +733,13 @@ var About = function (_React$Component) {
         null,
         _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'h1',
+          'center',
           null,
-          'About'
+          _react2.default.createElement(
+            'h1',
+            null,
+            'About'
+          )
         )
       );
     }
@@ -972,6 +980,8 @@ var SearchBar = function (_React$Component) {
             )
           )
         ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null)
       );
     }
