@@ -758,6 +758,12 @@ var About = function (_React$Component) {
             'h1',
             null,
             'About'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'p',
+            null,
+            'This is an interactive platform where international students and domestic students can find friends.'
           )
         )
       );

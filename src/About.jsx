@@ -17,6 +17,8 @@ export default class About extends React.Component {
         </SearchBar>
         <center>
         <h1>About</h1>
+        <br></br>
+        <p>This is an interactive platform where international students and domestic students can find friends.</p>
         </center>
       </div>
     );
