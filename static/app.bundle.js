@@ -676,17 +676,55 @@ var Question = function (_React$Component) {
               _react2.default.createElement('br', null),
               _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: inputStyle })
             ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement('br', null),
             _react2.default.createElement('br', null)
           ),
           _react2.default.createElement(
-            'a',
-            { className: 'btn btn-dark', role: 'button' },
+            'div',
+            { className: 'row' },
             _react2.default.createElement(
-              _reactRouter.Link,
-              { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-              'Find Friends'
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-dark', role: 'button' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                  'Save'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-dark', role: 'button' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                  'Edit'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-dark', role: 'button' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                  'Find Friends'
+                )
+              )
             )
-          )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('br', null)
         )
       );
     }

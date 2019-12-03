@@ -73,9 +73,20 @@ export default class Question extends React.Component {
           <br></br>
           <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
         </div>
-        <br></br>
+        <br></br><br></br><br></br>
         </form>
-        <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
+        <div className = "row">
+              <div className="col">
+              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Save</Link></a>
+            </div> 
+              <div className="col">
+              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
+              </div> 
+              <div className="col">
+              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
+              </div>
+          </div>   
+          <br></br><br></br>
           </center>
           </div>
     );
