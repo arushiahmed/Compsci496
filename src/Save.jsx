@@ -129,19 +129,21 @@ export default class Save extends React.Component {
         </SearchBar>
         <center>
         <h1>Save</h1>
-        <br></br>
-        <hr />
-          <FormPage questionform={this.state.questionform} />
+          <br></br>
+          <div>
           <hr />
-          <div className = "row">
-              <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
-              </div> 
-              <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
-              </div>
-          </div>   
-          <br></br><br></br>
+            <FormPage questionform={this.state.questionform} />
+            <hr />
+            <div className = "row">
+                <div className="col">
+                <a className="btn btn-dark"role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
+                </div> 
+                <div className="col">
+                <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
+                </div>
+            </div>   
+            <br></br><br></br>
+          </div>
         </center>
       </div>
     );
