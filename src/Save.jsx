@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import Question from './Question.jsx';
 import SearchBar from './SearchBar.jsx';
 
-const FormQuestions = (props) => (
+/*const FormQuestions = (props) => (
    <div>
       <div class="form-group" >
           <label for="exampleFormControlTextarea1" style={textStyle}>What do you like to do?{props.question.one}</label>
@@ -57,16 +57,32 @@ const FormQuestions = (props) => (
           <br></br><br></br><br></br>
     </div> 
 ); 
-    
+    */
+
+    const FormQuestion = (props) => (
+      <ul className="question">
+        <div className="viewForm">What do you like to do?<br></br>{props.question.one}</div><br></br>
+        <div className="viewForm">What struggles are you facing?<br></br>{props.question.two}</div><br></br>
+        <div className="viewForm">What are you looking for in a person?<br></br>{props.question.three}</div><br></br>
+        <div className="viewForm">How can someone help you?<br></br> {props.question.four}</div><br></br>
+        <div className="viewForm">Why do you want to connect with someone?<br></br>{props.question.five}</div><br></br>
+        <div className="viewForm">Do you want to meet in person or online?<br></br> {props.question.six}</div><br></br>
+        <div className="viewForm">Do you want to connect with people from the same country?<br></br> {props.question.seven}</div><br></br>
+        <div className="viewForm">Do you want to connect with people who share the same ethnicity?<br></br> {props.question.eight}</div><br></br>
+      </ul>
+    )
+
     function FormPage(props)
     {
-      const formQuestions = props.questions.map(question => (
-        <FormQuestions key={question._id} question={question} />
+      const formQuestions = props.questionform.map(question => (
+        <FormQuestion key={question._id} question={question} />
       ));
     
       return(
         <div id="question-air">
-          {formQuestions}
+          <ul>
+            {formQuestions}
+          </ul>
         </div>
       );
     } 
@@ -90,7 +106,7 @@ export default class Save extends React.Component {
       fetch("api/questionform")
         .then(res => {
             if (res.ok){
-                res/json().then( json => {
+                res.json().then( json => {
                     let questionform = [];
                     json.records.forEach(question => {
                         questionform.push(
@@ -104,6 +120,7 @@ export default class Save extends React.Component {
             alert("There was a problem: " + err.message)
         });
   }
+  
   render() {
     return (
       <div>
@@ -112,9 +129,9 @@ export default class Save extends React.Component {
         <center>
         <h1>Save</h1>
         <br></br>
-       
-    
-         
+        <hr />
+          <FormPage questionform={this.state.questionform} />
+          <hr />
           <div className = "row">
               <div className="col">
               <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>

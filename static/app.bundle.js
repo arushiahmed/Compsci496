@@ -727,128 +727,148 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var FormQuestions = function FormQuestions(props) {
+/*const FormQuestions = (props) => (
+   <div>
+      <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>What do you like to do?{props.question.one}</label>
+            <br></br>
+            <textarea class="form-control form-control-lg" id="one" rows="3" style={inputStyle}></textarea>
+          </div>
+          <br></br>
+          <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>What struggles are you facing?{props.question.two}</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="two" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+          <label for="exampleFormControlTextarea1" style={textStyle}>What are you looking for in a person?{props.question.three}</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="three" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>How can someone help you?{props.question.four}</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="four" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>Why do you want to connect with someone?{props.question.five}</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="five" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to meet in person or online?{props.question.six}</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="six" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people from the same country?{props.question.seven}</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="seven" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people who share the same ethnicity?{props.question.eight}</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="eight" rows="3" style={inputStyle}></textarea>
+            </div>
+          <br></br><br></br><br></br>
+    </div> 
+); 
+    */
+
+var FormQuestion = function FormQuestion(props) {
   return _react2.default.createElement(
-    'div',
-    null,
+    'ul',
+    { className: 'question' },
     _react2.default.createElement(
       'div',
-      { 'class': 'form-group' },
-      _react2.default.createElement(
-        'label',
-        { 'for': 'exampleFormControlTextarea1', style: textStyle },
-        'What do you like to do?',
-        props.question.one
-      ),
+      { className: 'viewForm' },
+      'What do you like to do?',
       _react2.default.createElement('br', null),
-      _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'one', rows: '3', style: inputStyle })
+      props.question.one
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { 'class': 'form-group' },
-      _react2.default.createElement(
-        'label',
-        { 'for': 'exampleFormControlTextarea1', style: textStyle },
-        'What struggles are you facing?',
-        props.question.two
-      ),
+      { className: 'viewForm' },
+      'What struggles are you facing?',
       _react2.default.createElement('br', null),
-      _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'two', rows: '3', style: inputStyle })
+      props.question.two
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { 'class': 'form-group' },
-      _react2.default.createElement(
-        'label',
-        { 'for': 'exampleFormControlTextarea1', style: textStyle },
-        'What are you looking for in a person?',
-        props.question.three
-      ),
+      { className: 'viewForm' },
+      'What are you looking for in a person?',
       _react2.default.createElement('br', null),
-      _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'three', rows: '3', style: inputStyle })
+      props.question.three
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { 'class': 'form-group' },
-      _react2.default.createElement(
-        'label',
-        { 'for': 'exampleFormControlTextarea1', style: textStyle },
-        'How can someone help you?',
-        props.question.four
-      ),
+      { className: 'viewForm' },
+      'How can someone help you?',
       _react2.default.createElement('br', null),
-      _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'four', rows: '3', style: inputStyle })
+      ' ',
+      props.question.four
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { 'class': 'form-group' },
-      _react2.default.createElement(
-        'label',
-        { 'for': 'exampleFormControlTextarea1', style: textStyle },
-        'Why do you want to connect with someone?',
-        props.question.five
-      ),
+      { className: 'viewForm' },
+      'Why do you want to connect with someone?',
       _react2.default.createElement('br', null),
-      _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'five', rows: '3', style: inputStyle })
+      props.question.five
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { 'class': 'form-group' },
-      _react2.default.createElement(
-        'label',
-        { 'for': 'exampleFormControlTextarea1', style: textStyle },
-        'Do you want to meet in person or online?',
-        props.question.six
-      ),
+      { className: 'viewForm' },
+      'Do you want to meet in person or online?',
       _react2.default.createElement('br', null),
-      _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'six', rows: '3', style: inputStyle })
+      ' ',
+      props.question.six
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { 'class': 'form-group' },
-      _react2.default.createElement(
-        'label',
-        { 'for': 'exampleFormControlTextarea1', style: textStyle },
-        'Do you want to connect with people from the same country?',
-        props.question.seven
-      ),
+      { className: 'viewForm' },
+      'Do you want to connect with people from the same country?',
       _react2.default.createElement('br', null),
-      _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'seven', rows: '3', style: inputStyle })
+      ' ',
+      props.question.seven
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { 'class': 'form-group' },
-      _react2.default.createElement(
-        'label',
-        { 'for': 'exampleFormControlTextarea1', style: textStyle },
-        'Do you want to connect with people who share the same ethnicity?',
-        props.question.eight
-      ),
+      { className: 'viewForm' },
+      'Do you want to connect with people who share the same ethnicity?',
       _react2.default.createElement('br', null),
-      _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'eight', rows: '3', style: inputStyle })
+      ' ',
+      props.question.eight
     ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('br', null),
     _react2.default.createElement('br', null)
   );
 };
 
 function FormPage(props) {
-  var formQuestions = props.questions.map(function (question) {
-    return _react2.default.createElement(FormQuestions, { key: question._id, question: question });
+  var formQuestions = props.questionform.map(function (question) {
+    return _react2.default.createElement(FormQuestion, { key: question._id, question: question });
   });
 
   return _react2.default.createElement(
     'div',
     { id: 'question-air' },
-    formQuestions
+    _react2.default.createElement(
+      'ul',
+      null,
+      formQuestions
+    )
   );
 }
 
@@ -882,7 +902,7 @@ var Save = function (_React$Component) {
       var question = this.state.questionform;
       fetch("api/questionform").then(function (res) {
         if (res.ok) {
-          res / json().then(function (json) {
+          res.json().then(function (json) {
             var questionform = [];
             json.records.forEach(function (question) {
               questionform.push(question);
@@ -910,6 +930,9 @@ var Save = function (_React$Component) {
             'Save'
           ),
           _react2.default.createElement('br', null),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
+          _react2.default.createElement('hr', null),
           _react2.default.createElement(
             'div',
             { className: 'row' },
@@ -1438,11 +1461,7 @@ var Question = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(
-          _SearchBar2.default,
-          null,
-          ' '
-        ),
+        _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
           'center',
           null,
@@ -1459,100 +1478,104 @@ var Question = function (_React$Component) {
               'div',
               { 'class': 'form-group', name: 'question', onSubmit: this.handleForm },
               _react2.default.createElement(
-                'label',
-                { 'for': 'exampleFormControlTextarea1', style: textStyle },
-                'What do you like to do?'
+                'div',
+                { 'class': 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'one', style: textStyle },
+                  'What do you like to do?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'one', rows: '3', style: inputStyle })
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'one', rows: '3', style: inputStyle })
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { 'class': 'form-group' },
               _react2.default.createElement(
-                'label',
-                { 'for': 'exampleFormControlTextarea1', style: textStyle },
-                'What struggles are you facing?'
+                'div',
+                { 'class': 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'two', style: textStyle },
+                  'What struggles are you facing?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'two', rows: '3', style: inputStyle })
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'two', rows: '3', style: inputStyle })
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { 'class': 'form-group' },
               _react2.default.createElement(
-                'label',
-                { 'for': 'exampleFormControlTextarea1', style: textStyle },
-                'What are you looking for in a person?'
+                'div',
+                { 'class': 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'three', style: textStyle },
+                  'What are you looking for in a person?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'three', rows: '3', style: inputStyle })
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'three', rows: '3', style: inputStyle })
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { 'class': 'form-group' },
               _react2.default.createElement(
-                'label',
-                { 'for': 'exampleFormControlTextarea1', style: textStyle },
-                'How can someone help you?'
+                'div',
+                { 'class': 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'four', style: textStyle },
+                  'How can someone help you?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'four', rows: '3', style: inputStyle })
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'four', rows: '3', style: inputStyle })
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { 'class': 'form-group' },
               _react2.default.createElement(
-                'label',
-                { 'for': 'exampleFormControlTextarea1', style: textStyle },
-                'Why do you want to connect with someone?'
+                'div',
+                { 'class': 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'five', style: textStyle },
+                  'Why do you want to connect with someone?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'five', rows: '3', style: inputStyle })
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'five', rows: '3', style: inputStyle })
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { 'class': 'form-group' },
               _react2.default.createElement(
-                'label',
-                { 'for': 'exampleFormControlTextarea1', style: textStyle },
-                'Do you want to meet in person or online?'
+                'div',
+                { 'class': 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'six', style: textStyle },
+                  'Do you want to meet in person or online?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'six', rows: '3', style: inputStyle })
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'six', rows: '3', style: inputStyle })
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { 'class': 'form-group' },
               _react2.default.createElement(
-                'label',
-                { 'for': 'exampleFormControlTextarea1', style: textStyle },
-                'Do you want to connect with people from the same country?'
+                'div',
+                { 'class': 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'seven', style: textStyle },
+                  'Do you want to connect with people from the same country?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'seven', rows: '3', style: inputStyle })
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'seven', rows: '3', style: inputStyle })
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { 'class': 'form-group' },
               _react2.default.createElement(
-                'label',
-                { 'for': 'exampleFormControlTextarea1', style: textStyle },
-                'Do you want to connect with people who share the same ethnicity?'
+                'div',
+                { 'class': 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'eight', style: textStyle },
+                  'Do you want to connect with people who share the same ethnicity?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'eight', rows: '3', style: inputStyle })
               ),
               _react2.default.createElement('br', null),
-              _react2.default.createElement('textarea', { 'class': 'form-control form-control-lg', id: 'eight', rows: '3', style: inputStyle })
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement('br', null)
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null)
+            )
           ),
           _react2.default.createElement(
             'div',

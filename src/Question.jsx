@@ -80,59 +80,63 @@ export default class Question extends React.Component {
   render() {
     return (
       <div>
-        <SearchBar> </SearchBar>
+        <SearchBar> 
+          
+        </SearchBar>
         <center>
         <h1>Question Air</h1>
         <br></br>
         <form >
           <div class="form-group" name="question" onSubmit={this.handleForm}>
-          <label for="exampleFormControlTextarea1" style={textStyle}>What do you like to do?</label>
-            <br></br>
-            <textarea class="form-control form-control-lg" id="one" rows="3" style={inputStyle}></textarea>
+          <div class="form-group" >
+            <label for="one"  style={textStyle}>What do you like to do?</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="one" rows="3" style={inputStyle}></textarea>
           </div>
           <br></br>
           <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>What struggles are you facing?</label>
+          <label for="two" style={textStyle}>What struggles are you facing?</label>
               <br></br>
               <textarea class="form-control form-control-lg" id="two" rows="3" style={inputStyle}></textarea>
             </div>
             <br></br>
             <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>What are you looking for in a person?</label>
+          <label for="three"  style={textStyle}>What are you looking for in a person?</label>
               <br></br>
               <textarea class="form-control form-control-lg" id="three" rows="3" style={inputStyle}></textarea>
             </div>
             <br></br>
             <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>How can someone help you?</label>
+              <label for="four" style={textStyle}>How can someone help you?</label>
               <br></br>
               <textarea class="form-control form-control-lg" id="four" rows="3" style={inputStyle}></textarea>
             </div>
             <br></br>
             <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>Why do you want to connect with someone?</label>
+              <label for="five" style={textStyle}>Why do you want to connect with someone?</label>
               <br></br>
               <textarea class="form-control form-control-lg" id="five" rows="3" style={inputStyle}></textarea>
             </div>
             <br></br>
             <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to meet in person or online?</label>
+              <label for="six" style={textStyle}>Do you want to meet in person or online?</label>
               <br></br>
               <textarea class="form-control form-control-lg" id="six" rows="3" style={inputStyle}></textarea>
             </div>
             <br></br>
             <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people from the same country?</label>
+              <label for="seven" style={textStyle}>Do you want to connect with people from the same country?</label>
               <br></br>
               <textarea class="form-control form-control-lg" id="seven" rows="3" style={inputStyle}></textarea>
             </div>
             <br></br>
             <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people who share the same ethnicity?</label>
+              <label for="eight" style={textStyle}>Do you want to connect with people who share the same ethnicity?</label>
               <br></br>
               <textarea class="form-control form-control-lg" id="eight" rows="3" style={inputStyle}></textarea>
             </div>
           <br></br><br></br><br></br>
+          </div>
       </form>
         <div className = "row">
               <div className="col">
