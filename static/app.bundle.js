@@ -1603,6 +1603,36 @@ var Profile = function (_React$Component) {
           'center',
           null,
           _react2.default.createElement(
+            'div',
+            { className: 'row', style: { marginLeft: '85%' } },
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-dark', role: 'button' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/rate', style: { textDecoration: 'none', color: 'white' } },
+                  'Rate'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-dark', role: 'button' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/chat', style: { textDecoration: 'none', color: 'white' } },
+                  'Chat'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
             'h1',
             null,
             'Profile'
