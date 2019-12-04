@@ -2,7 +2,7 @@ import React from 'react';
 import 'isomorphic-fetch';
 import { Link } from 'react-router';
 
-import Question from './Question.jsx';
+
 import SearchBar from './SearchBar.jsx';
 
 /*const FormQuestions = (props) => (
@@ -70,7 +70,7 @@ import SearchBar from './SearchBar.jsx';
         <div className="viewForm">Do you want to connect with people from the same country?<br></br> {props.question.seven}</div><br></br>
         <div className="viewForm">Do you want to connect with people who share the same ethnicity?<br></br> {props.question.eight}</div><br></br>
       </ul>
-    )
+    );
 
     function FormPage(props)
     {
@@ -90,6 +90,7 @@ import SearchBar from './SearchBar.jsx';
 export default class Save extends React.Component {
   constructor() {
     super();
+
     this.loadData = this.loadData.bind(this);
 
     this.state = {
@@ -134,7 +135,7 @@ export default class Save extends React.Component {
           <hr />
           <div className = "row">
               <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
+              <a className="btn btn-dark"role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
               </div> 
               <div className="col">
               <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>

@@ -12,14 +12,42 @@ const textStyle = {
   fontFamily: 'Athelas'
 
 }
+/*
+const FormQuestion = (props) => (
+  <ul className="question">
+    <div className="viewForm">What do you like to do?<br></br>{props.question.one}</div><br></br>
+    <div className="viewForm">What struggles are you facing?<br></br>{props.question.two}</div><br></br>
+    <div className="viewForm">What are you looking for in a person?<br></br>{props.question.three}</div><br></br>
+    <div className="viewForm">How can someone help you?<br></br> {props.question.four}</div><br></br>
+    <div className="viewForm">Why do you want to connect with someone?<br></br>{props.question.five}</div><br></br>
+    <div className="viewForm">Do you want to meet in person or online?<br></br> {props.question.six}</div><br></br>
+    <div className="viewForm">Do you want to connect with people from the same country?<br></br> {props.question.seven}</div><br></br>
+    <div className="viewForm">Do you want to connect with people who share the same ethnicity?<br></br> {props.question.eight}</div><br></br>
+  </ul>
+)
 
-/*export default class Question extends React.createClass ({
+function FormPage(props)
+{
+  const formQuestions = props.questionform.map(question => (
+    <FormQuestion key={question._id} question={question} />
+  ));
+
+  return(
+    <div id="question-air">
+      <ul>
+        {formQuestions}
+      </ul>
+    </div>
+  );
+} 
+
+export default class Form extends React.createClass ({
   getInitialState:function(){
     return {edit:false, save:false, form:true}
   },
     switch:function(word)
     {
-    let signup,login;
+    let edit,form,save;
     if(word == "edit"){edit = true;save = false;form = false;}
     else if(word == "save"){save = true; edit = false; form = false}
     else{form = true; save = false; edit = false}
@@ -34,12 +62,18 @@ const textStyle = {
               <button id="editButton" onClick={this.switch.bind(null,"edit")} className="btn btn-dark" style={loginPage}>Edit</button>
               <button id="saveButton" onClick={this.switch.bind(null,"save")} className="btn btn-dark" style={loginPage}>Save</button>
           </div>
+          <br></br><br></br><br></br>
+          {this.state.signup?<Question/>:null}
+          {this.state.login?<Save />:null}
+          {this.state.login?<Edit />:null}
         </div>
       )
     }
-*/
+  })
+  {} */
 
-export default class Question extends React.Component {
+
+ export default class Form extends React.Component {
   constructor() {
     super();
     this.handleForm = this.handleForm.bind(this);
@@ -86,61 +120,61 @@ export default class Question extends React.Component {
         <center>
         <h1>Question Air</h1>
         <br></br>
-        <form >
-          <div className="form-group" name="question" onSubmit={this.handleForm}>
+        <div>
+          <form className="form-group" name="question" onSubmit={this.handleForm}>
           <div className="form-group" >
             <label for="one"  style={textStyle}>What do you like to do?</label>
               <br></br>
-              <textarea className="form-control form-control-lg" id="one" rows="3" style={inputStyle}></textarea>
+              <input type="text" className="form-control" id="one" rows="3" style={inputStyle} />
           </div>
           <br></br>
           <div className="form-group" >
           <label for="two" style={textStyle}>What struggles are you facing?</label>
               <br></br>
-              <textarea className="form-control form-control-lg" id="two" rows="3" style={inputStyle}></textarea>
+              <input type="text" className="form-control" id="two" rows="3" style={inputStyle} />
             </div>
             <br></br>
             <div className="form-group" >
             <label for="three"  style={textStyle}>What are you looking for in a person?</label>
               <br></br>
-              <textarea className="form-control form-control-lg" id="three" rows="3" style={inputStyle}></textarea>
+              <input type="text" className="form-control" id="three" rows="3" style={inputStyle} />
             </div>
             <br></br>
             <div className="form-group" >
               <label for="four" style={textStyle}>How can someone help you?</label>
               <br></br>
-              <textarea className="form-control form-control-lg" id="four" rows="3" style={inputStyle}></textarea>
+              <input type="text" className="form-control" id="four"  style={inputStyle} />
             </div>
             <br></br>
             <div className="form-group" >
               <label for="five" style={textStyle}>Why do you want to connect with someone?</label>
               <br></br>
-              <textarea className="form-control form-control-lg" id="five" rows="3" style={inputStyle}></textarea>
+              <input type="text" className="form-control" id="five" style={inputStyle} />
             </div>
             <br></br>
             <div className="form-group" >
               <label for="six" style={textStyle}>Do you want to meet in person or online?</label>
               <br></br>
-              <textarea className="form-control form-control-lg" id="six" rows="3" style={inputStyle}></textarea>
+              <input type="text" className="form-control" id="six" rows="3" style={inputStyle} />
             </div>
             <br></br>
             <div className="form-group" >
               <label for="seven" style={textStyle}>Do you want to connect with people from the same country?</label>
               <br></br>
-              <textarea className="form-control form-control-lg" id="seven" rows="3" style={inputStyle}></textarea>
+              <input type="text" className="form-control" id="seven" rows="3" style={inputStyle} />
             </div>
             <br></br>
             <div className="form-group" >
               <label for="eight" style={textStyle}>Do you want to connect with people who share the same ethnicity?</label>
               <br></br>
-              <textarea className="form-control form-control-lg" id="eight" rows="3" style={inputStyle}></textarea>
+              <input type="text" className="form-control" id="eight" rows="3" style={inputStyle} />
             </div>
           <br></br><br></br><br></br>
-          </div>
       </form>
+      </div>
         <div className = "row">
               <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/save" style={{ textDecoration: 'none', color: 'white' }} >Save</Link></a>
+              <button className="btn btn-dark" type="submit"><Link to="/save" style={{ textDecoration: 'none', color: 'white' }}>Save</Link></button>
             </div> 
               <div className="col">
               <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
@@ -156,5 +190,65 @@ export default class Question extends React.Component {
   }
 }
 
+/*
+class Save extends React.Component {
+  constructor() {
+    super();
+    this.loadData = this.loadData.bind(this);
 
+    this.state = {
+     questionform: [],
+    };
+    
+  }
+  componentDidMount(){
+      this.loadData();
+  }
+
+  loadData(){
+      let question = this.state.questionform;
+      fetch("api/questionform")
+        .then(res => {
+            if (res.ok){
+                res.json().then( json => {
+                    let questionform = [];
+                    json.records.forEach(question => {
+                        questionform.push(
+                            question
+                        )
+                    });
+                    this.setState({questionform: questionform})
+                })
+            }
+        }).catch( err => {
+            alert("There was a problem: " + err.message)
+        });
+  }
+  
+  render() {
+    return (
+      <div id="save">
+        <SearchBar>
+        </SearchBar>
+        <center>
+        <h1>Save</h1>
+        <br></br>
+        <hr />
+          <FormPage questionform={this.state.questionform} />
+          <hr />
+          <div className = "row">
+              <div className="col">
+              <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
+              </div> 
+              <div className="col">
+              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
+              </div>
+          </div>   
+          <br></br><br></br>
+        </center>
+      </div>
+    );
+  }
+}
+*/
 

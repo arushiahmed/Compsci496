@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, withRouter, IndexRoute, Link } from 'react-router';
 
 import Connect from './Connect.jsx';
-import Question from './Question.jsx';
+import Form from './Form.jsx';
 import Welcome from './Welcome.jsx';
 import SearchBar from './SearchBar.jsx'
 import Profile from './Profile.jsx'
@@ -47,9 +47,9 @@ const RoutedApp = () => (
       <Route path="/home" component={withRouter(SearchBar)} />
       <Route path="/about" component={About} />
       <Route path="/connect" component={Connect} />
-      <Route path="/question" component={Question} />
-      <Route path="/profile" component={Profile} />
+      <Route path="/form" component={Form} />
       <Route path="/save" component={Save} />
+      <Route path="/profile" component={Profile} />
       <Route path="*" component={NoMatch} />
     </Route>
   </Router>);

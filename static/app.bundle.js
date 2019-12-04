@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 123:
+/***/ 122:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -187,7 +187,7 @@ exports.default = Connect;
 
 /***/ }),
 
-/***/ 124:
+/***/ 123:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -507,6 +507,391 @@ var Login = function (_React$Component2) {
 
 /***/ }),
 
+/***/ 124:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(26);
+
+var _reactRouter = __webpack_require__(19);
+
+var _SearchBar = __webpack_require__(31);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var inputStyle = {
+  width: '50%'
+};
+
+var textStyle = {
+  fontSize: '22px',
+  fontFamily: 'Athelas'
+  /*
+  const FormQuestion = (props) => (
+    <ul className="question">
+      <div className="viewForm">What do you like to do?<br></br>{props.question.one}</div><br></br>
+      <div className="viewForm">What struggles are you facing?<br></br>{props.question.two}</div><br></br>
+      <div className="viewForm">What are you looking for in a person?<br></br>{props.question.three}</div><br></br>
+      <div className="viewForm">How can someone help you?<br></br> {props.question.four}</div><br></br>
+      <div className="viewForm">Why do you want to connect with someone?<br></br>{props.question.five}</div><br></br>
+      <div className="viewForm">Do you want to meet in person or online?<br></br> {props.question.six}</div><br></br>
+      <div className="viewForm">Do you want to connect with people from the same country?<br></br> {props.question.seven}</div><br></br>
+      <div className="viewForm">Do you want to connect with people who share the same ethnicity?<br></br> {props.question.eight}</div><br></br>
+    </ul>
+  )
+  
+  function FormPage(props)
+  {
+    const formQuestions = props.questionform.map(question => (
+      <FormQuestion key={question._id} question={question} />
+    ));
+  
+    return(
+      <div id="question-air">
+        <ul>
+          {formQuestions}
+        </ul>
+      </div>
+    );
+  } 
+  
+  export default class Form extends React.createClass ({
+    getInitialState:function(){
+      return {edit:false, save:false, form:true}
+    },
+      switch:function(word)
+      {
+      let edit,form,save;
+      if(word == "edit"){edit = true;save = false;form = false;}
+      else if(word == "save"){save = true; edit = false; form = false}
+      else{form = true; save = false; edit = false}
+      return this.setState({form:form,save:save,edit:edit})
+      },
+  
+      render:function(){
+        return(
+          <div>
+            <div id="buttons">
+                <button id="formButton" onClick={this.switch.bind(null,"form")} className="btn btn-dark" style={signUp}>Form</button>
+                <button id="editButton" onClick={this.switch.bind(null,"edit")} className="btn btn-dark" style={loginPage}>Edit</button>
+                <button id="saveButton" onClick={this.switch.bind(null,"save")} className="btn btn-dark" style={loginPage}>Save</button>
+            </div>
+            <br></br><br></br><br></br>
+            {this.state.signup?<Question/>:null}
+            {this.state.login?<Save />:null}
+            {this.state.login?<Edit />:null}
+          </div>
+        )
+      }
+    })
+    {} */
+
+};
+var Form = function (_React$Component) {
+  _inherits(Form, _React$Component);
+
+  function Form() {
+    _classCallCheck(this, Form);
+
+    var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this));
+
+    _this.handleForm = _this.handleForm.bind(_this);
+
+    return _this;
+  }
+
+  _createClass(Form, [{
+    key: 'handleForm',
+    value: function handleForm(e) {
+      e.preventDefault();
+      var form = document.forms.question;
+      var submitReq = {
+        "one": form.one.value,
+        "two": form.two.value,
+        "three": form.three.value,
+        "four": form.four.value,
+        "five": form.five.value,
+        "six": form.six.value,
+        "seven": form.seven.value,
+        "eight": form.eight.value
+      };
+
+      fetch('/api/questions', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submitReq)
+      }).then(function (res) {
+        return res.json();
+      }).then(function (json) {
+        if (json.success) {
+          alert('Failed to add event.\n Error description: ' + json.msg);
+        } else {
+          alert('Questions Saved');
+        }
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement(
+          'center',
+          null,
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Question Air'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'form',
+              { className: 'form-group', name: 'question', onSubmit: this.handleForm },
+              _react2.default.createElement(
+                'div',
+                { className: 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'one', style: textStyle },
+                  'What do you like to do?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'one', rows: '3', style: inputStyle })
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'two', style: textStyle },
+                  'What struggles are you facing?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'two', rows: '3', style: inputStyle })
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'three', style: textStyle },
+                  'What are you looking for in a person?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'three', rows: '3', style: inputStyle })
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'four', style: textStyle },
+                  'How can someone help you?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'five', style: textStyle },
+                  'Why do you want to connect with someone?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'five', style: inputStyle })
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'six', style: textStyle },
+                  'Do you want to meet in person or online?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'six', rows: '3', style: inputStyle })
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'seven', style: textStyle },
+                  'Do you want to connect with people from the same country?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'seven', rows: '3', style: inputStyle })
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-group' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'eight', style: textStyle },
+                  'Do you want to connect with people who share the same ethnicity?'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'eight', rows: '3', style: inputStyle })
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('br', null)
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'button',
+                { className: 'btn btn-dark', type: 'submit' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/save', style: { textDecoration: 'none', color: 'white' } },
+                  'Save'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-dark', role: 'button' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/question', style: { textDecoration: 'none', color: 'white' } },
+                  'Edit'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-dark', role: 'button' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                  'Find Friends'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('br', null)
+        )
+      );
+    }
+  }]);
+
+  return Form;
+}(_react2.default.Component);
+
+/*
+class Save extends React.Component {
+  constructor() {
+    super();
+    this.loadData = this.loadData.bind(this);
+
+    this.state = {
+     questionform: [],
+    };
+    
+  }
+  componentDidMount(){
+      this.loadData();
+  }
+
+  loadData(){
+      let question = this.state.questionform;
+      fetch("api/questionform")
+        .then(res => {
+            if (res.ok){
+                res.json().then( json => {
+                    let questionform = [];
+                    json.records.forEach(question => {
+                        questionform.push(
+                            question
+                        )
+                    });
+                    this.setState({questionform: questionform})
+                })
+            }
+        }).catch( err => {
+            alert("There was a problem: " + err.message)
+        });
+  }
+  
+  render() {
+    return (
+      <div id="save">
+        <SearchBar>
+        </SearchBar>
+        <center>
+        <h1>Save</h1>
+        <br></br>
+        <hr />
+          <FormPage questionform={this.state.questionform} />
+          <hr />
+          <div className = "row">
+              <div className="col">
+              <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
+              </div> 
+              <div className="col">
+              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
+              </div>
+          </div>   
+          <br></br><br></br>
+        </center>
+      </div>
+    );
+  }
+}
+*/
+
+
+exports.default = Form;
+
+/***/ }),
+
 /***/ 125:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -595,21 +980,21 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(87);
+var _reactDom = __webpack_require__(86);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouter = __webpack_require__(19);
 
-var _Connect = __webpack_require__(123);
+var _Connect = __webpack_require__(122);
 
 var _Connect2 = _interopRequireDefault(_Connect);
 
-var _Question = __webpack_require__(80);
+var _Form = __webpack_require__(124);
 
-var _Question2 = _interopRequireDefault(_Question);
+var _Form2 = _interopRequireDefault(_Form);
 
-var _Welcome = __webpack_require__(124);
+var _Welcome = __webpack_require__(123);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
 
@@ -678,9 +1063,9 @@ var RoutedApp = function RoutedApp() {
       _react2.default.createElement(_reactRouter.Route, { path: '/home', component: (0, _reactRouter.withRouter)(_SearchBar2.default) }),
       _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
       _react2.default.createElement(_reactRouter.Route, { path: '/connect', component: _Connect2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/question', component: _Question2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/form', component: _Form2.default }),
       _react2.default.createElement(_reactRouter.Route, { path: '/save', component: _Save2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default }),
       _react2.default.createElement(_reactRouter.Route, { path: '*', component: NoMatch })
     )
   );
@@ -710,10 +1095,6 @@ var _react2 = _interopRequireDefault(_react);
 __webpack_require__(26);
 
 var _reactRouter = __webpack_require__(19);
-
-var _Question = __webpack_require__(80);
-
-var _Question2 = _interopRequireDefault(_Question);
 
 var _SearchBar = __webpack_require__(31);
 
@@ -944,7 +1325,7 @@ var Save = function (_React$Component) {
                 { className: 'btn btn-dark', role: 'button' },
                 _react2.default.createElement(
                   _reactRouter.Link,
-                  { to: '/question', style: { textDecoration: 'none', color: 'white' } },
+                  { to: '/form', style: { textDecoration: 'none', color: 'white' } },
                   'Edit'
                 )
               )
@@ -1001,15 +1382,15 @@ var _Profile = __webpack_require__(79);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
-var _Welcome = __webpack_require__(124);
+var _Welcome = __webpack_require__(123);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
 
-var _Question = __webpack_require__(80);
+var _Form = __webpack_require__(124);
 
-var _Question2 = _interopRequireDefault(_Question);
+var _Form2 = _interopRequireDefault(_Form);
 
-var _Connect = __webpack_require__(123);
+var _Connect = __webpack_require__(122);
 
 var _Connect2 = _interopRequireDefault(_Connect);
 
@@ -1070,7 +1451,7 @@ var SearchBar = function (_React$Component) {
               { className: 'btn btn-dark', role: 'button' },
               _react2.default.createElement(
                 _reactRouter.Link,
-                { to: '/question', style: { textDecoration: 'none', color: 'white' } },
+                { to: '/form', style: { textDecoration: 'none', color: 'white' } },
                 'Question Air'
               )
             ),
@@ -1342,295 +1723,6 @@ var Profile = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Profile;
-
-/***/ }),
-
-/***/ 80:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(26);
-
-var _reactRouter = __webpack_require__(19);
-
-var _SearchBar = __webpack_require__(31);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var inputStyle = {
-  width: '50%'
-};
-
-var textStyle = {
-  fontSize: '22px',
-  fontFamily: 'Athelas'
-
-  /*export default class Question extends React.createClass ({
-    getInitialState:function(){
-      return {edit:false, save:false, form:true}
-    },
-      switch:function(word)
-      {
-      let signup,login;
-      if(word == "edit"){edit = true;save = false;form = false;}
-      else if(word == "save"){save = true; edit = false; form = false}
-      else{form = true; save = false; edit = false}
-      return this.setState({form:form,save:save,edit:edit})
-      },
-  
-      render:function(){
-        return(
-          <div>
-            <div id="buttons">
-                <button id="formButton" onClick={this.switch.bind(null,"form")} className="btn btn-dark" style={signUp}>Form</button>
-                <button id="editButton" onClick={this.switch.bind(null,"edit")} className="btn btn-dark" style={loginPage}>Edit</button>
-                <button id="saveButton" onClick={this.switch.bind(null,"save")} className="btn btn-dark" style={loginPage}>Save</button>
-            </div>
-          </div>
-        )
-      }
-  */
-
-};
-var Question = function (_React$Component) {
-  _inherits(Question, _React$Component);
-
-  function Question() {
-    _classCallCheck(this, Question);
-
-    var _this = _possibleConstructorReturn(this, (Question.__proto__ || Object.getPrototypeOf(Question)).call(this));
-
-    _this.handleForm = _this.handleForm.bind(_this);
-
-    return _this;
-  }
-
-  _createClass(Question, [{
-    key: 'handleForm',
-    value: function handleForm(e) {
-      e.preventDefault();
-      var form = document.forms.question;
-      var submitReq = {
-        "one": form.one.value,
-        "two": form.two.value,
-        "three": form.three.value,
-        "four": form.four.value,
-        "five": form.five.value,
-        "six": form.six.value,
-        "seven": form.seven.value,
-        "eight": form.eight.value
-      };
-
-      fetch('/api/questions', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submitReq)
-      }).then(function (res) {
-        return res.json();
-      }).then(function (json) {
-        if (json.success) {
-          alert('Failed to add event.\n Error description: ' + json.msg);
-        } else {
-          alert('Questions Saved');
-        }
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_SearchBar2.default, null),
-        _react2.default.createElement(
-          'center',
-          null,
-          _react2.default.createElement(
-            'h1',
-            null,
-            'Question Air'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'form',
-            null,
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group', name: 'question', onSubmit: this.handleForm },
-              _react2.default.createElement(
-                'div',
-                { className: 'form-group' },
-                _react2.default.createElement(
-                  'label',
-                  { 'for': 'one', style: textStyle },
-                  'What do you like to do?'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'one', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-group' },
-                _react2.default.createElement(
-                  'label',
-                  { 'for': 'two', style: textStyle },
-                  'What struggles are you facing?'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'two', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-group' },
-                _react2.default.createElement(
-                  'label',
-                  { 'for': 'three', style: textStyle },
-                  'What are you looking for in a person?'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'three', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-group' },
-                _react2.default.createElement(
-                  'label',
-                  { 'for': 'four', style: textStyle },
-                  'How can someone help you?'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'four', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-group' },
-                _react2.default.createElement(
-                  'label',
-                  { 'for': 'five', style: textStyle },
-                  'Why do you want to connect with someone?'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'five', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-group' },
-                _react2.default.createElement(
-                  'label',
-                  { 'for': 'six', style: textStyle },
-                  'Do you want to meet in person or online?'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'six', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-group' },
-                _react2.default.createElement(
-                  'label',
-                  { 'for': 'seven', style: textStyle },
-                  'Do you want to connect with people from the same country?'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'seven', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-group' },
-                _react2.default.createElement(
-                  'label',
-                  { 'for': 'eight', style: textStyle },
-                  'Do you want to connect with people who share the same ethnicity?'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'eight', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null)
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col' },
-              _react2.default.createElement(
-                'a',
-                { className: 'btn btn-dark', role: 'button' },
-                _react2.default.createElement(
-                  _reactRouter.Link,
-                  { to: '/save', style: { textDecoration: 'none', color: 'white' } },
-                  'Save'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col' },
-              _react2.default.createElement(
-                'a',
-                { className: 'btn btn-dark', role: 'button' },
-                _react2.default.createElement(
-                  _reactRouter.Link,
-                  { to: '/question', style: { textDecoration: 'none', color: 'white' } },
-                  'Edit'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col' },
-              _react2.default.createElement(
-                'a',
-                { className: 'btn btn-dark', role: 'button' },
-                _react2.default.createElement(
-                  _reactRouter.Link,
-                  { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-                  'Find Friends'
-                )
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('br', null)
-        )
-      );
-    }
-  }]);
-
-  return Question;
-}(_react2.default.Component);
-
-exports.default = Question;
 
 /***/ })
 
