@@ -13,25 +13,6 @@ const textStyle = {
 
 }
 
-const FormQuestions = (props) => (
-<div>
-
-</div>
-);
-
-function FormPage(props)
-{
-  const formQuestions = props.questions.map(question => (
-    <FormQuestions key={question._id} question={question} />
-  ));
-
-  return(
-    <div id="question-air">
-      {formQuestions}
-    </div>
-  );
-}
-
 /*export default class Question extends React.createClass ({
   getInitialState:function(){
     return {edit:false, save:false, form:true}
@@ -171,7 +152,5 @@ export default class Question extends React.Component {
   }
 }
 
-class Edit extends React.Component {
 
-}
 

@@ -6,9 +6,8 @@ import Question from './Question.jsx';
 import SearchBar from './SearchBar.jsx';
 
 const FormQuestions = (props) => (
-    <div>
-        <form>
-          <div class="form-group" >
+   <div>
+      <div class="form-group" >
           <label for="exampleFormControlTextarea1" style={textStyle}>What do you like to do?{props.question.one}</label>
             <br></br>
             <textarea class="form-control form-control-lg" id="one" rows="3" style={inputStyle}></textarea>
@@ -56,9 +55,8 @@ const FormQuestions = (props) => (
               <textarea class="form-control form-control-lg" id="eight" rows="3" style={inputStyle}></textarea>
             </div>
           <br></br><br></br><br></br>
-      </form>
-    </div>
-);
+    </div> 
+); 
     
     function FormPage(props)
     {
@@ -71,7 +69,7 @@ const FormQuestions = (props) => (
           {formQuestions}
         </div>
       );
-    }
+    } 
 
 export default class Save extends React.Component {
   constructor() {
@@ -114,9 +112,9 @@ export default class Save extends React.Component {
         <center>
         <h1>Save</h1>
         <br></br>
-        <form> 
-          <FormPage questionform={this.state.questionforms} />  
-          </form>
+       
+    
+         
           <div className = "row">
               <div className="col">
               <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
