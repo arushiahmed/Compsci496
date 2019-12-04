@@ -6,15 +6,15 @@ db.friends.remove({});
 
 db.friends.insert([
   {
-    "name" : "Abigail Adams",
+    "name" : "Serena Chan",
     "school": "University of Massachusetts Amherst",
-    "year" : "2020",
+    "year" : "2021",
     "rate":  "4.5",
     "bio": "I am a biology and chemestry majory from Hong Kong. I like to bake, take photos, and watch movies",
   },
 
   {
-    "name" : "Caroline Baker",
+    "name" : "Caroline Kato",
     "school": "University of Massachusetts Amherst",
     "year" : "2022",
     "rate": "4",
@@ -26,7 +26,7 @@ db.friends.insert([
     "school": "University of Massachusetts Amherst",
     "year" : "2020",
     "rate":  "4",
-    "bio": "I am computer enginnering major from Japan, I like shopping, watching movies, and eating. I am looking for someone who could help me with my english and show me around campus", 
+    "bio": "I am computer enginnering major from Mass, I like shopping, watching movies, and eating. I am looking to meet new friends and help people know the aera", 
   },
   
   {
