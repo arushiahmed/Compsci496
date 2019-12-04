@@ -8,7 +8,7 @@ One of the biggest adjustments for students is going away from home to college. 
 
 To use this application you should have `node` and `npm` installed and issue the following commands:
 
-1. `npm install`: this will install the required `node` libraries.
-2. `npm run watch`: this will compile the application code and produce an `App.js` file in the `static` directory. This command will also continue to run until explicitly killed (e.g., control-C).
-3. `npm start`: this will run the Express server, `server.js`, allowing you to view the running application in the browser window.
-4. (Optionally) `mongo scripts/init.mongo.js` to seed the database with some initial data
+1. Run `npm install`: this will install the required `node` libraries.
+2. `Run npm run watch`: this will compile the application code and produce an `App.js` file in the `static` directory. This command will also continue to run until explicitly killed (e.g., control-C).
+3. Run `npm start`: this will run the Express server, `server.js`, allowing you to view the running application in the browser window.
+4. (Optionally) Run `mongo scripts/init.mongo.js` to seed the database with some initial data
