@@ -133,7 +133,7 @@ export default class Welcome extends React.createClass ({
           <label for = "inputPassword">Confirm Password</label>
           <input type="password" className= "form-control" id="inputPassword"placeholder=" Password"/>
         </div>  
-        <a className="btn btn-dark"role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></a>
+        <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></a>
       </form>
     </center>
           );

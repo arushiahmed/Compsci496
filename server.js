@@ -16,6 +16,18 @@ const friendFieldType = {
     "rate":  'required',
 };
 
+const formFieldType = {
+  "one": 'required',
+  "two": 'required',
+  "three": 'required',
+  "four": 'required',
+  "five": 'required',
+  "six": 'required',
+  "seven": 'required',
+  "eight": 'required',
+
+};
+
 function validateFriend(friend) {
   for (const field in friendFieldType) {
     if(friendFieldType.hasOwnProperty(field)){
@@ -63,9 +75,55 @@ app.post('/api/friends', (req, res) => {
   });
 });
 
+function validateForm(question) {
+  for (const field in formFieldType) {
+    if(formFieldType.hasOwnProperty(field)){
+         const type = formFieldType[field];
+          if (!type) {
+            delete question[field];
+          } else if (type === 'required' && !question[field]) {
+            return `${field} is required.`;
+          }
+       }   
+    }
+  return null;
+}
+
+app.get('/api/questionform', (req, res) => {
+  db.collection('questionform').find().toArray().then(questionform => {
+    const metadata = {total_count: questionform.length };
+    res.json({success: true, _metadata: metadata, records: questionform})
+  }).catch(error =>{
+    console.log(error);
+    res.status(500).json({sucess:false, message: `Internal Server Error: ${error}`});
+  });
+});
+
+app.post('/api/questionform', (req, res) => {
+  console.log(req)
+  const newForm = req.body;
+  newForm.data = new Date();
+
+  const err = validateForm(newForm);
+  if (err) {
+    res.status(422).json({ message: `Invalid request: ${err}` });
+    return;
+  }
+
+  db.collection('questionform').insertOne(newForm).then(result =>
+    db.collection('questionform').find({ _id: result.insertedId }).limit(1).next()
+    ).then(newForm => {
+      res.json(newForm);
+    }).catch(error => {
+      console.log(error);
+      res.status(500).json({ message: `Internal Server Error: ${error}` });
+    });
+  });
+
+
 let db;
 MongoClient.connect('mongodb://localhost', { useNewUrlParser: true }).then(connection => {
-  db = connection.db('friendslist');
+  db = connection.db('getData');
   app.listen(3000, () => {
     console.log('App started on port 3000');
   });

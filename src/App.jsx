@@ -8,6 +8,7 @@ import Welcome from './Welcome.jsx';
 import SearchBar from './SearchBar.jsx'
 import Profile from './Profile.jsx'
 import About from './About.jsx'
+import Save from './Save.jsx'
 
 var contentNode = document.getElementById("contents");
 
@@ -48,6 +49,7 @@ const RoutedApp = () => (
       <Route path="/connect" component={Connect} />
       <Route path="/question" component={Question} />
       <Route path="/profile" component={Profile} />
+      <Route path="/save" component={Save} />
       <Route path="*" component={NoMatch} />
     </Route>
   </Router>);

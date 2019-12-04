@@ -1,5 +1,7 @@
-db = new Mongo().getDB('friendslist');
+db = new Mongo().getDB('getData');
 
+db.users.remove({});
+db.questionform.remove({});
 db.friends.remove({});
 
 db.friends.insert([

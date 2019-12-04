@@ -13,11 +13,89 @@ const textStyle = {
 
 }
 
+const FormQuestions = (props) => (
+<div>
+
+</div>
+);
+
+function FormPage(props)
+{
+  const formQuestions = props.questions.map(question => (
+    <FormQuestions key={question._id} question={question} />
+  ));
+
+  return(
+    <div id="question-air">
+      {formQuestions}
+    </div>
+  );
+}
+
+/*export default class Question extends React.createClass ({
+  getInitialState:function(){
+    return {edit:false, save:false, form:true}
+  },
+    switch:function(word)
+    {
+    let signup,login;
+    if(word == "edit"){edit = true;save = false;form = false;}
+    else if(word == "save"){save = true; edit = false; form = false}
+    else{form = true; save = false; edit = false}
+    return this.setState({form:form,save:save,edit:edit})
+    },
+
+    render:function(){
+      return(
+        <div>
+          <div id="buttons">
+              <button id="formButton" onClick={this.switch.bind(null,"form")} className="btn btn-dark" style={signUp}>Form</button>
+              <button id="editButton" onClick={this.switch.bind(null,"edit")} className="btn btn-dark" style={loginPage}>Edit</button>
+              <button id="saveButton" onClick={this.switch.bind(null,"save")} className="btn btn-dark" style={loginPage}>Save</button>
+          </div>
+        </div>
+      )
+    }
+*/
+
 export default class Question extends React.Component {
   constructor() {
     super();
+    this.handleForm = this.handleForm.bind(this);
     
   }
+
+    handleForm(e)
+    {
+      e.preventDefault();
+      let form = document.forms.question
+      const submitReq = {
+        "one": form.one.value,
+        "two": form.two.value,
+        "three": form.three.value,
+        "four": form.four.value,
+        "five": form.five.value,
+        "six": form.six.value,
+        "seven": form.seven.value,
+        "eight": form.eight.value,
+      }
+
+      fetch('/api/questions', {
+          method: 'post',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(submitReq),
+      })
+
+      .then(res => res.json())
+      .then(json => {
+        if(json.success) {
+          alert('Failed to add event.\n Error description: ' + json.msg);
+        }
+        else {
+          alert('Questions Saved')
+        }
+      });
+    }
   render() {
     return (
       <div>
@@ -26,61 +104,61 @@ export default class Question extends React.Component {
         <h1>Question Air</h1>
         <br></br>
         <form >
-        <div class="form-group" >
+          <div class="form-group" name="question" onSubmit={this.handleForm}>
           <label for="exampleFormControlTextarea1" style={textStyle}>What do you like to do?</label>
+            <br></br>
+            <textarea class="form-control form-control-lg" id="one" rows="3" style={inputStyle}></textarea>
+          </div>
           <br></br>
-          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
-        </div>
-        <br></br>
-        <div class="form-group" >
+          <div class="form-group" >
           <label for="exampleFormControlTextarea1" style={textStyle}>What struggles are you facing?</label>
-          <br></br>
-          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
-        </div>
-        <br></br>
-        <div class="form-group" >
+              <br></br>
+              <textarea class="form-control form-control-lg" id="two" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
           <label for="exampleFormControlTextarea1" style={textStyle}>What are you looking for in a person?</label>
-          <br></br>
-          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
-        </div>
-        <br></br>
-        <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>How can someone help you?</label>
-          <br></br>
-          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
-        </div>
-        <br></br>
-        <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>Why do you want to connect with someone?</label>
-          <br></br>
-          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
-        </div>
-        <br></br>
-        <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to meet in person or online?</label>
-          <br></br>
-          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
-        </div>
-        <br></br>
-        <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people from the same country?</label>
-          <br></br>
-          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
-        </div>
-        <br></br>
-        <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people who share the same ethnicity?</label>
-          <br></br>
-          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={inputStyle}></textarea>
-        </div>
-        <br></br><br></br><br></br>
-        </form>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="three" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>How can someone help you?</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="four" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>Why do you want to connect with someone?</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="five" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to meet in person or online?</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="six" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people from the same country?</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="seven" rows="3" style={inputStyle}></textarea>
+            </div>
+            <br></br>
+            <div class="form-group" >
+              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people who share the same ethnicity?</label>
+              <br></br>
+              <textarea class="form-control form-control-lg" id="eight" rows="3" style={inputStyle}></textarea>
+            </div>
+          <br></br><br></br><br></br>
+      </form>
         <div className = "row">
               <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Save</Link></a>
+              <a className="btn btn-dark"role="button"><Link to="/save" style={{ textDecoration: 'none', color: 'white' }} >Save</Link></a>
             </div> 
               <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
+              <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
               </div> 
               <div className="col">
               <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
@@ -91,5 +169,9 @@ export default class Question extends React.Component {
           </div>
     );
   }
+}
+
+class Edit extends React.Component {
+
 }
 
