@@ -114,6 +114,16 @@ export default class Welcome extends React.createClass ({
           <input type="school" className = "form-control" id="inputschool" placeholder="School"/>
         </div>
           <br></br>
+          <div className = "form-group">  
+          <label for = "inputEmail">Major</label>
+          <input type="country" className = "form-control" id="inputmajor" placeholder="Major"/>
+        </div>
+        <br></br>
+        <div className = "form-group">  
+          <label for = "inputEmail">Year</label>
+          <input type="country" className = "form-control" id="inputyear" placeholder="Year"/>
+        </div>
+        <br></br>
         <div className = "form-group">  
           <label for = "inputEmail">Country</label>
           <input type="country" className = "form-control" id="inputcountry" placeholder="Country"/>
@@ -133,8 +143,10 @@ export default class Welcome extends React.createClass ({
           <label for = "inputPassword">Confirm Password</label>
           <input type="password" className= "form-control" id="inputPassword"placeholder=" Password"/>
         </div>  
+        <br></br>
         <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></a>
       </form>
+      <br></br><br></br>
     </center>
           );
         }
@@ -157,8 +169,10 @@ export default class Welcome extends React.createClass ({
                       <label for = "inputPassword">Password</label>
                       <input type="password" className = "form-control" id="inputPassword" placeholder=" Password"/>
                     </div>  
+                    <br></br>
                     <a className="btn btn-dark" role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>Login</Link></a>
                   </form>
+                  <br></br><br></br>
                 </center>
               );
             }

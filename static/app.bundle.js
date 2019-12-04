@@ -395,6 +395,28 @@ var Signup = function (_React$Component) {
             _react2.default.createElement(
               'label',
               { 'for': 'inputEmail' },
+              'Major'
+            ),
+            _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputmajor', placeholder: 'Major' })
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'label',
+              { 'for': 'inputEmail' },
+              'Year'
+            ),
+            _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputyear', placeholder: 'Year' })
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'label',
+              { 'for': 'inputEmail' },
               'Country'
             ),
             _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputcountry', placeholder: 'Country' })
@@ -432,6 +454,7 @@ var Signup = function (_React$Component) {
             ),
             _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: ' Password' })
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'a',
             { className: 'btn btn-dark', role: 'button' },
@@ -441,7 +464,9 @@ var Signup = function (_React$Component) {
               'Sign Up'
             )
           )
-        )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null)
       );
     }
   }]);
@@ -488,6 +513,7 @@ var Login = function (_React$Component2) {
             ),
             _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: ' Password' })
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'a',
             { className: 'btn btn-dark', role: 'button' },
@@ -497,7 +523,9 @@ var Login = function (_React$Component2) {
               'Login'
             )
           )
-        )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null)
       );
     }
   }]);
@@ -636,7 +664,7 @@ var Form = function (_React$Component) {
         "eight": form.eight.value
       };
 
-      fetch('/api/questions', {
+      fetch('/api/questionform', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submitReq)
@@ -1311,41 +1339,45 @@ var Save = function (_React$Component) {
             'Save'
           ),
           _react2.default.createElement('br', null),
-          _react2.default.createElement('hr', null),
-          _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
-          _react2.default.createElement('hr', null),
           _react2.default.createElement(
             'div',
-            { className: 'row' },
+            null,
+            _react2.default.createElement('hr', null),
+            _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
+            _react2.default.createElement('hr', null),
             _react2.default.createElement(
               'div',
-              { className: 'col' },
+              { className: 'row' },
               _react2.default.createElement(
-                'a',
-                { className: 'btn btn-dark', role: 'button' },
+                'div',
+                { className: 'col' },
                 _react2.default.createElement(
-                  _reactRouter.Link,
-                  { to: '/form', style: { textDecoration: 'none', color: 'white' } },
-                  'Edit'
+                  'a',
+                  { className: 'btn btn-dark', role: 'button' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/form', style: { textDecoration: 'none', color: 'white' } },
+                    'Edit'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'btn btn-dark', role: 'button' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                    'Find Friends'
+                  )
                 )
               )
             ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col' },
-              _react2.default.createElement(
-                'a',
-                { className: 'btn btn-dark', role: 'button' },
-                _react2.default.createElement(
-                  _reactRouter.Link,
-                  { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-                  'Find Friends'
-                )
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('br', null)
+            _react2.default.createElement('br', null),
+            _react2.default.createElement('br', null)
+          )
         )
       );
     }

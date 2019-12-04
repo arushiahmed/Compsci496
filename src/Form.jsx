@@ -95,7 +95,7 @@ export default class Form extends React.createClass ({
         "eight": form.eight.value,
       }
 
-      fetch('/api/questions', {
+      fetch('/api/questionform', {
           method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(submitReq),
