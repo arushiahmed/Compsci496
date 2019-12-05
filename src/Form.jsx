@@ -118,7 +118,7 @@ export default class Form extends React.createClass ({
 
         </SearchBar>
         <center>
-        <h1>Question Air</h1>
+        <h1>Form</h1>
         <br></br>
         <div>
           <form className="form-group" name="question" onSubmit={this.handleForm}>

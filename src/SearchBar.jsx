@@ -22,7 +22,7 @@ export default class SearchBar extends React.Component {
                 <a className="navbar-brand"></a>
                   <a className="btn btn-dark" role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>About</Link></a>
                     <a className="btn btn-dark" role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }}>Connect With Students</Link></a>
-                    <a className="btn btn-dark" role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }}>Question Air</Link></a>
+                    <a className="btn btn-dark" role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }}>Form</Link></a>
                     <a className="btn btn-dark" role="button"><Link to="/profile" style={{ textDecoration: 'none', color: 'white' }}>Profile</Link></a>
                     <a className="btn btn-dark" role="button" ><Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Sign Out</Link></a>
                     <form className="form-inline">
