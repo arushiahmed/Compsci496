@@ -4,12 +4,14 @@ import { Link } from 'react-router';
 import SearchBar from './SearchBar.jsx';
 
 const inputStyle = {
-  width: '50%'
+  marginRight: '20%',
+  
 }
 
 const textStyle = {
   fontSize: '22px',
-  fontFamily: 'Athelas'
+  fontFamily: 'Athelas',
+  marginLeft: '5%',
 
 }
 /*
@@ -119,59 +121,112 @@ export default class Form extends React.createClass ({
         </SearchBar>
         <center>
         <h1>Form</h1>
-        <br></br>
+        </center>
+        <br></br><br></br>
         <div>
           <form className="form-group" name="question" onSubmit={this.handleForm}>
           <div className="form-group" >
-            <label for="one"  style={textStyle}>What do you like to do?</label>
-              <br></br>
-              <input type="text" className="form-control" id="one" rows="3" style={inputStyle} />
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="one" >What do you like to do?</label>
+              </div>
+              <div className="col">
+                <textarea type="textarea" className="form-control" id="one" style={inputStyle}/>
+              </div>
+            </div>            
           </div>
           <br></br>
           <div className="form-group" >
-          <label for="two" style={textStyle}>What struggles are you facing?</label>
-              <br></br>
-              <input type="text" className="form-control" id="two" rows="3" style={inputStyle} />
-            </div>
-            <br></br>
-            <div className="form-group" >
-            <label for="three"  style={textStyle}>What are you looking for in a person?</label>
-              <br></br>
-              <input type="text" className="form-control" id="three" rows="3" style={inputStyle} />
-            </div>
-            <br></br>
-            <div className="form-group" >
-              <label for="four" style={textStyle}>How can someone help you?</label>
-              <br></br>
-              <input type="text" className="form-control" id="four"  style={inputStyle} />
-            </div>
-            <br></br>
-            <div className="form-group" >
-              <label for="five" style={textStyle}>Why do you want to connect with someone?</label>
-              <br></br>
-              <input type="text" className="form-control" id="five" style={inputStyle} />
-            </div>
-            <br></br>
-            <div className="form-group" >
-              <label for="six" style={textStyle}>Do you want to meet in person or online?</label>
-              <br></br>
-              <input type="text" className="form-control" id="six" rows="3" style={inputStyle} />
-            </div>
-            <br></br>
-            <div className="form-group" >
-              <label for="seven" style={textStyle}>Do you want to connect with people from the same country?</label>
-              <br></br>
-              <input type="text" className="form-control" id="seven" rows="3" style={inputStyle} />
-            </div>
-            <br></br>
-            <div className="form-group" >
-              <label for="eight" style={textStyle}>Do you want to connect with people who share the same ethnicity?</label>
-              <br></br>
-              <input type="text" className="form-control" id="eight" rows="3" style={inputStyle} />
-            </div>
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">What challenges are you currently</label>
+              </div>
+              <div className="col">
+                <textarea type="text" className="form-control" id="two" style={inputStyle}/>
+              </div>
+            </div>            
+          </div>
+          <br></br>
+          <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">What challenges are you currently</label>
+              </div>
+              <div className="col">
+                <textarea type="text" className="form-control" id="three" style={inputStyle}/>
+              </div>
+            </div>            
+          </div>
+          <br></br>
+          <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">What are you looking for in a person?</label>
+              </div>
+              <div className="col">
+                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
+              </div>
+            </div>            
+          </div>
+          <br></br>
+          <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">How can someone help you?</label>
+              </div>
+              <div className="col">
+                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
+              </div>
+            </div>            
+          </div>
+          <br></br>
+          <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">Why do you want to connect with someone?</label>
+              </div>
+              <div className="col">
+                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
+              </div>
+            </div>            
+          </div>
+          <br></br>
+          <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">Do you want to meet in person or online?</label>
+              </div>
+              <div className="col">
+                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
+              </div>
+            </div>            
+          </div>
+          <br></br>
+          <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">Do you want to connect with people from the same country?</label>
+              </div>
+              <div className="col">
+                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
+              </div>
+            </div>            
+          </div>
+          <br></br>
+          <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">Do you want to connect with people who share the same ethnicity?</label>
+              </div>
+              <div className="col">
+                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
+              </div>
+            </div>            
+          </div>
           <br></br><br></br><br></br>
       </form>
       </div>
+      <center>
         <div className = "row">
               <div className="col">
               <button className="btn btn-dark" type="submit"><Link to="/save" style={{ textDecoration: 'none', color: 'white' }}>Save</Link></button>
@@ -183,8 +238,8 @@ export default class Form extends React.createClass ({
               <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
               </div>
           </div>   
-          <br></br><br></br>
           </center>
+          <br></br><br></br>
           </div>
     );
   }

@@ -568,12 +568,14 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var inputStyle = {
-  width: '50%'
+  marginRight: '20%'
+
 };
 
 var textStyle = {
   fontSize: '22px',
-  fontFamily: 'Athelas'
+  fontFamily: 'Athelas',
+  marginLeft: '5%'
   /*
   const FormQuestion = (props) => (
     <ul className="question">
@@ -691,115 +693,231 @@ var Form = function (_React$Component) {
           _react2.default.createElement(
             'h1',
             null,
-            'Question Air'
-          ),
-          _react2.default.createElement('br', null),
+            'Form'
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          null,
           _react2.default.createElement(
-            'div',
-            null,
+            'form',
+            { className: 'form-group', name: 'question', onSubmit: this.handleForm },
             _react2.default.createElement(
-              'form',
-              { className: 'form-group', name: 'question', onSubmit: this.handleForm },
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
                 'div',
-                { className: 'form-group' },
+                { className: 'row', style: textStyle },
                 _react2.default.createElement(
-                  'label',
-                  { 'for': 'one', style: textStyle },
-                  'What do you like to do?'
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'one' },
+                    'What do you like to do?'
+                  )
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'one', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'textarea', className: 'form-control', id: 'one', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
                 'div',
-                { className: 'form-group' },
+                { className: 'row', style: textStyle },
                 _react2.default.createElement(
-                  'label',
-                  { 'for': 'two', style: textStyle },
-                  'What struggles are you facing?'
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'two' },
+                    'What challenges are you currently'
+                  )
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'two', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'two', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
                 'div',
-                { className: 'form-group' },
+                { className: 'row', style: textStyle },
                 _react2.default.createElement(
-                  'label',
-                  { 'for': 'three', style: textStyle },
-                  'What are you looking for in a person?'
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'two' },
+                    'What challenges are you currently'
+                  )
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'three', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'three', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
                 'div',
-                { className: 'form-group' },
+                { className: 'row', style: textStyle },
                 _react2.default.createElement(
-                  'label',
-                  { 'for': 'four', style: textStyle },
-                  'How can someone help you?'
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'two' },
+                    'What are you looking for in a person?'
+                  )
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
                 'div',
-                { className: 'form-group' },
+                { className: 'row', style: textStyle },
                 _react2.default.createElement(
-                  'label',
-                  { 'for': 'five', style: textStyle },
-                  'Why do you want to connect with someone?'
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'two' },
+                    'How can someone help you?'
+                  )
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'five', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
                 'div',
-                { className: 'form-group' },
+                { className: 'row', style: textStyle },
                 _react2.default.createElement(
-                  'label',
-                  { 'for': 'six', style: textStyle },
-                  'Do you want to meet in person or online?'
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'two' },
+                    'Why do you want to connect with someone?'
+                  )
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'six', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
                 'div',
-                { className: 'form-group' },
+                { className: 'row', style: textStyle },
                 _react2.default.createElement(
-                  'label',
-                  { 'for': 'seven', style: textStyle },
-                  'Do you want to connect with people from the same country?'
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'two' },
+                    'Do you want to meet in person or online?'
+                  )
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'seven', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
                 'div',
-                { className: 'form-group' },
+                { className: 'row', style: textStyle },
                 _react2.default.createElement(
-                  'label',
-                  { 'for': 'eight', style: textStyle },
-                  'Do you want to connect with people who share the same ethnicity?'
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'two' },
+                    'Do you want to connect with people from the same country?'
+                  )
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'eight', rows: '3', style: inputStyle })
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement('br', null)
-            )
-          ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'row', style: textStyle },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement(
+                    'label',
+                    { 'for': 'two' },
+                    'Do you want to connect with people who share the same ethnicity?'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col' },
+                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement('br', null)
+          )
+        ),
+        _react2.default.createElement(
+          'center',
+          null,
           _react2.default.createElement(
             'div',
             { className: 'row' },
@@ -842,10 +960,10 @@ var Form = function (_React$Component) {
                 )
               )
             )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('br', null)
-        )
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null)
       );
     }
   }]);
@@ -1484,7 +1602,7 @@ var SearchBar = function (_React$Component) {
               _react2.default.createElement(
                 _reactRouter.Link,
                 { to: '/form', style: { textDecoration: 'none', color: 'white' } },
-                'Question Air'
+                'Form'
               )
             ),
             _react2.default.createElement(
