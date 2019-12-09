@@ -1,6 +1,8 @@
 db = new Mongo().getDB('getData');
 
 db.users.remove({});
+
+
 db.questionform.remove({});
 db.friends.remove({});
 

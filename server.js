@@ -2,11 +2,13 @@ const express = require('express');
 
 const app = express();
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 
 app.use(express.static('static'));
 app.use(bodyParser.json());
 
 const MongoClient = require('mongodb').MongoClient;
+
 
 const friendFieldType = {
     "name" : 'required',
@@ -27,6 +29,7 @@ const formFieldType = {
   "eight": 'required',
 
 };
+
 
 function validateFriend(friend) {
   for (const field in friendFieldType) {

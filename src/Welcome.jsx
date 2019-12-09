@@ -96,24 +96,29 @@ export default class Welcome extends React.createClass ({
           <label for = "inputName">Name</label>
             <div className = "row">
               <div className="col">
-                <input type="name" className = "form-control" id="inputName" placeholder=" First Name"/>
+                <input type="name" className = "form-control" id="firstname" placeholder=" First Name"/>
             </div> 
               <div className="col">
-              <input  type="name" className = "form-control" id="inputName" placeholder=" Last Name"/>
+              <input  type="name" className = "form-control" id="lastname" placeholder=" Last Name"/>
               </div> 
           </div>              
         </div>
         <br></br>
-        <div className = "form-group">  
-            <label for = "inputEmail">Email</label>
-              <input type="email" className = "form-control" id="inputEmail" placeholder="Email"/>
-            </div>
-            <br></br>
+            <div className = "form-group">  
+          <label for = "inputEmail">Undergraduate or Graduate Student</label>
+          <input type="school" className = "form-control" id="inputschool" placeholder="School"/>
+        </div>
+          <br></br>  
         <div className = "form-group">  
           <label for = "inputEmail">School</label>
           <input type="school" className = "form-control" id="inputschool" placeholder="School"/>
         </div>
           <br></br>
+          <div className = "form-group">  
+            <label for = "inputEmail">School Email</label>
+              <input type="email" className = "form-control" id="inputEmail" placeholder="Email"/>
+            </div>
+            <br></br>
           <div className = "form-group">  
           <label for = "inputEmail">Major</label>
           <input type="country" className = "form-control" id="inputmajor" placeholder="Major"/>

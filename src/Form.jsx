@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import SearchBar from './SearchBar.jsx';
 
 const inputStyle = {
-  marginRight: '20%',
+  marginRight: '50%',
   
 }
 

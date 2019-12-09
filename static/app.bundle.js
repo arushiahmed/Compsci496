@@ -357,12 +357,12 @@ var Signup = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'inputName', placeholder: ' First Name' })
+                _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'firstname', placeholder: ' First Name' })
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'inputName', placeholder: ' Last Name' })
+                _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'lastname', placeholder: ' Last Name' })
               )
             )
           ),
@@ -373,9 +373,9 @@ var Signup = function (_React$Component) {
             _react2.default.createElement(
               'label',
               { 'for': 'inputEmail' },
-              'Email'
+              'Undergraduate or Graduate Student'
             ),
-            _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: 'Email' })
+            _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputschool', placeholder: 'School' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -387,6 +387,17 @@ var Signup = function (_React$Component) {
               'School'
             ),
             _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputschool', placeholder: 'School' })
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'label',
+              { 'for': 'inputEmail' },
+              'School Email'
+            ),
+            _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: 'Email' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -568,7 +579,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var inputStyle = {
-  marginRight: '20%'
+  marginRight: '50%'
 
 };
 
