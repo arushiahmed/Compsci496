@@ -7,13 +7,11 @@ import SearchBar from './SearchBar.jsx';
 const profile = {
 	border: "2px solid black",    
   marginTop: "10px",
-  borderRadius: "50%",
+  marginLeft: "5%",
   textAlign: "center",
-  fontFamily: "cursive", 
   fontSize: "50px",
-  height: "350px", 
-  width: "350px",
-  lineHeight: "350px"
+  height: "150px", 
+  width: "150px",
 }
 const formStyle =
 {
@@ -29,7 +27,6 @@ export default class Profile extends React.Component {
     return (
       <div>
         <SearchBar> </SearchBar>
-        <center>
         <div className = "row" style={{marginLeft: '85%'}}>
               <div className="col" >
               <a className="btn btn-dark"role="button"><Link to="/rate" style={{ textDecoration: 'none', color: 'white' }} >Rate</Link></a>
@@ -38,13 +35,13 @@ export default class Profile extends React.Component {
               <a className="btn btn-dark"role="button"><Link to="/chat" style={{ textDecoration: 'none', color: 'white' }} >Chat</Link></a>
               </div> 
           </div>
-        <h1>Profile</h1>
+        <h1 style={{marginLeft: '5%'}}>Profile</h1>
         <br></br>
           <div className="picture" style={profile}>
             Profile picture
           </div>
           <br></br> <br></br>
-          <form>
+          <form style={{marginLeft: '5%'}}>
           <div class="form-group">
             <div className = "row">
               <div className="col">
@@ -101,8 +98,7 @@ export default class Profile extends React.Component {
           </div>
            </form>
            <br></br>
-           <a className="btn btn-dark"role="button"><Link to="*" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
-        </center>
+           <a className="btn btn-dark"role="button" style={{marginLeft: '5%'}}><Link to="*" style={{ textDecoration: 'none', color: 'white'}} >Edit</Link></a>
         <br></br>
         <br></br>
       </div>

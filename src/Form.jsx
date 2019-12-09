@@ -120,7 +120,7 @@ export default class Form extends React.createClass ({
 
         </SearchBar>
         <center>
-        <h1>Form</h1>
+        <h1>Survery Questions</h1>
         </center>
         <br></br><br></br>
         <div>
