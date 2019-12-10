@@ -87,13 +87,48 @@ export default class Welcome extends React.createClass ({
    class Signup extends React.Component {    
     constructor() {
       super();
+      this.handleEvent = this.handleEvent.bind(this);
+    }
+    handleEvent(e){
+      e.preventDefault();
+      let form = document.forms.user;
+      const submitReq = {
+        "firstname": form.firstname.value,
+        "lastname": form.lastname.value,
+        "degree": form.inputDegree.value,
+        "school": form.inputSchool.value,
+        "email": form.inputEmail.value,
+        "major": form.inputMajor.value,
+        "year": form.inputYear.value,
+        "country": form.inputCountry.value,
+        "username": form.inputUsername.value,
+        "password": form.inputPassword.value,
+        "comfirmPassword": form.comfirmPassword.value
+      }
+      
+      fetch('api/users', {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(submitReq),
+      })
+
+      .then(res => res.json())
+      .then(json => {
+        if(json.sucess){
+          alert('Failed to create new user.\n Error description ' + json.msg);
+        }
+        else{
+          alert('User Saved');
+        }
+      });
+
     }
     render(){
       return (
           <center >
-        <form >
+        <form className = "form-group" name="user" onSubmit={this.handleEvent}>
           <div className = "form-group">
-          <label for = "inputName">Name</label>
+          <label for = "name">Name</label>
             <div className = "row">
               <div className="col">
                 <input type="name" className = "form-control" id="firstname" placeholder=" First Name"/>
@@ -105,13 +140,13 @@ export default class Welcome extends React.createClass ({
         </div>
         <br></br>
             <div className = "form-group">  
-          <label for = "inputEmail">Undergraduate or Graduate Student</label>
-          <input type="school" className = "form-control" id="inputschool" placeholder="School"/>
+          <label for = "degree">Undergraduate or Graduate Student</label>
+          <input type="school" className = "form-control" id="inputDegree" placeholder="School"/>
         </div>
           <br></br>  
         <div className = "form-group">  
-          <label for = "inputEmail">School</label>
-          <input type="school" className = "form-control" id="inputschool" placeholder="School"/>
+          <label for = "school">School</label>
+          <input type="school" className = "form-control" id="inputSchool" placeholder="School"/>
         </div>
           <br></br>
           <div className = "form-group">  
@@ -120,36 +155,36 @@ export default class Welcome extends React.createClass ({
             </div>
             <br></br>
           <div className = "form-group">  
-          <label for = "inputEmail">Major</label>
-          <input type="country" className = "form-control" id="inputmajor" placeholder="Major"/>
+          <label for = "major">Major</label>
+          <input type="major" className = "form-control" id="inputMajor" placeholder="Major"/>
         </div>
         <br></br>
         <div className = "form-group">  
-          <label for = "inputEmail">Year</label>
-          <input type="country" className = "form-control" id="inputyear" placeholder="Year"/>
+          <label for = "year">Year</label>
+          <input type="year" className = "form-control" id="inputYear" placeholder="Year"/>
         </div>
         <br></br>
         <div className = "form-group">  
-          <label for = "inputEmail">Country</label>
-          <input type="country" className = "form-control" id="inputcountry" placeholder="Country"/>
+          <label for = "country">Country</label>
+          <input type="country" className = "form-control" id="inputCountry" placeholder="Country"/>
         </div>
         <br></br>
           <div className = "form-group">  
-            <label for = "inputEmail">Username</label>
-              <input type="email" className = "form-control" id="inputEmail" placeholder=" Username"/>
+            <label for = "userName">Username</label>
+              <input type="email" className = "form-control" id="inputUsername" placeholder=" Username"/>
             </div>
             <br></br>
         <div className = "form-group">
           <label for = "inputPassword">Password</label>
-          <input type="password" className = "form-control" id="inputPassword"placeholder=" Password"/>
+          <input type="password" className = "form-control" id="inputPassword" placeholder=" Password"/>
         </div>  
         <br></br>
         <div className = "form-group">
           <label for = "inputPassword">Confirm Password</label>
-          <input type="password" className= "form-control" id="inputPassword"placeholder=" Password"/>
+          <input type="password" className= "form-control" id="comfirmPassword"placeholder=" Password"/>
         </div>  
         <br></br>
-        <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></a>
+        <a className="btn btn-dark"role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></a>
       </form>
       <br></br><br></br>
     </center>

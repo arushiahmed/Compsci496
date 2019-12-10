@@ -30,6 +30,64 @@ const formFieldType = {
 
 };
 
+const userFieldType = {
+  "firstname": 'required',
+  "lastname": 'required',
+  "degree": 'required',
+  "school": 'required',
+  "email": 'required',
+  "major": 'required',
+  "year": 'required',
+  "country": 'required',
+  "username": 'required',
+  "password": 'required',
+  "comfirmPassword": 'required',
+};
+
+function validateNewUser(user){
+  for (const field in userFieldType){
+    if(newUser.hasOwnProperty(field)){
+      const type = userFieldType[field];
+      if(!type){
+        delete user[field];
+      } else if(type == 'required' && !user[field]){
+        return `${field} is required.`;
+      } 
+    }
+  }
+  return null;
+}
+
+app.get('/api/users', (req, res) => {
+  db.collection('users').find.toArray().then(users => {
+    const metadata = {total_count: users.length};
+    res.json({success: true, _metadata: metadata, records: users})
+  }).catch(error => {
+    console.log(error);
+    res.status(500).json({success:false, message: `Internal Server Error: ${error}`});
+  });
+});
+
+app.post('/api/users', (req, res) => {
+  console.log(req)
+  const newUser = req.body;
+
+  newUser.username = new Date();
+  const err = validateNewUser(newUser);
+  if(err){
+    res.status(422).json({ message: `Invalid request: ${err}` });
+    return;
+  }
+ 
+  db.collection('users').insertOne(newUser).then(result => 
+    db.collection('users').find({ _id: result.insertedId }).limit(1).next()
+    ).then(newUser => {
+      res.json(newUser);
+    }).catch(error => {
+      console.log(error);
+      res.status(500).json({ message: `Internal Server Error: ${error}` });
+    });
+});
 
 function validateFriend(friend) {
   for (const field in friendFieldType) {

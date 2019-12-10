@@ -331,10 +331,46 @@ var Signup = function (_React$Component) {
   function Signup() {
     _classCallCheck(this, Signup);
 
-    return _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this));
+    var _this2 = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this));
+
+    _this2.handleEvent = _this2.handleEvent.bind(_this2);
+    return _this2;
   }
 
   _createClass(Signup, [{
+    key: 'handleEvent',
+    value: function handleEvent(e) {
+      e.preventDefault();
+      var form = document.forms.user;
+      var submitReq = {
+        "firstname": form.firstname.value,
+        "lastname": form.lastname.value,
+        "degree": form.inputDegree.value,
+        "school": form.inputSchool.value,
+        "email": form.inputEmail.value,
+        "major": form.inputMajor.value,
+        "year": form.inputYear.value,
+        "country": form.inputCountry.value,
+        "username": form.inputUsername.value,
+        "password": form.inputPassword.value,
+        "comfirmPassword": form.comfirmPassword.value
+      };
+
+      fetch('api/users', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submitReq)
+      }).then(function (res) {
+        return res.json();
+      }).then(function (json) {
+        if (json.sucess) {
+          alert('Failed to create new user.\n Error description ' + json.msg);
+        } else {
+          alert('User Saved');
+        }
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -342,13 +378,13 @@ var Signup = function (_React$Component) {
         null,
         _react2.default.createElement(
           'form',
-          null,
+          { className: 'form-group', name: 'user', onSubmit: this.handleEvent },
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'inputName' },
+              { 'for': 'name' },
               'Name'
             ),
             _react2.default.createElement(
@@ -372,10 +408,10 @@ var Signup = function (_React$Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'inputEmail' },
+              { 'for': 'degree' },
               'Undergraduate or Graduate Student'
             ),
-            _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputschool', placeholder: 'School' })
+            _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputDegree', placeholder: 'School' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -383,10 +419,10 @@ var Signup = function (_React$Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'inputEmail' },
+              { 'for': 'school' },
               'School'
             ),
-            _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputschool', placeholder: 'School' })
+            _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputSchool', placeholder: 'School' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -405,10 +441,10 @@ var Signup = function (_React$Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'inputEmail' },
+              { 'for': 'major' },
               'Major'
             ),
-            _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputmajor', placeholder: 'Major' })
+            _react2.default.createElement('input', { type: 'major', className: 'form-control', id: 'inputMajor', placeholder: 'Major' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -416,10 +452,10 @@ var Signup = function (_React$Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'inputEmail' },
+              { 'for': 'year' },
               'Year'
             ),
-            _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputyear', placeholder: 'Year' })
+            _react2.default.createElement('input', { type: 'year', className: 'form-control', id: 'inputYear', placeholder: 'Year' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -427,10 +463,10 @@ var Signup = function (_React$Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'inputEmail' },
+              { 'for': 'country' },
               'Country'
             ),
-            _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputcountry', placeholder: 'Country' })
+            _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputCountry', placeholder: 'Country' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -438,10 +474,10 @@ var Signup = function (_React$Component) {
             { className: 'form-group' },
             _react2.default.createElement(
               'label',
-              { 'for': 'inputEmail' },
+              { 'for': 'userName' },
               'Username'
             ),
-            _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: ' Username' })
+            _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputUsername', placeholder: ' Username' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -463,7 +499,7 @@ var Signup = function (_React$Component) {
               { 'for': 'inputPassword' },
               'Confirm Password'
             ),
-            _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: ' Password' })
+            _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'comfirmPassword', placeholder: ' Password' })
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -471,7 +507,7 @@ var Signup = function (_React$Component) {
             { className: 'btn btn-dark', role: 'button' },
             _react2.default.createElement(
               _reactRouter.Link,
-              { to: '/question', style: { textDecoration: 'none', color: 'white' } },
+              { to: '/form', style: { textDecoration: 'none', color: 'white' } },
               'Sign Up'
             )
           )
@@ -1791,7 +1827,11 @@ var Profile = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('input', { type: 'text', readonly: true, 'class': 'form-control-plaintext', id: 'staticEmail', value: 'email@example.com', style: formStyle })
+                _react2.default.createElement(
+                  'input',
+                  { type: 'text', readonly: true, 'class': 'form-control-plaintext', id: 'staticEmail', value: 'email@example.com', style: formStyle },
+                  ' '
+                )
               )
             )
           ),
@@ -1890,8 +1930,8 @@ var Profile = function (_React$Component) {
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'a',
-          { className: 'btn btn-dark', role: 'button', style: { marginLeft: '5%' } },
+          'button',
+          { className: 'btn btn-dark', type: 'submit', style: { marginLeft: '5%' } },
           _react2.default.createElement(
             _reactRouter.Link,
             { to: '*', style: { textDecoration: 'none', color: 'white' } },
