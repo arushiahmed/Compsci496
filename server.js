@@ -42,6 +42,7 @@ const userFieldType = {
   "username": 'required',
   "password": 'required',
   "comfirmPassword": 'required',
+  "comfirmPassword": 'required',
 };
 
 function validateNewUser(user){

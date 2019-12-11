@@ -1827,11 +1827,7 @@ var Profile = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement(
-                  'input',
-                  { type: 'text', readonly: true, 'class': 'form-control-plaintext', id: 'staticEmail', value: 'email@example.com', style: formStyle },
-                  ' '
-                )
+                _react2.default.createElement('input', { type: 'text', readonly: true, 'class': 'form-control-plaintext', id: 'staticEmail', value: 'email@example.com', style: formStyle })
               )
             )
           ),
@@ -1930,8 +1926,8 @@ var Profile = function (_React$Component) {
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'button',
-          { className: 'btn btn-dark', type: 'submit', style: { marginLeft: '5%' } },
+          'a',
+          { className: 'btn btn-dark', role: 'button', style: { marginLeft: '5%' } },
           _react2.default.createElement(
             _reactRouter.Link,
             { to: '*', style: { textDecoration: 'none', color: 'white' } },

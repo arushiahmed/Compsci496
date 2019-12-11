@@ -48,7 +48,7 @@ export default class Profile extends React.Component {
               <label for="exampleFormControlInput1">Email address</label>
             </div> 
               <div className="col">
-              <input type="text"  readonly class="form-control-plaintext" id="staticEmail" value="email@example.com" style={formStyle} > </input>
+              <input type="text"  readonly class="form-control-plaintext" id="staticEmail" value="email@example.com" style={formStyle} />
               </div> 
           </div> 
           </div>
@@ -98,7 +98,7 @@ export default class Profile extends React.Component {
           </div>
            </form>
            <br></br>
-           <button className="btn btn-dark" type="submit" style={{marginLeft: '5%'}}><Link to="*" style={{ textDecoration: 'none', color: 'white'}} >Edit</Link></button>
+           <a className="btn btn-dark"role="button" style={{marginLeft: '5%'}}><Link to="*" style={{ textDecoration: 'none', color: 'white'}} >Edit</Link></a>
         <br></br>
         <br></br>
       </div>
