@@ -146,11 +146,9 @@ const formStyle = {
                 <div class="form-check form-check-inline" style={formStyle}>
                 <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option3" checked={this.state.one === 'option3'} onChange={this.oneChange}/>
                 <label class="form-check-label" for="inlineRadio1">Both</label>
-                </div>
-          
+              </div>
             </div>
       </div>
-      <br></br>
       <div className="form-group">
             <div className="row" style={textStyle}>
               <div className="col">
@@ -170,7 +168,6 @@ const formStyle = {
                 </div>
             </div>
       </div>
-      <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -186,7 +183,6 @@ const formStyle = {
                 </div>
             </div>
       </div>
-      <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -202,7 +198,6 @@ const formStyle = {
                 </div>
             </div>
       </div>
-      <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -218,7 +213,6 @@ const formStyle = {
                 </div>
             </div>
       </div>
-      <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -234,8 +228,8 @@ const formStyle = {
                 </div>
             </div>
       </div>
-      <br></br>
-    <h3 style={{marginLeft: '2%'}}>Knowledge about the school abd why are you using this website</h3>
+    <br></br>
+    <h3 style={{marginLeft: '2%'}}>Knowledge about the school and why are you using this website</h3>
     <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -285,7 +279,6 @@ const formStyle = {
                 </div>
             </div>
       </div> 
-      <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -301,7 +294,6 @@ const formStyle = {
                 </div>
             </div>
       </div> 
-      <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -312,7 +304,6 @@ const formStyle = {
               </div>
             </div>            
       </div>
-      <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -323,7 +314,6 @@ const formStyle = {
               </div>
             </div>            
       </div>
-      <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -334,6 +324,7 @@ const formStyle = {
               </div>
             </div>            
       </div>
+
       <br></br>
     <h3 style={{marginLeft: '2%'}}>What are your hobbies</h3>
       </form>
@@ -346,7 +337,7 @@ const formStyle = {
               <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
               </div> 
               <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
+              <button className="btn btn-dark" type="submit" type="submit"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
               </div>
           </div>   
           </center>

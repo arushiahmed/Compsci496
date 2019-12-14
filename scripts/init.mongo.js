@@ -1,16 +1,8 @@
 db = new Mongo().getDB('getData');
 
 db.users.remove({});
-
-db.users.insert([
-{
-
-},
-]);
-
-
-db.questionform.remove({});
 db.friends.remove({});
+db.questionform.remove({});
 
 db.friends.insert([
   {

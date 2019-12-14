@@ -608,6 +608,8 @@ var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -825,7 +827,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -873,7 +874,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -911,7 +911,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -949,7 +948,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -987,7 +985,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -1029,7 +1026,7 @@ var Form = function (_React$Component) {
           _react2.default.createElement(
             'h3',
             { style: { marginLeft: '2%' } },
-            'Knowledge about the school abd why are you using this website'
+            'Knowledge about the school and why are you using this website'
           ),
           _react2.default.createElement(
             'div',
@@ -1152,7 +1149,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -1190,7 +1186,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -1213,7 +1208,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -1236,7 +1230,6 @@ var Form = function (_React$Component) {
               )
             )
           ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -1302,8 +1295,8 @@ var Form = function (_React$Component) {
               'div',
               { className: 'col' },
               _react2.default.createElement(
-                'a',
-                { className: 'btn btn-dark', role: 'button' },
+                'button',
+                _defineProperty({ className: 'btn btn-dark', type: 'submit' }, 'type', 'submit'),
                 _react2.default.createElement(
                   _reactRouter.Link,
                   { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
@@ -1604,60 +1597,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*const FormQuestions = (props) => (
-   <div>
-      <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>What do you like to do?{props.question.one}</label>
-            <br></br>
-            <textarea class="form-control form-control-lg" id="one" rows="3" style={inputStyle}></textarea>
-          </div>
-          <br></br>
-          <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>What struggles are you facing?{props.question.two}</label>
-              <br></br>
-              <textarea class="form-control form-control-lg" id="two" rows="3" style={inputStyle}></textarea>
-            </div>
-            <br></br>
-            <div class="form-group" >
-          <label for="exampleFormControlTextarea1" style={textStyle}>What are you looking for in a person?{props.question.three}</label>
-              <br></br>
-              <textarea class="form-control form-control-lg" id="three" rows="3" style={inputStyle}></textarea>
-            </div>
-            <br></br>
-            <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>How can someone help you?{props.question.four}</label>
-              <br></br>
-              <textarea class="form-control form-control-lg" id="four" rows="3" style={inputStyle}></textarea>
-            </div>
-            <br></br>
-            <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>Why do you want to connect with someone?{props.question.five}</label>
-              <br></br>
-              <textarea class="form-control form-control-lg" id="five" rows="3" style={inputStyle}></textarea>
-            </div>
-            <br></br>
-            <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to meet in person or online?{props.question.six}</label>
-              <br></br>
-              <textarea class="form-control form-control-lg" id="six" rows="3" style={inputStyle}></textarea>
-            </div>
-            <br></br>
-            <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people from the same country?{props.question.seven}</label>
-              <br></br>
-              <textarea class="form-control form-control-lg" id="seven" rows="3" style={inputStyle}></textarea>
-            </div>
-            <br></br>
-            <div class="form-group" >
-              <label for="exampleFormControlTextarea1" style={textStyle}>Do you want to connect with people who share the same ethnicity?{props.question.eight}</label>
-              <br></br>
-              <textarea class="form-control form-control-lg" id="eight" rows="3" style={inputStyle}></textarea>
-            </div>
-          <br></br><br></br><br></br>
-    </div> 
-); 
-    */
 
 var FormQuestion = function FormQuestion(props) {
   return _react2.default.createElement(
