@@ -608,8 +608,6 @@ var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -655,7 +653,10 @@ var Form = function (_React$Component) {
       seven: '',
       eight: '',
       nine: '',
-      ten: ''
+      ten: '',
+      eleven: [],
+      tweleve: [],
+      thirteen: []
     };
 
     _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -737,7 +738,10 @@ var Form = function (_React$Component) {
         "seven": form.inlineRadioOptions7.value,
         "eight": form.inlineRadioOptions8.value,
         "nine": form.inlineRadioOptions9.value,
-        "ten": form.inlineRadioOptions10.value
+        "ten": form.inlineRadioOptions10.value,
+        "eleven": form.one1.value,
+        "tweleve": form.open2.value,
+        "thirteen": form.open3.value
       };
 
       fetch('/api/questionform', {
@@ -1039,53 +1043,6 @@ var Form = function (_React$Component) {
                 { className: 'col' },
                 _react2.default.createElement(
                   'label',
-                  { 'for': 'seven' },
-                  'Are you looking for someone to help you?'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option15', checked: this.state.seven === 'option15', onChange: this.sevenChange }),
-                _react2.default.createElement(
-                  'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio7' },
-                  'Yes '
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option16', checked: this.state.seven === 'option16', onChange: this.sevenChange }),
-                _react2.default.createElement(
-                  'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio7' },
-                  'No'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option17', checked: this.state.seven === 'option12', onChange: this.sevenChange }),
-                _react2.default.createElement(
-                  'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
-                  'Both'
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row', style: textStyle },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
                   { 'for': 'eight' },
                   'Do you have any knowledge of the school before you started?'
                 )
@@ -1197,6 +1154,53 @@ var Form = function (_React$Component) {
                 { className: 'col' },
                 _react2.default.createElement(
                   'label',
+                  { 'for': 'seven' },
+                  'Are you looking for someone to help you or are you willing to help people?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { 'class': 'form-check form-check-inline', style: formStyle },
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option15', checked: this.state.seven === 'option15', onChange: this.sevenChange }),
+                _react2.default.createElement(
+                  'label',
+                  { 'class': 'form-check-label', 'for': 'inlineRadio7' },
+                  'Yes '
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { 'class': 'form-check form-check-inline', style: formStyle },
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option16', checked: this.state.seven === 'option16', onChange: this.sevenChange }),
+                _react2.default.createElement(
+                  'label',
+                  { 'class': 'form-check-label', 'for': 'inlineRadio7' },
+                  'No'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { 'class': 'form-check form-check-inline', style: formStyle },
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option17', checked: this.state.seven === 'option17', onChange: this.sevenChange }),
+                _react2.default.createElement(
+                  'label',
+                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
+                  'Both'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
                   { 'for': 'two' },
                   'Are there any challenges you are coping with? If yes, please describe.'
                 )
@@ -1204,7 +1208,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'two', style: inputStyle })
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'open1', style: inputStyle })
               )
             )
           ),
@@ -1226,7 +1230,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'two', style: inputStyle })
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'open2', style: inputStyle })
               )
             )
           ),
@@ -1248,7 +1252,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'two', style: inputStyle })
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'open3', style: inputStyle })
               )
             )
           ),
@@ -1296,7 +1300,7 @@ var Form = function (_React$Component) {
               { className: 'col' },
               _react2.default.createElement(
                 'button',
-                _defineProperty({ className: 'btn btn-dark', type: 'submit' }, 'type', 'submit'),
+                { className: 'btn btn-dark', type: 'submit' },
                 _react2.default.createElement(
                   _reactRouter.Link,
                   { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
@@ -1603,9 +1607,14 @@ var FormQuestion = function FormQuestion(props) {
     'ul',
     { className: 'question' },
     _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'What are the people you want to connect with?'
+    ),
+    _react2.default.createElement(
       'div',
       { className: 'viewForm' },
-      'What do you like to do?',
+      'Do you want to meet in person or online?',
       _react2.default.createElement('br', null),
       props.question.one
     ),
@@ -1613,7 +1622,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm' },
-      'What struggles are you facing?',
+      'Do you want to connect with Undergraduates or Graduates Students?',
       _react2.default.createElement('br', null),
       props.question.two
     ),
@@ -1621,35 +1630,9 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm' },
-      'What are you looking for in a person?',
+      'Do you want to connect with people in the same year as you?',
       _react2.default.createElement('br', null),
       props.question.three
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm' },
-      'How can someone help you?',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.four
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm' },
-      'Why do you want to connect with someone?',
-      _react2.default.createElement('br', null),
-      props.question.five
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm' },
-      'Do you want to meet in person or online?',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.six
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
@@ -1658,7 +1641,7 @@ var FormQuestion = function FormQuestion(props) {
       'Do you want to connect with people from the same country?',
       _react2.default.createElement('br', null),
       ' ',
-      props.question.seven
+      props.question.four
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
@@ -1666,8 +1649,84 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm' },
       'Do you want to connect with people who share the same ethnicity?',
       _react2.default.createElement('br', null),
+      props.question.five
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm' },
+      'Do you want to connect with people in the same major?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.six
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'Knowledge about the school and why are you using this website'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm' },
+      'Are you looking for someone to help you?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.seven
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm' },
+      'Do you have any knowledge of the school before you started?',
+      _react2.default.createElement('br', null),
       ' ',
       props.question.eight
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm' },
+      'Do you know the aera of where your school is located?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.nine
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm' },
+      'Do you have a car on campus?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.ten
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm' },
+      'Are there any challenges you are coping with? If yes, please describe.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.eleven
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm' },
+      'How can someone help you with your challenges? Please descibe.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.tweleve
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm' },
+      'How are you able to help someone with their challenges? Please descibe how you can help a person.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.thirteen
     ),
     _react2.default.createElement('br', null)
   );

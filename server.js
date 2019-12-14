@@ -9,6 +9,21 @@ app.use(bodyParser.json());
 
 const MongoClient = require('mongodb').MongoClient;
 
+const formField = {
+  "one": true,
+  "two": true,
+  "three": true,
+  "four": true,
+  "five": true,
+  "six": true,
+  "seven": true,
+  "eight": true,
+  "nine": true,
+  "ten": true,
+  "eleven": 'required',
+  "tweleve": 'required',
+  "thirteen": 'required',
+};
 
 const friendFieldType = {
     "name" : 'required',
@@ -18,6 +33,53 @@ const friendFieldType = {
     "rate":  'required',
 };
 
+function validateForm(question){
+  for (const field in formField ) {
+    if(formField .hasOwnProperty(field)){
+         const type = formField [field];
+          if (!type) {
+            delete question[field];
+          } else if (type === 'required' && !question[field]) {
+            return `${field} is required.`;
+          }
+    }
+   }
+  return null;
+}
+
+app.get('/api/questionform', (req, res) => {
+  db.collection('questionform').find().toArray().then(questionform => {
+    const metadata = { total_count: questionform.length };
+    res.json({ success: true, _metadata: metadata, records: questionform })
+  }).catch(error => {
+    console.log(error);
+    res.status(500).json({ success:false, message: `Internal Server Error: ${error}` });
+  });
+});
+
+app.post('/api/questionform', (req, res) => {
+  console.log(req)
+  const newForm = req.body;
+  newForm.date = new Date();
+
+  const err = validateForm(newForm);
+  if (err) {
+    res.status(422).json({ message: `Invalid request: ${err}` });
+    return;
+  }
+
+  db.collection('questionform').insertOne(newForm).then(result =>
+
+    db.collection('questionform').find({ _id: result.insertedId }).limit(1).next()
+  ).then(newForm => {
+    res.json(newForm);
+  }).catch(error => {
+    console.log(error);
+    res.status(500).json({ message: `Internal Server Error: ${error}` });
+  });
+});
+
+//Form Friends List
 function validateFriend(friend) {
   for (const field in friendFieldType) {
     if(friendFieldType.hasOwnProperty(field)){

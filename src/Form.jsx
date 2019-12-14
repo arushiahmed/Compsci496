@@ -38,7 +38,10 @@ const formStyle = {
       seven: '',
       eight: '',
       nine: '',
-      ten:''
+      ten:'',
+      eleven: [],
+      tweleve: [],
+      thirteen: []
     };
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -100,7 +103,10 @@ const formStyle = {
         "eight": form.inlineRadioOptions8.value,
         "nine": form.inlineRadioOptions9.value,
         "ten": form.inlineRadioOptions10.value,
-      }
+        "eleven": form.one1.value,
+        "tweleve": form.open2.value,
+        "thirteen": form.open3.value
+    }
 
       fetch('/api/questionform', {
           method: 'post',
@@ -122,7 +128,6 @@ const formStyle = {
     return (
       <div>
         <SearchBar> 
-
         </SearchBar>
         <center>
         <h1>Survery Questions</h1>
@@ -230,25 +235,6 @@ const formStyle = {
       </div>
     <br></br>
     <h3 style={{marginLeft: '2%'}}>Knowledge about the school and why are you using this website</h3>
-    <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="seven">Are you looking for someone to help you?</label>
-              </div>
-                <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option15" checked={this.state.seven=== 'option15'} onChange={this.sevenChange}/>
-                  <label class="form-check-label" for="inlineRadio7">Yes </label>
-                </div>
-                <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option16" checked={this.state.seven === 'option16'} onChange={this.sevenChange}/>
-                <label class="form-check-label" for="inlineRadio7">No</label>
-                </div>
-                <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option17" checked={this.state.seven === 'option12'} onChange={this.sevenChange}/>
-                <label class="form-check-label" for="inlineRadio2">Both</label>
-                </div>
-            </div>
-      </div> 
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
@@ -297,10 +283,29 @@ const formStyle = {
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
+              <label for="seven">Are you looking for someone to help you or are you willing to help people?</label>
+              </div>
+                <div class="form-check form-check-inline" style={formStyle}>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option15" checked={this.state.seven=== 'option15'} onChange={this.sevenChange}/>
+                  <label class="form-check-label" for="inlineRadio7">Yes </label>
+                </div>
+                <div class="form-check form-check-inline" style={formStyle}>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option16" checked={this.state.seven === 'option16'} onChange={this.sevenChange}/>
+                <label class="form-check-label" for="inlineRadio7">No</label>
+                </div>
+                <div class="form-check form-check-inline" style={formStyle}>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option17" checked={this.state.seven === 'option17'} onChange={this.sevenChange}/>
+                <label class="form-check-label" for="inlineRadio2">Both</label>
+                </div>
+            </div>
+      </div> 
+      <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
               <label for="two">Are there any challenges you are coping with? If yes, please describe.</label>
               </div>
               <div className="col">
-                <textarea type="text" className="form-control" id="two" style={inputStyle}/>
+                <textarea type="text" className="form-control" id="open1" style={inputStyle}/>
               </div>
             </div>            
       </div>
@@ -310,7 +315,7 @@ const formStyle = {
               <label for="two">How can someone help you with your challenges? Please descibe.</label>
               </div>
               <div className="col">
-                <textarea type="text" className="form-control" id="two" style={inputStyle}/>
+                <textarea type="text" className="form-control" id="open2" style={inputStyle}/>
               </div>
             </div>            
       </div>
@@ -320,24 +325,23 @@ const formStyle = {
               <label for="two">How are you able to help someone with their challenges? Please descibe how you can help a person.</label>
               </div>
               <div className="col">
-                <textarea type="text" className="form-control" id="two" style={inputStyle}/>
+                <textarea type="text" className="form-control" id="open3" style={inputStyle}/>
               </div>
             </div>            
       </div>
-
       <br></br>
-    <h3 style={{marginLeft: '2%'}}>What are your hobbies</h3>
-      </form>
+      <h3 style={{marginLeft: '2%'}}>What are your hobbies</h3>
+    </form>
       <center> 
         <div className = "row">
               <div className="col">
               <button className="btn btn-dark" type="submit"><Link to="/save" style={{ textDecoration: 'none', color: 'white' }}>Save</Link></button>
             </div> 
               <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
+              <a className="btn btn-dark" role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
               </div> 
               <div className="col">
-              <button className="btn btn-dark" type="submit" type="submit"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
+              <button className="btn btn-dark" type="submit"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
               </div>
           </div>   
           </center>
