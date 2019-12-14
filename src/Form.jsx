@@ -79,6 +79,8 @@ export default class Form extends React.createClass ({
   constructor() {
     super();
     this.handleForm = this.handleForm.bind(this);
+  //  this.handleChange = this.handleChange.bind(this);
+  //  this.handleSubmit = this.handleSubmit.bind(this)
     
   }
 
@@ -123,110 +125,32 @@ export default class Form extends React.createClass ({
         <h1>Survery Questions</h1>
         </center>
         <br></br><br></br>
-        <div>
-          <form className="form-group" name="question" onSubmit={this.handleForm}>
-          <div className="form-group" >
+      <form className="form-group" name="question" onSubmit={this.handleForm}>
+      <h3 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h3>
+      <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label for="one" >What do you like to do?</label>
+              <label for="one" >Do you want to meet in person or online?</label>
               </div>
               <div className="col">
-                <textarea type="textarea" className="form-control" id="one" style={inputStyle}/>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="meet" id="meet1" value="option1" checked />
+                  <label class="form-check-label" for="meet1">In person </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="meet" id="meet2" value="option2" />
+                <label class="form-check-label" for="meet2">Online</label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="meet" id="meet3" value="option2" />
+                <label class="form-check-label" for="meet3">Both</label>
+                </div>
               </div>
-            </div>            
-          </div>
-          <br></br>
-          <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="two">What challenges are you currently</label>
-              </div>
-              <div className="col">
-                <textarea type="text" className="form-control" id="two" style={inputStyle}/>
-              </div>
-            </div>            
-          </div>
-          <br></br>
-          <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="two">What challenges are you currently</label>
-              </div>
-              <div className="col">
-                <textarea type="text" className="form-control" id="three" style={inputStyle}/>
-              </div>
-            </div>            
-          </div>
-          <br></br>
-          <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="two">What are you looking for in a person?</label>
-              </div>
-              <div className="col">
-                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
-              </div>
-            </div>            
-          </div>
-          <br></br>
-          <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="two">How can someone help you?</label>
-              </div>
-              <div className="col">
-                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
-              </div>
-            </div>            
-          </div>
-          <br></br>
-          <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="two">Why do you want to connect with someone?</label>
-              </div>
-              <div className="col">
-                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
-              </div>
-            </div>            
-          </div>
-          <br></br>
-          <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="two">Do you want to meet in person or online?</label>
-              </div>
-              <div className="col">
-                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
-              </div>
-            </div>            
-          </div>
-          <br></br>
-          <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="two">Do you want to connect with people from the same country?</label>
-              </div>
-              <div className="col">
-                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
-              </div>
-            </div>            
-          </div>
-          <br></br>
-          <div className="form-group" >
-            <div className="row" style={textStyle}>
-              <div className="col">
-              <label for="two">Do you want to connect with people who share the same ethnicity?</label>
-              </div>
-              <div className="col">
-                <textarea type="text" className="form-control" id="four" style={inputStyle}/>
-              </div>
-            </div>            
-          </div>
-          <br></br><br></br><br></br>
-      </form>
+            </div>
       </div>
-      <center>
+
+      </form>
+      <center> 
         <div className = "row">
               <div className="col">
               <button className="btn btn-dark" type="submit"><Link to="/save" style={{ textDecoration: 'none', color: 'white' }}>Save</Link></button>

@@ -693,6 +693,8 @@ var Form = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this));
 
     _this.handleForm = _this.handleForm.bind(_this);
+    //  this.handleChange = this.handleChange.bind(this);
+    //  this.handleSubmit = this.handleSubmit.bind(this)
 
     return _this;
   }
@@ -746,220 +748,63 @@ var Form = function (_React$Component) {
         _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'div',
-          null,
+          'form',
+          { className: 'form-group', name: 'question', onSubmit: this.handleForm },
           _react2.default.createElement(
-            'form',
-            { className: 'form-group', name: 'question', onSubmit: this.handleForm },
+            'h3',
+            { style: { marginLeft: '2%' } },
+            'What are the people you want to connect with?'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
             _react2.default.createElement(
               'div',
-              { className: 'form-group' },
+              { className: 'row', style: textStyle },
               _react2.default.createElement(
                 'div',
-                { className: 'row', style: textStyle },
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'one' },
+                  'Do you want to meet in person or online?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
                 _react2.default.createElement(
                   'div',
-                  { className: 'col' },
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet1', value: 'option1', checked: true }),
                   _react2.default.createElement(
                     'label',
-                    { 'for': 'one' },
-                    'What do you like to do?'
+                    { 'class': 'form-check-label', 'for': 'meet1' },
+                    'In person '
                   )
                 ),
                 _react2.default.createElement(
                   'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'textarea', className: 'form-control', id: 'one', style: inputStyle })
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row', style: textStyle },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet2', value: 'option2' }),
                   _react2.default.createElement(
                     'label',
-                    { 'for': 'two' },
-                    'What challenges are you currently'
+                    { 'class': 'form-check-label', 'for': 'meet2' },
+                    'Online'
                   )
                 ),
                 _react2.default.createElement(
                   'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'two', style: inputStyle })
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row', style: textStyle },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet3', value: 'option2' }),
                   _react2.default.createElement(
                     'label',
-                    { 'for': 'two' },
-                    'What challenges are you currently'
+                    { 'class': 'form-check-label', 'for': 'meet3' },
+                    'Both'
                   )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'three', style: inputStyle })
                 )
               )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row', style: textStyle },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement(
-                    'label',
-                    { 'for': 'two' },
-                    'What are you looking for in a person?'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row', style: textStyle },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement(
-                    'label',
-                    { 'for': 'two' },
-                    'How can someone help you?'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row', style: textStyle },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement(
-                    'label',
-                    { 'for': 'two' },
-                    'Why do you want to connect with someone?'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row', style: textStyle },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement(
-                    'label',
-                    { 'for': 'two' },
-                    'Do you want to meet in person or online?'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row', style: textStyle },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement(
-                    'label',
-                    { 'for': 'two' },
-                    'Do you want to connect with people from the same country?'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'div',
-                { className: 'row', style: textStyle },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement(
-                    'label',
-                    { 'for': 'two' },
-                    'Do you want to connect with people who share the same ethnicity?'
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'col' },
-                  _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'four', style: inputStyle })
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement('br', null)
+            )
           )
         ),
         _react2.default.createElement(
