@@ -127,14 +127,14 @@ export default class Form extends React.createClass ({
         <br></br><br></br>
       <form className="form-group" name="question" onSubmit={this.handleForm}>
       <h3 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h3>
-      <div className="form-group" >
+      <div className="form-group">
             <div className="row" style={textStyle}>
               <div className="col">
-              <label for="one" >Do you want to meet in person or online?</label>
+              <label for="one">Do you want to meet in person or online?</label>
               </div>
               <div className="col">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="meet" id="meet1" value="option1" checked />
+                  <input class="form-check-input" type="radio" name="meet" id="meet1" value="option1" />
                   <label class="form-check-label" for="meet1">In person </label>
                 </div>
                 <div class="form-check">
@@ -148,7 +148,102 @@ export default class Form extends React.createClass ({
               </div>
             </div>
       </div>
-
+      <br></br>
+      <div className="form-group">
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="two">Do you want to connect with Undergraduates Students or Graduates Students?</label>
+              </div>
+              <div className="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="meet" id="meet1" value="option1" />
+                  <label class="form-check-label" for="meet1">Undergraduates Students</label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="meet" id="meet2" value="option2" />
+                <label class="form-check-label" for="meet2">Graduates Students</label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="meet" id="meet3" value="option2" />
+                <label class="form-check-label" for="meet3">Both Undergraduates and Graduates Students</label>
+                </div>
+              </div>
+            </div>
+      </div>
+      <br></br>
+      <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="three">Do you want to connect with people in the same year as you?</label>
+              </div>
+              <div className="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="meet" id="meet1" value="option1"/>
+                  <label class="form-check-label" for="meet1">Yes </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="meet" id="meet2" value="option2" />
+                <label class="form-check-label" for="meet2">No</label>
+                </div>
+              </div>
+            </div>
+      </div>
+      <br></br>
+      <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="four">Do you want to connect with people from the same country?</label>
+              </div>
+              <div className="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="meet" id="meet1" value="option1" />
+                  <label class="form-check-label" for="meet1">Yes </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="meet" id="meet2" value="option2" />
+                <label class="form-check-label" for="meet2">No</label>
+                </div>
+              </div>
+            </div>
+      </div>
+      <br></br>
+      <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="five">Do you want to connect with people who share the same ethnicity?</label>
+              </div>
+              <div className="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="meet" id="meet1" value="option1" />
+                  <label class="form-check-label" for="meet1">Yes </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="meet" id="meet2" value="option2" />
+                <label class="form-check-label" for="meet2">No</label>
+                </div>
+              </div>
+            </div>
+      </div>
+      <br></br>
+      <div className="form-group" >
+            <div className="row" style={textStyle}>
+              <div className="col">
+              <label for="six">Do you want to connect with people in the same major?</label>
+              </div>
+              <div className="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="meet" id="meet1" value="option1"/>
+                  <label class="form-check-label" for="meet1">Yes </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="meet" id="meet2" value="option2" />
+                <label class="form-check-label" for="meet2">No</label>
+                </div>
+              </div>
+            </div>
+      </div>
+      <br></br>
+    <h3 style={{marginLeft: '2%'}}>Information about you</h3>
       </form>
       <center> 
         <div className = "row">

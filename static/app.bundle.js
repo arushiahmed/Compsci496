@@ -776,7 +776,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'div',
                   { 'class': 'form-check' },
-                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet1', value: 'option1', checked: true }),
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet1', value: 'option1' }),
                   _react2.default.createElement(
                     'label',
                     { 'class': 'form-check-label', 'for': 'meet1' },
@@ -805,6 +805,232 @@ var Form = function (_React$Component) {
                 )
               )
             )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'two' },
+                  'Do you want to connect with Undergraduates Students or Graduates Students?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet1', value: 'option1' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet1' },
+                    'Undergraduates Students'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet2', value: 'option2' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet2' },
+                    'Graduates Students'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet3', value: 'option2' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet3' },
+                    'Both Undergraduates and Graduates Students'
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'three' },
+                  'Do you want to connect with people in the same year as you?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet1', value: 'option1' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet1' },
+                    'Yes '
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet2', value: 'option2' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet2' },
+                    'No'
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'four' },
+                  'Do you want to connect with people from the same country?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet1', value: 'option1' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet1' },
+                    'Yes '
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet2', value: 'option2' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet2' },
+                    'No'
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'five' },
+                  'Do you want to connect with people who share the same ethnicity?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet1', value: 'option1' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet1' },
+                    'Yes '
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet2', value: 'option2' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet2' },
+                    'No'
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  { 'for': 'six' },
+                  'Do you want to connect with people in the same major?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet1', value: 'option1' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet1' },
+                    'Yes '
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'meet', id: 'meet2', value: 'option2' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'meet2' },
+                    'No'
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'h3',
+            { style: { marginLeft: '2%' } },
+            'Information about you'
           )
         ),
         _react2.default.createElement(
