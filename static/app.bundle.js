@@ -615,7 +615,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var inputStyle = {
-  marginRight: '50%'
+  marginRight: '5%'
 
 };
 
@@ -781,7 +781,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions1', id: 'inlineRadio1', value: 'option1' }),
                 _react2.default.createElement(
                   'label',
                   { 'class': 'form-check-label', 'for': 'inlineRadio1' },
@@ -791,7 +791,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions1', id: 'inlineRadio1', value: 'option1' }),
                 _react2.default.createElement(
                   'label',
                   { 'class': 'form-check-label', 'for': 'inlineRadio2' },
@@ -801,7 +801,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'option3' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions1', id: 'inlineRadio1', value: 'option1' }),
                 _react2.default.createElement(
                   'label',
                   { 'class': 'form-check-label', 'for': 'inlineRadio3' },
@@ -829,7 +829,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
                 _react2.default.createElement(
                   'label',
                   { 'class': 'form-check-label', 'for': 'inlineRadio1' },
@@ -849,10 +849,10 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio3' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
                   'Both'
                 )
               )
@@ -877,20 +877,20 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'option3' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio1' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio3' },
                   'Yes '
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'option3' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio3' },
                   'No'
                 )
               )
@@ -915,7 +915,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions1', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions4', id: 'inlineRadio4', value: 'option4' }),
                 _react2.default.createElement(
                   'label',
                   { 'class': 'form-check-label', 'for': 'inlineRadio1' },
@@ -925,10 +925,10 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions4', id: 'inlineRadio4', value: 'option4' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio4' },
                   'No'
                 )
               )
@@ -953,20 +953,20 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions1', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions5', id: 'inlineRadio5', value: 'option5' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio1' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio5' },
                   'Yes '
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions5', id: 'inlineRadio5', value: 'option5' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio5' },
                   'No'
                 )
               )
@@ -991,20 +991,20 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions1', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions6', id: 'inlineRadio6', value: 'option6' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio1' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio6' },
                   'Yes '
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions6', id: 'inlineRadio6', value: 'option6' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio6' },
                   'No'
                 )
               )
@@ -1034,27 +1034,27 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option7' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'meet1' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio7' },
                   'Yes '
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option7' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio7' },
                   'No'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'option7' }),
                 _react2.default.createElement(
                   'label',
                   { 'class': 'form-check-label', 'for': 'inlineRadio2' },
@@ -1081,20 +1081,20 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'option8' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio1' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio8' },
                   'Yes '
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'option8' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio8' },
                   'No'
                 )
               )
@@ -1118,20 +1118,20 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'option9' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio1' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio9' },
                   'Yes '
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'option9' }),
                 _react2.default.createElement(
                   'label',
-                  { 'class': 'form-check-label', 'for': 'inlineRadio2' },
+                  { 'class': 'form-check-label', 'for': 'inlineRadio9' },
                   'No'
                 )
               )
@@ -1156,7 +1156,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions', id: 'inlineRadio1', value: 'option1' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions10', id: 'inlineRadio10', value: 'option10' }),
                 _react2.default.createElement(
                   'label',
                   { 'class': 'form-check-label', 'for': 'inlineRadio1' },
@@ -1166,7 +1166,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { 'class': 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions2', id: 'inlineRadio2', value: 'option2' }),
+                _react2.default.createElement('input', { 'class': 'form-check-input', type: 'radio', name: 'inlineRadioOptions10', id: 'inlineRadio2', value: 'option10' }),
                 _react2.default.createElement(
                   'label',
                   { 'class': 'form-check-label', 'for': 'inlineRadio2' },
@@ -1188,7 +1188,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   { 'for': 'two' },
-                  'Are there any challenges you are coping with? If yes, give details'
+                  'Are there any challenges you are coping with? If yes, please describe'
                 )
               ),
               _react2.default.createElement(
@@ -1211,7 +1211,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   { 'for': 'two' },
-                  'How are you able to help someone?'
+                  'How are you able to help someone? Please descibe'
                 )
               ),
               _react2.default.createElement(

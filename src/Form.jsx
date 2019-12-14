@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import SearchBar from './SearchBar.jsx';
 
 const inputStyle = {
-  marginRight: '50%',
+  marginRight: '5%',
   
 }
 
@@ -140,15 +140,15 @@ export default class Form extends React.createClass ({
               <label for="one">Do you want to meet in person or online?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" />
                   <label class="form-check-label" for="inlineRadio1">In person </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" />
                 <label class="form-check-label" for="inlineRadio2">Online</label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option3" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" />
                 <label class="form-check-label" for="inlineRadio3">Both</label>
                 </div>
           
@@ -161,7 +161,7 @@ export default class Form extends React.createClass ({
               <label for="two">Do you want to connect with Undergraduates or Graduates Students?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
                   <label class="form-check-label" for="inlineRadio1">Undergraduates</label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
@@ -169,8 +169,8 @@ export default class Form extends React.createClass ({
                 <label class="form-check-label" for="inlineRadio2">Graduates</label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option2" />
-                <label class="form-check-label" for="inlineRadio3">Both</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
+                <label class="form-check-label" for="inlineRadio2">Both</label>
                 </div>
             </div>
       </div>
@@ -181,12 +181,12 @@ export default class Form extends React.createClass ({
               <label for="three">Do you want to connect with people in the same year as you?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
-                  <label class="form-check-label" for="inlineRadio1">Yes </label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option3"/>
+                  <label class="form-check-label" for="inlineRadio3">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option3" />
+                <label class="form-check-label" for="inlineRadio3">No</label>
                 </div>
             </div>
       </div>
@@ -197,12 +197,12 @@ export default class Form extends React.createClass ({
               <label for="four">Do you want to connect with people from the same country?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" />
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="option4" />
                   <label class="form-check-label" for="inlineRadio1">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="option4" />
+                <label class="form-check-label" for="inlineRadio4">No</label>
                 </div>
             </div>
       </div>
@@ -213,12 +213,12 @@ export default class Form extends React.createClass ({
               <label for="five">Do you want to connect with people who share the same ethnicity?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" />
-                  <label class="form-check-label" for="inlineRadio1">Yes </label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="option5" />
+                  <label class="form-check-label" for="inlineRadio5">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="option5" />
+                <label class="form-check-label" for="inlineRadio5">No</label>
                 </div>
             </div>
       </div>
@@ -229,12 +229,12 @@ export default class Form extends React.createClass ({
               <label for="six">Do you want to connect with people in the same major?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"/>
-                  <label class="form-check-label" for="inlineRadio1">Yes </label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="option6"/>
+                  <label class="form-check-label" for="inlineRadio6">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="option6" />
+                <label class="form-check-label" for="inlineRadio6">No</label>
                 </div>
             </div>
       </div>
@@ -246,15 +246,15 @@ export default class Form extends React.createClass ({
               <label for="seven">Are you looking for someone to help you?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
-                  <label class="form-check-label" for="meet1">Yes </label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option7"/>
+                  <label class="form-check-label" for="inlineRadio7">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option7" />
+                <label class="form-check-label" for="inlineRadio7">No</label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option7" />
                 <label class="form-check-label" for="inlineRadio2">Both</label>
                 </div>
             </div>
@@ -265,12 +265,12 @@ export default class Form extends React.createClass ({
               <label for="eight">Do you have any knowledge of the school before you started?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
-                  <label class="form-check-label" for="inlineRadio1">Yes </label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="option8"/>
+                  <label class="form-check-label" for="inlineRadio8">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="option8" />
+                <label class="form-check-label" for="inlineRadio8">No</label>
                 </div>
             </div>
       </div> 
@@ -280,12 +280,12 @@ export default class Form extends React.createClass ({
               <label for="nine">Do you know the aera?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
-                  <label class="form-check-label" for="inlineRadio1">Yes </label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="option9"/>
+                  <label class="form-check-label" for="inlineRadio9">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="option9" />
+                <label class="form-check-label" for="inlineRadio9">No</label>
                 </div>
             </div>
       </div> 
@@ -296,11 +296,11 @@ export default class Form extends React.createClass ({
               <label for="ten">Do you have a car?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio10" value="option10"/>
                   <label class="form-check-label" for="inlineRadio1">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio2" value="option10" />
                 <label class="form-check-label" for="inlineRadio2">No</label>
                 </div>
             </div>
@@ -309,7 +309,7 @@ export default class Form extends React.createClass ({
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label for="two">Are there any challenges you are coping with? If yes, give details</label>
+              <label for="two">Are there any challenges you are coping with? If yes, please describe</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="two" style={inputStyle}/>
@@ -320,7 +320,7 @@ export default class Form extends React.createClass ({
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label for="two">How are you able to help someone?</label>
+              <label for="two">How are you able to help someone? Please descibe</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="two" style={inputStyle}/>
