@@ -25,27 +25,81 @@ const formStyle = {
 //Form Helpers
 
  export default class Form extends React.Component {
-  constructor() {
-    super();
-    this.handleForm = this.handleForm.bind(this);
-  //  this.handleChange = this.handleChange.bind(this);
-  //  this.handleSubmit = this.handleSubmit.bind(this)
-    
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      one: '',
+      two: '',
+      three: '',
+      four: '',
+      five: '',
+      six: '',
+      seven: '',
+      eight: '',
+      nine: '',
+      ten:''
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.oneChange = this.oneChange.bind(this);
+    this.twoChange = this.twoChange.bind(this);
+    this.threeChange = this.threeChange.bind(this);
+    this.fourChange = this.fourChange.bind(this);
+    this.fiveChange = this.fiveChange.bind(this);
+    this.sixChange = this.sixChange.bind(this);
+    this.sevenChange = this.sevenChange.bind(this);
+    this.eightChange = this.eightChange.bind(this);
+    this.nineChange = this.nineChange.bind(this);
+    this.tenChange = this.tenChange.bind(this);      
   }
 
-    handleForm(e)
+  oneChange(e){
+    this.setState({one: e.target.value });
+  }
+  twoChange(e){
+    this.setState({two: e.target.value });
+  }
+  threeChange(e){
+    this.setState({three: e.target.value });
+  }
+  fourChange(e){
+    this.setState({four: e.target.value });
+  }
+  fiveChange(e){
+    this.setState({five: e.target.value });
+  }
+  sixChange(e){
+    this.setState({six: e.target.value });
+  }
+  sevenChange(e){
+    this.setState({seven: e.target.value });
+  }
+  eightChange(e){
+    this.setState({eight: e.target.value });
+  }
+  nineChange(e){
+    this.setState({nine: e.target.value });
+  }
+  tenChange(e){
+    this.setState({ten: e.target.value });
+  }
+
+    handleSubmit(e)
     {
       e.preventDefault();
       let form = document.forms.question
       const submitReq = {
-        "one": form.one.value,
-        "two": form.two.value,
-        "three": form.three.value,
-        "four": form.four.value,
-        "five": form.five.value,
-        "six": form.six.value,
-        "seven": form.seven.value,
-        "eight": form.eight.value,
+        "one": form.inlineRadioOptions1.value,
+        "two": form.inlineRadioOptions2.value,
+        "three": form.inlineRadioOptions3.value,
+        "four": form.inlineRadioOptions4.value,
+        "five": form.inlineRadioOptions5.value,
+        "six": form.inlineRadioOptions6.value,
+        "seven": form.inlineRadioOptions7.value,
+        "eight": form.inlineRadioOptions8.value,
+        "nine": form.inlineRadioOptions9.value,
+        "ten": form.inlineRadioOptions10.value,
       }
 
       fetch('/api/questionform', {
@@ -74,7 +128,7 @@ const formStyle = {
         <h1>Survery Questions</h1>
         </center>
         <br></br><br></br>
-      <form className="form-group" name="question" onSubmit={this.handleForm}>
+      <form className="form-group" name="question" onSubmit={this.handleSubmit}>
       <h3 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h3>
       <div className="form-group">
             <div className="row" style={textStyle}>
@@ -82,16 +136,16 @@ const formStyle = {
               <label for="one">Do you want to meet in person or online?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" />
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" checked={this.state.one === 'option1'} onChange={this.oneChange}/>
                   <label class="form-check-label" for="inlineRadio1">In person </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option2" />
-                <label class="form-check-label" for="inlineRadio2">Online</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option2" checked={this.state.one === 'option2'} onChange={this.oneChange}/>
+                <label class="form-check-label" for="inlineRadio1">Online</label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option3" />
-                <label class="form-check-label" for="inlineRadio3">Both</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option3" checked={this.state.one === 'option3'} onChange={this.oneChange}/>
+                <label class="form-check-label" for="inlineRadio1">Both</label>
                 </div>
           
             </div>
@@ -103,15 +157,15 @@ const formStyle = {
               <label for="two">Do you want to connect with Undergraduates or Graduates Students?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option4" />
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option4" checked={this.state.two === 'option4'} onChange={this.twoChange}/>
                   <label class="form-check-label" for="inlineRadio1">Undergraduates</label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option5" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option5" checked={this.state.two === 'option5'} onChange={this.twoChange}/>
                 <label class="form-check-label" for="inlineRadio2">Graduates</label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option6" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option6" checked={this.state.two === 'option6'} onChange={this.twoChange}/>
                 <label class="form-check-label" for="inlineRadio2">Both</label>
                 </div>
             </div>
@@ -123,11 +177,11 @@ const formStyle = {
               <label for="three">Do you want to connect with people in the same year as you?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option7"/>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option7" checked={this.state.three === 'option7'} onChange={this.threeChange}/>
                   <label class="form-check-label" for="inlineRadio3">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option8" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option8" checked={this.state.three === 'option8'} onChange={this.threeChange}/>
                 <label class="form-check-label" for="inlineRadio3">No</label>
                 </div>
             </div>
@@ -139,11 +193,11 @@ const formStyle = {
               <label for="four">Do you want to connect with people from the same country?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="option9" />
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="option9" checked={this.state.four === 'option9'} onChange={this.fourChange}/>
                   <label class="form-check-label" for="inlineRadio1">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="option10" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="option10" checked={this.state.four === 'option10'} onChange={this.fourChange}/>
                 <label class="form-check-label" for="inlineRadio4">No</label>
                 </div>
             </div>
@@ -155,11 +209,11 @@ const formStyle = {
               <label for="five">Do you want to connect with people who share the same ethnicity?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="option11" />
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="option11" checked={this.state.five === 'option11'} onChange={this.fiveChange}/>
                   <label class="form-check-label" for="inlineRadio5">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="option12" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="option12" checked={this.state.five === 'option12'} onChange={this.fiveChange}/>
                 <label class="form-check-label" for="inlineRadio5">No</label>
                 </div>
             </div>
@@ -171,32 +225,32 @@ const formStyle = {
               <label for="six">Do you want to connect with people in the same major?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="option13"/>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="option13" checked={this.state.six === 'option13'} onChange={this.sixChange}/>
                   <label class="form-check-label" for="inlineRadio6">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="option14" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="option14" checked={this.state.six === 'option14'} onChange={this.sixChange}/>
                 <label class="form-check-label" for="inlineRadio6">No</label>
                 </div>
             </div>
       </div>
       <br></br>
-    <h3 style={{marginLeft: '2%'}}>Why are you using this website?</h3>
+    <h3 style={{marginLeft: '2%'}}>Knowledge about the school abd why are you using this website</h3>
     <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
               <label for="seven">Are you looking for someone to help you?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option15"/>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option15" checked={this.state.seven=== 'option15'} onChange={this.sevenChange}/>
                   <label class="form-check-label" for="inlineRadio7">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option16" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option16" checked={this.state.seven === 'option16'} onChange={this.sevenChange}/>
                 <label class="form-check-label" for="inlineRadio7">No</label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option17" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="option17" checked={this.state.seven === 'option12'} onChange={this.sevenChange}/>
                 <label class="form-check-label" for="inlineRadio2">Both</label>
                 </div>
             </div>
@@ -207,11 +261,11 @@ const formStyle = {
               <label for="eight">Do you have any knowledge of the school before you started?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="option18"/>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="option18" checked={this.state.eight === 'option18'} onChange={this.eightChange}/>
                   <label class="form-check-label" for="inlineRadio8">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="option19" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="option19" checked={this.state.eight === 'option19'} onChange={this.eightChange}/>
                 <label class="form-check-label" for="inlineRadio8">No</label>
                 </div>
             </div>
@@ -222,11 +276,11 @@ const formStyle = {
               <label for="nine">Do you know the aera of where your school is located?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="option20"/>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="option20" checked={this.state.nine === 'option20'} onChange={this.nineChange}/>
                   <label class="form-check-label" for="inlineRadio9">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="option21" />
+                <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="option21" checked={this.state.nine === 'option21'} onChange={this.nineChange}/>
                 <label class="form-check-label" for="inlineRadio9">No</label>
                 </div>
             </div>
@@ -238,12 +292,12 @@ const formStyle = {
               <label for="ten">Do you have a car on campus?</label>
               </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio10" value="option22"/>
-                  <label class="form-check-label" for="inlineRadio1">Yes </label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio10" value="option22" checked={this.state.ten === 'option22'} onChange={this.tenChange}/>
+                  <label class="form-check-label" for="inlineRadio10">Yes </label>
                 </div>
                 <div class="form-check form-check-inline" style={formStyle}>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio2" value="option23" />
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio10" value="option23" checked={this.state.ten === 'option23'} onChange={this.tenChange}/>
+                <label class="form-check-label" for="inlineRadio10">No</label>
                 </div>
             </div>
       </div> 
