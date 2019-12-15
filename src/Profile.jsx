@@ -47,7 +47,7 @@ export default class Profile extends React.Component {
               <label>Email address</label>
             </div> 
               <div className="col">
-              <input type="text" className="form-control-plaintext" id="staticEmail" style={formStyle} />
+              <input type="text" className="form-control-plaintext" id="staticEmail" value="emailexamplel@umass.edu" style={formStyle} />
               </div> 
           </div> 
           </div>

@@ -5,15 +5,20 @@ import { Link } from 'react-router';
 import SearchBar from './SearchBar.jsx';
 
 
+
 const FriendList = (props) => (
- <tr>
-      <td><Link to="/profile">{props.friend.name}</Link></td>
-      <td>{props.friend.school}</td>
-      <td>{props.friend.year}</td>
-      <td >{props.friend.rate}</td>
-      <td>{props.friend.bio}</td>
-  </tr>
-    
+<div className="col mb-4">
+  <div className="card h-100">
+    <div className="card-body">
+      <h5 className="card-title"><Link to="/profile">Profile: {props.friend.name}</Link></h5>
+      <h6 className="card-subtitle mb-2">School: {props.friend.school}</h6>
+      <h6 className="card-subtitle mb-2">Year: {props.friend.year}</h6>
+      <h6 className="card-subtitle mb-2">Rate: {props.friend.rate}</h6>
+      <p className="card-text">{props.friend.bio}</p>
+      <br></br>
+    </div>
+  </div>
+</div>
 
 );
 
@@ -23,18 +28,9 @@ function FriendTable(props) {
   ));
 
   return (
-    <table id="bordered-table" >
-      <thead>
-        <tr>
-          <th>Name:</th>
-          <th>School:</th>
-          <th>Year:</th>
-          <th>Rate:</th>
-          <th>Bio:</th>
-        </tr>
-      </thead>
-  <tbody>{issueRows}</tbody>
-    </table>
+    <div className="row row-cols-1 row-cols-md-3">
+        {issueRows}
+    </div>
   );
 }
 
@@ -79,9 +75,9 @@ export default class Connect extends React.Component {
         <SearchBar></SearchBar>
         <center>
         <h1>Connect with Students</h1>
+        </center>
         <br></br>
         <FriendTable friends={this.state.friends} />
-        </center>
       </div>
     );
   }

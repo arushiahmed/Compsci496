@@ -18,7 +18,7 @@ db.friends.insert([
     "school": "University of Massachusetts Amherst",
     "year" : "2022",
     "rate": "4",
-    "bio": "I am computer enginnering major from Japan, I like shopping, watching movies, and eating. I am looking for someone who could help me with my english and show me around campus", 
+    "bio": "I am computer enginnering major from Japan, I like shopping, watching movies, and eating.", 
   },
 
   {
