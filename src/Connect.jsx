@@ -7,10 +7,11 @@ import SearchBar from './SearchBar.jsx';
 
 
 const FriendList = (props) => (
-<div className="col mb-4">
+<div className="col" style={{marginBottom: '15px'}}>
   <div className="card h-100">
     <div className="card-body">
       <h5 className="card-title"><Link to="/profile">Profile: {props.friend.name}</Link></h5>
+      <h6 className="card-subtitle mb-2">Degree: {props.friend.degree}</h6>
       <h6 className="card-subtitle mb-2">School: {props.friend.school}</h6>
       <h6 className="card-subtitle mb-2">Year: {props.friend.year}</h6>
       <h6 className="card-subtitle mb-2">Rate: {props.friend.rate}</h6>
@@ -28,7 +29,7 @@ function FriendTable(props) {
   ));
 
   return (
-    <div className="row row-cols-1 row-cols-md-3">
+    <div className="row-cols-2 row-cols-md-3">
         {issueRows}
     </div>
   );

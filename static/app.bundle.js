@@ -35,7 +35,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FriendList = function FriendList(props) {
   return _react2.default.createElement(
     'div',
-    { className: 'col mb-4' },
+    { className: 'col', style: { marginBottom: '15px' } },
     _react2.default.createElement(
       'div',
       { className: 'card h-100' },
@@ -51,6 +51,12 @@ var FriendList = function FriendList(props) {
             'Profile: ',
             props.friend.name
           )
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2' },
+          'Degree: ',
+          props.friend.degree
         ),
         _react2.default.createElement(
           'h6',
@@ -88,7 +94,7 @@ function FriendTable(props) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'row row-cols-1 row-cols-md-3' },
+    { className: 'row-cols-2 row-cols-md-3' },
     issueRows
   );
 }
@@ -338,7 +344,7 @@ var Signup = function (_React$Component) {
             null,
             'Undergraduate or Graduate Student'
           ),
-          _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputDegree', placeholder: 'School' })
+          _react2.default.createElement('input', { type: 'degree', className: 'form-control', id: 'inputDegree', placeholder: 'Degree' })
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
@@ -1646,9 +1652,13 @@ var Survey = function (_React$Component) {
         null,
         _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'h1',
+          'center',
           null,
-          'Save'
+          _react2.default.createElement(
+            'h1',
+            null,
+            'My Survey'
+          )
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
@@ -1993,13 +2003,13 @@ var Profile = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'School'
+                  'Degree'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'school', style: formStyle })
+                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'ethencity', style: formStyle })
               )
             )
           ),
@@ -2016,13 +2026,13 @@ var Profile = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Ethencity'
+                  'School'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'ethencity', style: formStyle })
+                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'school', style: formStyle })
               )
             )
           ),

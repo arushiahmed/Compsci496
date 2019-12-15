@@ -92,7 +92,7 @@ class Signup extends React.Component {
         <br></br>
             <div className="form-group">  
           <label>Undergraduate or Graduate Student</label>
-          <input type="school" className="form-control" id="inputDegree" placeholder="School"/>
+          <input type="degree" className="form-control" id="inputDegree" placeholder="Degree"/>
         </div>
           <br></br>  
         <div className="form-group">  

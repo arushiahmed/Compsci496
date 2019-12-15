@@ -55,10 +55,10 @@ export default class Profile extends React.Component {
           <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label>School</label>
+              <label>Degree</label>
             </div> 
               <div className="col">
-              <input type="email" className="form-control" id="school"  style={formStyle}/>
+              <input type="email" className="form-control" id="ethencity"  style={formStyle}/>
               </div> 
           </div> 
           </div>
@@ -66,10 +66,10 @@ export default class Profile extends React.Component {
           <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label>Ethencity</label>
+              <label>School</label>
             </div> 
               <div className="col">
-              <input type="email" className="form-control" id="ethencity"  style={formStyle}/>
+              <input type="email" className="form-control" id="school"  style={formStyle}/>
               </div> 
           </div> 
           </div>

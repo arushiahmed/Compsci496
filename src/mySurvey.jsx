@@ -88,7 +88,9 @@ export default class Survey extends React.Component {
       <div>
         <SearchBar>
         </SearchBar>
-        <h1>Save</h1>
+        <center>
+        <h1>My Survey</h1>
+        </center>
           <br></br>
           <div>
           <hr />

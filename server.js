@@ -27,6 +27,7 @@ const formField = {
 
 const friendFieldType = {
     "name" : 'required',
+    "degree": 'required',
     "school": 'required',
     "year" : 'required',
     "bio": 'required',
