@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, withRouter, IndexRoute, Link } from 'react-router';
+import { Router, Route, hashHistory, withRouter, IndexRoute } from 'react-router';
 
 import Connect from './Connect.jsx';
 import Form from './Form.jsx';
@@ -19,10 +19,11 @@ const NoMatch = () => <p>Page Not Found</p>;
 // across nested routes. The `props.children` property is received
 // by the parent route. See the route definitions below.
 const App = (props) => (
-
-    <div className="contents">
-      {props.children}
+<div>
+  <div className="contents">
+    {props.children}
   </div >
+</div>
 );
 
 // For safety, we specify that the prop types received by the

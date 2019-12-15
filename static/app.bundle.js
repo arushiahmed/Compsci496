@@ -16,7 +16,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(26);
+__webpack_require__(23);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -203,6 +203,8 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+__webpack_require__(23);
+
 var _reactRouter = __webpack_require__(19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -215,7 +217,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var bodyPage = {
   width: '100%',
-  height: '700px',
+  height: '100%',
   margin: '0'
 
 };
@@ -243,18 +245,6 @@ var loginPage = {
   height: '$height/2',
   marginLeft: '25%',
   marginTop: '20px'
-};
-
-var titleName = {
-  border: "2px solid black",
-  marginTop: "10px",
-  borderRadius: "50%",
-  textAlign: "center",
-  fontFamily: "cursive",
-  fontSize: "50px",
-  height: "350px",
-  width: "350px",
-  lineHeight: "350px"
 };
 
 var Welcome = function (_React$createClass) {
@@ -289,13 +279,13 @@ var Welcome = function (_React$createClass) {
       'div',
       { style: bodyPage },
       _react2.default.createElement(
+        'h1',
+        { style: { marginLeft: '2%', marginTop: '15px' } },
+        'Website title'
+      ),
+      _react2.default.createElement(
         'center',
         { style: content },
-        _react2.default.createElement(
-          'div',
-          { className: 'picture', style: titleName },
-          'Website title'
-        ),
         _react2.default.createElement('br', null),
         ' ',
         _react2.default.createElement('br', null),
@@ -331,189 +321,147 @@ var Signup = function (_React$Component) {
   function Signup() {
     _classCallCheck(this, Signup);
 
-    var _this2 = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this));
-
-    _this2.handleEvent = _this2.handleEvent.bind(_this2);
-    return _this2;
+    return _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this));
   }
 
   _createClass(Signup, [{
-    key: 'handleEvent',
-    value: function handleEvent(e) {
-      e.preventDefault();
-      var form = document.forms.user;
-      var submitReq = {
-        "firstname": form.firstname.value,
-        "lastname": form.lastname.value,
-        "degree": form.inputDegree.value,
-        "school": form.inputSchool.value,
-        "email": form.inputEmail.value,
-        "major": form.inputMajor.value,
-        "year": form.inputYear.value,
-        "country": form.inputCountry.value,
-        "username": form.inputUsername.value,
-        "password": form.inputPassword.value,
-        "comfirmPassword": form.comfirmPassword.value
-      };
-
-      fetch('api/users', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submitReq)
-      }).then(function (res) {
-        return res.json();
-      }).then(function (json) {
-        if (json.sucess) {
-          alert('Failed to create new user.\n Error description ' + json.msg);
-        } else {
-          alert('User Saved');
-        }
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'center',
-        null,
+        'form',
+        { className: 'form-group', name: 'signup' },
         _react2.default.createElement(
-          'form',
-          { className: 'form-group', name: 'user', onSubmit: this.handleEvent },
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Name'
+          ),
           _react2.default.createElement(
             'div',
-            { className: 'form-group' },
+            { className: 'row' },
             _react2.default.createElement(
-              'label',
-              { 'for': 'name' },
-              'Name'
+              'div',
+              { className: 'col' },
+              _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'firstname', placeholder: 'First Name' })
             ),
             _react2.default.createElement(
               'div',
-              { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'firstname', placeholder: ' First Name' })
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'lastname', placeholder: ' Last Name' })
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'degree' },
-              'Undergraduate or Graduate Student'
-            ),
-            _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputDegree', placeholder: 'School' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'school' },
-              'School'
-            ),
-            _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputSchool', placeholder: 'School' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'inputEmail' },
-              'School Email'
-            ),
-            _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: 'Email' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'major' },
-              'Major'
-            ),
-            _react2.default.createElement('input', { type: 'major', className: 'form-control', id: 'inputMajor', placeholder: 'Major' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'year' },
-              'Year'
-            ),
-            _react2.default.createElement('input', { type: 'year', className: 'form-control', id: 'inputYear', placeholder: 'Year' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'country' },
-              'Country'
-            ),
-            _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputCountry', placeholder: 'Country' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'userName' },
-              'Username'
-            ),
-            _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputUsername', placeholder: ' Username' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'inputPassword' },
-              'Password'
-            ),
-            _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: ' Password' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'inputPassword' },
-              'Confirm Password'
-            ),
-            _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'comfirmPassword', placeholder: ' Password' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'a',
-            { className: 'btn btn-dark', role: 'button' },
-            _react2.default.createElement(
-              _reactRouter.Link,
-              { to: '/form', style: { textDecoration: 'none', color: 'white' } },
-              'Sign Up'
+              { className: 'col' },
+              _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'lastname', placeholder: 'Last Name' })
             )
           )
         ),
         _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null)
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Undergraduate or Graduate Student'
+          ),
+          _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputDegree', placeholder: 'School' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'School'
+          ),
+          _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputSchool', placeholder: 'School' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'School Email'
+          ),
+          _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: 'Email' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Major'
+          ),
+          _react2.default.createElement('input', { type: 'major', className: 'form-control', id: 'inputMajor', placeholder: 'Major' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Year'
+          ),
+          _react2.default.createElement('input', { type: 'year', className: 'form-control', id: 'inputYear', placeholder: 'Year' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Country'
+          ),
+          _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputCountry', placeholder: 'Country' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Username'
+          ),
+          _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputUsername', placeholder: 'Username' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Password'
+          ),
+          _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: 'Password' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Confirm Password'
+          ),
+          _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'comfirmPassword', placeholder: 'Confirm Password' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', role: 'button' },
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { to: '/form', style: { textDecoration: 'none', color: 'white' } },
+            'Sign Up'
+          )
+        )
       );
     }
   }]);
@@ -534,45 +482,39 @@ var Login = function (_React$Component2) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'center',
-        null,
+        'form',
+        { className: 'form-group', name: 'login' },
         _react2.default.createElement(
-          'form',
-          null,
+          'div',
+          { className: 'form-group' },
           _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'inputEmail' },
-              'Username'
-            ),
-            _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: ' Username' })
+            'label',
+            null,
+            'Username'
           ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'label',
-              { 'for': 'inputPassword' },
-              'Password'
-            ),
-            _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: ' Password' })
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'a',
-            { className: 'btn btn-dark', role: 'button' },
-            _react2.default.createElement(
-              _reactRouter.Link,
-              { to: '/about', style: { textDecoration: 'none', color: 'white' } },
-              'Login'
-            )
-          )
+          _react2.default.createElement('input', { className: 'form-control', id: 'inputName', placeholder: 'Username' })
         ),
         _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null)
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Password'
+          ),
+          _react2.default.createElement('input', { className: 'form-control', id: 'inputPassword', placeholder: 'Password' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', role: 'button' },
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { to: '/about', style: { textDecoration: 'none', color: 'white' } },
+            'Login'
+          )
+        )
       );
     }
   }]);
@@ -598,7 +540,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(26);
+__webpack_require__(23);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -644,16 +586,16 @@ var Form = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
 
     _this.state = {
-      one: '',
-      two: '',
-      three: '',
-      four: '',
-      five: '',
-      six: '',
-      seven: '',
-      eight: '',
-      nine: '',
-      ten: '',
+      one: false,
+      two: false,
+      three: false,
+      four: false,
+      five: false,
+      six: false,
+      seven: false,
+      eight: false,
+      nine: false,
+      ten: false,
       eleven: [],
       tweleve: [],
       thirteen: []
@@ -1286,8 +1228,8 @@ var Form = function (_React$Component) {
               'div',
               { className: 'col' },
               _react2.default.createElement(
-                'a',
-                { className: 'btn btn-dark', role: 'button' },
+                'button',
+                { className: 'btn btn-dark' },
                 _react2.default.createElement(
                   _reactRouter.Link,
                   { to: '/question', style: { textDecoration: 'none', color: 'white' } },
@@ -1300,7 +1242,7 @@ var Form = function (_React$Component) {
               { className: 'col' },
               _react2.default.createElement(
                 'button',
-                { className: 'btn btn-dark', type: 'submit' },
+                { className: 'btn btn-dark' },
                 _react2.default.createElement(
                   _reactRouter.Link,
                   { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
@@ -1402,7 +1344,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(26);
+__webpack_require__(23);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -1527,8 +1469,12 @@ var NoMatch = function NoMatch() {
 var App = function App(props) {
   return _react2.default.createElement(
     'div',
-    { className: 'contents' },
-    props.children
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'contents' },
+      props.children
+    )
   );
 };
 
@@ -1586,7 +1532,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(26);
+__webpack_require__(23);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -1873,7 +1819,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(26);
+__webpack_require__(23);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -1928,8 +1874,8 @@ var SearchBar = function (_React$Component) {
             { className: 'navbar navbar-dark' },
             _react2.default.createElement('a', { className: 'navbar-brand' }),
             _react2.default.createElement(
-              'a',
-              { className: 'btn btn-dark', role: 'button' },
+              'button',
+              { className: 'btn btn-dark' },
               _react2.default.createElement(
                 _reactRouter.Link,
                 { to: '/about', style: { textDecoration: 'none', color: 'white' } },
@@ -1937,8 +1883,8 @@ var SearchBar = function (_React$Component) {
               )
             ),
             _react2.default.createElement(
-              'a',
-              { className: 'btn btn-dark', role: 'button' },
+              'button',
+              { className: 'btn btn-dark' },
               _react2.default.createElement(
                 _reactRouter.Link,
                 { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
@@ -1946,8 +1892,8 @@ var SearchBar = function (_React$Component) {
               )
             ),
             _react2.default.createElement(
-              'a',
-              { className: 'btn btn-dark', role: 'button' },
+              'button',
+              { className: 'btn btn-dark' },
               _react2.default.createElement(
                 _reactRouter.Link,
                 { to: '/form', style: { textDecoration: 'none', color: 'white' } },
@@ -1955,8 +1901,8 @@ var SearchBar = function (_React$Component) {
               )
             ),
             _react2.default.createElement(
-              'a',
-              { className: 'btn btn-dark', role: 'button' },
+              'button',
+              { className: 'btn btn-dark' },
               _react2.default.createElement(
                 _reactRouter.Link,
                 { to: '/profile', style: { textDecoration: 'none', color: 'white' } },
@@ -1964,8 +1910,8 @@ var SearchBar = function (_React$Component) {
               )
             ),
             _react2.default.createElement(
-              'a',
-              { className: 'btn btn-dark', role: 'button' },
+              'button',
+              { className: 'btn btn-dark' },
               _react2.default.createElement(
                 _reactRouter.Link,
                 { to: '/', style: { textDecoration: 'none', color: 'white' } },
@@ -2014,7 +1960,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(26);
+__webpack_require__(23);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -2071,7 +2017,7 @@ var Profile = function (_React$Component) {
             'div',
             { className: 'col' },
             _react2.default.createElement(
-              'a',
+              'button',
               { className: 'btn btn-dark', role: 'button' },
               _react2.default.createElement(
                 _reactRouter.Link,
@@ -2084,7 +2030,7 @@ var Profile = function (_React$Component) {
             'div',
             { className: 'col' },
             _react2.default.createElement(
-              'a',
+              'button',
               { className: 'btn btn-dark', role: 'button' },
               _react2.default.createElement(
                 _reactRouter.Link,
