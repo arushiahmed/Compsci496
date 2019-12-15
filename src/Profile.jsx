@@ -8,10 +8,9 @@ const profile = {
 	border: "2px solid black",    
   marginTop: "10px",
   marginLeft: "5%",
-  textAlign: "center",
-  fontSize: "50px",
-  height: "150px", 
-  width: "150px",
+  fontSize: "20px",
+  height: "100px", 
+  width: "100px",
 }
 const formStyle =
 {
@@ -42,63 +41,63 @@ export default class Profile extends React.Component {
           </div>
           <br></br> <br></br>
           <form style={{marginLeft: '5%'}}>
-          <div class="form-group">
+          <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label for="exampleFormControlInput1">Email address</label>
+              <label>Email address</label>
             </div> 
               <div className="col">
-              <input type="text"  readonly class="form-control-plaintext" id="staticEmail" value="email@example.com" style={formStyle} />
+              <input type="text" className="form-control-plaintext" id="staticEmail" style={formStyle} />
               </div> 
           </div> 
           </div>
           <br></br>
-          <div class="form-group">
+          <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label for="exampleFormControlInput1">School</label>
+              <label>School</label>
             </div> 
               <div className="col">
-              <input type="email" class="form-control" id="school"  style={formStyle}/>
+              <input type="email" className="form-control" id="school"  style={formStyle}/>
               </div> 
           </div> 
           </div>
           <br></br>
-          <div class="form-group">
+          <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label for="exampleFormControlInput1">Ethencity</label>
+              <label>Ethencity</label>
             </div> 
               <div className="col">
-              <input type="email" class="form-control" id="ethencity"  style={formStyle}/>
+              <input type="email" className="form-control" id="ethencity"  style={formStyle}/>
               </div> 
           </div> 
           </div>
           <br></br>
-          <div class="form-group">
+          <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label for="exampleFormControlInput1">Country</label>
+              <label>Country</label>
             </div> 
               <div className="col">
-              <input type="email" class="form-control" id="country"  style={formStyle}/>
+              <input type="email" className="form-control" id="country"  style={formStyle}/>
               </div> 
           </div> 
           </div>
           <br></br>
-          <div class="form-group">
+          <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label for="exampleFormControlInput1">Bio:</label>
+              <label>Bio:</label>
             </div> 
               <div className="col">
-              <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={formStyle}></textarea>
+              <textarea className="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={formStyle}></textarea>
               </div> 
           </div> 
           </div>
            </form>
            <br></br>
-           <a className="btn btn-dark"role="button" style={{marginLeft: '5%'}}><Link to="*" style={{ textDecoration: 'none', color: 'white'}} >Edit</Link></a>
+           <button className="btn btn-dark"role="button" style={{marginLeft: '5%'}}><Link to="*" style={{ textDecoration: 'none', color: 'white'}} >Edit</Link></button>
         <br></br>
         <br></br>
       </div>
