@@ -34,54 +34,53 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var FriendList = function FriendList(props) {
   return _react2.default.createElement(
-    'div',
-    { className: 'col', style: { marginBottom: '15px' } },
+    _reactRouter.Link,
+    { to: '/profile', style: { textDecoration: 'none', color: 'black' } },
     _react2.default.createElement(
       'div',
-      { className: 'card h-100' },
+      { className: 'col', style: { marginBottom: '15px' } },
       _react2.default.createElement(
         'div',
-        { className: 'card-body' },
+        { className: 'card h-100' },
         _react2.default.createElement(
-          'h5',
-          { className: 'card-title' },
+          'div',
+          { className: 'card-body' },
           _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/profile' },
-            'Profile: ',
+            'h5',
+            { className: 'card-title' },
             props.friend.name
-          )
-        ),
-        _react2.default.createElement(
-          'h6',
-          { className: 'card-subtitle mb-2' },
-          'Degree: ',
-          props.friend.degree
-        ),
-        _react2.default.createElement(
-          'h6',
-          { className: 'card-subtitle mb-2' },
-          'School: ',
-          props.friend.school
-        ),
-        _react2.default.createElement(
-          'h6',
-          { className: 'card-subtitle mb-2' },
-          'Year: ',
-          props.friend.year
-        ),
-        _react2.default.createElement(
-          'h6',
-          { className: 'card-subtitle mb-2' },
-          'Rate: ',
-          props.friend.rate
-        ),
-        _react2.default.createElement(
-          'p',
-          { className: 'card-text' },
-          props.friend.bio
-        ),
-        _react2.default.createElement('br', null)
+          ),
+          _react2.default.createElement(
+            'h6',
+            { className: 'card-subtitle mb-2' },
+            'Degree: ',
+            props.friend.degree
+          ),
+          _react2.default.createElement(
+            'h6',
+            { className: 'card-subtitle mb-2' },
+            'School: ',
+            props.friend.school
+          ),
+          _react2.default.createElement(
+            'h6',
+            { className: 'card-subtitle mb-2' },
+            'Year: ',
+            props.friend.year
+          ),
+          _react2.default.createElement(
+            'h6',
+            { className: 'card-subtitle mb-2' },
+            'Rate: ',
+            props.friend.rate
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'card-text' },
+            props.friend.bio
+          ),
+          _react2.default.createElement('br', null)
+        )
       )
     )
   );

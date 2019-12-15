@@ -7,10 +7,11 @@ import SearchBar from './SearchBar.jsx';
 
 
 const FriendList = (props) => (
-<div className="col" style={{marginBottom: '15px'}}>
+  <Link to="/profile" style={{ textDecoration: 'none', color: 'black' }}>
+    <div className="col" style={{marginBottom: '15px'}}>
   <div className="card h-100">
     <div className="card-body">
-      <h5 className="card-title"><Link to="/profile">Profile: {props.friend.name}</Link></h5>
+      <h5 className="card-title">{props.friend.name}</h5>
       <h6 className="card-subtitle mb-2">Degree: {props.friend.degree}</h6>
       <h6 className="card-subtitle mb-2">School: {props.friend.school}</h6>
       <h6 className="card-subtitle mb-2">Year: {props.friend.year}</h6>
@@ -20,6 +21,8 @@ const FriendList = (props) => (
     </div>
   </div>
 </div>
+  </Link>
+
 
 );
 
