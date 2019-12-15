@@ -596,9 +596,9 @@ var Form = function (_React$Component) {
       eight: false,
       nine: false,
       ten: false,
-      eleven: [],
-      tweleve: [],
-      thirteen: []
+      eleven: '',
+      tweleve: '',
+      thirteen: ''
     };
 
     _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -1248,69 +1248,6 @@ var Form = function (_React$Component) {
   return Form;
 }(_react2.default.Component);
 
-/*
-class Save extends React.Component {
-  constructor() {
-    super();
-    this.loadData = this.loadData.bind(this);
-
-    this.state = {
-     questionform: [],
-    };
-    
-  }
-  componentDidMount(){
-      this.loadData();
-  }
-
-  loadData(){
-      let question = this.state.questionform;
-      fetch("api/questionform")
-        .then(res => {
-            if (res.ok){
-                res.json().then( json => {
-                    let questionform = [];
-                    json.records.forEach(question => {
-                        questionform.push(
-                            question
-                        )
-                    });
-                    this.setState({questionform: questionform})
-                })
-            }
-        }).catch( err => {
-            alert("There was a problem: " + err.message)
-        });
-  }
-  
-  render() {
-    return (
-      <div id="save">
-        <SearchBar>
-        </SearchBar>
-        <center>
-        <h1>Save</h1>
-        <br></br>
-        <hr />
-          <FormPage questionform={this.state.questionform} />
-          <hr />
-          <div className = "row">
-              <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
-              </div> 
-              <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
-              </div>
-          </div>   
-          <br></br><br></br>
-        </center>
-      </div>
-    );
-  }
-}
-*/
-
-
 exports.default = Form;
 
 /***/ }),
@@ -1535,6 +1472,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var formStyle = {
+  marginLeft: '2%',
+  marginRight: '2%',
+  fontSize: '20px'
+};
+
 var FormQuestion = function FormQuestion(props) {
   return _react2.default.createElement(
     'div',
@@ -1546,7 +1489,7 @@ var FormQuestion = function FormQuestion(props) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you want to meet in person or online?',
       _react2.default.createElement('br', null),
       props.question.one
@@ -1554,7 +1497,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you want to connect with Undergraduates or Graduates Students?',
       _react2.default.createElement('br', null),
       props.question.two
@@ -1562,7 +1505,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you want to connect with people in the same year as you?',
       _react2.default.createElement('br', null),
       props.question.three
@@ -1570,7 +1513,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you want to connect with people from the same country?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1579,7 +1522,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you want to connect with people who share the same ethnicity?',
       _react2.default.createElement('br', null),
       props.question.five
@@ -1587,7 +1530,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you want to connect with people in the same major?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1601,7 +1544,7 @@ var FormQuestion = function FormQuestion(props) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Are you looking for someone to help you?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1610,7 +1553,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you have any knowledge of the school before you started?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1619,7 +1562,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you know the aera of where your school is located?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1628,7 +1571,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Do you have a car on campus?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1637,7 +1580,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'Are there any challenges you are coping with? If yes, please describe.',
       _react2.default.createElement('br', null),
       ' ',
@@ -1646,7 +1589,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'How can someone help you with your challenges? Please descibe.',
       _react2.default.createElement('br', null),
       ' ',
@@ -1655,7 +1598,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm' },
+      { className: 'viewForm', style: ormStyle },
       'How are you able to help someone with their challenges? Please descibe how you can help a person.',
       _react2.default.createElement('br', null),
       ' ',

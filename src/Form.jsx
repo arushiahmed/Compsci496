@@ -39,9 +39,9 @@ const formStyle = {
       eight: false,
       nine: false,
       ten: false,
-      eleven: [],
-      tweleve: [],
-      thirteen: []
+      eleven: '',
+      tweleve: '',
+      thirteen: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -58,34 +58,34 @@ const formStyle = {
   }
 
   oneChange(e){
-    this.setState({one: e.target.value });
+    this.setState({one: e.target.value});
   }
   twoChange(e){
-    this.setState({two: e.target.value });
+    this.setState({two: e.target.value});
   }
   threeChange(e){
-    this.setState({three: e.target.value });
+    this.setState({three: e.target.value});
   }
   fourChange(e){
-    this.setState({four: e.target.value });
+    this.setState({four: e.target.value});
   }
   fiveChange(e){
-    this.setState({five: e.target.value });
+    this.setState({five: e.target.value});
   }
   sixChange(e){
-    this.setState({six: e.target.value });
+    this.setState({six: e.target.value});
   }
   sevenChange(e){
-    this.setState({seven: e.target.value });
+    this.setState({seven: e.target.value});
   }
   eightChange(e){
-    this.setState({eight: e.target.value });
+    this.setState({eight: e.target.value});
   }
   nineChange(e){
-    this.setState({nine: e.target.value });
+    this.setState({nine: e.target.value});
   }
   tenChange(e){
-    this.setState({ten: e.target.value });
+    this.setState({ten: e.target.value});
   }
 
     handleSubmit(e)
@@ -348,65 +348,5 @@ const formStyle = {
   }
 }
 
-/*
-class Save extends React.Component {
-  constructor() {
-    super();
-    this.loadData = this.loadData.bind(this);
 
-    this.state = {
-     questionform: [],
-    };
-    
-  }
-  componentDidMount(){
-      this.loadData();
-  }
-
-  loadData(){
-      let question = this.state.questionform;
-      fetch("api/questionform")
-        .then(res => {
-            if (res.ok){
-                res.json().then( json => {
-                    let questionform = [];
-                    json.records.forEach(question => {
-                        questionform.push(
-                            question
-                        )
-                    });
-                    this.setState({questionform: questionform})
-                })
-            }
-        }).catch( err => {
-            alert("There was a problem: " + err.message)
-        });
-  }
-  
-  render() {
-    return (
-      <div id="save">
-        <SearchBar>
-        </SearchBar>
-        <center>
-        <h1>Save</h1>
-        <br></br>
-        <hr />
-          <FormPage questionform={this.state.questionform} />
-          <hr />
-          <div className = "row">
-              <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
-              </div> 
-              <div className="col">
-              <a className="btn btn-dark"role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
-              </div>
-          </div>   
-          <br></br><br></br>
-        </center>
-      </div>
-    );
-  }
-}
-*/
 
