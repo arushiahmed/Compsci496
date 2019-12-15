@@ -29,16 +29,16 @@ const formStyle = {
     super(props);
 
     this.state = {
-      one: false,
-      two: false,
-      three: false,
-      four: false,
-      five: false,
-      six: false,
-      seven: false,
-      eight: false,
-      nine: false,
-      ten: false,
+      one: '',
+      two: '',
+      three: '',
+      four: '',
+      five: '',
+      six: '',
+      seven: '',
+      eight: '',
+      nine: '',
+      ten: '',
       eleven: '',
       tweleve: '',
       thirteen: ''
@@ -338,7 +338,7 @@ const formStyle = {
               <button className="btn btn-dark"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></button>
               </div> 
               <div className="col">
-              <button className="btn btn-dark"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
+              <button className="btn btn-dark" type="submit"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
               </div>
           </div>   
           </center>

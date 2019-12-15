@@ -586,16 +586,16 @@ var Form = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
 
     _this.state = {
-      one: false,
-      two: false,
-      three: false,
-      four: false,
-      five: false,
-      six: false,
-      seven: false,
-      eight: false,
-      nine: false,
-      ten: false,
+      one: '',
+      two: '',
+      three: '',
+      four: '',
+      five: '',
+      six: '',
+      seven: '',
+      eight: '',
+      nine: '',
+      ten: '',
       eleven: '',
       tweleve: '',
       thirteen: ''
@@ -1229,7 +1229,7 @@ var Form = function (_React$Component) {
               { className: 'col' },
               _react2.default.createElement(
                 'button',
-                { className: 'btn btn-dark' },
+                { className: 'btn btn-dark', type: 'submit' },
                 _react2.default.createElement(
                   _reactRouter.Link,
                   { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
