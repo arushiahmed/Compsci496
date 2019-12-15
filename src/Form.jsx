@@ -335,9 +335,6 @@ const formStyle = {
       <center> 
         <div className = "row">
               <div className="col">
-              <button className="btn btn-dark" type="submit"><Link to="/save" style={{ textDecoration: 'none', color: 'white' }}>Save</Link></button>
-            </div> 
-              <div className="col">
               <button className="btn btn-dark"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></button>
               </div> 
               <div className="col">

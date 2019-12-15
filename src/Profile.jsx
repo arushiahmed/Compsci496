@@ -98,6 +98,7 @@ export default class Profile extends React.Component {
            </form>
            <br></br>
            <button className="btn btn-dark"role="button" style={{marginLeft: '5%'}}><Link to="*" style={{ textDecoration: 'none', color: 'white'}} >Edit</Link></button>
+           <button className="btn btn-dark"role="button" style={{marginLeft: '5%'}}><Link to="/save" style={{ textDecoration: 'none', color: 'white'}} >My Survey</Link></button>
         <br></br>
         <br></br>
       </div>

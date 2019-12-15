@@ -1216,19 +1216,6 @@ var Form = function (_React$Component) {
               { className: 'col' },
               _react2.default.createElement(
                 'button',
-                { className: 'btn btn-dark', type: 'submit' },
-                _react2.default.createElement(
-                  _reactRouter.Link,
-                  { to: '/save', style: { textDecoration: 'none', color: 'white' } },
-                  'Save'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col' },
-              _react2.default.createElement(
-                'button',
                 { className: 'btn btn-dark' },
                 _react2.default.createElement(
                   _reactRouter.Link,
@@ -1550,8 +1537,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var FormQuestion = function FormQuestion(props) {
   return _react2.default.createElement(
-    'ul',
-    { className: 'question' },
+    'div',
+    null,
     _react2.default.createElement(
       'h3',
       { style: { marginLeft: '2%' } },
@@ -1686,11 +1673,7 @@ function FormPage(props) {
   return _react2.default.createElement(
     'div',
     { id: 'question-air' },
-    _react2.default.createElement(
-      'ul',
-      null,
-      formQuestions
-    )
+    formQuestions
   );
 }
 
@@ -1744,20 +1727,20 @@ var Save = function (_React$Component) {
         null,
         _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'center',
+          'h1',
           null,
+          'Save'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
+          _react2.default.createElement('hr', null),
           _react2.default.createElement(
-            'h1',
+            'center',
             null,
-            'Save'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement('hr', null),
-            _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
-            _react2.default.createElement('hr', null),
             _react2.default.createElement(
               'div',
               { className: 'row' },
@@ -2179,6 +2162,15 @@ var Profile = function (_React$Component) {
             _reactRouter.Link,
             { to: '*', style: { textDecoration: 'none', color: 'white' } },
             'Edit'
+          )
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', role: 'button', style: { marginLeft: '5%' } },
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { to: '/save', style: { textDecoration: 'none', color: 'white' } },
+            'My Survey'
           )
         ),
         _react2.default.createElement('br', null),

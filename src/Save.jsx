@@ -6,8 +6,8 @@ import { Link } from 'react-router';
 import SearchBar from './SearchBar.jsx';
 
     const FormQuestion = (props) => (
-        <ul className="question">
-          <h3 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h3>
+       <div>
+         <h3 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h3>
             <div className="viewForm">Do you want to meet in person or online?<br></br>{props.question.one}</div><br></br>
             <div className="viewForm">Do you want to connect with Undergraduates or Graduates Students?<br></br>{props.question.two}</div><br></br>
             <div className="viewForm">Do you want to connect with people in the same year as you?<br></br>{props.question.three}</div><br></br>
@@ -22,7 +22,9 @@ import SearchBar from './SearchBar.jsx';
             <div className="viewForm">Are there any challenges you are coping with? If yes, please describe.<br></br> {props.question.eleven}</div><br></br>
             <div className="viewForm">How can someone help you with your challenges? Please descibe.<br></br> {props.question.tweleve}</div><br></br>
             <div className="viewForm">How are you able to help someone with their challenges? Please descibe how you can help a person.<br></br> {props.question.thirteen}</div><br></br>
-        </ul>
+       </div>
+          
+  
       );
 
     function FormPage(props)
@@ -33,9 +35,9 @@ import SearchBar from './SearchBar.jsx';
     
       return(
         <div id="question-air">
-          <ul>
+          
             {formQuestions}
-          </ul>
+        
         </div>
       );
     } 
@@ -80,13 +82,13 @@ export default class Save extends React.Component {
       <div>
         <SearchBar>
         </SearchBar>
-        <center>
         <h1>Save</h1>
           <br></br>
           <div>
           <hr />
             <FormPage questionform={this.state.questionform} />
             <hr />
+            <center>
             <div className = "row">
                 <div className="col">
                 <a className="btn btn-dark" role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
@@ -96,8 +98,8 @@ export default class Save extends React.Component {
                 </div>
             </div>   
             <br></br><br></br>
+            </center>
           </div>
-        </center>
       </div>
     );
   }
