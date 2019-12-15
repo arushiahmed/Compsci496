@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router';
 
 import Profile from './Profile.jsx';
 import Welcome from './Welcome.jsx';
-import Form from './Form.jsx';
+import Form from './NewForm.jsx';
 import Connect from './Connect.jsx';
 import About from './About.jsx'
 
@@ -22,7 +22,7 @@ export default class SearchBar extends React.Component {
                 <a className="navbar-brand"></a>
                   <button className="btn btn-dark"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>About</Link></button>
                     <button className="btn btn-dark"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }}>Connect With Students</Link></button>
-                    <button className="btn btn-dark"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }}>Survery</Link></button>
+                    <button className="btn btn-dark"><Link to="/userSurvey" style={{ textDecoration: 'none', color: 'white' }}>Survery</Link></button>
                     <button className="btn btn-dark"><Link to="/profile" style={{ textDecoration: 'none', color: 'white' }}>Profile</Link></button>
                     <button className="btn btn-dark"><Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Sign Out</Link></button>
                     <form className="form-inline">

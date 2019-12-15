@@ -48,7 +48,7 @@ const formStyle = {
       );
     } 
 
-export default class Save extends React.Component {
+export default class Survey extends React.Component {
   constructor() {
     super();
 
@@ -97,7 +97,7 @@ export default class Save extends React.Component {
             <center>
             <div className = "row">
                 <div className="col">
-                <button className="btn btn-dark" role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></button>
+                <button className="btn btn-dark" role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }}>New Survery</Link></button>
                 </div> 
                 <div className="col">
                 <button className="btn btn-dark" role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>

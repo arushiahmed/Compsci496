@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, withRouter, IndexRoute } from 'react-router';
 
 import Connect from './Connect.jsx';
-import Form from './Form.jsx';
+import Form from './NewForm.jsx';
 import Welcome from './Welcome.jsx';
 import SearchBar from './SearchBar.jsx'
 import Profile from './Profile.jsx'
 import About from './About.jsx'
-import Save from './Save.jsx'
+import Save from './mySurvey.jsx'
+import Survey from './mySurvey.jsx';
 
 var contentNode = document.getElementById("contents");
 
@@ -49,7 +50,7 @@ const RoutedApp = () => (
       <Route path="/about" component={About} />
       <Route path="/connect" component={Connect} />
       <Route path="/form" component={Form} />
-      <Route path="/save" component={Save} />
+      <Route path="/userSurvey" component={Survey} />
       <Route path="/profile" component={Profile} />
       <Route path="*" component={NoMatch} />
     </Route>

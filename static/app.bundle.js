@@ -524,7 +524,484 @@ var Login = function (_React$Component2) {
 
 /***/ }),
 
-/***/ 124:
+/***/ 125:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(23);
+
+var _reactRouter = __webpack_require__(19);
+
+var _Profile = __webpack_require__(79);
+
+var _Profile2 = _interopRequireDefault(_Profile);
+
+var _SearchBar = __webpack_require__(31);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_React$Component) {
+  _inherits(About, _React$Component);
+
+  function About() {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
+  }
+
+  _createClass(About, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement(
+          'center',
+          null,
+          _react2.default.createElement(
+            'h1',
+            null,
+            'About'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'p',
+            null,
+            'This is an interactive platform where international students and domestic students can find friends.'
+          )
+        )
+      );
+    }
+  }]);
+
+  return About;
+}(_react2.default.Component);
+
+exports.default = About;
+
+/***/ }),
+
+/***/ 126:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(86);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactRouter = __webpack_require__(19);
+
+var _Connect = __webpack_require__(122);
+
+var _Connect2 = _interopRequireDefault(_Connect);
+
+var _NewForm = __webpack_require__(246);
+
+var _NewForm2 = _interopRequireDefault(_NewForm);
+
+var _Welcome = __webpack_require__(123);
+
+var _Welcome2 = _interopRequireDefault(_Welcome);
+
+var _SearchBar = __webpack_require__(31);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+var _Profile = __webpack_require__(79);
+
+var _Profile2 = _interopRequireDefault(_Profile);
+
+var _About = __webpack_require__(125);
+
+var _About2 = _interopRequireDefault(_About);
+
+var _mySurvey = __webpack_require__(245);
+
+var _mySurvey2 = _interopRequireDefault(_mySurvey);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var contentNode = document.getElementById("contents");
+
+// A simple component to indicate that a page was not found.
+var NoMatch = function NoMatch() {
+  return _react2.default.createElement(
+    'p',
+    null,
+    'Page Not Found'
+  );
+};
+
+// This defines the main application layout that can be used
+// across nested routes. The `props.children` property is received
+// by the parent route. See the route definitions below.
+var App = function App(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'contents' },
+      props.children
+    )
+  );
+};
+
+// For safety, we specify that the prop types received by the
+// App component must require a "children" property. If we do
+// not include this it will not compile.
+App.propTypes = {
+  children: _react2.default.PropTypes.object.isRequired
+};
+
+// The "routed app" that defines the different routes that
+// are supposed in this application. As you can see, If the
+// URL path is '/' we will render the IssueList component,
+// if the path is '/issues/:id' we render the IssueEdit component,
+// and if we get anything else we render the NoMatch view.
+// This router uses the "hash history" approach to implement
+// single-page apps with multiple views.
+var RoutedApp = function RoutedApp() {
+  return _react2.default.createElement(
+    _reactRouter.Router,
+    { history: _reactRouter.hashHistory },
+    _react2.default.createElement(
+      _reactRouter.Route,
+      { path: '/', component: App },
+      _react2.default.createElement(_reactRouter.IndexRoute, { component: _Welcome2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/home', component: (0, _reactRouter.withRouter)(_SearchBar2.default) }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/connect', component: _Connect2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/form', component: _NewForm2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/userSurvey', component: _mySurvey2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default }),
+      _react2.default.createElement(_reactRouter.Route, { path: '*', component: NoMatch })
+    )
+  );
+};
+
+// This renders the JSX router inside the content node:
+_reactDom2.default.render(_react2.default.createElement(RoutedApp, null), contentNode);
+
+/***/ }),
+
+/***/ 245:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(23);
+
+var _reactRouter = __webpack_require__(19);
+
+var _SearchBar = __webpack_require__(31);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var formStyle = {
+  marginLeft: '2%',
+  marginRight: '2%',
+  fontSize: '20px'
+};
+
+var FormQuestion = function FormQuestion(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'What are the people you want to connect with?'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you want to meet in person or online?',
+      _react2.default.createElement('br', null),
+      props.question.one
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you want to connect with Undergraduates or Graduates Students?',
+      _react2.default.createElement('br', null),
+      props.question.two
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you want to connect with people in the same year as you?',
+      _react2.default.createElement('br', null),
+      props.question.three
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you want to connect with people from the same country?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.four
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you want to connect with people who share the same ethnicity?',
+      _react2.default.createElement('br', null),
+      props.question.five
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you want to connect with people in the same major?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.six
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'Knowledge about the school and why are you using this website'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Are you looking for someone to help you?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.seven
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you have any knowledge of the school before you started?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.eight
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you know the aera of where your school is located?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.nine
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Do you have a car on campus?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.ten
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'Are there any challenges you are coping with? If yes, please describe.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.eleven
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'How can someone help you with your challenges? Please descibe.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.tweleve
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: ormStyle },
+      'How are you able to help someone with their challenges? Please descibe how you can help a person.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.thirteen
+    ),
+    _react2.default.createElement('br', null)
+  );
+};
+
+function FormPage(props) {
+  var formQuestions = props.questionform.map(function (question) {
+    return _react2.default.createElement(FormQuestion, { key: question._id, question: question });
+  });
+
+  return _react2.default.createElement(
+    'div',
+    { id: 'question-air' },
+    formQuestions
+  );
+}
+
+var Survey = function (_React$Component) {
+  _inherits(Survey, _React$Component);
+
+  function Survey() {
+    _classCallCheck(this, Survey);
+
+    var _this = _possibleConstructorReturn(this, (Survey.__proto__ || Object.getPrototypeOf(Survey)).call(this));
+
+    _this.loadData = _this.loadData.bind(_this);
+
+    _this.state = {
+      questionform: []
+    };
+
+    return _this;
+  }
+
+  _createClass(Survey, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.loadData();
+    }
+  }, {
+    key: 'loadData',
+    value: function loadData() {
+      var _this2 = this;
+
+      var question = this.state.questionform;
+      fetch("api/questionform").then(function (res) {
+        if (res.ok) {
+          res.json().then(function (json) {
+            var questionform = [];
+            json.records.forEach(function (question) {
+              questionform.push(question);
+            });
+            _this2.setState({ questionform: questionform });
+          });
+        }
+      }).catch(function (err) {
+        alert("There was a problem: " + err.message);
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Save'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'center',
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'button',
+                  { className: 'btn btn-dark', role: 'button' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/form', style: { textDecoration: 'none', color: 'white' } },
+                    'New Survery'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'button',
+                  { className: 'btn btn-dark', role: 'button' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                    'Find Friends'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement('br', null)
+          )
+        )
+      );
+    }
+  }]);
+
+  return Survey;
+}(_react2.default.Component);
+
+exports.default = Survey;
+
+/***/ }),
+
+/***/ 246:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1252,483 +1729,6 @@ exports.default = Form;
 
 /***/ }),
 
-/***/ 125:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(23);
-
-var _reactRouter = __webpack_require__(19);
-
-var _Profile = __webpack_require__(79);
-
-var _Profile2 = _interopRequireDefault(_Profile);
-
-var _SearchBar = __webpack_require__(31);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var About = function (_React$Component) {
-  _inherits(About, _React$Component);
-
-  function About() {
-    _classCallCheck(this, About);
-
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
-  }
-
-  _createClass(About, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_SearchBar2.default, null),
-        _react2.default.createElement(
-          'center',
-          null,
-          _react2.default.createElement(
-            'h1',
-            null,
-            'About'
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'p',
-            null,
-            'This is an interactive platform where international students and domestic students can find friends.'
-          )
-        )
-      );
-    }
-  }]);
-
-  return About;
-}(_react2.default.Component);
-
-exports.default = About;
-
-/***/ }),
-
-/***/ 126:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(86);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactRouter = __webpack_require__(19);
-
-var _Connect = __webpack_require__(122);
-
-var _Connect2 = _interopRequireDefault(_Connect);
-
-var _Form = __webpack_require__(124);
-
-var _Form2 = _interopRequireDefault(_Form);
-
-var _Welcome = __webpack_require__(123);
-
-var _Welcome2 = _interopRequireDefault(_Welcome);
-
-var _SearchBar = __webpack_require__(31);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
-var _Profile = __webpack_require__(79);
-
-var _Profile2 = _interopRequireDefault(_Profile);
-
-var _About = __webpack_require__(125);
-
-var _About2 = _interopRequireDefault(_About);
-
-var _Save = __webpack_require__(243);
-
-var _Save2 = _interopRequireDefault(_Save);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var contentNode = document.getElementById("contents");
-
-// A simple component to indicate that a page was not found.
-var NoMatch = function NoMatch() {
-  return _react2.default.createElement(
-    'p',
-    null,
-    'Page Not Found'
-  );
-};
-
-// This defines the main application layout that can be used
-// across nested routes. The `props.children` property is received
-// by the parent route. See the route definitions below.
-var App = function App(props) {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'div',
-      { className: 'contents' },
-      props.children
-    )
-  );
-};
-
-// For safety, we specify that the prop types received by the
-// App component must require a "children" property. If we do
-// not include this it will not compile.
-App.propTypes = {
-  children: _react2.default.PropTypes.object.isRequired
-};
-
-// The "routed app" that defines the different routes that
-// are supposed in this application. As you can see, If the
-// URL path is '/' we will render the IssueList component,
-// if the path is '/issues/:id' we render the IssueEdit component,
-// and if we get anything else we render the NoMatch view.
-// This router uses the "hash history" approach to implement
-// single-page apps with multiple views.
-var RoutedApp = function RoutedApp() {
-  return _react2.default.createElement(
-    _reactRouter.Router,
-    { history: _reactRouter.hashHistory },
-    _react2.default.createElement(
-      _reactRouter.Route,
-      { path: '/', component: App },
-      _react2.default.createElement(_reactRouter.IndexRoute, { component: _Welcome2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/home', component: (0, _reactRouter.withRouter)(_SearchBar2.default) }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/connect', component: _Connect2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/form', component: _Form2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/save', component: _Save2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default }),
-      _react2.default.createElement(_reactRouter.Route, { path: '*', component: NoMatch })
-    )
-  );
-};
-
-// This renders the JSX router inside the content node:
-_reactDom2.default.render(_react2.default.createElement(RoutedApp, null), contentNode);
-
-/***/ }),
-
-/***/ 243:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(23);
-
-var _reactRouter = __webpack_require__(19);
-
-var _SearchBar = __webpack_require__(31);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var formStyle = {
-  marginLeft: '2%',
-  marginRight: '2%',
-  fontSize: '20px'
-};
-
-var FormQuestion = function FormQuestion(props) {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'h3',
-      { style: { marginLeft: '2%' } },
-      'What are the people you want to connect with?'
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you want to meet in person or online?',
-      _react2.default.createElement('br', null),
-      props.question.one
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you want to connect with Undergraduates or Graduates Students?',
-      _react2.default.createElement('br', null),
-      props.question.two
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you want to connect with people in the same year as you?',
-      _react2.default.createElement('br', null),
-      props.question.three
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you want to connect with people from the same country?',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.four
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you want to connect with people who share the same ethnicity?',
-      _react2.default.createElement('br', null),
-      props.question.five
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you want to connect with people in the same major?',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.six
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'h3',
-      { style: { marginLeft: '2%' } },
-      'Knowledge about the school and why are you using this website'
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Are you looking for someone to help you?',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.seven
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you have any knowledge of the school before you started?',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.eight
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you know the aera of where your school is located?',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.nine
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Do you have a car on campus?',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.ten
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'Are there any challenges you are coping with? If yes, please describe.',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.eleven
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'How can someone help you with your challenges? Please descibe.',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.tweleve
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: ormStyle },
-      'How are you able to help someone with their challenges? Please descibe how you can help a person.',
-      _react2.default.createElement('br', null),
-      ' ',
-      props.question.thirteen
-    ),
-    _react2.default.createElement('br', null)
-  );
-};
-
-function FormPage(props) {
-  var formQuestions = props.questionform.map(function (question) {
-    return _react2.default.createElement(FormQuestion, { key: question._id, question: question });
-  });
-
-  return _react2.default.createElement(
-    'div',
-    { id: 'question-air' },
-    formQuestions
-  );
-}
-
-var Save = function (_React$Component) {
-  _inherits(Save, _React$Component);
-
-  function Save() {
-    _classCallCheck(this, Save);
-
-    var _this = _possibleConstructorReturn(this, (Save.__proto__ || Object.getPrototypeOf(Save)).call(this));
-
-    _this.loadData = _this.loadData.bind(_this);
-
-    _this.state = {
-      questionform: []
-    };
-
-    return _this;
-  }
-
-  _createClass(Save, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.loadData();
-    }
-  }, {
-    key: 'loadData',
-    value: function loadData() {
-      var _this2 = this;
-
-      var question = this.state.questionform;
-      fetch("api/questionform").then(function (res) {
-        if (res.ok) {
-          res.json().then(function (json) {
-            var questionform = [];
-            json.records.forEach(function (question) {
-              questionform.push(question);
-            });
-            _this2.setState({ questionform: questionform });
-          });
-        }
-      }).catch(function (err) {
-        alert("There was a problem: " + err.message);
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_SearchBar2.default, null),
-        _react2.default.createElement(
-          'h1',
-          null,
-          'Save'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement('hr', null),
-          _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
-          _react2.default.createElement('hr', null),
-          _react2.default.createElement(
-            'center',
-            null,
-            _react2.default.createElement(
-              'div',
-              { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'button',
-                  { className: 'btn btn-dark', role: 'button' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/form', style: { textDecoration: 'none', color: 'white' } },
-                    'Edit'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'button',
-                  { className: 'btn btn-dark', role: 'button' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-                    'Find Friends'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement('br', null)
-          )
-        )
-      );
-    }
-  }]);
-
-  return Save;
-}(_react2.default.Component);
-
-exports.default = Save;
-
-/***/ }),
-
 /***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1757,9 +1757,9 @@ var _Welcome = __webpack_require__(123);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
 
-var _Form = __webpack_require__(124);
+var _NewForm = __webpack_require__(246);
 
-var _Form2 = _interopRequireDefault(_Form);
+var _NewForm2 = _interopRequireDefault(_NewForm);
 
 var _Connect = __webpack_require__(122);
 
@@ -1822,7 +1822,7 @@ var SearchBar = function (_React$Component) {
               { className: 'btn btn-dark' },
               _react2.default.createElement(
                 _reactRouter.Link,
-                { to: '/form', style: { textDecoration: 'none', color: 'white' } },
+                { to: '/userSurvey', style: { textDecoration: 'none', color: 'white' } },
                 'Survery'
               )
             ),
@@ -2105,15 +2105,6 @@ var Profile = function (_React$Component) {
             _reactRouter.Link,
             { to: '*', style: { textDecoration: 'none', color: 'white' } },
             'Edit'
-          )
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'btn btn-dark', role: 'button', style: { marginLeft: '5%' } },
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/save', style: { textDecoration: 'none', color: 'white' } },
-            'My Survey'
           )
         ),
         _react2.default.createElement('br', null),
