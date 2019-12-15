@@ -54,7 +54,7 @@ export default class Welcome extends React.createClass ({
                 <div style={bodyPage}>
                   <h1 style={{marginLeft: '2%', marginTop: '15px',}}>Website title</h1> 
                   <center style={content}>
-                <br></br> <br></br>
+                 <br></br> <br></br>
                       <div id="buttons">
                         <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Sign Up</button>
                         <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Login</button>

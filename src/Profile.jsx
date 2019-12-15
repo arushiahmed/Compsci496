@@ -35,7 +35,7 @@ export default class Profile extends React.Component {
               </div> 
           </div>
         <h1 style={{marginLeft: '5%'}}>Profile</h1>
-        <br></br>
+        <br></br><br></br>
           <div className="picture" style={profile}>
             Profile picture
           </div>

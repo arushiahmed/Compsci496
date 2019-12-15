@@ -86,12 +86,9 @@ export default class Survey extends React.Component {
   render() {
     return (
       <div>
-        <SearchBar>
-        </SearchBar>
-        <center>
-        <h1>My Survey</h1>
-        </center>
-          <br></br>
+        <SearchBar></SearchBar>
+        <h1 style={{marginLeft: '2%'}}>My Survey</h1>
+          <br></br><br></br>
           <div>
           <hr />
             <FormPage questionform={this.state.questionform} />

@@ -147,14 +147,11 @@ var Connect = function (_React$Component) {
         null,
         _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'center',
-          null,
-          _react2.default.createElement(
-            'h1',
-            null,
-            'Connect with Students'
-          )
+          'h1',
+          { style: { marginLeft: '2%' } },
+          'Connect with Students'
         ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(FriendTable, { friends: this.state.friends })
       );
@@ -687,15 +684,15 @@ var Form = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'center',
+          _SearchBar2.default,
           null,
-          _react2.default.createElement(
-            'h1',
-            null,
-            'Survery Questions'
-          )
+          ' '
+        ),
+        _react2.default.createElement(
+          'h1',
+          { style: { marginLeft: '2%' } },
+          'Survery Questions'
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
@@ -1200,7 +1197,7 @@ var Form = function (_React$Component) {
                 { className: 'btn btn-dark' },
                 _react2.default.createElement(
                   _reactRouter.Link,
-                  { to: '/question', style: { textDecoration: 'none', color: 'white' } },
+                  { to: '/userSurvey', style: { textDecoration: 'none', color: 'white' } },
                   'Edit'
                 )
               )
@@ -1286,14 +1283,15 @@ var About = function (_React$Component) {
         null,
         _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
+          'h1',
+          { style: { marginLeft: '2%' } },
+          'About'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
           'center',
           null,
-          _react2.default.createElement(
-            'h1',
-            null,
-            'About'
-          ),
-          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'p',
             null,
@@ -1651,14 +1649,11 @@ var Survey = function (_React$Component) {
         null,
         _react2.default.createElement(_SearchBar2.default, null),
         _react2.default.createElement(
-          'center',
-          null,
-          _react2.default.createElement(
-            'h1',
-            null,
-            'My Survey'
-          )
+          'h1',
+          { style: { marginLeft: '2%' } },
+          'My Survey'
         ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'div',
@@ -1955,6 +1950,7 @@ var Profile = function (_React$Component) {
           { style: { marginLeft: '5%' } },
           'Profile'
         ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'div',

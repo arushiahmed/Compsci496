@@ -127,11 +127,8 @@ const formStyle = {
   render() {
     return (
       <div>
-        <SearchBar> 
-        </SearchBar>
-        <center>
-        <h1>Survery Questions</h1>
-        </center>
+        <SearchBar> </SearchBar>   
+        <h1 style={{marginLeft: '2%'}}>Survery Questions</h1>
         <br></br><br></br>
       <form className="form-group" name="question" onSubmit={this.handleSubmit}>
       <h3 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h3>
@@ -335,7 +332,7 @@ const formStyle = {
       <center> 
         <div className = "row">
               <div className="col">
-              <button className="btn btn-dark"><Link to="/question" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></button>
+              <button className="btn btn-dark"><Link to="/userSurvey" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></button>
               </div> 
               <div className="col">
               <button className="btn btn-dark" type="submit"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>

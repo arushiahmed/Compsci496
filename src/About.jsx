@@ -13,11 +13,10 @@ export default class About extends React.Component {
   render() {
     return (
       <div>
-        <SearchBar>
-        </SearchBar>
+        <SearchBar></SearchBar>
+        <h1 style={{marginLeft: '2%'}}>About</h1>
+        <br></br><br></br>
         <center>
-        <h1>About</h1>
-        <br></br>
         <p>This is an interactive platform where international students and domestic students can find friends.</p>
         </center>
       </div>
