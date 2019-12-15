@@ -109,7 +109,7 @@ const formStyle = {
     }
 
       fetch('/api/questionform', {
-          method: 'post',
+          method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(submitReq),
       })

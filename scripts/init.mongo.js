@@ -4,24 +4,6 @@ db.users.remove({});
 db.friends.remove({});
 db.questionform.remove({});
 
-db.questionform.insert([
-  {
-    "one": "Both",
-    "two": "Both",
-    "three": "No",
-    "four": "No",
-    "five": "No",
-    "six": "No",
-    "seven": "No",
-    "eight": "Yes",
-    "nine": "Yes",
-    "ten": "Both",
-    "eleven": "example of text",
-    "tweleve": "example of text",
-    "thirteen": "example",
-  }
-]);
-
 db.friends.insert([
   {
     "name" : "Serena Chan",

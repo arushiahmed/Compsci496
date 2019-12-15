@@ -91,10 +91,10 @@ export default class Save extends React.Component {
             <center>
             <div className = "row">
                 <div className="col">
-                <a className="btn btn-dark" role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></a>
+                <button className="btn btn-dark" role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></button>
                 </div> 
                 <div className="col">
-                <a className="btn btn-dark" role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></a>
+                <button className="btn btn-dark" role="button"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
                 </div>
             </div>   
             <br></br><br></br>

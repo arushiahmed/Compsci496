@@ -687,7 +687,7 @@ var Form = function (_React$Component) {
       };
 
       fetch('/api/questionform', {
-        method: 'post',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submitReq)
       }).then(function (res) {
@@ -1748,7 +1748,7 @@ var Save = function (_React$Component) {
                 'div',
                 { className: 'col' },
                 _react2.default.createElement(
-                  'a',
+                  'button',
                   { className: 'btn btn-dark', role: 'button' },
                   _react2.default.createElement(
                     _reactRouter.Link,
@@ -1761,7 +1761,7 @@ var Save = function (_React$Component) {
                 'div',
                 { className: 'col' },
                 _react2.default.createElement(
-                  'a',
+                  'button',
                   { className: 'btn btn-dark', role: 'button' },
                   _react2.default.createElement(
                     _reactRouter.Link,
