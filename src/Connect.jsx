@@ -7,7 +7,7 @@ import SearchBar from './SearchBar.jsx';
 
 
 const FriendList = (props) => (
-  <Link to="/profile" style={{ textDecoration: 'none', color: 'black' }}>
+  <Link to="/profile" style={{textDecoration: 'none', color: 'black' }}>
     <div className="col" style={{marginBottom: '15px'}}>
   <div className="card h-100">
     <div className="card-body">

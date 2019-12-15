@@ -8,7 +8,6 @@ import Welcome from './Welcome.jsx';
 import SearchBar from './SearchBar.jsx'
 import Profile from './Profile.jsx'
 import About from './About.jsx'
-import Save from './mySurvey.jsx'
 import Survey from './mySurvey.jsx';
 
 var contentNode = document.getElementById("contents");

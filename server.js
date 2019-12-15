@@ -2,7 +2,6 @@ const express = require('express');
 
 const app = express();
 const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt');
 
 app.use(express.static('static'));
 app.use(bodyParser.json());
@@ -10,33 +9,33 @@ app.use(bodyParser.json());
 const MongoClient = require('mongodb').MongoClient;
 
 const formField = {
-  "one": 'required',
-  "two": 'required',
-  "three": 'required',
-  "four": 'required',
-  "five": 'required',
-  "six": 'required',
-  "seven": 'required',
-  "eight": 'required',
-  "nine": 'required',
-  "ten": 'required',
-  "eleven": 'required',
-  "tweleve": 'required',
-  "thirteen": 'required',
+  one: 'required',
+  two: 'required',
+  three: 'required',
+  four: 'required',
+  five: 'required',
+  six: 'required',
+  seven: 'required',
+  eight: 'required',
+  nine: 'required',
+  ten: 'required',
+  eleven: 'required',
+  tweleve: 'required',
+  thirteen: 'required',
 };
 
 const friendFieldType = {
-    "name" : 'required',
-    "degree": 'required',
-    "school": 'required',
-    "year" : 'required',
-    "bio": 'required',
-    "rate":  'required',
+    name: 'required',
+    degree: 'required',
+    school: 'required',
+    year: 'required',
+    bio: 'required',
+    rate:  'required',
 };
 
 function validateForm(question){
   for (const field in formField ) {
-    if(formField .hasOwnProperty(field)){
+    if(formField.hasOwnProperty(field)){
          const type = formField [field];
           if (!type) {
             delete question[field];

@@ -93,23 +93,23 @@ const formStyle = {
       e.preventDefault();
       let form = document.forms.question
       const submitReq = {
-        "one": form.inlineRadioOptions1.value,
-        "two": form.inlineRadioOptions2.value,
-        "three": form.inlineRadioOptions3.value,
-        "four": form.inlineRadioOptions4.value,
-        "five": form.inlineRadioOptions5.value,
-        "six": form.inlineRadioOptions6.value,
-        "seven": form.inlineRadioOptions7.value,
-        "eight": form.inlineRadioOptions8.value,
-        "nine": form.inlineRadioOptions9.value,
-        "ten": form.inlineRadioOptions10.value,
-        "eleven": form.one1.value,
+        "one": form.inlineRadio1.value,
+        "two": form.inlineRadio2.value,
+        "three": form.inlineRadio3.value,
+        "four": form.inlineRadio4.value,
+        "five": form.inlineRadio5.value,
+        "six": form.inlineRadio6.value,
+        "seven": form.inlineRadio7.value,
+        "eight": form.inlineRadio8.value,
+        "nine": form.inlineRadio9.value,
+        "ten": form.inlineRadio10.value,
+        "eleven": form.open1.value,
         "tweleve": form.open2.value,
         "thirteen": form.open3.value
     }
 
       fetch('/api/questionform', {
-          method: 'POST',
+          method: 'post',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(submitReq),
       })
@@ -139,7 +139,7 @@ const formStyle = {
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
                   <input className="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" checked={this.state.one === 'option1'} onChange={this.oneChange}/>
-                  <label className="form-check-label" htmlFor="inlineRadio1">In person </label>
+                  <label className="form-check-label" htmlFor="inlineRadio1">In person</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
                 <input className="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option2" checked={this.state.one === 'option2'} onChange={this.oneChange}/>
@@ -328,17 +328,17 @@ const formStyle = {
       </div>
       <br></br>
       <h3 style={{marginLeft: '2%'}}>What are your hobbies</h3>
-    </form>
       <center> 
         <div className = "row">
               <div className="col">
               <button className="btn btn-dark"><Link to="/userSurvey" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></button>
               </div> 
               <div className="col">
-              <button className="btn btn-dark" type="submit"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
+              <button className="btn btn-dark" type="submit" value="Submit"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
               </div>
           </div>   
           </center>
+    </form>
           <br></br><br></br>
           </div>
     );

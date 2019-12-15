@@ -16,11 +16,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(26);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
-var _SearchBar = __webpack_require__(31);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -181,9 +181,9 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(26);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -518,11 +518,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(26);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
-var _SearchBar = __webpack_require__(31);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -649,23 +649,23 @@ var Form = function (_React$Component) {
       e.preventDefault();
       var form = document.forms.question;
       var submitReq = {
-        "one": form.inlineRadioOptions1.value,
-        "two": form.inlineRadioOptions2.value,
-        "three": form.inlineRadioOptions3.value,
-        "four": form.inlineRadioOptions4.value,
-        "five": form.inlineRadioOptions5.value,
-        "six": form.inlineRadioOptions6.value,
-        "seven": form.inlineRadioOptions7.value,
-        "eight": form.inlineRadioOptions8.value,
-        "nine": form.inlineRadioOptions9.value,
-        "ten": form.inlineRadioOptions10.value,
-        "eleven": form.one1.value,
+        "one": form.inlineRadio1.value,
+        "two": form.inlineRadio2.value,
+        "three": form.inlineRadio3.value,
+        "four": form.inlineRadio4.value,
+        "five": form.inlineRadio5.value,
+        "six": form.inlineRadio6.value,
+        "seven": form.inlineRadio7.value,
+        "eight": form.inlineRadio8.value,
+        "nine": form.inlineRadio9.value,
+        "ten": form.inlineRadio10.value,
+        "eleven": form.open1.value,
         "tweleve": form.open2.value,
         "thirteen": form.open3.value
       };
 
       fetch('/api/questionform', {
-        method: 'POST',
+        method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submitReq)
       }).then(function (res) {
@@ -726,7 +726,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio1' },
-                  'In person '
+                  'In person'
                 )
               ),
               _react2.default.createElement(
@@ -1181,37 +1181,37 @@ var Form = function (_React$Component) {
             'h3',
             { style: { marginLeft: '2%' } },
             'What are your hobbies'
-          )
-        ),
-        _react2.default.createElement(
-          'center',
-          null,
+          ),
           _react2.default.createElement(
-            'div',
-            { className: 'row' },
+            'center',
+            null,
             _react2.default.createElement(
               'div',
-              { className: 'col' },
+              { className: 'row' },
               _react2.default.createElement(
-                'button',
-                { className: 'btn btn-dark' },
+                'div',
+                { className: 'col' },
                 _react2.default.createElement(
-                  _reactRouter.Link,
-                  { to: '/userSurvey', style: { textDecoration: 'none', color: 'white' } },
-                  'Edit'
+                  'button',
+                  { className: 'btn btn-dark' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/userSurvey', style: { textDecoration: 'none', color: 'white' } },
+                    'Edit'
+                  )
                 )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col' },
+              ),
               _react2.default.createElement(
-                'button',
-                { className: 'btn btn-dark', type: 'submit' },
+                'div',
+                { className: 'col' },
                 _react2.default.createElement(
-                  _reactRouter.Link,
-                  { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-                  'Find Friends'
+                  'button',
+                  { className: 'btn btn-dark', type: 'submit', value: 'Submit' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                    'Find Friends'
+                  )
                 )
               )
             )
@@ -1246,15 +1246,15 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(26);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
 var _Profile = __webpack_require__(79);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
-var _SearchBar = __webpack_require__(31);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -1323,7 +1323,7 @@ var _reactDom = __webpack_require__(86);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
 var _Connect = __webpack_require__(122);
 
@@ -1337,7 +1337,7 @@ var _Welcome = __webpack_require__(123);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
 
-var _SearchBar = __webpack_require__(31);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -1349,7 +1349,7 @@ var _About = __webpack_require__(125);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _mySurvey = __webpack_require__(243);
+var _mySurvey = __webpack_require__(244);
 
 var _mySurvey2 = _interopRequireDefault(_mySurvey);
 
@@ -1419,7 +1419,7 @@ _reactDom2.default.render(_react2.default.createElement(RoutedApp, null), conten
 
 /***/ }),
 
-/***/ 243:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1435,11 +1435,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(26);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
-var _SearchBar = __webpack_require__(31);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -1468,7 +1468,7 @@ var FormQuestion = function FormQuestion(props) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you want to meet in person or online?',
       _react2.default.createElement('br', null),
       props.question.one
@@ -1476,7 +1476,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you want to connect with Undergraduates or Graduates Students?',
       _react2.default.createElement('br', null),
       props.question.two
@@ -1484,7 +1484,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you want to connect with people in the same year as you?',
       _react2.default.createElement('br', null),
       props.question.three
@@ -1492,7 +1492,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you want to connect with people from the same country?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1501,7 +1501,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you want to connect with people who share the same ethnicity?',
       _react2.default.createElement('br', null),
       props.question.five
@@ -1509,7 +1509,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you want to connect with people in the same major?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1523,7 +1523,7 @@ var FormQuestion = function FormQuestion(props) {
     ),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Are you looking for someone to help you?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1532,7 +1532,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you have any knowledge of the school before you started?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1541,7 +1541,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you know the aera of where your school is located?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1550,7 +1550,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Do you have a car on campus?',
       _react2.default.createElement('br', null),
       ' ',
@@ -1559,7 +1559,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'Are there any challenges you are coping with? If yes, please describe.',
       _react2.default.createElement('br', null),
       ' ',
@@ -1568,7 +1568,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'How can someone help you with your challenges? Please descibe.',
       _react2.default.createElement('br', null),
       ' ',
@@ -1577,7 +1577,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'div',
-      { className: 'viewForm', style: ormStyle },
+      { className: 'viewForm', style: formStyle },
       'How are you able to help someone with their challenges? Please descibe how you can help a person.',
       _react2.default.createElement('br', null),
       ' ',
@@ -1709,7 +1709,7 @@ exports.default = Survey;
 
 /***/ }),
 
-/***/ 31:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1725,9 +1725,9 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(26);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
 var _Profile = __webpack_require__(79);
 
@@ -1866,11 +1866,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(26);
 
-var _reactRouter = __webpack_require__(19);
+var _reactRouter = __webpack_require__(21);
 
-var _SearchBar = __webpack_require__(31);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -1981,7 +1981,7 @@ var Profile = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('input', { type: 'text', className: 'form-control-plaintext', id: 'staticEmail', value: 'emailexamplel@umass.edu', style: formStyle })
+                _react2.default.createElement('input', { type: 'text', className: 'form-control-plaintext', id: 'staticEmail', defaultValue: 'emailexamplel@umass.edu', style: formStyle })
               )
             )
           ),
