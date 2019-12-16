@@ -162,7 +162,7 @@ const formStyle = {
         <h1 style={{marginLeft: '2%'}}>Survery Questions</h1>
         <br></br><br></br>
       <form className="form-group" name="question" onSubmit={this.handleSubmit}>
-      <h2 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h2>
+      <h3 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h3>
       <br></br>
       <div className="form-group">
             <div className="row" style={textStyle}>
@@ -313,7 +313,8 @@ const formStyle = {
             </div>
       </div>
     <br></br>
-    <h2 style={{marginLeft: '2%'}}>Knowledge about the University</h2>
+
+    <h3 style={{marginLeft: '2%'}}>Knowledge about the University</h3>
     <br></br>
       <div className="form-group" >
             <div className="row" style={textStyle}>
@@ -367,7 +368,7 @@ const formStyle = {
       </div>
       
       <br></br>
-      <h2 style={{marginLeft: '2%'}}>What are your hobbies</h2>
+      <h3 style={{marginLeft: '2%'}}>What are your hobbies</h3>
       <br></br>
       <div className="form-group">
         <div className="row" style={textStyle}>
@@ -405,7 +406,7 @@ const formStyle = {
       </div> 
 
 
-      <h2 style={{marginLeft: '2%'}}>What are you hoping to get out of this website?</h2>
+      <h3 style={{marginLeft: '2%'}}>What are you hoping to get out of this website?</h3>
       <br></br>
       <div className="form-group">
             <div className="row" style={textStyle}>

@@ -733,7 +733,7 @@ var Form = function (_React$Component) {
           'form',
           { className: 'form-group', name: 'question', onSubmit: this.handleSubmit },
           _react2.default.createElement(
-            'h2',
+            'h3',
             { style: { marginLeft: '2%' } },
             'What are the people you want to connect with?'
           ),
@@ -1106,7 +1106,7 @@ var Form = function (_React$Component) {
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
-            'h2',
+            'h3',
             { style: { marginLeft: '2%' } },
             'Knowledge about the University'
           ),
@@ -1223,7 +1223,7 @@ var Form = function (_React$Component) {
           ),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
-            'h2',
+            'h3',
             { style: { marginLeft: '2%' } },
             'What are your hobbies'
           ),
@@ -1307,7 +1307,7 @@ var Form = function (_React$Component) {
             )
           ),
           _react2.default.createElement(
-            'h2',
+            'h3',
             { style: { marginLeft: '2%' } },
             'What are you hoping to get out of this website?'
           ),
