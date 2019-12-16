@@ -528,6 +528,8 @@ var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -612,6 +614,8 @@ var Form = function (_React$Component) {
         index = categories.indexOf(+e.value);
         categories.splice(index, 1);
       }
+
+      this.setState(_defineProperty({}, categories, e.target.value));
     }
   }, {
     key: 'oneChange',
@@ -667,8 +671,8 @@ var Form = function (_React$Component) {
         "six": form.inlineRadio6.value,
         "seven": form.inlineRadio7.value,
         "eight": form.inlineRadio8.value,
-        "nine": form.openOnevalue,
-        "ten": form.openTwovalue,
+        "nine": form.openOne.value,
+        "ten": form.openTwo.value,
         "eleven": form.openThree.value,
         "tweleve": form.openFour.value,
         "thirteen": form.openFive.value,
@@ -1212,7 +1216,7 @@ var Form = function (_React$Component) {
           _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
-            { className: 'form-group' },
+            { className: 'form-group', id: 'hobbies' },
             _react2.default.createElement(
               'div',
               { className: 'row', style: textStyle },

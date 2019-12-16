@@ -101,6 +101,10 @@ handleCheck(e){
       index = categories.indexOf(+e.value)
       categories.splice(index, 1)
     }
+
+    this.setState({
+      [categories]: e.target.value
+    });
   }
 
   oneChange(e){
@@ -141,8 +145,8 @@ handleCheck(e){
         "six": form.inlineRadio6.value,
         "seven": form.inlineRadio7.value,
         "eight": form.inlineRadio8.value,
-        "nine": form.openOnevalue,
-        "ten": form.openTwovalue,
+        "nine": form.openOne.value,
+        "ten": form.openTwo.value,
         "eleven": form.openThree.value,
         "tweleve": form.openFour.value,
         "thirteen": form.openFive.value,
@@ -384,7 +388,7 @@ handleCheck(e){
       <br></br>
       <h3 style={{marginLeft: '2%'}}>What are your hobbies</h3>
       <br></br>
-      <div className="form-group">
+      <div className="form-group" id="hobbies">
         <div className="row" style={textStyle}>
           <div className="col">
             <div class="form-check">
