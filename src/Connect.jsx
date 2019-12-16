@@ -8,9 +8,9 @@ import SearchBar from './SearchBar.jsx';
 
 const FriendList = (props) => (
   <Link to="/profile" style={{textDecoration: 'none', color: 'black' }}>
-    <div className="col" style={{marginBottom: '15px'}}>
-  <div className="card h-100">
-    <div className="card-body">
+   
+  <div className="card border-dark mb-3" style={{width: '550px', marginLeft: '30%', marginBottom: '15px'}}>
+    <div className="card-body h-100">
       <h5 className="card-title">{props.friend.name}</h5>
       <h6 className="card-subtitle mb-2">Degree: {props.friend.degree}</h6>
       <h6 className="card-subtitle mb-2">School: {props.friend.school}</h6>
@@ -20,7 +20,7 @@ const FriendList = (props) => (
       <br></br>
     </div>
   </div>
-</div>
+
   </Link>
 
 
@@ -32,7 +32,7 @@ function FriendTable(props) {
   ));
 
   return (
-    <div className="row-cols-2 row-cols-md-3">
+    <div className="card-deck">
         {issueRows}
     </div>
   );

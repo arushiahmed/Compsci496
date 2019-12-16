@@ -38,49 +38,45 @@ var FriendList = function FriendList(props) {
     { to: '/profile', style: { textDecoration: 'none', color: 'black' } },
     _react2.default.createElement(
       'div',
-      { className: 'col', style: { marginBottom: '15px' } },
+      { className: 'card border-dark mb-3', style: { width: '550px', marginLeft: '30%', marginBottom: '15px' } },
       _react2.default.createElement(
         'div',
-        { className: 'card h-100' },
+        { className: 'card-body h-100' },
         _react2.default.createElement(
-          'div',
-          { className: 'card-body' },
-          _react2.default.createElement(
-            'h5',
-            { className: 'card-title' },
-            props.friend.name
-          ),
-          _react2.default.createElement(
-            'h6',
-            { className: 'card-subtitle mb-2' },
-            'Degree: ',
-            props.friend.degree
-          ),
-          _react2.default.createElement(
-            'h6',
-            { className: 'card-subtitle mb-2' },
-            'School: ',
-            props.friend.school
-          ),
-          _react2.default.createElement(
-            'h6',
-            { className: 'card-subtitle mb-2' },
-            'Year: ',
-            props.friend.year
-          ),
-          _react2.default.createElement(
-            'h6',
-            { className: 'card-subtitle mb-2' },
-            'Rate: ',
-            props.friend.rate
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'card-text' },
-            props.friend.bio
-          ),
-          _react2.default.createElement('br', null)
-        )
+          'h5',
+          { className: 'card-title' },
+          props.friend.name
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2' },
+          'Degree: ',
+          props.friend.degree
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2' },
+          'School: ',
+          props.friend.school
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2' },
+          'Year: ',
+          props.friend.year
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2' },
+          'Rate: ',
+          props.friend.rate
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'card-text' },
+          props.friend.bio
+        ),
+        _react2.default.createElement('br', null)
       )
     )
   );
@@ -93,7 +89,7 @@ function FriendTable(props) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'row-cols-2 row-cols-md-3' },
+    { className: 'card-deck' },
     issueRows
   );
 }
