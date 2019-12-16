@@ -23,7 +23,7 @@ const formStyle = {
   fontSize: '20px'
 }
 
-//Form Helpers
+//Checkboxes
 
  export default class Form extends React.Component {
   constructor(props) {
@@ -38,7 +38,31 @@ const formStyle = {
       six: '',
       seven: '',
       eight: '',
-      categories: false, //['Sports', 'Dance', 'Music', 'Art', 'Fashion', 'Make up', 'Traveling', 'Hiking', 'Gardening', 'Camping', 'Video Games', 'Photography', 'Cars', 'Movies', 'Books', 'Volunteer', 'Comendy', 'Games', 'Building', 'Fishing', 'Theater', 'Baking/Cooking', 'Other'],
+      categories: [
+        {name: 'Sports', value: 'Sports'}, 
+        {name: 'Dance', value: 'Dance'}, 
+        {name: 'Music', value: 'Music'}, 
+        {name: 'Art', value: 'Art'}, 
+        {name: 'Fashion', value: 'Fashion'}, 
+        {name: 'Make up', value: 'Make up'},
+        {name: 'Traveling', value: 'Traveling'}, 
+        {name: 'Hiking', value: 'Hiking'}, 
+        {name: 'Gardening', value: 'Gardening'}, 
+        {name: 'Camping', value: 'Camping'}, 
+        {name: 'Video Games', value: 'Video Games'}, 
+        {name: 'Photography', value: 'Photography'}, 
+        {name: 'Cars', value: 'Cars'}, 
+        {name: 'Movies', value: 'Movies'}, 
+        {name: 'Books', value: 'Books'},
+        {name: 'Volunteer', value: 'Volunteer'}, 
+        {name: 'Comedy', value: 'Comedy'}, 
+        {name: 'Games', value: 'Games'},
+        {name: 'Building', value: 'Building'},
+        {name: 'Fishing', value: 'Fishing'},
+        {name: 'Theater', value: 'Theater'},
+        {name: 'Baking/Cooking', value: 'Baking/Cooking'}, 
+        {name: 'Writing', value: 'Writing'}, 
+        {name: 'Other', value: 'Other'}],
       nine: '',
       ten: '',
       eleven: '',
@@ -52,7 +76,7 @@ const formStyle = {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this)
-  //  this.handleCheck = this.handleCheck.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
     this.oneChange = this.oneChange.bind(this);
     this.twoChange = this.twoChange.bind(this);
     this.threeChange = this.threeChange.bind(this);
@@ -61,33 +85,24 @@ const formStyle = {
     this.sixChange = this.sixChange.bind(this);
     this.sevenChange = this.sevenChange.bind(this);
     this.eightChange = this.eightChange.bind(this);
-    this.nineChange = this.nineChange.bind(this);
-    this.tenChange = this.tenChange.bind(this);      
+    
   }
 
-  handleCheck() {
-    this.setState({
-      categories: !this.state.categories 
-    });
-  }; 
   
 
-/*setCategory = (e) => {
-    const categories = this.state.categories.slice(0);
-    const index = categories.indexOf(e.target.value);
+handleCheck(e){
+    const categories = this.state.categories
+    let index
 
     if(e.target.checked){
-      categories.push(e.target.value);
+      categories.push(+e.target.value)
     }
     else{
-      categories.splice(index, 1);
+      index = categories.indexOf(+e.value)
+      categories.splice(index, 1)
     }
-
-    this.setState({
-      categories: categories
-    });
   }
-*/
+
   oneChange(e){
     this.setState({one: e.target.value});
   }
@@ -112,12 +127,6 @@ const formStyle = {
   eightChange(e){
     this.setState({eight: e.target.value});
   }
-  nineChange(e){
-    this.setState({nine: e.target.value});
-  }
-  tenChange(e){
-    this.setState({ten: e.target.value});
-  }
 
     handleSubmit(e)
     {
@@ -132,11 +141,16 @@ const formStyle = {
         "six": form.inlineRadio6.value,
         "seven": form.inlineRadio7.value,
         "eight": form.inlineRadio8.value,
-        "nine": form.inlineRadio9.value,
-        "ten": form.inlineRadio10.value,
-        "eleven": form.open1.value,
-        "tweleve": form.open2.value,
-        "thirteen": form.open3.value
+        "nine": form.openOnevalue,
+        "ten": form.openTwovalue,
+        "eleven": form.openThree.value,
+        "tweleve": form.openFour.value,
+        "thirteen": form.openFive.value,
+        "fourteen": form.openSix.value,
+        "fifteen": form.openSeven.value,
+        "sixteen": form.openEight.value,
+        "seventeen": form.openNine.value,
+        "eighteen": form.openTen.value
     }
 
       fetch('/api/questionform', {
@@ -246,7 +260,7 @@ const formStyle = {
               <label>Do you want to connect with people in the same major, different, or both?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Same" checked={this.state.five=== 'Same'} onChange={this.fiveChange}/>
+                  <input className="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Same" checked={this.state.five === 'Same'} onChange={this.fiveChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio5">Same</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
@@ -374,38 +388,167 @@ const formStyle = {
         <div className="row" style={textStyle}>
           <div className="col">
             <div class="form-check">
-              <input class="form-check-input" style={formStyle} type="checkbox" name="categories" value={this.state.categories} id="defaultCheck1" onChange={this.handleCheck}/>
-              <label class="form-check-label" for="defaultCheck1">Sports</label>
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck" checked={this.state.categories[0].false} name={this.state.categories[0].name} value={this.state.categories[0].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck">Sports</label>
             </div>
           </div>
           <div className="col">
             <div class="form-check">
-              <input class="form-check-input" style={formStyle} type="checkbox" value="Dance" id="defaultCheck2"/>
-              <label class="form-check-label" for="defaultCheck2">Dance</label>
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck1" checked={this.state.categories[1].false} name={this.state.categories[1].name} value={this.state.categories[1].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck1">Dance</label>
             </div>
           </div>
           <div className="col">
             <div class="form-check">
-              <input class="form-check-input" style={formStyle} type="checkbox" value="Music" id="defaultCheck3"/>
-              <label class="form-check-label" for="defaultCheck3">Music</label>
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck2" checked={this.state.categories[2].false} name={this.state.categories[2].name} value={this.state.categories[2].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck2">Music</label>
             </div>
           </div>
           <div className="col">
             <div class="form-check">
-              <input class="form-check-input" style={formStyle} type="checkbox" value="Art" id="defaultCheck4"/>
-              <label class="form-check-label" for="defaultCheck4">Art</label>
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck3" checked={this.state.categories[3].false} name={this.state.categories[3].name} value={this.state.categories[3].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck3">Art</label>
             </div>
           </div>
           <div className="col">
             <div class="form-check">
-              <input class="form-check-input" style={formStyle} type="checkbox" value="Fashion" id="defaultCheck5"/>
-              <label class="form-check-label" for="defaultCheck5">Fashion</label>
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck4" checked={this.state.categories[4].false} name={this.state.categories[4].name} value={this.state.categories[4].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck4">Fashion</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck5" checked={this.state.categories[5].false} name={this.state.categories[5].name} value={this.state.categories[5].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck5">Make up</label>
             </div>
           </div>
         </div>
+        <div className="row" style={textStyle}>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck6" checked={this.state.categories[6].false} name={this.state.categories[6].name} value={this.state.categories[6].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck6">Traveling</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck7" checked={this.state.categories[7].false} name={this.state.categories[7].name} value={this.state.categories[7].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck7">Hiking</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck8" checked={this.state.categories[8].false} name={this.state.categories[8].name} value={this.state.categories[8].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck8">Gardening</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck9" checked={this.state.categories[9].false} name={this.state.categories[9].name} value={this.state.categories[9].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck9">Camping</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck10" checked={this.state.categories[10].false} name={this.state.categories[10].name} value={this.state.categories[10].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck9">Video Games</label>
+            </div>
+          </div>
+        <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck11" checked={this.state.categories[11].false} name={this.state.categories[11].name} value={this.state.categories[11].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck11">Photography</label>
+            </div>
+          </div>
+        </div>
+        <div className="row" style={textStyle}>
+        <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck12" checked={this.state.categories[12].false} name={this.state.categories[12].name} value={this.state.categories[12].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck12">Cars</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck13" checked={this.state.categories[13].false} name={this.state.categories[13].name} value={this.state.categories[13].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck13">Movies</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck14" checked={this.state.categories[14].false} name={this.state.categories[14].name} value={this.state.categories[14].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck14">Books</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck15" checked={this.state.categories[15].false} name={this.state.categories[15].name} value={this.state.categories[15].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck11">Volunteer</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck16" checked={this.state.categories[16].false} name={this.state.categories[16].name} value={this.state.categories[16].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck16">Comedy</label>
+            </div>
+          </div>
+          <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck17" checked={this.state.categories[17].false} name={this.state.categories[17].name} value={this.state.categories[17].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck17">Games</label>
+            </div>
       </div> 
-
-
+      </div>
+      <div className="row" style={textStyle}>
+      <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck18" checked={this.state.categories[18].false} name={this.state.categories[18].name} value={this.state.categories[18].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck18">Building</label>
+            </div>
+      </div> 
+      <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck19" checked={this.state.categories[19].false} name={this.state.categories[19].name} value={this.state.categories[19].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck19">Fishing</label>
+            </div>
+      </div> 
+      <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck20" checked={this.state.categories[20].false} name={this.state.categories[20].name} value={this.state.categories[20].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck20">Theater</label>
+            </div>
+      </div> 
+      <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck21" checked={this.state.categories[21].false} name={this.state.categories[21].name} value={this.state.categories[21].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck21">Baking/Cooking</label>
+            </div>
+      </div> 
+      <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck22" checked={this.state.categories[22].false} name={this.state.categories[22].name} value={this.state.categories[22].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck22">Writing</label>
+            </div>
+      </div> 
+      <div className="col">
+            <div class="form-check">
+              <input class="form-check-input" style={formStyle} type="checkbox" id="defaultCheck23" checked={this.state.categories[23].false} name={this.state.categories[23].name} value={this.state.categories[23].value} onChange={this.setCategory}/>
+              <label class="form-check-label" for="defaultCheck23">Other</label>
+            </div>
+      </div> 
+      </div>
+  </div>
+  <div className="form-group">
+              <div className="row" style={textStyle}>
+                <div className="col">
+                <label>If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.</label>
+                </div>
+                <div className="col">
+                  <textarea type="text" className="form-control" id="openSix" style={inputStyle}/>
+                </div>
+              </div>
+        </div> 
+  <br></br>
       <h3 style={{marginLeft: '2%'}}>What are you hoping to get out of this website?</h3>
       <br></br>
       <div className="form-group">
@@ -414,7 +557,7 @@ const formStyle = {
               <label>Are you looking for someone to help you or are you willing to help people?</label>
               </div>
               <div className="col">
-                <textarea type="text" className="form-control" id="openOne" style={inputStyle}/>
+                <textarea type="text" className="form-control" id="openSeven" style={inputStyle}/>
               </div>
             </div>
       </div> 
@@ -424,7 +567,7 @@ const formStyle = {
               <label>Are there any challenges you are coping with? If yes, please describe.</label>
               </div>
               <div className="col">
-                <textarea type="text" className="form-control" id="open1" style={inputStyle}/>
+                <textarea type="text" className="form-control" id="openEight" style={inputStyle}/>
               </div>
             </div>            
       </div>
@@ -434,7 +577,7 @@ const formStyle = {
               <label>How can someone help you with your challenges? Please descibe.</label>
               </div>
               <div className="col">
-                <textarea type="text" className="form-control" id="open2" style={inputStyle}/>
+                <textarea type="text" className="form-control" id="openNine" style={inputStyle}/>
               </div>
             </div>            
       </div>
@@ -444,7 +587,7 @@ const formStyle = {
               <label>How are you able to help someone with their challenges? Please descibe how you can help a person.</label>
               </div>
               <div className="col">
-                <textarea type="text" className="form-control" id="open3" style={inputStyle}/>
+                <textarea type="text" className="form-control" id="openTen" style={inputStyle}/>
               </div>
             </div>            
       </div>

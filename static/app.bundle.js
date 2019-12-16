@@ -553,7 +553,7 @@ var formStyle = {
   marginRight: '2%',
   fontSize: '20px'
 
-  //Form Helpers
+  //Checkboxes
 
 };
 var Form = function (_React$Component) {
@@ -573,7 +573,7 @@ var Form = function (_React$Component) {
       six: '',
       seven: '',
       eight: '',
-      categories: false, //['Sports', 'Dance', 'Music', 'Art', 'Fashion', 'Make up', 'Traveling', 'Hiking', 'Gardening', 'Camping', 'Video Games', 'Photography', 'Cars', 'Movies', 'Books', 'Volunteer', 'Comendy', 'Games', 'Building', 'Fishing', 'Theater', 'Baking/Cooking', 'Other'],
+      categories: [{ name: 'Sports', value: 'Sports' }, { name: 'Dance', value: 'Dance' }, { name: 'Music', value: 'Music' }, { name: 'Art', value: 'Art' }, { name: 'Fashion', value: 'Fashion' }, { name: 'Make up', value: 'Make up' }, { name: 'Traveling', value: 'Traveling' }, { name: 'Hiking', value: 'Hiking' }, { name: 'Gardening', value: 'Gardening' }, { name: 'Camping', value: 'Camping' }, { name: 'Video Games', value: 'Video Games' }, { name: 'Photography', value: 'Photography' }, { name: 'Cars', value: 'Cars' }, { name: 'Movies', value: 'Movies' }, { name: 'Books', value: 'Books' }, { name: 'Volunteer', value: 'Volunteer' }, { name: 'Comedy', value: 'Comedy' }, { name: 'Games', value: 'Games' }, { name: 'Building', value: 'Building' }, { name: 'Fishing', value: 'Fishing' }, { name: 'Theater', value: 'Theater' }, { name: 'Baking/Cooking', value: 'Baking/Cooking' }, { name: 'Writing', value: 'Writing' }, { name: 'Other', value: 'Other' }],
       nine: '',
       ten: '',
       eleven: '',
@@ -587,7 +587,7 @@ var Form = function (_React$Component) {
     };
 
     _this.handleSubmit = _this.handleSubmit.bind(_this);
-    //  this.handleCheck = this.handleCheck.bind(this);
+    _this.handleCheck = _this.handleCheck.bind(_this);
     _this.oneChange = _this.oneChange.bind(_this);
     _this.twoChange = _this.twoChange.bind(_this);
     _this.threeChange = _this.threeChange.bind(_this);
@@ -596,38 +596,25 @@ var Form = function (_React$Component) {
     _this.sixChange = _this.sixChange.bind(_this);
     _this.sevenChange = _this.sevenChange.bind(_this);
     _this.eightChange = _this.eightChange.bind(_this);
-    _this.nineChange = _this.nineChange.bind(_this);
-    _this.tenChange = _this.tenChange.bind(_this);
+
     return _this;
   }
 
   _createClass(Form, [{
     key: 'handleCheck',
-    value: function handleCheck() {
-      this.setState({
-        categories: !this.state.categories
-      });
+    value: function handleCheck(e) {
+      var categories = this.state.categories;
+      var index = void 0;
+
+      if (e.target.checked) {
+        categories.push(+e.target.value);
+      } else {
+        index = categories.indexOf(+e.value);
+        categories.splice(index, 1);
+      }
     }
   }, {
     key: 'oneChange',
-
-
-    /*setCategory = (e) => {
-        const categories = this.state.categories.slice(0);
-        const index = categories.indexOf(e.target.value);
-    
-        if(e.target.checked){
-          categories.push(e.target.value);
-        }
-        else{
-          categories.splice(index, 1);
-        }
-    
-        this.setState({
-          categories: categories
-        });
-      }
-    */
     value: function oneChange(e) {
       this.setState({ one: e.target.value });
     }
@@ -667,16 +654,6 @@ var Form = function (_React$Component) {
       this.setState({ eight: e.target.value });
     }
   }, {
-    key: 'nineChange',
-    value: function nineChange(e) {
-      this.setState({ nine: e.target.value });
-    }
-  }, {
-    key: 'tenChange',
-    value: function tenChange(e) {
-      this.setState({ ten: e.target.value });
-    }
-  }, {
     key: 'handleSubmit',
     value: function handleSubmit(e) {
       e.preventDefault();
@@ -690,11 +667,16 @@ var Form = function (_React$Component) {
         "six": form.inlineRadio6.value,
         "seven": form.inlineRadio7.value,
         "eight": form.inlineRadio8.value,
-        "nine": form.inlineRadio9.value,
-        "ten": form.inlineRadio10.value,
-        "eleven": form.open1.value,
-        "tweleve": form.open2.value,
-        "thirteen": form.open3.value
+        "nine": form.openOnevalue,
+        "ten": form.openTwovalue,
+        "eleven": form.openThree.value,
+        "tweleve": form.openFour.value,
+        "thirteen": form.openFive.value,
+        "fourteen": form.openSix.value,
+        "fifteen": form.openSeven.value,
+        "sixteen": form.openEight.value,
+        "seventeen": form.openNine.value,
+        "eighteen": form.openTen.value
       };
 
       fetch('/api/questionform', {
@@ -1240,10 +1222,10 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'div',
                   { 'class': 'form-check' },
-                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', name: 'categories', value: this.state.categories, id: 'defaultCheck1', onChange: this.handleCheck }),
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck', checked: this.state.categories[0].false, name: this.state.categories[0].name, value: this.state.categories[0].value, onChange: this.setCategory }),
                   _react2.default.createElement(
                     'label',
-                    { 'class': 'form-check-label', 'for': 'defaultCheck1' },
+                    { 'class': 'form-check-label', 'for': 'defaultCheck' },
                     'Sports'
                   )
                 )
@@ -1254,10 +1236,10 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'div',
                   { 'class': 'form-check' },
-                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Dance', id: 'defaultCheck2' }),
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck1', checked: this.state.categories[1].false, name: this.state.categories[1].name, value: this.state.categories[1].value, onChange: this.setCategory }),
                   _react2.default.createElement(
                     'label',
-                    { 'class': 'form-check-label', 'for': 'defaultCheck2' },
+                    { 'class': 'form-check-label', 'for': 'defaultCheck1' },
                     'Dance'
                   )
                 )
@@ -1268,10 +1250,10 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'div',
                   { 'class': 'form-check' },
-                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Music', id: 'defaultCheck3' }),
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck2', checked: this.state.categories[2].false, name: this.state.categories[2].name, value: this.state.categories[2].value, onChange: this.setCategory }),
                   _react2.default.createElement(
                     'label',
-                    { 'class': 'form-check-label', 'for': 'defaultCheck3' },
+                    { 'class': 'form-check-label', 'for': 'defaultCheck2' },
                     'Music'
                   )
                 )
@@ -1282,10 +1264,10 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'div',
                   { 'class': 'form-check' },
-                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Art', id: 'defaultCheck4' }),
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck3', checked: this.state.categories[3].false, name: this.state.categories[3].name, value: this.state.categories[3].value, onChange: this.setCategory }),
                   _react2.default.createElement(
                     'label',
-                    { 'class': 'form-check-label', 'for': 'defaultCheck4' },
+                    { 'class': 'form-check-label', 'for': 'defaultCheck3' },
                     'Art'
                   )
                 )
@@ -1296,16 +1278,317 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'div',
                   { 'class': 'form-check' },
-                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Fashion', id: 'defaultCheck5' }),
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck4', checked: this.state.categories[4].false, name: this.state.categories[4].name, value: this.state.categories[4].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck4' },
+                    'Fashion'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck5', checked: this.state.categories[5].false, name: this.state.categories[5].name, value: this.state.categories[5].value, onChange: this.setCategory }),
                   _react2.default.createElement(
                     'label',
                     { 'class': 'form-check-label', 'for': 'defaultCheck5' },
-                    'Fashion'
+                    'Make up'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck6', checked: this.state.categories[6].false, name: this.state.categories[6].name, value: this.state.categories[6].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck6' },
+                    'Traveling'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck7', checked: this.state.categories[7].false, name: this.state.categories[7].name, value: this.state.categories[7].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck7' },
+                    'Hiking'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck8', checked: this.state.categories[8].false, name: this.state.categories[8].name, value: this.state.categories[8].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck8' },
+                    'Gardening'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck9', checked: this.state.categories[9].false, name: this.state.categories[9].name, value: this.state.categories[9].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck9' },
+                    'Camping'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck10', checked: this.state.categories[10].false, name: this.state.categories[10].name, value: this.state.categories[10].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck9' },
+                    'Video Games'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck11', checked: this.state.categories[11].false, name: this.state.categories[11].name, value: this.state.categories[11].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck11' },
+                    'Photography'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck12', checked: this.state.categories[12].false, name: this.state.categories[12].name, value: this.state.categories[12].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck12' },
+                    'Cars'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck13', checked: this.state.categories[13].false, name: this.state.categories[13].name, value: this.state.categories[13].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck13' },
+                    'Movies'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck14', checked: this.state.categories[14].false, name: this.state.categories[14].name, value: this.state.categories[14].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck14' },
+                    'Books'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck15', checked: this.state.categories[15].false, name: this.state.categories[15].name, value: this.state.categories[15].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck11' },
+                    'Volunteer'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck16', checked: this.state.categories[16].false, name: this.state.categories[16].name, value: this.state.categories[16].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck16' },
+                    'Comedy'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck17', checked: this.state.categories[17].false, name: this.state.categories[17].name, value: this.state.categories[17].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck17' },
+                    'Games'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck18', checked: this.state.categories[18].false, name: this.state.categories[18].name, value: this.state.categories[18].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck18' },
+                    'Building'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck19', checked: this.state.categories[19].false, name: this.state.categories[19].name, value: this.state.categories[19].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck19' },
+                    'Fishing'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck20', checked: this.state.categories[20].false, name: this.state.categories[20].name, value: this.state.categories[20].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck20' },
+                    'Theater'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck21', checked: this.state.categories[21].false, name: this.state.categories[21].name, value: this.state.categories[21].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck21' },
+                    'Baking/Cooking'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck22', checked: this.state.categories[22].false, name: this.state.categories[22].name, value: this.state.categories[22].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck22' },
+                    'Writing'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', id: 'defaultCheck23', checked: this.state.categories[23].false, name: this.state.categories[23].name, value: this.state.categories[23].value, onChange: this.setCategory }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck23' },
+                    'Other'
                   )
                 )
               )
             )
           ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openSix', style: inputStyle })
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'h3',
             { style: { marginLeft: '2%' } },
@@ -1330,7 +1613,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openOne', style: inputStyle })
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openSeven', style: inputStyle })
               )
             )
           ),
@@ -1352,7 +1635,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'open1', style: inputStyle })
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openEight', style: inputStyle })
               )
             )
           ),
@@ -1374,7 +1657,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'open2', style: inputStyle })
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openNine', style: inputStyle })
               )
             )
           ),
@@ -1396,7 +1679,7 @@ var Form = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'col' },
-                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'open3', style: inputStyle })
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openTen', style: inputStyle })
               )
             )
           ),
