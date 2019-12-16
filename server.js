@@ -17,11 +17,17 @@ const formField = {
   six: 'required',
   seven: 'required',
   eight: 'required',
+  categores: 'required',
   nine: 'required',
   ten: 'required',
   eleven: 'required',
   tweleve: 'required',
   thirteen: 'required',
+  fourteen: 'optional',
+  fifteen: 'optional',
+  sixteen: 'optional',
+  seventeen: 'optional',
+  eighteen:'optional',
 };
 
 const friendFieldType = {

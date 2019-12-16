@@ -1651,7 +1651,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'How can someone help you with your challenges? Please descibe.'
+                  'How can someone help you with your challenges? Please describe.'
                 )
               ),
               _react2.default.createElement(
@@ -1673,7 +1673,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'How are you able to help someone with their challenges? Please descibe'
+                  'How are you able to help someone with their challenges? Please describe'
                 )
               ),
               _react2.default.createElement(
@@ -2132,7 +2132,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'How can someone help you with your challenges? Please descibe.',
+      'How can someone help you with your challenges? Please describe.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.seventeen
@@ -2141,7 +2141,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'How are you able to help someone with their challenges? Please descibe.',
+      'How are you able to help someone with their challenges? Please describe.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.eighteen

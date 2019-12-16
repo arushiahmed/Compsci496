@@ -578,7 +578,7 @@ handleCheck(e){
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label>How can someone help you with your challenges? Please descibe.</label>
+              <label>How can someone help you with your challenges? Please describe.</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="openNine" style={inputStyle}/>
@@ -588,7 +588,7 @@ handleCheck(e){
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label>How are you able to help someone with their challenges? Please descibe</label>
+              <label>How are you able to help someone with their challenges? Please describe</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="openTen" style={inputStyle}/>
@@ -612,6 +612,3 @@ handleCheck(e){
     );
   }
 }
-
-
-

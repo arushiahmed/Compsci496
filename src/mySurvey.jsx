@@ -37,8 +37,8 @@ const formStyle = {
           <h3 style={{marginLeft: '2%'}}>Knowledge about the University</h3>
             <div className="viewForm" style={formStyle}>Are you looking for help or are you willing to help? Please describe.<br></br> {props.question.fifteen}</div><br></br>
             <div className="viewForm" style={formStyle}>Are there any challenges you are coping with? Please describe.<br></br> {props.question.sixteen}</div><br></br>
-            <div className="viewForm" style={formStyle}>How can someone help you with your challenges? Please descibe.<br></br> {props.question.seventeen}</div><br></br>
-            <div className="viewForm" style={formStyle}>How are you able to help someone with their challenges? Please descibe.<br></br> {props.question.eighteen}</div><br></br>
+            <div className="viewForm" style={formStyle}>How can someone help you with your challenges? Please describe.<br></br> {props.question.seventeen}</div><br></br>
+            <div className="viewForm" style={formStyle}>How are you able to help someone with their challenges? Please describe.<br></br> {props.question.eighteen}</div><br></br>
        </div>
           
   
