@@ -572,11 +572,17 @@ var Form = function (_React$Component) {
       six: '',
       seven: '',
       eight: '',
+      categories: ['Sports', 'Dance', 'Music', 'Art', 'Fashion', 'Make up', 'Traveling', 'Hiking', 'Gardening', 'Camping', 'Video Games', 'Photography', 'Cars', 'Movies', 'Books', 'Volunteer', 'Comendy', 'Games', 'Building', 'Fishing', 'Theater', 'Baking/Cooking', 'Other'],
       nine: '',
       ten: '',
       eleven: '',
       tweleve: '',
-      thirteen: ''
+      thirteen: '',
+      fourteen: '',
+      fifteen: '',
+      sixteen: '',
+      seventeen: '',
+      eighteen: ''
     };
 
     _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -592,6 +598,24 @@ var Form = function (_React$Component) {
     _this.tenChange = _this.tenChange.bind(_this);
     return _this;
   }
+
+  /*setCategory = (e) => {
+      const categories = this.state.categories.slice(0);
+      const index = categories.indexOf(e.target.value);
+  
+      if(e.target.checked){
+        categories.push(e.target.value);
+      }
+      else{
+        categories.splice(index, 1);
+      }
+  
+      this.setState({
+        categories: categories
+      });
+    }
+  */
+
 
   _createClass(Form, [{
     key: 'oneChange',
@@ -700,10 +724,11 @@ var Form = function (_React$Component) {
           'form',
           { className: 'form-group', name: 'question', onSubmit: this.handleSubmit },
           _react2.default.createElement(
-            'h3',
+            'h2',
             { style: { marginLeft: '2%' } },
             'What are the people you want to connect with?'
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -716,7 +741,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you want to meet in person or online?'
+                  'Do you want to meet somone in person, online, or both?'
                 )
               ),
               _react2.default.createElement(
@@ -763,7 +788,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you want to connect with Undergraduates or Graduates Students?'
+                  'Do you want to connect with Undergraduates, Graduates Students, or both?'
                 )
               ),
               _react2.default.createElement(
@@ -810,27 +835,37 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you want to connect with people in the same year as you?'
+                  'Do you want to connect with people in the same year as you, different, or both?'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'Yes', checked: this.state.three === 'Yes', onChange: this.threeChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'Same', checked: this.state.three === 'Same', onChange: this.threeChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio3' },
-                  'Yes '
+                  'Same'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'No', checked: this.state.three === 'No', onChange: this.threeChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'Different', checked: this.state.three === 'Different', onChange: this.threeChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio3' },
-                  'No'
+                  'Different'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-check form-check-inline', style: formStyle },
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions3', id: 'inlineRadio3', value: 'Both', checked: this.state.three === 'Both', onChange: this.threeChange }),
+                _react2.default.createElement(
+                  'label',
+                  { className: 'form-check-label', htmlFor: 'inlineRadio3' },
+                  'Both'
                 )
               )
             )
@@ -847,27 +882,37 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you want to connect with people from the same country?'
+                  'Do you want to connect with people from the same country, different, or both?'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions4', id: 'inlineRadio4', value: 'Yes', checked: this.state.four === 'Yes', onChange: this.fourChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions4', id: 'inlineRadio4', value: 'Same', checked: this.state.four === 'Same', onChange: this.fourChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio1' },
-                  'Yes '
+                  'Same'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions4', id: 'inlineRadio4', value: 'No', checked: this.state.four === 'No', onChange: this.fourChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions4', id: 'inlineRadio4', value: 'Different', checked: this.state.four === 'Different', onChange: this.fourChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio4' },
-                  'No'
+                  'Different'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-check form-check-inline', style: formStyle },
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions4', id: 'inlineRadio4', value: 'Both', checked: this.state.four === 'Both', onChange: this.fourChange }),
+                _react2.default.createElement(
+                  'label',
+                  { className: 'form-check-label', htmlFor: 'inlineRadio4' },
+                  'Both'
                 )
               )
             )
@@ -884,27 +929,37 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you want to connect with people who share the same ethnicity?'
+                  'Do you want to connect with people in the same major, different, or both?'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions5', id: 'inlineRadio5', value: 'Yes', checked: this.state.five === 'Yes', onChange: this.fiveChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions5', id: 'inlineRadio5', value: 'Same', checked: this.state.five === 'Same', onChange: this.fiveChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio5' },
-                  'Yes '
+                  'Same'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions5', id: 'inlineRadio5', value: 'No', checked: this.state.five === 'No', onChange: this.fiveChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions5', id: 'inlineRadio5', value: 'Different', checked: this.state.five === 'Different', onChange: this.fiveChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio5' },
-                  'No'
+                  'Different'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-check form-check-inline', style: formStyle },
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions5', id: 'inlineRadio5', value: 'Both', checked: this.state.five === 'Both', onChange: this.fiveChange }),
+                _react2.default.createElement(
+                  'label',
+                  { className: 'form-check-label', htmlFor: 'inlineRadio5' },
+                  'Both'
                 )
               )
             )
@@ -921,70 +976,37 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you want to connect with people in the same major?'
+                  'Do you want to connect with people in the same school/college as you, different, or both?'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions6', id: 'inlineRadio6', value: 'Yes', checked: this.state.six === 'Yes', onChange: this.sixChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions6', id: 'inlineRadio6', value: 'Same', checked: this.state.six === 'Same', onChange: this.sixChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio6' },
-                  'Yes '
+                  'Same'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions6', id: 'inlineRadio6', value: 'No', checked: this.state.six === 'No', onChange: this.sixChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions6', id: 'inlineRadio6', value: 'Different', checked: this.state.six === 'Different', onChange: this.sixChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio6' },
-                  'No'
-                )
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'h3',
-            { style: { marginLeft: '2%' } },
-            'Knowledge about the school and why are you using this website'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row', style: textStyle },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  'Do you have any knowledge of the school before you started?'
+                  'Different'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'Yes', checked: this.state.eight === 'Yes', onChange: this.eightChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions6', id: 'inlineRadio6', value: 'Both', checked: this.state.six === 'Both', onChange: this.sixChange }),
                 _react2.default.createElement(
                   'label',
-                  { className: 'form-check-label', htmlFor: 'inlineRadio8' },
-                  'Yes '
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'No', checked: this.state.eight === 'No', onChange: this.eightChange }),
-                _react2.default.createElement(
-                  'label',
-                  { className: 'form-check-label', htmlFor: 'inlineRadio8' },
-                  'No'
+                  { className: 'form-check-label', htmlFor: 'inlineRadio2' },
+                  'Both'
                 )
               )
             )
@@ -1001,81 +1023,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you know the aera of where your school is located?'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'Yes', checked: this.state.nine === 'Yes', onChange: this.nineChange }),
-                _react2.default.createElement(
-                  'label',
-                  { className: 'form-check-label', htmlFor: 'inlineRadio9' },
-                  'Yes '
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'No', checked: this.state.nine === 'No', onChange: this.nineChange }),
-                _react2.default.createElement(
-                  'label',
-                  { className: 'form-check-label', htmlFor: 'inlineRadio9' },
-                  'No'
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row', style: textStyle },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  'Do you have a car on campus?'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions10', id: 'inlineRadio10', value: 'Yes', checked: this.state.ten === 'Yes', onChange: this.tenChange }),
-                _react2.default.createElement(
-                  'label',
-                  { className: 'form-check-label', htmlFor: 'inlineRadio10' },
-                  'Yes '
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions10', id: 'inlineRadio10', value: 'No', checked: this.state.ten === 'No', onChange: this.tenChange }),
-                _react2.default.createElement(
-                  'label',
-                  { className: 'form-check-label', htmlFor: 'inlineRadio10' },
-                  'No'
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row', style: textStyle },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  'Are you looking for someone to help you or are you willing to help people?'
+                  'Do you want to connect with someone who has a car on campus?'
                 )
               ),
               _react2.default.createElement(
@@ -1104,9 +1052,276 @@ var Form = function (_React$Component) {
                 _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions7', id: 'inlineRadio7', value: 'Both', checked: this.state.seven === 'Both', onChange: this.sevenChange }),
                 _react2.default.createElement(
                   'label',
-                  { className: 'form-check-label', htmlFor: 'inlineRadio2' },
+                  { className: 'form-check-label', htmlFor: 'inlineRadio7' },
                   'Both'
                 )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Do you want to connect with people who share the same ethnicity?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-check form-check-inline', style: formStyle },
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'Same', checked: this.state.eight === 'Same', onChange: this.eightChange }),
+                _react2.default.createElement(
+                  'label',
+                  { className: 'form-check-label', htmlFor: 'inlineRadio8' },
+                  'Same'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'form-check form-check-inline', style: formStyle },
+                _react2.default.createElement('input', { className: 'form-check-input', type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'Different', checked: this.state.eight === 'Different', onChange: this.eightChange }),
+                _react2.default.createElement(
+                  'label',
+                  { className: 'form-check-label', htmlFor: 'inlineRadio8' },
+                  'Different'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'h2',
+            { style: { marginLeft: '2%' } },
+            'Knowledge about the University'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Do you have any knowledge of the school before you started? If yes please describe below.'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openOne', style: inputStyle })
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Do you know the aera of where your school is located? If yes please descibe below.'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openTwo', style: inputStyle })
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Do you have a job(s) on campus? If yes please descibe the position and what you do below.'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openThree', style: inputStyle })
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Are their resources on campus that you found helpful/not helpful? If yes please descibe the position and what you do below.'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openFour', style: inputStyle })
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Are you involved with any clubs/organizations on campus? If yes please descibe the position and what you do below.'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openFive', style: inputStyle })
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'h2',
+            { style: { marginLeft: '2%' } },
+            'What are your hobbies'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Sports', id: 'defaultCheck1' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck1' },
+                    'Sports'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Dance', id: 'defaultCheck2' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck2' },
+                    'Dance'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Music', id: 'defaultCheck3' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck3' },
+                    'Music'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Art', id: 'defaultCheck4' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck4' },
+                    'Art'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'div',
+                  { 'class': 'form-check' },
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Fashion', id: 'defaultCheck5' }),
+                  _react2.default.createElement(
+                    'label',
+                    { 'class': 'form-check-label', 'for': 'defaultCheck5' },
+                    'Fashion'
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'h2',
+            { style: { marginLeft: '2%' } },
+            'What are you hoping to get out of this website?'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row', style: textStyle },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Are you looking for someone to help you or are you willing to help people?'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('textarea', { type: 'text', className: 'form-control', id: 'openOne', style: inputStyle })
               )
             )
           ),
@@ -1177,11 +1392,6 @@ var Form = function (_React$Component) {
             )
           ),
           _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'h3',
-            { style: { marginLeft: '2%' } },
-            'What are your hobbies'
-          ),
           _react2.default.createElement(
             'center',
             null,
