@@ -22,6 +22,7 @@ const formStyle = {
   marginRight: '2%',
   fontSize: '20px'
 }
+
 //Form Helpers
 
  export default class Form extends React.Component {
@@ -37,7 +38,7 @@ const formStyle = {
       six: '',
       seven: '',
       eight: '',
-      categories: ['Sports', 'Dance', 'Music', 'Art', 'Fashion', 'Make up', 'Traveling', 'Hiking', 'Gardening', 'Camping', 'Video Games', 'Photography', 'Cars', 'Movies', 'Books', 'Volunteer', 'Comendy', 'Games', 'Building', 'Fishing', 'Theater', 'Baking/Cooking', 'Other'],
+      categories: false, //['Sports', 'Dance', 'Music', 'Art', 'Fashion', 'Make up', 'Traveling', 'Hiking', 'Gardening', 'Camping', 'Video Games', 'Photography', 'Cars', 'Movies', 'Books', 'Volunteer', 'Comendy', 'Games', 'Building', 'Fishing', 'Theater', 'Baking/Cooking', 'Other'],
       nine: '',
       ten: '',
       eleven: '',
@@ -51,6 +52,7 @@ const formStyle = {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this)
+  //  this.handleCheck = this.handleCheck.bind(this);
     this.oneChange = this.oneChange.bind(this);
     this.twoChange = this.twoChange.bind(this);
     this.threeChange = this.threeChange.bind(this);
@@ -62,6 +64,13 @@ const formStyle = {
     this.nineChange = this.nineChange.bind(this);
     this.tenChange = this.tenChange.bind(this);      
   }
+
+  handleCheck() {
+    this.setState({
+      categories: !this.state.categories 
+    });
+  }; 
+  
 
 /*setCategory = (e) => {
     const categories = this.state.categories.slice(0);
@@ -364,7 +373,7 @@ const formStyle = {
         <div className="row" style={textStyle}>
           <div className="col">
             <div class="form-check">
-              <input class="form-check-input" style={formStyle} type="checkbox" value="Sports" id="defaultCheck1"/>
+              <input class="form-check-input" style={formStyle} type="checkbox" name="categories" value={this.state.categories} id="defaultCheck1" onChange={this.handleCheck}/>
               <label class="form-check-label" for="defaultCheck1">Sports</label>
             </div>
           </div>

@@ -552,6 +552,7 @@ var formStyle = {
   marginLeft: '2%',
   marginRight: '2%',
   fontSize: '20px'
+
   //Form Helpers
 
 };
@@ -572,7 +573,7 @@ var Form = function (_React$Component) {
       six: '',
       seven: '',
       eight: '',
-      categories: ['Sports', 'Dance', 'Music', 'Art', 'Fashion', 'Make up', 'Traveling', 'Hiking', 'Gardening', 'Camping', 'Video Games', 'Photography', 'Cars', 'Movies', 'Books', 'Volunteer', 'Comendy', 'Games', 'Building', 'Fishing', 'Theater', 'Baking/Cooking', 'Other'],
+      categories: false, //['Sports', 'Dance', 'Music', 'Art', 'Fashion', 'Make up', 'Traveling', 'Hiking', 'Gardening', 'Camping', 'Video Games', 'Photography', 'Cars', 'Movies', 'Books', 'Volunteer', 'Comendy', 'Games', 'Building', 'Fishing', 'Theater', 'Baking/Cooking', 'Other'],
       nine: '',
       ten: '',
       eleven: '',
@@ -586,6 +587,7 @@ var Form = function (_React$Component) {
     };
 
     _this.handleSubmit = _this.handleSubmit.bind(_this);
+    //  this.handleCheck = this.handleCheck.bind(this);
     _this.oneChange = _this.oneChange.bind(_this);
     _this.twoChange = _this.twoChange.bind(_this);
     _this.threeChange = _this.threeChange.bind(_this);
@@ -599,26 +601,33 @@ var Form = function (_React$Component) {
     return _this;
   }
 
-  /*setCategory = (e) => {
-      const categories = this.state.categories.slice(0);
-      const index = categories.indexOf(e.target.value);
-  
-      if(e.target.checked){
-        categories.push(e.target.value);
-      }
-      else{
-        categories.splice(index, 1);
-      }
-  
+  _createClass(Form, [{
+    key: 'handleCheck',
+    value: function handleCheck() {
       this.setState({
-        categories: categories
+        categories: !this.state.categories
       });
     }
-  */
-
-
-  _createClass(Form, [{
+  }, {
     key: 'oneChange',
+
+
+    /*setCategory = (e) => {
+        const categories = this.state.categories.slice(0);
+        const index = categories.indexOf(e.target.value);
+    
+        if(e.target.checked){
+          categories.push(e.target.value);
+        }
+        else{
+          categories.splice(index, 1);
+        }
+    
+        this.setState({
+          categories: categories
+        });
+      }
+    */
     value: function oneChange(e) {
       this.setState({ one: e.target.value });
     }
@@ -1231,7 +1240,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'div',
                   { 'class': 'form-check' },
-                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', value: 'Sports', id: 'defaultCheck1' }),
+                  _react2.default.createElement('input', { 'class': 'form-check-input', style: formStyle, type: 'checkbox', name: 'categories', value: this.state.categories, id: 'defaultCheck1', onChange: this.handleCheck }),
                   _react2.default.createElement(
                     'label',
                     { 'class': 'form-check-label', 'for': 'defaultCheck1' },
