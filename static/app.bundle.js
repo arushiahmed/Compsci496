@@ -1109,7 +1109,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you have any knowledge of the school before you started? If yes please describe below.'
+                  'Do you have any knowledge of the school before you started? Please describe what you know.'
                 )
               ),
               _react2.default.createElement(
@@ -1131,7 +1131,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Do you know the aera of where your school is located? If yes please descibe below.'
+                  'Do you know the city/town of where your school is located? Please describe what you know.'
                 )
               ),
               _react2.default.createElement(
@@ -1611,7 +1611,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Are you looking for someone to help you or are you willing to help people?'
+                  'Are you looking for help or are you willing to help? Please describe.'
                 )
               ),
               _react2.default.createElement(
@@ -1633,7 +1633,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Are there any challenges you are coping with? If yes, please describe.'
+                  'Are there any challenges you are coping with? Please describe.'
                 )
               ),
               _react2.default.createElement(
@@ -1677,7 +1677,7 @@ var Form = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'How are you able to help someone with their challenges? Please descibe how you can help a person.'
+                  'How are you able to help someone with their challenges? Please descibe'
                 )
               ),
               _react2.default.createElement(
@@ -2057,7 +2057,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you know the aera of where your school is located? If yes please descibe below.',
+      'Do you know the city/town of where your school is located? If yes please descibe below.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.ten
@@ -2118,7 +2118,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Are you looking for someone to help you or are you willing to help people?',
+      'Are you looking for help or are you willing to help? Please describe.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.fifteen
@@ -2127,7 +2127,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Are there any challenges you are coping with? If yes, please describe.',
+      'Are there any challenges you are coping with? Please describe.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.sixteen
@@ -2145,7 +2145,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'How are you able to help someone with their challenges? Please descibe how you can help a person.',
+      'How are you able to help someone with their challenges? Please descibe.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.eighteen

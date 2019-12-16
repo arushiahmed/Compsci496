@@ -337,7 +337,7 @@ handleCheck(e){
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label>Do you have any knowledge of the school before you started? If yes please describe below.</label>
+              <label>Do you have any knowledge of the school before you started? Please describe what you know.</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="openOne" style={inputStyle}/>
@@ -347,7 +347,7 @@ handleCheck(e){
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label>Do you know the aera of where your school is located? If yes please descibe below.</label>
+              <label>Do you know the city/town of where your school is located? Please describe what you know.</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="openTwo" style={inputStyle}/>
@@ -558,7 +558,7 @@ handleCheck(e){
       <div className="form-group">
             <div className="row" style={textStyle}>
               <div className="col">
-              <label>Are you looking for someone to help you or are you willing to help people?</label>
+              <label>Are you looking for help or are you willing to help? Please describe.</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="openSeven" style={inputStyle}/>
@@ -568,7 +568,7 @@ handleCheck(e){
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label>Are there any challenges you are coping with? If yes, please describe.</label>
+              <label>Are there any challenges you are coping with? Please describe.</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="openEight" style={inputStyle}/>
@@ -588,7 +588,7 @@ handleCheck(e){
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label>How are you able to help someone with their challenges? Please descibe how you can help a person.</label>
+              <label>How are you able to help someone with their challenges? Please descibe</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="openTen" style={inputStyle}/>
