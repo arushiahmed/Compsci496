@@ -1975,7 +1975,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you want to meet in person or online?',
+      'Do you want to meet somone in person, online, or both?',
       _react2.default.createElement('br', null),
       props.question.one
     ),
@@ -1983,7 +1983,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you want to connect with Undergraduates or Graduates Students?',
+      'Do you want to connect with Undergraduates, Graduates Students, or both?',
       _react2.default.createElement('br', null),
       props.question.two
     ),
@@ -1991,7 +1991,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people in the same year as you?',
+      'Do you want to connect with people in the same year as you, different, or both?',
       _react2.default.createElement('br', null),
       props.question.three
     ),
@@ -1999,7 +1999,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people from the same country?',
+      'Do you want to connect with people from the same country, different, or both?',
       _react2.default.createElement('br', null),
       ' ',
       props.question.four
@@ -2008,7 +2008,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people who share the same ethnicity?',
+      'Do you want to connect with people in the same major, different, or both?',
       _react2.default.createElement('br', null),
       props.question.five
     ),
@@ -2016,21 +2016,16 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people in the same major?',
+      'Do you want to connect with people in the same school/college as you, different, or both?',
       _react2.default.createElement('br', null),
       ' ',
       props.question.six
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
-      'h3',
-      { style: { marginLeft: '2%' } },
-      'Knowledge about the school and why are you using this website'
-    ),
-    _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Are you looking for someone to help you?',
+      'Do you want to connect with someone who has a car on campus?',
       _react2.default.createElement('br', null),
       ' ',
       props.question.seven
@@ -2039,16 +2034,21 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you have any knowledge of the school before you started?',
+      'Do you want to connect with people who share the same ethnicity?',
       _react2.default.createElement('br', null),
       ' ',
       props.question.eight
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'Knowledge about the University'
+    ),
+    _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you know the aera of where your school is located?',
+      'Do you have any knowledge of the school before you started? If yes please describe below.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.nine
@@ -2057,7 +2057,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Do you have a car on campus?',
+      'Do you know the aera of where your school is located? If yes please descibe below.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.ten
@@ -2066,7 +2066,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'Are there any challenges you are coping with? If yes, please describe.',
+      'Do you have a job(s) on campus? If yes please descibe the position and what you do below.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.eleven
@@ -2075,7 +2075,7 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'How can someone help you with your challenges? Please descibe.',
+      'Are their resources on campus that you found helpful/not helpful? If yes please descibe the position and what you do below.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.tweleve
@@ -2084,10 +2084,71 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
-      'How are you able to help someone with their challenges? Please descibe how you can help a person.',
+      'Are you involved with any clubs/organizations on campus? If yes please descibe the position and what you do below.',
       _react2.default.createElement('br', null),
       ' ',
       props.question.thirteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'What are your hobbies?'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      props.question.categories
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.fourteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'Knowledge about the University'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Are you looking for someone to help you or are you willing to help people?',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.fifteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Are there any challenges you are coping with? If yes, please describe.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.sixteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'How can someone help you with your challenges? Please descibe.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.seventeen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'How are you able to help someone with their challenges? Please descibe how you can help a person.',
+      _react2.default.createElement('br', null),
+      ' ',
+      props.question.eighteen
     ),
     _react2.default.createElement('br', null)
   );
