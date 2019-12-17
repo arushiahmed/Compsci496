@@ -2,13 +2,13 @@ import React from 'react';
 import 'isomorphic-fetch';
 import { Link } from 'react-router';
 
-import IssueFilter from './IssueFilter.jsx';
+import FriendFilter from './FriendFilter.jsx';
 import SearchBar from './SearchBar.jsx';
 
 // NEW
 // (1) Added a function to delete an issue given the issue ID.
 // (2) Added a button to the interface to provide the delete functionality.
-const IssueRow = (props) => (
+const FriendCard = (props) => (
 
   <Link to="/profile" style={{ textDecoration: 'none', color: 'black' }}>
 
@@ -28,19 +28,19 @@ const IssueRow = (props) => (
   );
 
 
-IssueRow.propTypes = {
+FriendCard.propTypes = {
   friend: React.PropTypes.object.isRequired,
 };
 // NEW END
 
-function IssueTable(props) {
-  const issueRows = props.friends.map(friend => (
-    <IssueRow key={friend._id} friend={friend}  />
+function FriendTable(props) {
+  const friendCard = props.friends.map(friend => (
+    <FriendCard key={friend._id} friend={friend}  />
   ));
   return (
   
       <div className="card-deck">
-      {issueRows}
+      {friendCard}
     </div>
     
 
@@ -48,12 +48,12 @@ function IssueTable(props) {
 }
 
 // NEW
-IssueTable.propTypes = {
+FriendTable.propTypes = {
   friends: React.PropTypes.array.isRequired,
 };
 // NEW END
 
-export default class IssueList extends React.Component {
+export default class FriendList extends React.Component {
   constructor() {
     super();
     this.state = { friends: [] };
@@ -116,16 +116,16 @@ export default class IssueList extends React.Component {
       <div>
         <SearchBar> </SearchBar>
         <br></br><br></br>
-        <IssueFilter setFilter={this.setFilter} initFilter={this.props.location.query} />
+        <FriendFilter setFilter={this.setFilter} initFilter={this.props.location.query} />
         <br></br><br></br>
-        <IssueTable friends={this.state.friends} />
+        <FriendTable friends={this.state.friends} />
        
       </div>
     );
   }
 }
 
-IssueList.propTypes = {
+FriendList.propTypes = {
   location: React.PropTypes.object.isRequired,
   router: React.PropTypes.object,
 };

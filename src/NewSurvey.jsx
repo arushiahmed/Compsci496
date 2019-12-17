@@ -169,7 +169,7 @@ handleCheck(e){
           alert('Failed to add event.\n Error description: ' + json.msg);
         }
         else {
-          alert('Questions Saved, to go' <Link)
+          alert('Questions Saved');
           
 
         }

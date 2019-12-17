@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class IssueFilter extends React.Component {
+export default class FriendFilter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,7 +64,7 @@ export default class IssueFilter extends React.Component {
   }
 }
 
-IssueFilter.propTypes = {
+FriendFilter.propTypes = {
   setFilter: React.PropTypes.func.isRequired,
   initFilter: React.PropTypes.object.isRequired,
 };

@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, withRouter, IndexRoute } from 'react-router';
 
-import Form from './NewForm.jsx';
+import Form from './NewSurvey.jsx';
 import Welcome from './Welcome.jsx';
 import Profile from './Profile.jsx'
 import About from './About.jsx'
-import Survey from './mySurvey.jsx';
-import IssueList from './IssueList.jsx';
+import Survey from './Survey.jsx';
+import FriendList from './FriendList.jsx';
 
 var contentNode = document.getElementById("contents");
 
@@ -38,7 +38,7 @@ const RoutedApp = () => (
     {/* <Redirect from="/" to="/issues" /> - replaced this with the Dashboard component */}
     <Route path="/" component={App} >
       <IndexRoute component={Welcome} />
-      <Route path="/home" component={withRouter(IssueList)} />
+      <Route path="/connect" component={withRouter(FriendList)} />
       <Route path="/about" component={About} />
       <Route path="/form" component={Form} />
       <Route path="/userSurvey" component={Survey} />
