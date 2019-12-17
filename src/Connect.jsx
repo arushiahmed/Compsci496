@@ -54,7 +54,7 @@ export default class Connect extends React.Component {
       friends: [],
     }; 
 
-    this.loadData = this.loadData.bind(this);
+  //  this.loadData = this.loadData.bind(this);
     this.setFilter = this.setFilter.bind(this);
     
    }

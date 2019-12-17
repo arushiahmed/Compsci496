@@ -118,7 +118,7 @@ var Connect = function (_React$Component) {
       friends: []
     };
 
-    _this.loadData = _this.loadData.bind(_this);
+    //  this.loadData = this.loadData.bind(this);
     _this.setFilter = _this.setFilter.bind(_this);
 
     return _this;
@@ -2063,7 +2063,7 @@ var ConnectFilter = function (_React$Component) {
         key: 'applyFilter',
         value: function applyFilter() {
             var newFilter = {};
-            if (this.state.academic) newFilter.academic = this.state.status;
+            if (this.state.academic) newFilter.academic = this.state.academic;
             this.props.setFilter(newFilter);
         }
     }, {

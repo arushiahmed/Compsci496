@@ -43,7 +43,7 @@ export default class ConnectFilter extends React.Component {
 
     applyFilter(){
         const newFilter = {};
-        if(this.state.academic) newFilter.academic = this.state.status;
+        if(this.state.academic) newFilter.academic = this.state.academic;
         this.props.setFilter(newFilter);
     }
 
