@@ -1691,54 +1691,54 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // (1) Added a function to delete an issue given the issue ID.
 // (2) Added a button to the interface to provide the delete functionality.
 var IssueRow = function IssueRow(props) {
-  // function onDeleteClick() {
-  //   props.deleteIssue(props.issue._id);
-  // }
-
   return _react2.default.createElement(
-    'div',
-    { className: 'card border-dark mb-3' },
+    _reactRouter.Link,
+    { to: '/profile', style: { textDecoration: 'none', color: 'black' } },
     _react2.default.createElement(
       'div',
-      { className: 'card-body h-100' },
+      { className: 'card border-dark mb-3', style: { width: '400px', marginLeft: '25%' } },
       _react2.default.createElement(
-        'h5',
-        { className: 'card-title' },
-        'Name:',
-        props.friend.name,
-        ' '
-      ),
-      _react2.default.createElement(
-        'h6',
-        { className: 'card-subtitle mb-2', id: 'academic' },
-        'Academic:',
-        props.friend.status
-      ),
-      _react2.default.createElement(
-        'h6',
-        { className: 'card-subtitle mb-2', id: 'school' },
-        'School: ',
-        props.friend.school
-      ),
-      _react2.default.createElement(
-        'h6',
-        { className: 'card-subtitle mb-2', id: 'year' },
-        'Year: ',
-        props.friend.school
-      ),
-      _react2.default.createElement(
-        'h6',
-        { className: 'card-subtitle mb-2', id: 'rate' },
-        'Rate: ',
-        props.friend.rate
-      ),
-      _react2.default.createElement(
-        'p',
-        { className: 'card-text', id: 'bio' },
-        'Bio:',
-        props.friend.bio
-      ),
-      _react2.default.createElement('br', null)
+        'div',
+        { className: 'card-body h-100' },
+        _react2.default.createElement(
+          'h5',
+          { className: 'card-title' },
+          'Name:',
+          props.friend.name,
+          ' '
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2', id: 'academic' },
+          'Academic:',
+          props.friend.status
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2', id: 'school' },
+          'School: ',
+          props.friend.school
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2', id: 'year' },
+          'Year: ',
+          props.friend.school
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2', id: 'rate' },
+          'Rate: ',
+          props.friend.rate
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'card-text', id: 'bio' },
+          'Bio: ',
+          props.friend.bio
+        ),
+        _react2.default.createElement('br', null)
+      )
     )
   );
 };
@@ -1843,11 +1843,12 @@ var IssueList = function (_React$Component) {
           null,
           ' '
         ),
-        _react2.default.createElement('hr', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(_IssueFilter2.default, { setFilter: this.setFilter, initFilter: this.props.location.query }),
-        _react2.default.createElement('hr', null),
-        _react2.default.createElement(IssueTable, { friends: this.state.friends }),
-        _react2.default.createElement('hr', null)
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(IssueTable, { friends: this.state.friends })
       );
     }
   }]);
@@ -1888,10 +1889,6 @@ var _NewForm2 = _interopRequireDefault(_NewForm);
 var _Welcome = __webpack_require__(123);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
-
-var _SearchBar = __webpack_require__(27);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
 var _Profile = __webpack_require__(79);
 

@@ -8,27 +8,25 @@ import SearchBar from './SearchBar.jsx';
 // NEW
 // (1) Added a function to delete an issue given the issue ID.
 // (2) Added a button to the interface to provide the delete functionality.
-const IssueRow = (props) => {
- // function onDeleteClick() {
- //   props.deleteIssue(props.issue._id);
- // }
+const IssueRow = (props) => (
 
-  return (
-    
-    <div className="card border-dark mb-3">
+  <Link to="/profile" style={{ textDecoration: 'none', color: 'black' }}>
+
+    <div className="card border-dark mb-3" style={{width: '400px', marginLeft: '25%'}}>
       <div className="card-body h-100">
         <h5 className="card-title">Name:{props.friend.name} </h5>
         <h6 className="card-subtitle mb-2" id="academic">Academic:{props.friend.status}</h6>
         <h6 className="card-subtitle mb-2" id="school">School: {props.friend.school}</h6>
         <h6 className="card-subtitle mb-2" id="year">Year: {props.friend.school}</h6>
         <h6 className="card-subtitle mb-2" id="rate">Rate: {props.friend.rate}</h6> 
-        <p className="card-text" id="bio">Bio:{props.friend.bio}</p> 
+        <p className="card-text" id="bio">Bio: {props.friend.bio}</p> 
         <br></br>
       </div>
   </div>
-  
+  </Link>
+
   );
-}
+
 
 IssueRow.propTypes = {
   friend: React.PropTypes.object.isRequired,
@@ -40,9 +38,12 @@ function IssueTable(props) {
     <IssueRow key={friend._id} friend={friend}  />
   ));
   return (
-    <div className="card-deck">
-    {issueRows}
-</div>
+  
+      <div className="card-deck">
+      {issueRows}
+    </div>
+    
+
   );
 }
 
@@ -114,11 +115,10 @@ export default class IssueList extends React.Component {
     return (
       <div>
         <SearchBar> </SearchBar>
-        <hr />
+        <br></br><br></br>
         <IssueFilter setFilter={this.setFilter} initFilter={this.props.location.query} />
-        <hr />
+        <br></br><br></br>
         <IssueTable friends={this.state.friends} />
-        <hr />
        
       </div>
     );

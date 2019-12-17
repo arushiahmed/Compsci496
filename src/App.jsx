@@ -4,7 +4,6 @@ import { Router, Route, hashHistory, withRouter, IndexRoute } from 'react-router
 
 import Form from './NewForm.jsx';
 import Welcome from './Welcome.jsx';
-import SearchBar from './SearchBar.jsx'
 import Profile from './Profile.jsx'
 import About from './About.jsx'
 import Survey from './mySurvey.jsx';
