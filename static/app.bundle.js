@@ -902,8 +902,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var formStyle = {
-  marginLeft: '2%',
-  marginRight: '2%',
+  marginLeft: '5%',
+  marginRight: '5%',
   fontSize: '20px'
 };
 
@@ -916,6 +916,7 @@ var FormQuestion = function FormQuestion(props) {
       { style: { marginLeft: '2%' } },
       'What are the people you want to connect with?'
     ),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -923,12 +924,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.one
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -936,12 +938,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.two
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -949,12 +952,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
-        'My Answer: '
+        null,
+        'My Answer:'
       ),
       props.question.three
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -962,12 +966,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.four
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -975,12 +980,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.five
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -988,12 +994,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.six
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1001,12 +1008,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.seven
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1014,12 +1022,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.eight
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'h3',
       { style: { marginLeft: '2%' } },
@@ -1032,12 +1041,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.nine
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1045,12 +1055,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.ten
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1058,12 +1069,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.eleven
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1071,12 +1083,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.tweleve
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1084,12 +1097,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.thirteen
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'h3',
       { style: { marginLeft: '2%' } },
@@ -1102,12 +1116,14 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
+      ' ',
       props.question.categories
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1115,12 +1131,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.fourteen
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'h3',
       { style: { marginLeft: '2%' } },
@@ -1133,12 +1150,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.fifteen
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1146,12 +1164,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.sixteen
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1159,12 +1178,13 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.seventeen
     ),
     _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
@@ -1172,7 +1192,7 @@ var FormQuestion = function FormQuestion(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         'strong',
-        { style: { border: '2px solid grey' } },
+        null,
         'My Answer: '
       ),
       props.question.eighteen
@@ -1252,7 +1272,6 @@ var Survey = function (_React$Component) {
         _react2.default.createElement(
           'div',
           null,
-          _react2.default.createElement('hr', null),
           _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
           _react2.default.createElement('hr', null),
           _react2.default.createElement(
@@ -2527,7 +2546,7 @@ var NewSurvey = function (_React$Component) {
                 { className: 'col' },
                 _react2.default.createElement(
                   'button',
-                  { className: 'btn btn-dark', type: 'submit', value: 'Submit' },
+                  { className: 'btn btn-dark', type: 'submit' },
                   ' Save'
                 )
               )

@@ -606,7 +606,7 @@ handleCheck(e){
       <center> 
         <div className = "row">
               <div className="col">
-               <button className="btn btn-dark" type="submit" value="Submit"> Save</button>
+               <button className="btn btn-dark" type="submit"> Save</button>
               </div>
           </div>   
           </center>
