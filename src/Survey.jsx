@@ -14,7 +14,6 @@ const formStyle = {
     const FormQuestion = (props) => (
        <div>
          <h3 style={{marginLeft: '2%'}}>What are the people you want to connect with?</h3>
-            <div className="viewForm" style={formStyle}>Do you want to connect with people from the same country, different, or both?<br></br><strong style={{ border: '2px solid grey'}}>My Answer: </strong>{props.question.four}</div><br></br>
          <hr />
             <div className="viewForm" style={formStyle}>Do you want to meet somone in person, online, or both?<br></br><strong>My Answer: </strong>{props.question.one}</div><br></br>
             <hr />
@@ -25,6 +24,7 @@ const formStyle = {
             <div className="viewForm" style={formStyle}>Do you want to connect with people from the same country, different, or both?<br></br><strong>My Answer: </strong>{props.question.four}</div><br></br>
             <hr />
             <div className="viewForm" style={formStyle}>Do you want to connect with people in the same major, different, or both?<br></br><strong>My Answer: </strong>{props.question.five}</div><br></br>
+            <hr />
             <div className="viewForm" style={formStyle}>Do you want to connect with people in the same school/college as you, different, or both?<br></br><strong>My Answer: </strong>{props.question.six}</div><br></br>
             <hr />
             <div className="viewForm" style={formStyle}>Do you want to connect with someone who has a car on campus?<br></br><strong>My Answer: </strong>{props.question.seven}</div><br></br>
@@ -32,7 +32,6 @@ const formStyle = {
             <div className="viewForm" style={formStyle}>Do you want to connect with people who share the same ethnicity?<br></br><strong>My Answer: </strong>{props.question.eight}</div><br></br>
             <hr />
           <h3 style={{marginLeft: '2%'}}>Knowledge about the University</h3>
-            <div className="viewForm" style={formStyle}>Are you involved with any clubs/organizations on campus? If yes please descibe the position and what you do below.<br></br><strong style={{ border: '2px solid grey'}}>My Answer: </strong>{props.question.thirteen}</div><br></br>
             <div className="viewForm" style={formStyle}>Do you have any knowledge of the school before you started? If yes please describe below.<br></br><strong>My Answer: </strong>{props.question.nine}</div><br></br>
             <hr />
             <div className="viewForm" style={formStyle}>Do you know the city/town of where your school is located? If yes please descibe below.<br></br><strong>My Answer: </strong>{props.question.ten}</div><br></br>
