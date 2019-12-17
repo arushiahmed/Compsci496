@@ -1,5 +1,10 @@
 import React from 'react';
 
+const inputStyle = {
+  //   marginRight: '5%',
+     marginLeft: '2%'
+   }
+
 export default class FriendFilter extends React.Component {
   constructor(props) {
     super(props);
@@ -50,15 +55,15 @@ export default class FriendFilter extends React.Component {
   render() {
     return (
       <div>
-        Status:
-          <select value={this.state.status} onChange={this.onChangeStatus}>
+        <label style={inputStyle}>Academic:</label>
+          <select value={this.state.status} onChange={this.onChangeStatus} style={{marginLeft:'4px'}}>
           <option value="">(Any)</option>
           <option value="Undergraduate">Undergraduate</option>
           <option value="Graduate">Graduate</option>
         </select>
-        <button onClick={this.applyFilter}>Apply</button>
-        <button onClick={this.resetFilter} disabled={!this.state.changed}>Reset</button>
-        <button onClick={this.clearFilter}>Clear</button>
+        <button className="btn btn-dark" style={inputStyle} onClick={this.applyFilter}>Apply</button>
+        <button className="btn btn-dark" style={inputStyle} onClick={this.resetFilter} disabled={!this.state.changed}>Reset</button>
+        <button className="btn btn-dark" style={inputStyle} onClick={this.clearFilter}>Clear</button>
       </div>
     );
   }

@@ -538,6 +538,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var inputStyle = {
+  //   marginRight: '5%',
+  marginLeft: '2%'
+};
+
 var FriendFilter = function (_React$Component) {
   _inherits(FriendFilter, _React$Component);
 
@@ -602,10 +607,14 @@ var FriendFilter = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Status:',
+        _react2.default.createElement(
+          'label',
+          { style: inputStyle },
+          'Academic:'
+        ),
         _react2.default.createElement(
           'select',
-          { value: this.state.status, onChange: this.onChangeStatus },
+          { value: this.state.status, onChange: this.onChangeStatus, style: { marginLeft: '4px' } },
           _react2.default.createElement(
             'option',
             { value: '' },
@@ -624,17 +633,17 @@ var FriendFilter = function (_React$Component) {
         ),
         _react2.default.createElement(
           'button',
-          { onClick: this.applyFilter },
+          { className: 'btn btn-dark', style: inputStyle, onClick: this.applyFilter },
           'Apply'
         ),
         _react2.default.createElement(
           'button',
-          { onClick: this.resetFilter, disabled: !this.state.changed },
+          { className: 'btn btn-dark', style: inputStyle, onClick: this.resetFilter, disabled: !this.state.changed },
           'Reset'
         ),
         _react2.default.createElement(
           'button',
-          { onClick: this.clearFilter },
+          { className: 'btn btn-dark', style: inputStyle, onClick: this.clearFilter },
           'Clear'
         )
       );
