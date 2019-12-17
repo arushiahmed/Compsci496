@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, withRouter, IndexRoute } from 'react-router';
 
-import Connect from './Connect.jsx';
 import Form from './NewForm.jsx';
 import Welcome from './Welcome.jsx';
 import SearchBar from './SearchBar.jsx'
 import Profile from './Profile.jsx'
 import About from './About.jsx'
 import Survey from './mySurvey.jsx';
+import IssueList from './IssueList.jsx';
 
 var contentNode = document.getElementById("contents");
 
@@ -33,21 +33,14 @@ App.propTypes = {
   children: React.PropTypes.object.isRequired,
 };
 
-// The "routed app" that defines the different routes that
-// are supposed in this application. As you can see, If the
-// URL path is '/' we will render the IssueList component,
-// if the path is '/issues/:id' we render the IssueEdit component,
-// and if we get anything else we render the NoMatch view.
-// This router uses the "hash history" approach to implement
-// single-page apps with multiple views.
+
 const RoutedApp = () => (
   <Router history={hashHistory} >
     {/* <Redirect from="/" to="/issues" /> - replaced this with the Dashboard component */}
     <Route path="/" component={App} >
       <IndexRoute component={Welcome} />
-      <Route path="/home" component={withRouter(SearchBar)} />
+      <Route path="/home" component={withRouter(IssueList)} />
       <Route path="/about" component={About} />
-      <Route path="/connect" component={Connect} />
       <Route path="/form" component={Form} />
       <Route path="/userSurvey" component={Survey} />
       <Route path="/profile" component={Profile} />

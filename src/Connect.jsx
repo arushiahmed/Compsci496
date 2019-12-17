@@ -7,24 +7,23 @@ import ConnectFilter from './ConnectFilter.jsx';
 
 
 
-const FriendList = (props) => (
-  <Link to="/profile" style={{textDecoration: 'none', color: 'black' }}>
-   
-  <div className="card border-dark mb-3" style={{width: '550px', marginLeft: '30%', marginBottom: '15px'}}>
+const FriendList = (props) => {
+  return( 
+  <div className="card border-dark mb-3">
     <div className="card-body h-100">
       <h5 className="card-title">{props.friend.name}</h5>
-      <h6 className="card-subtitle mb-2">Academic: {props.friend.academic}</h6>
-      <h6 className="card-subtitle mb-2">School: {props.friend.school}</h6>
-      <h6 className="card-subtitle mb-2">Year: {props.friend.year}</h6>
-      <h6 className="card-subtitle mb-2">Rate: {props.friend.rate}</h6>
-      <p className="card-text">{props.friend.bio}</p>
+      <h6 className="card-subtitle mb-2" id="status">Status: {props.friend.status}</h6>
+      <h6 className="card-subtitle mb-2" id="school">School: {props.friend.school}</h6>
+      <h6 className="card-subtitle mb-2" id="year">Year: {props.friend.year}</h6>
+      <h6 className="card-subtitle mb-2" id="rate">Rate: {props.friend.rate}</h6>
+      <p className="card-text id=bio">{props.friend.bio}</p>
       <br></br>
     </div>
   </div>
-</Link>
-
 
 );
+
+}
 
 FriendList.propTypes = {
   friend: React.PropTypes.object.isRequired,
@@ -50,11 +49,9 @@ FriendTable.propTypes = {
 export default class Connect extends React.Component {
   constructor() {
     super();
-    this.state = {
-      friends: [],
-    }; 
+    this.state = {friends: [] }; 
 
-  //  this.loadData = this.loadData.bind(this);
+    this.loadData = this.loadData.bind(this);
     this.setFilter = this.setFilter.bind(this);
     
    }
@@ -66,7 +63,7 @@ export default class Connect extends React.Component {
    componentDidUpdate(prevProps){
      const oldQuery = prevProps.location.query;
      const newQuery = this.props.location.query;
-     if(oldQuery.academic == newQuery.academic){
+     if(oldQuery.status == newQuery.status){
        return ;
      }
      this.loadData(); 
@@ -80,13 +77,13 @@ export default class Connect extends React.Component {
           json.records.forEach(friend => {
             friends.push(
               friend
-            )
+            )   
           });
           this.setState({friends: json.records})
         })
       }
     }).catch (err => {
-      alert("There was a problem: " + err.message)
+      alert("There was a problem: ", err)
     });
   }
 
@@ -94,28 +91,6 @@ export default class Connect extends React.Component {
     this.props.router.push({pathname: this.props.location.pathname, query});
   }
           
-/*
-   loadData(){
-     let friend = this.state.friends;
-     fetch("api/friends")
-        .then(res => {
-          if(res.ok) {
-            res.json().then(json => {
-              let friends = [];
-              json.records.forEach(friend => {
-                friends.push(
-                  friend
-                )
-              });
-              this.setState({friends: friends})
-            })
-          }
-        }).catch (err => {
-          alert("There was a problem: " + err.message)
-        });
-   }
-
-*/
   render() {
     return (
       <div>

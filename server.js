@@ -7,7 +7,6 @@ app.use(express.static('static'));
 app.use(bodyParser.json());
 
 const MongoClient = require('mongodb').MongoClient;
-const ObjectId = require('mongodb').ObjectId;
 
 const formField = {
   one: 'required',
@@ -30,14 +29,19 @@ const formField = {
   seventeen: 'optional',
   eighteen:'optional',
 };
+const validIssueStatus = {
+  Undergraduate: true,
+  Graduate: true,
+};
 
-const friendFieldType = {
-    name: 'required',
-    academic: 'required',
-    school: 'required',
-    year: 'required',
-    bio: 'required',
-    rate:  'required',
+const issueFieldType = {
+  name: 'required',
+  status: 'required',
+  school: 'required',
+  year: 'required',
+  rate: 'required',
+  bio: 'required',
+ 
 };
 
 function validateForm(question){
@@ -50,7 +54,7 @@ function validateForm(question){
             return `${field} is required.`;
           }
     }
-   }
+}
   return null;
 }
 
@@ -87,23 +91,26 @@ app.post('/api/questionform', (req, res) => {
 });
 
 //Form Friends List
-function validateFriend(friend) {
-  for (const field in friendFieldType) {
-    if(friendFieldType.hasOwnProperty(field)){
-         const type = friendFieldType[field];
-          if (!type) {
-            delete friend[field];
-          } else if (type === 'required' && !friend[field]) {
-            return `${field} is required.`;
-          }
-    }
-   }
-  return null;
+function validateIssue(friend) {
+  for (const field in issueFieldType){
+    if(issueFieldType.hasOwnProperty(field)){
+      const type = issueFieldType[field];
+      if(!type){
+        delete friend[field];
+      } else if(type === 'required' && !friend[field]){
+        return `${field} is required.`;
+      }
+    }   
+  if (!validIssueStatus[friend.status]) {
+      errors.push(`${friend.status} is not a valid status.`);
+  }
+}
+  return (errors.length ? errors.join('; ') : null);
 }
 
 app.get('/api/friends', (req, res) => {
   const filter = {};
-  if(req.query.academic) filter.academic = req.query.academic;
+  if (req.query.status) filter.status = req.query.status;
 
   db.collection('friends').find(filter).toArray().then(friends => {
     const metadata = { total_count: friends.length };
@@ -115,19 +122,16 @@ app.get('/api/friends', (req, res) => {
 });
 
 app.post('/api/friends', (req, res) => {
-  console.log(req)
-  const newFriend = req.body;
-
-  newFriend.date = new Date();
-
-  const err = validateFriend(newFriend);
+  const newFriend= req.body;
+  newFriend.created = new Date();
+ 
+  const err = validateIssue(newFriend);
   if (err) {
     res.status(422).json({ message: `Invalid request: ${err}` });
     return;
   }
 
   db.collection('friends').insertOne(newFriend).then(result =>
-
     db.collection('friends').find({ _id: result.insertedId }).limit(1).next()
   ).then(newFriend => {
     res.json(newFriend);
@@ -135,7 +139,8 @@ app.post('/api/friends', (req, res) => {
     console.log(error);
     res.status(500).json({ message: `Internal Server Error: ${error}` });
   });
-});
+}); 
+
 
 let db;
 MongoClient.connect('mongodb://localhost', { useNewUrlParser: true }).then(connection => {

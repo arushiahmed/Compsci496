@@ -12,59 +12,64 @@ db.questionform.insert([
 
 db.friends.insert([
   {
+    
     name: 'Serena Chan',
-    academic: "Undergraduate",
+    status: 'Undergraduate',
     school: 'University of Massachusetts Amherst',
     year: '2021',
     rate:  '4.5',
-    bio: 'I am a biology and chemestry majory from Hong Kong. I like to bake, take photos, and watch movies',
+    bio: 'I am a biology and chemestry majory from Hong Kong.',
   },
 
   {
+ 
     name: 'Caroline Kato',
-    academic: 'Undergraduate',
+    status: 'Undergraduate',
     school: 'University of Massachusetts Amherst',
     year: '2022',
     rate: '4',
-    bio: 'I am computer enginnering major from Japan, I like shopping, watching movies, and eating.', 
+    bio: 'I am computer enginnering major from Japan.', 
   },
 
   {
+  
     name: 'Caroline Baker',
-    academic: 'Undergraduate',
+    status: 'Undergraduate',
     school: 'University of Massachusetts Amherst',
     year: '2020',
     rate:  '3.5',
-    bio: 'I am computer enginnering major from Mass, I like shopping, watching movies, and eating. I am looking to meet new friends and help people know the aera', 
+    bio: 'I am computer enginnering major from Mass.', 
   },
   
   {
+ 
     name : 'Molly Miller',
-    academic: 'Graduate',
+    status: 'Graduate',
     school: 'University of Massachusetts Amherst',
     year: '2021',
     rate:  '5',
-    bio: 'I am computer science major from Ireland, I am looking to make some new friends who know the aera and can drive. In my free time I like to watch Netflex, listen to music, and go on random advantures',
+    bio: 'I am computer science major from Ireland',
   },
 
   {
+  
     name: 'Tracy Young',
-    academic: 'Graduate',
+    status: 'Graduate',
     school: 'University of Massachusetts Amherst',
     year: '2020',
     rate: '5',
-    bio: 'I am computer science major from Itlay, I am looking to make some new friends who know the aera and can drive. In my free time I like to watch Netflex, listen to music, and go on random advantures',
+    bio: 'I am computer science major from Itlay',
   },
 
   {
     name: 'Jon Doe',
-    academic: 'Graduate',
+    status: 'Graduate',
     school: 'University of Massachusetts Amherst',
     year: '2023',
     rate: '3.5',
-    bio: 'I am a biology major from Cananda. I am new to the states and looking for someone who knows the aera that can show me around.',
+    bio: 'I am a biology major from Cananda.',
   },
 
 ]);
 
-db.friends.createIndex({academic: 1 });
+db.friends.createIndex({status: 1});
