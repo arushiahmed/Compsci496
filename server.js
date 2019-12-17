@@ -32,7 +32,7 @@ const formField = {
 
 const friendFieldType = {
     name: 'required',
-    degree: 'required',
+    academic: 'required',
     school: 'required',
     year: 'required',
     bio: 'required',
@@ -101,12 +101,15 @@ function validateFriend(friend) {
 }
 
 app.get('/api/friends', (req, res) => {
-  db.collection('friends').find().toArray().then(friends => {
+  const filter = {};
+  if(req.query.academic) filter.academic = req.query.academic;
+
+  db.collection('friends').find(filter).toArray().then(friends => {
     const metadata = { total_count: friends.length };
-    res.json({ success: true, _metadata: metadata, records: friends })
+    res.json({ _metadata: metadata, records: friends })
   }).catch(error => {
     console.log(error);
-    res.status(500).json({ success:false, message: `Internal Server Error: ${error}` });
+    res.status(500).json({ message: `Internal Server Error: ${error}` });
   });
 });
 

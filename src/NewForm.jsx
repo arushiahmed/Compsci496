@@ -13,7 +13,7 @@ const textStyle = {
   fontSize: '22px',
   fontFamily: 'Athelas',
   marginLeft: '5%',
-  marginRight: '5%' 
+  marginRight: '5%', 
 }
 
 const formStyle = {
@@ -169,7 +169,9 @@ handleCheck(e){
           alert('Failed to add event.\n Error description: ' + json.msg);
         }
         else {
-          alert('Questions Saved')
+          alert('Questions Saved, to go' <Link)
+          
+
         }
       });
     }
@@ -605,7 +607,7 @@ handleCheck(e){
       <center> 
         <div className = "row">
               <div className="col">
-              <button className="btn btn-dark" type="submit" ><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
+               <button className="btn btn-dark" type="submit" ><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
               </div>
           </div>   
           </center>

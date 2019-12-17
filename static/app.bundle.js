@@ -16,13 +16,17 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(20);
 
 var _reactRouter = __webpack_require__(19);
 
 var _SearchBar = __webpack_require__(31);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+var _ConnectFilter = __webpack_require__(243);
+
+var _ConnectFilter2 = _interopRequireDefault(_ConnectFilter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -50,8 +54,8 @@ var FriendList = function FriendList(props) {
         _react2.default.createElement(
           'h6',
           { className: 'card-subtitle mb-2' },
-          'Degree: ',
-          props.friend.degree
+          'Academic: ',
+          props.friend.academic
         ),
         _react2.default.createElement(
           'h6',
@@ -82,6 +86,10 @@ var FriendList = function FriendList(props) {
   );
 };
 
+FriendList.propTypes = {
+  friend: _react2.default.PropTypes.object.isRequired
+};
+
 function FriendTable(props) {
   var issueRows = props.friends.map(function (friend) {
     return _react2.default.createElement(FriendList, { key: friend._id, friend: friend });
@@ -94,6 +102,10 @@ function FriendTable(props) {
   );
 }
 
+FriendTable.propTypes = {
+  friends: _react2.default.PropTypes.array.isRequired
+};
+
 var Connect = function (_React$Component) {
   _inherits(Connect, _React$Component);
 
@@ -102,11 +114,13 @@ var Connect = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Connect.__proto__ || Object.getPrototypeOf(Connect)).call(this));
 
-    _this.loadData = _this.loadData.bind(_this);
-
     _this.state = {
       friends: []
     };
+
+    _this.loadData = _this.loadData.bind(_this);
+    _this.setFilter = _this.setFilter.bind(_this);
+
     return _this;
   }
 
@@ -116,25 +130,63 @@ var Connect = function (_React$Component) {
       this.loadData();
     }
   }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      var oldQuery = prevProps.location.query;
+      var newQuery = this.props.location.query;
+      if (oldQuery.academic == newQuery.academic) {
+        return;
+      }
+      this.loadData();
+    }
+  }, {
     key: 'loadData',
     value: function loadData() {
       var _this2 = this;
 
-      var friend = this.state.friends;
-      fetch("api/friends").then(function (res) {
+      fetch('/api/friends' + this.props.location.search).then(function (res) {
         if (res.ok) {
           res.json().then(function (json) {
             var friends = [];
             json.records.forEach(function (friend) {
               friends.push(friend);
             });
-            _this2.setState({ friends: friends });
+            _this2.setState({ friends: json.records });
           });
         }
       }).catch(function (err) {
         alert("There was a problem: " + err.message);
       });
     }
+  }, {
+    key: 'setFilter',
+    value: function setFilter(query) {
+      this.props.router.push({ pathname: this.props.location.pathname, query: query });
+    }
+
+    /*
+       loadData(){
+         let friend = this.state.friends;
+         fetch("api/friends")
+            .then(res => {
+              if(res.ok) {
+                res.json().then(json => {
+                  let friends = [];
+                  json.records.forEach(friend => {
+                    friends.push(
+                      friend
+                    )
+                  });
+                  this.setState({friends: friends})
+                })
+              }
+            }).catch (err => {
+              alert("There was a problem: " + err.message)
+            });
+       }
+    
+    */
+
   }, {
     key: 'render',
     value: function render() {
@@ -149,6 +201,9 @@ var Connect = function (_React$Component) {
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
+        _react2.default.createElement(_ConnectFilter2.default, { setFilter: this.setFilter, initFilter: this.props.location.query }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(FriendTable, { friends: this.state.friends })
       );
     }
@@ -158,6 +213,12 @@ var Connect = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Connect;
+
+
+Connect.propTypes = {
+  location: _react2.default.PropTypes.object.isRequired,
+  router: _react2.default.PropTypes.object
+};
 
 /***/ }),
 
@@ -177,7 +238,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(20);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -514,7 +575,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(20);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -689,7 +750,7 @@ var Form = function (_React$Component) {
         if (json.success) {
           alert('Failed to add event.\n Error description: ' + json.msg);
         } else {
-          alert('Questions Saved');
+          alert('Questions Saved, to go' < _reactRouter.Link);
         }
       });
     }
@@ -1749,7 +1810,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(20);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -1852,7 +1913,7 @@ var _About = __webpack_require__(125);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _mySurvey = __webpack_require__(243);
+var _mySurvey = __webpack_require__(244);
 
 var _mySurvey2 = _interopRequireDefault(_mySurvey);
 
@@ -1929,6 +1990,156 @@ _reactDom2.default.render(_react2.default.createElement(RoutedApp, null), conten
 
 
 Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(20);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var inputStyle = {
+    //   marginRight: '5%',
+    marginLeft: '5%'
+};
+
+var ConnectFilter = function (_React$Component) {
+    _inherits(ConnectFilter, _React$Component);
+
+    function ConnectFilter(props) {
+        _classCallCheck(this, ConnectFilter);
+
+        var _this = _possibleConstructorReturn(this, (ConnectFilter.__proto__ || Object.getPrototypeOf(ConnectFilter)).call(this, props));
+
+        _this.state = {
+            academic: props.initFilter.academic || '',
+            changed: false
+        };
+        _this.onChangeAcademic = _this.onChangeAcademic.bind(_this);
+        _this.applyFilter = _this.applyFilter.bind(_this);
+        _this.resetFilter = _this.resetFilter.bind(_this);
+        _this.clearFilter = _this.clearFilter.bind(_this);
+        return _this;
+    }
+
+    _createClass(ConnectFilter, [{
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(newProps) {
+            this.setState({
+                academic: newProps.initFilter.academic || '',
+                changed: false
+            });
+        }
+    }, {
+        key: 'resetFilter',
+        value: function resetFilter() {
+            this.setState({
+                academic: this.props.initFilter.academic || '',
+                changed: false
+            });
+        }
+    }, {
+        key: 'clearFilter',
+        value: function clearFilter(e) {
+            this.props.setFilter({});
+        }
+    }, {
+        key: 'onChangeAcademic',
+        value: function onChangeAcademic(e) {
+            this.setState({ academic: e.target.value, changed: true });
+        }
+    }, {
+        key: 'applyFilter',
+        value: function applyFilter() {
+            var newFilter = {};
+            if (this.state.academic) newFilter.academic = this.state.status;
+            this.props.setFilter(newFilter);
+        }
+    }, {
+        key: 'clearFilter',
+        value: function clearFilter() {
+            this.props.setFilter({});
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'div',
+                    { className: 'row', style: inputStyle },
+                    'Academic:',
+                    _react2.default.createElement(
+                        'select',
+                        { value: this.state.academic, onChange: this.onChangeAcademic },
+                        _react2.default.createElement(
+                            'option',
+                            { value: '' },
+                            '(Any)'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'Undergraduate' },
+                            'Undergraduate'
+                        ),
+                        _react2.default.createElement(
+                            'option',
+                            { value: 'Graduate' },
+                            'Graduate'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'button',
+                        { className: 'btn btn-dark', style: inputStyle, onClick: this.applyFilter },
+                        'Apply'
+                    ),
+                    _react2.default.createElement(
+                        'button',
+                        { className: 'btn btn-dark', style: inputStyle, onClick: this.resetFilter, disabled: !this.state.changed },
+                        'Reset'
+                    ),
+                    _react2.default.createElement(
+                        'button',
+                        { className: 'btn btn-dark', style: inputStyle, onClick: this.clearFilter },
+                        'Clear'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return ConnectFilter;
+}(_react2.default.Component);
+
+exports.default = ConnectFilter;
+
+
+ConnectFilter.propTypes = {
+    setFilter: _react2.default.PropTypes.func.isRequired,
+    initFilter: _react2.default.PropTypes.object.isRequired
+};
+
+/***/ }),
+
+/***/ 244:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -1938,7 +2149,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(20);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -2335,6 +2546,19 @@ var Survey = function (_React$Component) {
                   { className: 'btn btn-dark', role: 'button' },
                   _react2.default.createElement(
                     _reactRouter.Link,
+                    { to: '/*', style: { textDecoration: 'none', color: 'white' } },
+                    'Edit'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'button',
+                  { className: 'btn btn-dark', role: 'button', Link: '/connect' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
                     { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
                     'Find Friends'
                   )
@@ -2372,7 +2596,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(20);
 
 var _reactRouter = __webpack_require__(19);
 
@@ -2513,7 +2737,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(20);
 
 var _reactRouter = __webpack_require__(19);
 

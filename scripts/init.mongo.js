@@ -13,7 +13,7 @@ db.questionform.insert([
 db.friends.insert([
   {
     "name": "Serena Chan",
-    "degree": "Undergraduate",
+    "academic": "Undergraduate",
     "school": "University of Massachusetts Amherst",
     "year": "2021",
     "rate":  "4.5",
@@ -22,7 +22,7 @@ db.friends.insert([
 
   {
     "name": "Caroline Kato",
-    "degree": "Undergraduate",
+    "academic": "Undergraduate",
     "school": "University of Massachusetts Amherst",
     "year": "2022",
     "rate": "4",
@@ -31,7 +31,7 @@ db.friends.insert([
 
   {
     "name": "Caroline Baker",
-    "degree": "Undergraduate",
+    "academic": "Undergraduate",
     "school": "University of Massachusetts Amherst",
     "year": "2020",
     "rate":  "3.5",
@@ -40,7 +40,7 @@ db.friends.insert([
   
   {
     "name" : "Molly Miller",
-    "degree": "Graduate",
+    "academic": "Graduate",
     "school": "University of Massachusetts Amherst",
     "year": "2021",
     "rate":  "5",
@@ -49,7 +49,7 @@ db.friends.insert([
 
   {
     "name": "Tracy Young",
-    "degree": "Graduate",
+    "academic": "Graduate",
     "school": "University of Massachusetts Amherst",
     "year" : "2020",
     "rate": "5",
@@ -58,7 +58,7 @@ db.friends.insert([
 
   {
     "name": "Jon Doe",
-    "degree": "Graduate",
+    "academic": "Graduate",
     "school": "University of Massachusetts Amherst",
     "year": "2023",
     "rate": "3.5",
@@ -66,3 +66,5 @@ db.friends.insert([
   },
 
 ]);
+
+db.friends.createIndex({academic: 1 });

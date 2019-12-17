@@ -40,7 +40,7 @@ const formStyle = {
             <div className="viewForm" style={formStyle}>How can someone help you with your challenges? Please describe.<br></br><strong style={{ border: '2px solid grey'}}>My Answer: </strong>{props.question.seventeen}</div><br></br>
             <div className="viewForm" style={formStyle}>How are you able to help someone with their challenges? Please describe.<br></br><strong style={{ border: '2px solid grey'}}>My Answer: </strong>{props.question.eighteen}</div><br></br>
        </div>
-          
+     
   
       );
 
@@ -109,7 +109,10 @@ export default class Survey extends React.Component {
                 <button className="btn btn-dark" role="button"><Link to="/form" style={{textDecoration: 'none', color: 'white' }}>New Survery</Link></button>
                 </div> 
                 <div className="col">
-                <button className="btn btn-dark" role="button"><Link to="/connect" style={{textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
+                <button className="btn btn-dark" role="button"><Link to="/*" style={{textDecoration: 'none', color: 'white' }}>Edit</Link></button>
+                </div>
+                <div className="col">
+                <button className="btn btn-dark" role="button" Link="/connect"><Link to="/connect" style={{textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
                 </div>
             </div>   
             <br></br><br></br>
