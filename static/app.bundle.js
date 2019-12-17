@@ -543,7 +543,6 @@ var textStyle = {
   fontFamily: 'Athelas',
   marginLeft: '5%',
   marginRight: '5%'
-
 };
 
 var formStyle = {
@@ -667,6 +666,7 @@ var Form = function (_React$Component) {
         "six": form.inlineRadio6.value,
         "seven": form.inlineRadio7.value,
         "eight": form.inlineRadio8.value,
+        "categories": form.defaultCheck.value,
         "nine": form.openOne.value,
         "ten": form.openTwo.value,
         "eleven": form.openThree.value,
@@ -1212,6 +1212,19 @@ var Form = function (_React$Component) {
           _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col', style: textStyle },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Select all hobbies that apply to you.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
             { className: 'form-group', id: 'hobbies' },
             _react2.default.createElement(
               'div',
@@ -1566,6 +1579,7 @@ var Form = function (_React$Component) {
               )
             )
           ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
             { className: 'form-group' },
@@ -1695,20 +1709,7 @@ var Form = function (_React$Component) {
                 { className: 'col' },
                 _react2.default.createElement(
                   'button',
-                  { className: 'btn btn-dark' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/userSurvey', style: { textDecoration: 'none', color: 'white' } },
-                    'Edit'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'button',
-                  { className: 'btn btn-dark', type: 'submit', value: 'Submit' },
+                  { className: 'btn btn-dark', type: 'submit' },
                   _react2.default.createElement(
                     _reactRouter.Link,
                     { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
@@ -1973,6 +1974,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you want to meet somone in person, online, or both?',
       _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.one
     ),
     _react2.default.createElement('br', null),
@@ -1981,6 +1987,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you want to connect with Undergraduates, Graduates Students, or both?',
       _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.two
     ),
     _react2.default.createElement('br', null),
@@ -1989,6 +2000,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you want to connect with people in the same year as you, different, or both?',
       _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.three
     ),
     _react2.default.createElement('br', null),
@@ -1997,7 +2013,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you want to connect with people from the same country, different, or both?',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.four
     ),
     _react2.default.createElement('br', null),
@@ -2006,6 +2026,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you want to connect with people in the same major, different, or both?',
       _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.five
     ),
     _react2.default.createElement('br', null),
@@ -2014,7 +2039,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you want to connect with people in the same school/college as you, different, or both?',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.six
     ),
     _react2.default.createElement('br', null),
@@ -2023,7 +2052,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you want to connect with someone who has a car on campus?',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.seven
     ),
     _react2.default.createElement('br', null),
@@ -2032,7 +2065,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you want to connect with people who share the same ethnicity?',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.eight
     ),
     _react2.default.createElement('br', null),
@@ -2046,7 +2083,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you have any knowledge of the school before you started? If yes please describe below.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.nine
     ),
     _react2.default.createElement('br', null),
@@ -2055,7 +2096,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you know the city/town of where your school is located? If yes please descibe below.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.ten
     ),
     _react2.default.createElement('br', null),
@@ -2064,7 +2109,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Do you have a job(s) on campus? If yes please descibe the position and what you do below.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.eleven
     ),
     _react2.default.createElement('br', null),
@@ -2073,7 +2122,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Are their resources on campus that you found helpful/not helpful? If yes please descibe the position and what you do below.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.tweleve
     ),
     _react2.default.createElement('br', null),
@@ -2082,7 +2135,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Are you involved with any clubs/organizations on campus? If yes please descibe the position and what you do below.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.thirteen
     ),
     _react2.default.createElement('br', null),
@@ -2094,6 +2151,13 @@ var FormQuestion = function FormQuestion(props) {
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
+      'Select all hobbies that apply to you.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.categories
     ),
     _react2.default.createElement('br', null),
@@ -2102,21 +2166,29 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.fourteen
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement(
       'h3',
       { style: { marginLeft: '2%' } },
-      'Knowledge about the University'
+      'What are you hoping to get out of this website?'
     ),
     _react2.default.createElement(
       'div',
       { className: 'viewForm', style: formStyle },
       'Are you looking for help or are you willing to help? Please describe.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.fifteen
     ),
     _react2.default.createElement('br', null),
@@ -2125,7 +2197,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'Are there any challenges you are coping with? Please describe.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.sixteen
     ),
     _react2.default.createElement('br', null),
@@ -2134,7 +2210,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'How can someone help you with your challenges? Please describe.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.seventeen
     ),
     _react2.default.createElement('br', null),
@@ -2143,7 +2223,11 @@ var FormQuestion = function FormQuestion(props) {
       { className: 'viewForm', style: formStyle },
       'How are you able to help someone with their challenges? Please describe.',
       _react2.default.createElement('br', null),
-      ' ',
+      _react2.default.createElement(
+        'strong',
+        { style: { border: '2px solid grey' } },
+        'My Answer: '
+      ),
       props.question.eighteen
     ),
     _react2.default.createElement('br', null)

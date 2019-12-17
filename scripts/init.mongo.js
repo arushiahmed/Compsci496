@@ -6,25 +6,7 @@ db.questionform.remove({});
 
 db.questionform.insert([
   {
-    "one": "Both",
-    "two": "Undergraduates",
-    "three": "Same",
-    "four": "Both",
-    "five": "Both",
-    "six": "Both",
-    "seven": "Both",
-    "eight": "Different",
-    "categories": ["Traveling, ", "Photography, ", "Baking/Cooking, "],
-    "nine": "My older sibilings attend UMass. My older brother graduated with an enginnering major and my older sister graduated with a English major. They told me to live on campus for two years live off campus the last two years. There is busses that you can travel around on and off campus.",
-    "ten": "There is a every store you can think of such as Target, Walmart, and much more close to campus. My favorite place to go out to eat this pasta place in the center of town.",
-    "eleven": "I work at the Learning Commons. I tutots people in math.",
-    "tweleve": "Other an the Learning Commons, I go to office hours for help on my assignments.",
-    "thirteen": "I am part of Dance Team and Community Out Reach Club",
-    "fourteen": 'I love to travel as much as I can. When I travel, I like to take pictures of everything around me. IF i am not traveling I like to bake various different dessert',
-    "fifteen": 'I am looking for someone to help me and help others',
-    "sixteen": 'Adjusting to campus, and making more friends.',
-    "seventeen": 'Looking for someone that has gone through the same challengesd as I have.',
-    "eighteen": "I am open to meeting new people, would get lunch with someone to talk about similar and different challenges. "
+
   }
 ])
 

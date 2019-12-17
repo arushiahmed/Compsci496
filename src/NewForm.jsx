@@ -13,8 +13,7 @@ const textStyle = {
   fontSize: '22px',
   fontFamily: 'Athelas',
   marginLeft: '5%',
-  marginRight: '5%'
-
+  marginRight: '5%' 
 }
 
 const formStyle = {
@@ -145,6 +144,7 @@ handleCheck(e){
         "six": form.inlineRadio6.value,
         "seven": form.inlineRadio7.value,
         "eight": form.inlineRadio8.value,
+        "categories": form.defaultCheck.value,
         "nine": form.openOne.value,
         "ten": form.openTwo.value,
         "eleven": form.openThree.value,
@@ -388,6 +388,11 @@ handleCheck(e){
       <br></br>
       <h3 style={{marginLeft: '2%'}}>What are your hobbies</h3>
       <br></br>
+      <div className="form-group">
+        <div className="col" style={textStyle}>
+                <label>Select all hobbies that apply to you.</label>
+        </div>
+      </div>
       <div className="form-group" id="hobbies">
         <div className="row" style={textStyle}>
           <div className="col">
@@ -542,6 +547,7 @@ handleCheck(e){
       </div> 
       </div>
   </div>
+  <br></br>
   <div className="form-group">
               <div className="row" style={textStyle}>
                 <div className="col">
@@ -551,7 +557,7 @@ handleCheck(e){
                   <textarea type="text" className="form-control" id="openSix" style={inputStyle}/>
                 </div>
               </div>
-        </div> 
+  </div> 
   <br></br>
       <h3 style={{marginLeft: '2%'}}>What are you hoping to get out of this website?</h3>
       <br></br>
@@ -599,10 +605,7 @@ handleCheck(e){
       <center> 
         <div className = "row">
               <div className="col">
-              <button className="btn btn-dark"><Link to="/userSurvey" style={{ textDecoration: 'none', color: 'white' }} >Edit</Link></button>
-              </div> 
-              <div className="col">
-              <button className="btn btn-dark" type="submit" value="Submit"><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
+              <button className="btn btn-dark" type="submit" ><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
               </div>
           </div>   
           </center>

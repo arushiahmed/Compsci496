@@ -17,7 +17,7 @@ const formField = {
   six: 'required',
   seven: 'required',
   eight: 'required',
-  categores: 'required',
+  categories: 'required',
   nine: 'required',
   ten: 'required',
   eleven: 'required',
