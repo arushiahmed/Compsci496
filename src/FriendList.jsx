@@ -17,7 +17,7 @@ const FriendCard = (props) => (
         <h5 className="card-title">Name:{props.friend.name} </h5>
         <h6 className="card-subtitle mb-2" id="academic">Academic:{props.friend.status}</h6>
         <h6 className="card-subtitle mb-2" id="school">School: {props.friend.school}</h6>
-        <h6 className="card-subtitle mb-2" id="year">Year: {props.friend.school}</h6>
+        <h6 className="card-subtitle mb-2" id="year">Year: {props.friend.year}</h6>
         <h6 className="card-subtitle mb-2" id="rate">Rate: {props.friend.rate}</h6> 
         <p className="card-text" id="bio">Bio: {props.friend.bio}</p> 
         <br></br>

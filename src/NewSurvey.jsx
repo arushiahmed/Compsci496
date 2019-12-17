@@ -24,7 +24,7 @@ const formStyle = {
 
 //Checkboxes
 
- export default class Form extends React.Component {
+ export default class NewSurvey extends React.Component {
   constructor(props) {
     super(props);
 
@@ -171,7 +171,6 @@ handleCheck(e){
         else {
           alert('Questions Saved');
           
-
         }
       });
     }
@@ -607,11 +606,19 @@ handleCheck(e){
       <center> 
         <div className = "row">
               <div className="col">
-               <button className="btn btn-dark" type="submit" ><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
+               <button className="btn btn-dark" type="submit" value="Submit"> Save</button>
               </div>
           </div>   
           </center>
     </form>
+    <center> 
+        <div className = "row">
+              <div className="col">
+               <button className="btn btn-dark" type="submit" ><Link to="/connect" style={{ textDecoration: 'none', color: 'white' }} >Find Friends</Link></button>
+              </div>
+          </div>   
+          </center>
+
           <br></br><br></br>
           </div>
     );

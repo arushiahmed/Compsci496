@@ -726,7 +726,7 @@ var FriendCard = function FriendCard(props) {
           'h6',
           { className: 'card-subtitle mb-2', id: 'year' },
           'Year: ',
-          props.friend.school
+          props.friend.year
         ),
         _react2.default.createElement(
           'h6',
@@ -1371,13 +1371,13 @@ var formStyle = {
   //Checkboxes
 
 };
-var Form = function (_React$Component) {
-  _inherits(Form, _React$Component);
+var NewSurvey = function (_React$Component) {
+  _inherits(NewSurvey, _React$Component);
 
-  function Form(props) {
-    _classCallCheck(this, Form);
+  function NewSurvey(props) {
+    _classCallCheck(this, NewSurvey);
 
-    var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (NewSurvey.__proto__ || Object.getPrototypeOf(NewSurvey)).call(this, props));
 
     _this.state = {
       one: '',
@@ -1415,7 +1415,7 @@ var Form = function (_React$Component) {
     return _this;
   }
 
-  _createClass(Form, [{
+  _createClass(NewSurvey, [{
     key: 'handleCheck',
     value: function handleCheck(e) {
       var categories = this.state.categories;
@@ -2527,12 +2527,29 @@ var Form = function (_React$Component) {
                 { className: 'col' },
                 _react2.default.createElement(
                   'button',
-                  { className: 'btn btn-dark', type: 'submit' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-                    'Find Friends'
-                  )
+                  { className: 'btn btn-dark', type: 'submit', value: 'Submit' },
+                  ' Save'
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'center',
+          null,
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement(
+                'button',
+                { className: 'btn btn-dark', type: 'submit' },
+                _react2.default.createElement(
+                  _reactRouter.Link,
+                  { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                  'Find Friends'
                 )
               )
             )
@@ -2544,10 +2561,10 @@ var Form = function (_React$Component) {
     }
   }]);
 
-  return Form;
+  return NewSurvey;
 }(_react2.default.Component);
 
-exports.default = Form;
+exports.default = NewSurvey;
 
 /***/ }),
 
