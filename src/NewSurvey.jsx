@@ -552,7 +552,7 @@ handleCheck(e){
   <div className="form-group">
               <div className="row" style={textStyle}>
                 <div className="col">
-                <label>If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.</label>
+                <label>If there is a hobbie that was not listest above, please type your answers here and describe more details about your choosen hobbies.</label>
                 </div>
                 <div className="col">
                   <textarea type="text" className="form-control" id="openSix" style={inputStyle}/>

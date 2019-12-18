@@ -35,7 +35,7 @@ const loginPage = {
   marginTop: '20px'
 }
 
-function validateLogin(first, last, degree, email, username, password, password2){
+function validateLogin(first, last, degree, email, password, password2){
   const errors = [];
 
   if(first.length === 0){
@@ -85,7 +85,7 @@ export default class Welcome extends React.createClass ({
       render:function(){
               return (
                 <div style={bodyPage}>
-                  <h1 style={{marginLeft: '2%', marginTop: '15px',}}>Intermingle</h1> 
+                  <h1 style={{marginLeft: '2%', marginTop: '15px',}}>Welcome to Intermingle</h1> 
                   <center style={content}>
                  <br></br> <br></br>
                       <div id="buttons">

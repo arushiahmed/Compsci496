@@ -5,12 +5,13 @@ import { Link } from 'react-router';
 import SearchBar from './SearchBar.jsx';
 
 const profile = {
-	border: "2px solid black",    
-  marginTop: "10px",
-  marginLeft: "5%",
-  fontSize: "20px",
-  height: "100px", 
-  width: "100px",
+	border: '2px solid black',    
+  marginTop: '10px',
+  marginLeft: '5%',
+  fontSize: '20px',
+  height: '100px', 
+  width: '100px',
+  textAlign: "center"
 }
 const formStyle =
 {
@@ -28,10 +29,10 @@ export default class Profile extends React.Component {
         <SearchBar> </SearchBar>
         <div className = "row" style={{marginLeft: '85%'}}>
               <div className="col" >
-              <button className="btn btn-dark"role="button"><Link to="/rate" style={{ textDecoration: 'none', color: 'white' }} >Rate</Link></button>
+              <button className="btn btn-dark"role="button"><Link to="/*" style={{ textDecoration: 'none', color: 'white' }}>Rate</Link></button>
             </div> 
               <div className="col">
-              <button className="btn btn-dark"role="button"><Link to="/chat" style={{ textDecoration: 'none', color: 'white' }} >Chat</Link></button>
+              <button className="btn btn-dark"role="button"><Link to="/*" style={{ textDecoration: 'none', color: 'white' }}>Chat</Link></button>
               </div> 
           </div>
         <h1 style={{marginLeft: '5%'}}>Profile</h1>
@@ -44,7 +45,7 @@ export default class Profile extends React.Component {
           <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label>Email address</label>
+              <label>Email address: </label>
             </div> 
               <div className="col">
               <input type="text" className="form-control-plaintext" id="staticEmail" defaultValue="emailexamplel@umass.edu" style={formStyle} />
@@ -55,7 +56,7 @@ export default class Profile extends React.Component {
           <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label>Degree</label>
+              <label>Academic: </label>
             </div> 
               <div className="col">
               <input type="email" className="form-control" id="ethencity"  style={formStyle}/>
@@ -66,7 +67,7 @@ export default class Profile extends React.Component {
           <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label>School</label>
+              <label>School: </label>
             </div> 
               <div className="col">
               <input type="email" className="form-control" id="school"  style={formStyle}/>
@@ -77,7 +78,7 @@ export default class Profile extends React.Component {
           <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label>Country</label>
+              <label>Country: </label>
             </div> 
               <div className="col">
               <input type="email" className="form-control" id="country"  style={formStyle}/>
@@ -88,7 +89,7 @@ export default class Profile extends React.Component {
           <div className="form-group">
             <div className = "row">
               <div className="col">
-              <label>Bio:</label>
+              <label>Bio: </label>
             </div> 
               <div className="col">
               <textarea className="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3" style={formStyle}></textarea>

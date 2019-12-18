@@ -34,12 +34,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var profile = {
-  border: "2px solid black",
-  marginTop: "10px",
-  marginLeft: "5%",
-  fontSize: "20px",
-  height: "100px",
-  width: "100px"
+  border: '2px solid black',
+  marginTop: '10px',
+  marginLeft: '5%',
+  fontSize: '20px',
+  height: '100px',
+  width: '100px',
+  textAlign: "center"
 };
 var formStyle = {
   width: '500px'
@@ -76,7 +77,7 @@ var Profile = function (_React$Component) {
               { className: 'btn btn-dark', role: 'button' },
               _react2.default.createElement(
                 _reactRouter.Link,
-                { to: '/rate', style: { textDecoration: 'none', color: 'white' } },
+                { to: '/*', style: { textDecoration: 'none', color: 'white' } },
                 'Rate'
               )
             )
@@ -89,7 +90,7 @@ var Profile = function (_React$Component) {
               { className: 'btn btn-dark', role: 'button' },
               _react2.default.createElement(
                 _reactRouter.Link,
-                { to: '/chat', style: { textDecoration: 'none', color: 'white' } },
+                { to: '/*', style: { textDecoration: 'none', color: 'white' } },
                 'Chat'
               )
             )
@@ -125,7 +126,7 @@ var Profile = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Email address'
+                  'Email address: '
                 )
               ),
               _react2.default.createElement(
@@ -148,7 +149,7 @@ var Profile = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Degree'
+                  'Academic: '
                 )
               ),
               _react2.default.createElement(
@@ -171,7 +172,7 @@ var Profile = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'School'
+                  'School: '
                 )
               ),
               _react2.default.createElement(
@@ -194,7 +195,7 @@ var Profile = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Country'
+                  'Country: '
                 )
               ),
               _react2.default.createElement(
@@ -217,7 +218,7 @@ var Profile = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'Bio:'
+                  'Bio: '
                 )
               ),
               _react2.default.createElement(
@@ -409,7 +410,7 @@ var loginPage = {
   marginTop: '20px'
 };
 
-function validateLogin(first, last, degree, email, username, password, password2) {
+function validateLogin(first, last, degree, email, password, password2) {
   var errors = [];
 
   if (first.length === 0) {
@@ -477,7 +478,7 @@ var Welcome = function (_React$createClass) {
       _react2.default.createElement(
         'h1',
         { style: { marginLeft: '2%', marginTop: '15px' } },
-        'Intermingle'
+        'Welcome to Intermingle'
       ),
       _react2.default.createElement(
         'center',
@@ -2497,7 +2498,7 @@ var NewSurvey = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  'If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.'
+                  'If there is a hobbie that was not listest above, please type your answers here and describe more details about your choosen hobbies.'
                 )
               ),
               _react2.default.createElement(
