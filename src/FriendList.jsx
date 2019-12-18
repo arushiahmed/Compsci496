@@ -14,8 +14,8 @@ const FriendCard = (props) => (
 
     <div className="card border-dark mb-3" style={{width: '400px', marginLeft: '25%'}}>
       <div className="card-body h-100">
-        <h5 className="card-title">Name:{props.friend.name} </h5>
-        <h6 className="card-subtitle mb-2" id="academic">Academic:{props.friend.status}</h6>
+        <h5 className="card-title">Name: {props.friend.name} </h5>
+        <h6 className="card-subtitle mb-2" id="academic">Academic: {props.friend.status}</h6>
         <h6 className="card-subtitle mb-2" id="school">School: {props.friend.school}</h6>
         <h6 className="card-subtitle mb-2" id="year">Year: {props.friend.year}</h6>
         <h6 className="card-subtitle mb-2" id="rate">Rate: {props.friend.rate}</h6> 

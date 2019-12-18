@@ -900,14 +900,14 @@ var FriendCard = function FriendCard(props) {
         _react2.default.createElement(
           'h5',
           { className: 'card-title' },
-          'Name:',
+          'Name: ',
           props.friend.name,
           ' '
         ),
         _react2.default.createElement(
           'h6',
           { className: 'card-subtitle mb-2', id: 'academic' },
-          'Academic:',
+          'Academic: ',
           props.friend.status
         ),
         _react2.default.createElement(
