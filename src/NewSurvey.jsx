@@ -338,7 +338,7 @@ handleCheck(e){
       <div className="form-group" >
             <div className="row" style={textStyle}>
               <div className="col">
-              <label>Do you have any knowledge of the school before you started? Please describe what you know.</label>
+              <label for="validationServer01">Do you have any knowledge of the school before you started? Please describe what you know.</label>
               </div>
               <div className="col">
                 <textarea type="text" className="form-control" id="openOne" style={inputStyle}/>

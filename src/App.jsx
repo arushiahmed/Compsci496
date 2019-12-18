@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, withRouter, IndexRoute } from 'react-router';
 
-import Form from './NewSurvey.jsx';
 import Welcome from './Welcome.jsx';
 import Profile from './Profile.jsx'
 import About from './About.jsx'
 import Survey from './Survey.jsx';
+import NewSurvey from './NewSurvey.jsx';
 import FriendList from './FriendList.jsx';
 
 var contentNode = document.getElementById("contents");
@@ -40,8 +40,8 @@ const RoutedApp = () => (
       <IndexRoute component={Welcome} />
       <Route path="/connect" component={withRouter(FriendList)} />
       <Route path="/about" component={About} />
-      <Route path="/form" component={Form} />
       <Route path="/userSurvey" component={Survey} />
+      <Route path="/form" component={NewSurvey} />
       <Route path="/profile" component={Profile} />
       <Route path="*" component={NoMatch} />
     </Route>

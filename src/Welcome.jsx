@@ -35,6 +35,39 @@ const loginPage = {
   marginTop: '20px'
 }
 
+function validateLogin(first, last, degree, email, username, password, password2){
+  const errors = [];
+
+  if(first.length === 0){
+    errors.push(alert("Firstname can't be empty"));
+  }
+
+  if(last.length === 0){
+    errors.push("Lastname can't be empty");
+  }
+
+  if(degree != "Undergraduate" || "Graduate"){
+    errors.push("please type either Undergrate or Graduate");
+  }
+
+  if (email.split("").filter(x => x === "@").length !== 1) {
+    errors.push(alert("Email should contain a @"));
+  }
+  if (email.indexOf(".edu") === -1) {
+    errors.push(alert("Email should contain at least one dot"));
+  }
+  if (password.length < 6) {
+    errors.push(alert("Password should be at least 6 characters long"));
+  }
+
+  if(password2.length != password.length){
+    errors.push(alert("Password does not match"));
+  }
+
+  return errors;
+
+}
+
 
 export default class Welcome extends React.createClass ({
     getInitialState:function(){
@@ -57,7 +90,7 @@ export default class Welcome extends React.createClass ({
                  <br></br> <br></br>
                       <div id="buttons">
                         <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Sign Up</button>
-                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Login</button>
+                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Sign in</button>
                        </div>
                        <br></br><br></br><br></br>
                         {this.state.signup?<Signup/>:null}
@@ -74,35 +107,61 @@ export default class Welcome extends React.createClass ({
 class Signup extends React.Component {    
     constructor() {
       super();
+      this.state ={
+        errors: []
+      };
+
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e){
+      e.preventDefault();
+
+      const first = ReactDOM.findDOMNode(this._firstname).value;
+      const last = ReactDOM.findDOMNode(this._lastname).value;
+      const degree = ReactDOM.findDOMNode(this._inputDegree).value;
+      const email = ReactDOM.findDOMNode(this._inputEmail).value;
+      const password = ReactDOM.findDOMNode(this._inputPassword).value;
+      const password2 = ReactDOM.findDOMNode(this._comfirmPassword).value;
+
+      const errors = validateLogin(first, last, degree, email, password, password2);
+      if(errors.length > 0){
+        this.setState({errors});
+        return
+      }
     }
     render(){
+      const {errors} = this.state;
       return (
-        <form className ="form-group" name="signup">
+        <form className ="form-group" name="signup" onSubmit={this.handleSubmit}>
+          {errors.map(error => (
+          <p key={error}>Error: {error}</p>
+        ))}
           <div className="form-group">
           <label>Name</label>
             <div className="row">
               <div className="col">
-                <input type="name" className="form-control" id="firstname" placeholder="First Name"/>
+                <input type="text" className="form-control" id="firstname" ref={firstname => this._firstname = firstname} placeholder="First Name"/>
             </div> 
               <div className="col">
-              <input type="name" className="form-control" id="lastname" placeholder="Last Name"/>
+              <input type="text" className="form-control" id="lastname" ref={lastname => this._lastname = lastname} placeholder="Last Name"/>
               </div> 
           </div>              
         </div>
         <br></br>
             <div className="form-group">  
           <label>Undergraduate or Graduate Student</label>
-          <input type="degree" className="form-control" id="inputDegree" placeholder="Degree"/>
+          <input type="text" className="form-control" id="inputDegree" ref={inputDegree => this._inputDegree = inputDegree} placeholder="Degree"/>
         </div>
           <br></br>  
         <div className="form-group">  
           <label>School</label>
-          <input type="school" className="form-control" id="inputSchool" placeholder="School"/>
+          <input type="text" className="form-control" id="inputSchool" placeholder="School"/>
         </div>
           <br></br>
           <div className="form-group">  
             <label>School Email</label>
-              <input type="email" className="form-control" id="inputEmail" placeholder="Email"/>
+              <input type="email" className="form-control" id="inputEmail" ref={inputEmail => this._inputEmail = inputEmail} placeholder="Email"/>
             </div>
             <br></br>
           <div className="form-group">  
@@ -127,15 +186,15 @@ class Signup extends React.Component {
             <br></br>
         <div className="form-group">
           <label>Password</label>
-          <input type="password" className="form-control" id="inputPassword" placeholder="Password"/>
+          <input type="password" className="form-control" id="inputPassword" ref={inputPassword => this._inputPassword = inputPassword} placeholder="Password"/>
         </div>  
         <br></br>
         <div className="form-group">
           <label>Confirm Password</label>
-          <input type="password" className="form-control" id="comfirmPassword"placeholder="Confirm Password"/>
+          <input type="password" className="form-control" id="comfirmPassword" ref={comfirmPassword => this._comfirmPassword = comfirmPassword}  placeholder="Confirm Password"/>
         </div>  
         <br></br>
-        <button className="btn btn-dark"role="button"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></button>
+        <button className="btn btn-dark"type="submit"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></button>
       </form>
 
           );
