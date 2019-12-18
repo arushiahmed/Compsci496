@@ -477,7 +477,7 @@ var Welcome = function (_React$createClass) {
       _react2.default.createElement(
         'h1',
         { style: { marginLeft: '2%', marginTop: '15px' } },
-        'Website title'
+        'Intermingle'
       ),
       _react2.default.createElement(
         'center',

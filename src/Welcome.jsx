@@ -85,7 +85,7 @@ export default class Welcome extends React.createClass ({
       render:function(){
               return (
                 <div style={bodyPage}>
-                  <h1 style={{marginLeft: '2%', marginTop: '15px',}}>Website title</h1> 
+                  <h1 style={{marginLeft: '2%', marginTop: '15px',}}>Intermingle</h1> 
                   <center style={content}>
                  <br></br> <br></br>
                       <div id="buttons">
