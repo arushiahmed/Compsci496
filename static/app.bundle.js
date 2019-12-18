@@ -850,7 +850,12 @@ var About = function (_React$Component) {
             _react2.default.createElement(
               'p',
               null,
-              'This is an interactive platform where international students and domestic students can find friends. Majority of this website is not implemented. Below is a list of the pages of the site, how a user would interact with the page, and what needs to be implemented on the page.'
+              _react2.default.createElement(
+                'strong',
+                null,
+                'Overview: '
+              ),
+              'One of the biggest adjustments for students is going away from home to college. For international students, it is more of an adjustment than for domestic students. These students have to adjust going to school away from their family but also experiencing a new culture. This adjustment can cause stress for these students that affect their academic performance and their experience living in the United States. This application is for both international and domestic student to find people and connect within their University.'
             ),
             _react2.default.createElement('br', null),
             _react2.default.createElement(
@@ -871,7 +876,13 @@ var About = function (_React$Component) {
                 null,
                 '2. About: '
               ),
-              ' The about page will give them the infomation about the application. The about page will have contain content from the About.md file as well.'
+              ' The about page will give them the infomation about the application and its purpose. When a returning user signing in, it will direct them to the about page. ',
+              _react2.default.createElement(
+                'strong',
+                null,
+                'Note:'
+              ),
+              ' the content is the same as the About.md file as well.'
             ),
             _react2.default.createElement(
               'p',
