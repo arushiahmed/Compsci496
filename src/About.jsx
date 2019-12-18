@@ -27,8 +27,8 @@ export default class About extends React.Component {
           <div className="about" style={textStyle}>
           <h3>Welcome to Intermingle.</h3>
           <br></br>
-          <p><strong>Overview: </strong>One of the biggest adjustments for students is going away from home to college. For international students, it is more of an adjustment than for domestic students. These students have to adjust going to school away from their family but also experiencing a new culture. This adjustment can cause stress for these students that affect their academic performance and their experience living in the United States. 
-          This application is for both international and domestic student to find people and connect within their University.</p>
+          <p><strong>Overview: </strong>One of the biggest adjustments for students is going away from home to college. For international students, it is more of an adjustment than for domestic students. These students have to adjust going to school away from their family but also experiencing a new culture. This adjustment can cause stress for these students that affects their academic performance and their experience living in the United States. 
+          This application is for both international and domestic student to find people and connect within their University. Below is a list of the descripition of each page, the function of their page, and what features of the page needs to be implemented.</p>
           <br></br>
           <p><strong>1. Welcome: </strong> This is the home page where users either signin and signup. If the user is signing up then they would fill out the form that will directly take them to the survey once completed. The signin page is for returning users where they fill in their username (set to their email) 
           and the password where they will be directed to the about page.</p> 

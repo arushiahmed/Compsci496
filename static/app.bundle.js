@@ -855,7 +855,7 @@ var About = function (_React$Component) {
                 null,
                 'Overview: '
               ),
-              'One of the biggest adjustments for students is going away from home to college. For international students, it is more of an adjustment than for domestic students. These students have to adjust going to school away from their family but also experiencing a new culture. This adjustment can cause stress for these students that affect their academic performance and their experience living in the United States. This application is for both international and domestic student to find people and connect within their University.'
+              'One of the biggest adjustments for students is going away from home to college. For international students, it is more of an adjustment than for domestic students. These students have to adjust going to school away from their family but also experiencing a new culture. This adjustment can cause stress for these students that affects their academic performance and their experience living in the United States. This application is for both international and domestic student to find people and connect within their University. Below is a list of the descripition of each page, the function of their page, and what features of the page needs to be implemented.'
             ),
             _react2.default.createElement('br', null),
             _react2.default.createElement(
