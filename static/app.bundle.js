@@ -382,7 +382,6 @@ var bodyPage = {
   width: '100%',
   height: '100%',
   margin: '0'
-
 };
 
 var content = {
@@ -497,7 +496,7 @@ var Welcome = function (_React$createClass) {
           _react2.default.createElement(
             'button',
             { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark', style: loginPage },
-            'Sign In'
+            'Register'
           )
         ),
         _react2.default.createElement('br', null),
@@ -567,6 +566,13 @@ var Signup = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Sign Up'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'label',
             null,
@@ -733,6 +739,13 @@ var Login = function (_React$Component2) {
         _react2.default.createElement(
           'div',
           { className: 'form-group' },
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Register'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'label',
             null,
@@ -3143,7 +3156,7 @@ var SearchBar = function (_React$Component) {
               _react2.default.createElement(
                 _reactRouter.Link,
                 { to: '/', style: { textDecoration: 'none', color: 'white' } },
-                'Logout'
+                'Sign Out'
               )
             ),
             _react2.default.createElement(

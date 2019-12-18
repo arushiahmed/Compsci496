@@ -6,7 +6,6 @@ const bodyPage = {
   width: '100%',
 	height: '100%',
   margin: '0',
-
 };
 
 const content = 
@@ -26,7 +25,7 @@ const divStyle = {
 const signUp = {
   height: '$height',
   marginLeft: '25px',
-  marginTop: '20px'
+  marginTop: '20px',
 };
 
 const loginPage = {
@@ -90,7 +89,7 @@ export default class Welcome extends React.createClass ({
                  <br></br> <br></br>
                       <div id="buttons">
                         <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Sign Up</button>
-                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Sign In</button>
+                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Register</button>
                        </div>
                        <br></br><br></br><br></br>
                         {this.state.signup?<Signup/>:null}
@@ -137,7 +136,10 @@ class Signup extends React.Component {
           {errors.map(error => (
           <p key={error}>Error: {error}</p>
         ))}
+        
           <div className="form-group">
+            <h3>Sign Up</h3>
+            <br></br><br></br>
           <label>Name</label>
             <div className="row">
               <div className="col">
@@ -209,6 +211,8 @@ class Login extends React.Component {
           return (
                <form className="form-group" name="login">
                     <div className="form-group">
+                      <h3>Register</h3>
+                      <br></br><br></br>
                       <label>Username</label>
                       <input className="form-control" id="inputName" placeholder="Username"/>
                     </div>
