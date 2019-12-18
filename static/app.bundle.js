@@ -497,7 +497,7 @@ var Welcome = function (_React$createClass) {
           _react2.default.createElement(
             'button',
             { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark', style: loginPage },
-            'Sign in'
+            'Sign In'
           )
         ),
         _react2.default.createElement('br', null),
@@ -758,7 +758,7 @@ var Login = function (_React$Component2) {
           _react2.default.createElement(
             _reactRouter.Link,
             { to: '/about', style: { textDecoration: 'none', color: 'white' } },
-            'Login'
+            'Sign In'
           )
         )
       );
@@ -2998,20 +2998,20 @@ var FriendFilter = function (_React$Component) {
         ),
         _react2.default.createElement(
           'select',
-          { value: this.state.status, onChange: this.onChangeStatus, style: { marginLeft: '4px' } },
+          { value: this.state.status, onChange: this.onChangeStatus, style: { marginLeft: '4px', cursor: 'pointer' } },
           _react2.default.createElement(
             'option',
-            { value: '' },
+            { value: '', style: { cursor: 'pointer' } },
             '(Any)'
           ),
           _react2.default.createElement(
             'option',
-            { value: 'Undergraduate' },
+            { style: { cursor: 'pointer' }, value: 'Undergraduate' },
             'Undergraduate'
           ),
           _react2.default.createElement(
             'option',
-            { value: 'Graduate' },
+            { style: { cursor: 'pointer' }, value: 'Graduate' },
             'Graduate'
           )
         ),

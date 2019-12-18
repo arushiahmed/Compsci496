@@ -80,10 +80,10 @@ export default class FriendFilter extends React.Component {
     return (
       <div>
         <label style={inputStyle}>Academic:</label>
-          <select value={this.state.status} onChange={this.onChangeStatus} style={{marginLeft:'4px'}}>
-          <option value="">(Any)</option>
-          <option value="Undergraduate">Undergraduate</option>
-          <option value="Graduate">Graduate</option>
+          <select value={this.state.status} onChange={this.onChangeStatus} style={{marginLeft:'4px', cursor: 'pointer'}}>
+          <option value="" style={{cursor: 'pointer'}}>(Any)</option>
+          <option style={{cursor: 'pointer'}} value="Undergraduate">Undergraduate</option>
+          <option style={{cursor: 'pointer'}} value="Graduate">Graduate</option>
         </select>
         &nbsp;
         Rate between:

@@ -90,7 +90,7 @@ export default class Welcome extends React.createClass ({
                  <br></br> <br></br>
                       <div id="buttons">
                         <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Sign Up</button>
-                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Sign in</button>
+                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Sign In</button>
                        </div>
                        <br></br><br></br><br></br>
                         {this.state.signup?<Signup/>:null}
@@ -194,7 +194,7 @@ class Signup extends React.Component {
           <input type="password" className="form-control" id="comfirmPassword" ref={comfirmPassword => this._comfirmPassword = comfirmPassword}  placeholder="Confirm Password"/>
         </div>  
         <br></br>
-        <button className="btn btn-dark"type="submit"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }} >Sign Up</Link></button>
+        <button className="btn btn-dark"type="submit"><Link to="/form" style={{ textDecoration: 'none', color: 'white' }}>Sign Up</Link></button>
       </form>
 
           );
@@ -218,7 +218,7 @@ class Login extends React.Component {
                       <input className="form-control" id="inputPassword" placeholder="Password"/>
                     </div>  
                     <br></br>
-                    <button className="btn btn-dark" role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>Login</Link></button>
+                    <button className="btn btn-dark" role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>Sign In</Link></button>
                 </form>
                            
               );
