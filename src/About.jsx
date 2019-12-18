@@ -17,7 +17,9 @@ export default class About extends React.Component {
         <h1 style={{marginLeft: '2%'}}>About</h1>
         <br></br><br></br>
         <center>
-        <p>This is an interactive platform where international students and domestic students can find friends.</p>
+        <p>Welcome to Intermingle.</p>
+        <p>This is an interactive platform where international students and domestic students can find friends. Majority of this website is not implemented.</p> 
+       
         </center>
       </div>
     );

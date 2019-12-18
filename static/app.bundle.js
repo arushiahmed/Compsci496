@@ -834,7 +834,12 @@ var About = function (_React$Component) {
           _react2.default.createElement(
             'p',
             null,
-            'This is an interactive platform where international students and domestic students can find friends.'
+            'Welcome to Intermingle.'
+          ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'This is an interactive platform where international students and domestic students can find friends. Majority of this website is not implemented.'
           )
         )
       );
