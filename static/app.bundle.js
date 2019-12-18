@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 123:
+/***/ 121:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16,352 +16,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(20);
+__webpack_require__(23);
 
-var _reactRouter = __webpack_require__(15);
+var _reactRouter = __webpack_require__(19);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var bodyPage = {
-  width: '100%',
-  height: '100%',
-  margin: '0'
-
-};
-
-var content = {
-  width: '550px',
-  margin: 'auto',
-  marginBottom: '5%'
-};
-
-var divStyle = {
-  width: '100%',
-  height: '250px',
-  marginTop: '20px'
-
-};
-
-var signUp = {
-  height: '$height',
-  marginLeft: '25px',
-  marginTop: '20px'
-};
-
-var loginPage = {
-  height: '$height/2',
-  marginLeft: '25%',
-  marginTop: '20px'
-};
-
-var Welcome = function (_React$createClass) {
-  _inherits(Welcome, _React$createClass);
-
-  function Welcome() {
-    _classCallCheck(this, Welcome);
-
-    return _possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).apply(this, arguments));
-  }
-
-  return Welcome;
-}(_react2.default.createClass({
-  displayName: 'Welcome',
-
-  getInitialState: function getInitialState() {
-    return { signup: false, login: true };
-  },
-  switch: function _switch(word) {
-    var signup = void 0,
-        login = void 0;
-    if (word == "signup") {
-      signup = true;login = false;
-    } else {
-      login = true;signup = false;
-    }
-    return this.setState({ login: login, signup: signup });
-  },
-
-  render: function render() {
-    return _react2.default.createElement(
-      'div',
-      { style: bodyPage },
-      _react2.default.createElement(
-        'h1',
-        { style: { marginLeft: '2%', marginTop: '15px' } },
-        'Website title'
-      ),
-      _react2.default.createElement(
-        'center',
-        { style: content },
-        _react2.default.createElement('br', null),
-        ' ',
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { id: 'buttons' },
-          _react2.default.createElement(
-            'button',
-            { id: 'signupButton', onClick: this.switch.bind(null, "signup"), className: 'btn btn-dark', style: signUp },
-            'Sign Up'
-          ),
-          _react2.default.createElement(
-            'button',
-            { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark', style: loginPage },
-            'Login'
-          )
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        this.state.signup ? _react2.default.createElement(Signup, null) : null,
-        this.state.login ? _react2.default.createElement(Login, null) : null
-      )
-    );
-  }
-}));
-
-exports.default = Welcome;
-
-var Signup = function (_React$Component) {
-  _inherits(Signup, _React$Component);
-
-  function Signup() {
-    _classCallCheck(this, Signup);
-
-    return _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this));
-  }
-
-  _createClass(Signup, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'form',
-        { className: 'form-group', name: 'signup' },
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Name'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col' },
-              _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'firstname', placeholder: 'First Name' })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col' },
-              _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'lastname', placeholder: 'Last Name' })
-            )
-          )
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Undergraduate or Graduate Student'
-          ),
-          _react2.default.createElement('input', { type: 'degree', className: 'form-control', id: 'inputDegree', placeholder: 'Degree' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'School'
-          ),
-          _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputSchool', placeholder: 'School' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'School Email'
-          ),
-          _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: 'Email' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Major'
-          ),
-          _react2.default.createElement('input', { type: 'major', className: 'form-control', id: 'inputMajor', placeholder: 'Major' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Year'
-          ),
-          _react2.default.createElement('input', { type: 'year', className: 'form-control', id: 'inputYear', placeholder: 'Year' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Country'
-          ),
-          _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputCountry', placeholder: 'Country' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Username'
-          ),
-          _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputUsername', placeholder: 'Username' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Password'
-          ),
-          _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: 'Password' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Confirm Password'
-          ),
-          _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'comfirmPassword', placeholder: 'Confirm Password' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'button',
-          { className: 'btn btn-dark', role: 'button' },
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/form', style: { textDecoration: 'none', color: 'white' } },
-            'Sign Up'
-          )
-        )
-      );
-    }
-  }]);
-
-  return Signup;
-}(_react2.default.Component);
-
-var Login = function (_React$Component2) {
-  _inherits(Login, _React$Component2);
-
-  function Login() {
-    _classCallCheck(this, Login);
-
-    return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this));
-  }
-
-  _createClass(Login, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'form',
-        { className: 'form-group', name: 'login' },
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Username'
-          ),
-          _react2.default.createElement('input', { className: 'form-control', id: 'inputName', placeholder: 'Username' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'form-group' },
-          _react2.default.createElement(
-            'label',
-            null,
-            'Password'
-          ),
-          _react2.default.createElement('input', { className: 'form-control', id: 'inputPassword', placeholder: 'Password' })
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'button',
-          { className: 'btn btn-dark', role: 'button' },
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '/about', style: { textDecoration: 'none', color: 'white' } },
-            'Login'
-          )
-        )
-      );
-    }
-  }]);
-
-  return Login;
-}(_react2.default.Component);
-
-/***/ }),
-
-/***/ 124:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(20);
-
-var _reactRouter = __webpack_require__(15);
-
-var _Profile = __webpack_require__(79);
-
-var _Profile2 = _interopRequireDefault(_Profile);
-
-var _SearchBar = __webpack_require__(31);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -371,52 +30,228 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // NEW: added the import for react.
 
-var About = function (_React$Component) {
-  _inherits(About, _React$Component);
 
-  function About() {
-    _classCallCheck(this, About);
+var profile = {
+  border: "2px solid black",
+  marginTop: "10px",
+  marginLeft: "5%",
+  fontSize: "20px",
+  height: "100px",
+  width: "100px"
+};
+var formStyle = {
+  width: '500px'
+};
 
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
+var Profile = function (_React$Component) {
+  _inherits(Profile, _React$Component);
+
+  function Profile() {
+    _classCallCheck(this, Profile);
+
+    return _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this));
   }
 
-  _createClass(About, [{
+  _createClass(Profile, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement(
+          _SearchBar2.default,
+          null,
+          ' '
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'row', style: { marginLeft: '85%' } },
+          _react2.default.createElement(
+            'div',
+            { className: 'col' },
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn-dark', role: 'button' },
+              _react2.default.createElement(
+                _reactRouter.Link,
+                { to: '/rate', style: { textDecoration: 'none', color: 'white' } },
+                'Rate'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col' },
+            _react2.default.createElement(
+              'button',
+              { className: 'btn btn-dark', role: 'button' },
+              _react2.default.createElement(
+                _reactRouter.Link,
+                { to: '/chat', style: { textDecoration: 'none', color: 'white' } },
+                'Chat'
+              )
+            )
+          )
+        ),
         _react2.default.createElement(
           'h1',
-          { style: { marginLeft: '2%' } },
-          'About'
+          { style: { marginLeft: '5%' } },
+          'Profile'
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'center',
-          null,
+          'div',
+          { className: 'picture', style: profile },
+          'Profile picture'
+        ),
+        _react2.default.createElement('br', null),
+        ' ',
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'form',
+          { style: { marginLeft: '5%' } },
           _react2.default.createElement(
-            'p',
-            null,
-            'This is an interactive platform where international students and domestic students can find friends.'
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Email address'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('input', { type: 'text', className: 'form-control-plaintext', id: 'staticEmail', defaultValue: 'emailexamplel@umass.edu', style: formStyle })
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Degree'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'ethencity', style: formStyle })
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'School'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'school', style: formStyle })
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Country'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'country', style: formStyle })
+              )
+            )
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  'Bio:'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: formStyle })
+              )
+            )
           )
-        )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', role: 'button', style: { marginLeft: '5%' } },
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { to: '*', style: { textDecoration: 'none', color: 'white' } },
+            'Edit'
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null)
       );
     }
   }]);
 
-  return About;
+  return Profile;
 }(_react2.default.Component);
 
-exports.default = About;
+exports.default = Profile;
 
 /***/ }),
 
-/***/ 126:
+/***/ 122:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -426,33 +261,33 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(86);
+var _reactDom = __webpack_require__(85);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouter = __webpack_require__(15);
+var _reactRouter = __webpack_require__(19);
 
-var _NewSurvey = __webpack_require__(250);
+var _NewSurvey = __webpack_require__(238);
 
 var _NewSurvey2 = _interopRequireDefault(_NewSurvey);
 
-var _Welcome = __webpack_require__(123);
+var _Welcome = __webpack_require__(240);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
 
-var _Profile = __webpack_require__(79);
+var _Profile = __webpack_require__(121);
 
 var _Profile2 = _interopRequireDefault(_Profile);
 
-var _About = __webpack_require__(124);
+var _About = __webpack_require__(241);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _Survey = __webpack_require__(249);
+var _Survey = __webpack_require__(242);
 
 var _Survey2 = _interopRequireDefault(_Survey);
 
-var _FriendList = __webpack_require__(248);
+var _FriendList = __webpack_require__(243);
 
 var _FriendList2 = _interopRequireDefault(_FriendList);
 
@@ -514,7 +349,7 @@ _reactDom2.default.render(_react2.default.createElement(RoutedApp, null), conten
 
 /***/ }),
 
-/***/ 245:
+/***/ 238:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -530,841 +365,11 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+__webpack_require__(23);
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _reactRouter = __webpack_require__(19);
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var inputStyle = {
-  //   marginRight: '5%',
-  marginLeft: '2%'
-};
-
-var FriendFilter = function (_React$Component) {
-  _inherits(FriendFilter, _React$Component);
-
-  function FriendFilter(props) {
-    _classCallCheck(this, FriendFilter);
-
-    var _this = _possibleConstructorReturn(this, (FriendFilter.__proto__ || Object.getPrototypeOf(FriendFilter)).call(this, props));
-
-    _this.state = {
-      status: props.initFilter.status || '',
-      changed: false
-    };
-
-    _this.onChangeStatus = _this.onChangeStatus.bind(_this);
-    _this.applyFilter = _this.applyFilter.bind(_this);
-    _this.resetFilter = _this.resetFilter.bind(_this);
-    _this.clearFilter = _this.clearFilter.bind(_this);
-    return _this;
-  }
-
-  _createClass(FriendFilter, [{
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(newProps) {
-      this.setState({
-        status: newProps.initFilter.status || '',
-        changed: false
-      });
-    }
-  }, {
-    key: 'resetFilter',
-    value: function resetFilter() {
-      this.setState({
-        status: this.props.initFilter.status || '',
-        changed: false
-      });
-    }
-  }, {
-    key: 'onChangeStatus',
-    value: function onChangeStatus(e) {
-      this.setState({ status: e.target.value, changed: true });
-    }
-  }, {
-    key: 'clearFilter',
-    value: function clearFilter(e) {
-      this.props.setFilter({});
-    }
-  }, {
-    key: 'applyFilter',
-    value: function applyFilter() {
-      var newFilter = {};
-      if (this.state.status) newFilter.status = this.state.status;
-      this.props.setFilter(newFilter);
-    }
-  }, {
-    key: 'clearFilter',
-    value: function clearFilter() {
-      this.props.setFilter({});
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'label',
-          { style: inputStyle },
-          'Academic:'
-        ),
-        _react2.default.createElement(
-          'select',
-          { value: this.state.status, onChange: this.onChangeStatus, style: { marginLeft: '4px' } },
-          _react2.default.createElement(
-            'option',
-            { value: '' },
-            '(Any)'
-          ),
-          _react2.default.createElement(
-            'option',
-            { value: 'Undergraduate' },
-            'Undergraduate'
-          ),
-          _react2.default.createElement(
-            'option',
-            { value: 'Graduate' },
-            'Graduate'
-          )
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'btn btn-dark', style: inputStyle, onClick: this.applyFilter },
-          'Apply'
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'btn btn-dark', style: inputStyle, onClick: this.resetFilter, disabled: !this.state.changed },
-          'Reset'
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'btn btn-dark', style: inputStyle, onClick: this.clearFilter },
-          'Clear'
-        )
-      );
-    }
-  }]);
-
-  return FriendFilter;
-}(_react2.default.Component);
-
-exports.default = FriendFilter;
-
-
-FriendFilter.propTypes = {
-  setFilter: _react2.default.PropTypes.func.isRequired,
-  initFilter: _react2.default.PropTypes.object.isRequired
-};
-
-/***/ }),
-
-/***/ 248:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(20);
-
-var _reactRouter = __webpack_require__(15);
-
-var _FriendFilter = __webpack_require__(245);
-
-var _FriendFilter2 = _interopRequireDefault(_FriendFilter);
-
-var _SearchBar = __webpack_require__(31);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// NEW
-// (1) Added a function to delete an issue given the issue ID.
-// (2) Added a button to the interface to provide the delete functionality.
-var FriendCard = function FriendCard(props) {
-  return _react2.default.createElement(
-    _reactRouter.Link,
-    { to: '/profile', style: { textDecoration: 'none', color: 'black' } },
-    _react2.default.createElement(
-      'div',
-      { className: 'card border-dark mb-3', style: { width: '400px', marginLeft: '25%' } },
-      _react2.default.createElement(
-        'div',
-        { className: 'card-body h-100' },
-        _react2.default.createElement(
-          'h5',
-          { className: 'card-title' },
-          'Name:',
-          props.friend.name,
-          ' '
-        ),
-        _react2.default.createElement(
-          'h6',
-          { className: 'card-subtitle mb-2', id: 'academic' },
-          'Academic:',
-          props.friend.status
-        ),
-        _react2.default.createElement(
-          'h6',
-          { className: 'card-subtitle mb-2', id: 'school' },
-          'School: ',
-          props.friend.school
-        ),
-        _react2.default.createElement(
-          'h6',
-          { className: 'card-subtitle mb-2', id: 'year' },
-          'Year: ',
-          props.friend.year
-        ),
-        _react2.default.createElement(
-          'h6',
-          { className: 'card-subtitle mb-2', id: 'rate' },
-          'Rate: ',
-          props.friend.rate
-        ),
-        _react2.default.createElement(
-          'p',
-          { className: 'card-text', id: 'bio' },
-          'Bio: ',
-          props.friend.bio
-        ),
-        _react2.default.createElement('br', null)
-      )
-    )
-  );
-};
-
-FriendCard.propTypes = {
-  friend: _react2.default.PropTypes.object.isRequired
-};
-// NEW END
-
-function FriendTable(props) {
-  var friendCard = props.friends.map(function (friend) {
-    return _react2.default.createElement(FriendCard, { key: friend._id, friend: friend });
-  });
-  return _react2.default.createElement(
-    'div',
-    { className: 'card-deck' },
-    friendCard
-  );
-}
-
-// NEW
-FriendTable.propTypes = {
-  friends: _react2.default.PropTypes.array.isRequired
-};
-// NEW END
-
-var FriendList = function (_React$Component) {
-  _inherits(FriendList, _React$Component);
-
-  function FriendList() {
-    _classCallCheck(this, FriendList);
-
-    var _this = _possibleConstructorReturn(this, (FriendList.__proto__ || Object.getPrototypeOf(FriendList)).call(this));
-
-    _this.state = { friends: [] };
-
-    _this.loadData = _this.loadData.bind(_this);
-    _this.setFilter = _this.setFilter.bind(_this);
-    return _this;
-  }
-
-  _createClass(FriendList, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.loadData();
-    }
-
-    // This method is part of the React component "lifecycle". It is invoked
-    // when a component property is updated. In this case, we are using it to
-    // load new data when the props.location object is changed. In particular,
-    // when we click on a link that causes react router to change the view to
-    // the IssueList and the URL changes (for example, a search query) it
-    // causes the componentDidUpdate() method to be invoked.
-
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate(prevProps) {
-      var oldQuery = prevProps.location.query;
-      var newQuery = this.props.location.query;
-      if (oldQuery.status === newQuery.status) {
-        return;
-      }
-      this.loadData();
-    }
-  }, {
-    key: 'loadData',
-    value: function loadData() {
-      var _this2 = this;
-
-      // Note: React Router automatically adds a "location" property to a react
-      //       object's "props". The object that the "location" property refers
-      //       to also has a "search" property which is the query string of the
-      //       URL, including the '?' character  -  which is why we do not need
-      //       to add it to the string in the `fetch()` call.
-      fetch('/api/friends' + this.props.location.search).then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            var friends = [];
-            data.records.forEach(function (friend) {
-              friends.push(friend);
-            });
-            _this2.setState({ friends: data.records });
-          });
-        }
-      }).catch(function (err) {
-        alert("Error in fetching data from server:", err);
-      });
-    }
-  }, {
-    key: 'setFilter',
-    value: function setFilter(query) {
-      this.props.router.push({ pathname: this.props.location.pathname, query: query });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          _SearchBar2.default,
-          null,
-          ' '
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(_FriendFilter2.default, { setFilter: this.setFilter, initFilter: this.props.location.query }),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(FriendTable, { friends: this.state.friends })
-      );
-    }
-  }]);
-
-  return FriendList;
-}(_react2.default.Component);
-
-exports.default = FriendList;
-
-
-FriendList.propTypes = {
-  location: _react2.default.PropTypes.object.isRequired,
-  router: _react2.default.PropTypes.object
-};
-
-/***/ }),
-
-/***/ 249:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(20);
-
-var _reactRouter = __webpack_require__(15);
-
-var _SearchBar = __webpack_require__(31);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var formStyle = {
-  marginLeft: '5%',
-  marginRight: '5%',
-  fontSize: '20px'
-};
-
-var FormQuestion = function FormQuestion(props) {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'h3',
-      { style: { marginLeft: '2%' } },
-      'What are the people you want to connect with?'
-    ),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you want to meet somone in person, online, or both?',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.one
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you want to connect with Undergraduates, Graduates Students, or both?',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.two
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people in the same year as you, different, or both?',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer:'
-      ),
-      props.question.three
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people from the same country, different, or both?',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.four
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people in the same major, different, or both?',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.five
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people in the same school/college as you, different, or both?',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.six
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you want to connect with someone who has a car on campus?',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.seven
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you want to connect with people who share the same ethnicity?',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.eight
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'h3',
-      { style: { marginLeft: '2%' } },
-      'Knowledge about the University'
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you have any knowledge of the school before you started? If yes please describe below.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.nine
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you know the city/town of where your school is located? If yes please descibe below.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.ten
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Do you have a job(s) on campus? If yes please descibe the position and what you do below.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.eleven
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Are their resources on campus that you found helpful/not helpful? If yes please descibe the position and what you do below.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.tweleve
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Are you involved with any clubs/organizations on campus? If yes please descibe the position and what you do below.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.thirteen
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'h3',
-      { style: { marginLeft: '2%' } },
-      'What are your hobbies?'
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Select all hobbies that apply to you.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      ' ',
-      props.question.categories
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.fourteen
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'h3',
-      { style: { marginLeft: '2%' } },
-      'What are you hoping to get out of this website?'
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Are you looking for help or are you willing to help? Please describe.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.fifteen
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'Are there any challenges you are coping with? Please describe.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.sixteen
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'How can someone help you with your challenges? Please describe.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.seventeen
-    ),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'div',
-      { className: 'viewForm', style: formStyle },
-      'How are you able to help someone with their challenges? Please describe.',
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        'strong',
-        null,
-        'My Answer: '
-      ),
-      props.question.eighteen
-    ),
-    _react2.default.createElement('br', null)
-  );
-};
-
-function FormPage(props) {
-  var formQuestions = props.questionform.map(function (question) {
-    return _react2.default.createElement(FormQuestion, { key: question._id, question: question });
-  });
-
-  return _react2.default.createElement(
-    'div',
-    { id: 'question-air' },
-    formQuestions
-  );
-}
-
-var Survey = function (_React$Component) {
-  _inherits(Survey, _React$Component);
-
-  function Survey() {
-    _classCallCheck(this, Survey);
-
-    var _this = _possibleConstructorReturn(this, (Survey.__proto__ || Object.getPrototypeOf(Survey)).call(this));
-
-    _this.loadData = _this.loadData.bind(_this);
-
-    _this.state = {
-      questionform: []
-    };
-
-    return _this;
-  }
-
-  _createClass(Survey, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.loadData();
-    }
-  }, {
-    key: 'loadData',
-    value: function loadData() {
-      var _this2 = this;
-
-      var question = this.state.questionform;
-      fetch("api/questionform").then(function (res) {
-        if (res.ok) {
-          res.json().then(function (json) {
-            var questionform = [];
-            json.records.forEach(function (question) {
-              questionform.push(question);
-            });
-            _this2.setState({ questionform: questionform });
-          });
-        }
-      }).catch(function (err) {
-        alert("There was a problem: " + err.message);
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_SearchBar2.default, null),
-        _react2.default.createElement(
-          'h1',
-          { style: { marginLeft: '2%' } },
-          'My Survey'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
-          _react2.default.createElement('hr', null),
-          _react2.default.createElement(
-            'center',
-            null,
-            _react2.default.createElement(
-              'div',
-              { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'button',
-                  { className: 'btn btn-dark', role: 'button' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/form', style: { textDecoration: 'none', color: 'white' } },
-                    'New Survery'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'button',
-                  { className: 'btn btn-dark', role: 'button' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/*', style: { textDecoration: 'none', color: 'white' } },
-                    'Edit'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'button',
-                  { className: 'btn btn-dark', role: 'button', Link: '/connect' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-                    'Find Friends'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement('br', null)
-          )
-        )
-      );
-    }
-  }]);
-
-  return Survey;
-}(_react2.default.Component);
-
-exports.default = Survey;
-
-/***/ }),
-
-/***/ 250:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(20);
-
-var _reactRouter = __webpack_require__(15);
-
-var _SearchBar = __webpack_require__(31);
+var _SearchBar = __webpack_require__(37);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
@@ -2555,8 +1560,8 @@ var NewSurvey = function (_React$Component) {
                 { className: 'col' },
                 _react2.default.createElement(
                   'button',
-                  { className: 'btn btn-dark', type: 'submit' },
-                  ' Save'
+                  { className: 'btn btn-dark', type: 'submit', value: 'Submit' },
+                  'Save'
                 )
               )
             )
@@ -2596,7 +1601,7 @@ exports.default = NewSurvey;
 
 /***/ }),
 
-/***/ 31:
+/***/ 240:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2612,9 +1617,1285 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(20);
+__webpack_require__(23);
 
-var _reactRouter = __webpack_require__(15);
+var _reactRouter = __webpack_require__(19);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var bodyPage = {
+  width: '100%',
+  height: '100%',
+  margin: '0'
+
+};
+
+var content = {
+  width: '550px',
+  margin: 'auto',
+  marginBottom: '5%'
+};
+
+var divStyle = {
+  width: '100%',
+  height: '250px',
+  marginTop: '20px'
+
+};
+
+var signUp = {
+  height: '$height',
+  marginLeft: '25px',
+  marginTop: '20px'
+};
+
+var loginPage = {
+  height: '$height/2',
+  marginLeft: '25%',
+  marginTop: '20px'
+};
+
+var Welcome = function (_React$createClass) {
+  _inherits(Welcome, _React$createClass);
+
+  function Welcome() {
+    _classCallCheck(this, Welcome);
+
+    return _possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).apply(this, arguments));
+  }
+
+  return Welcome;
+}(_react2.default.createClass({
+  displayName: 'Welcome',
+
+  getInitialState: function getInitialState() {
+    return { signup: false, login: true };
+  },
+  switch: function _switch(word) {
+    var signup = void 0,
+        login = void 0;
+    if (word == "signup") {
+      signup = true;login = false;
+    } else {
+      login = true;signup = false;
+    }
+    return this.setState({ login: login, signup: signup });
+  },
+
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      { style: bodyPage },
+      _react2.default.createElement(
+        'h1',
+        { style: { marginLeft: '2%', marginTop: '15px' } },
+        'Website title'
+      ),
+      _react2.default.createElement(
+        'center',
+        { style: content },
+        _react2.default.createElement('br', null),
+        ' ',
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { id: 'buttons' },
+          _react2.default.createElement(
+            'button',
+            { id: 'signupButton', onClick: this.switch.bind(null, "signup"), className: 'btn btn-dark', style: signUp },
+            'Sign Up'
+          ),
+          _react2.default.createElement(
+            'button',
+            { id: 'loginButton', onClick: this.switch.bind(null, "login"), className: 'btn btn-dark', style: loginPage },
+            'Login'
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        this.state.signup ? _react2.default.createElement(Signup, null) : null,
+        this.state.login ? _react2.default.createElement(Login, null) : null
+      )
+    );
+  }
+}));
+
+exports.default = Welcome;
+
+var Signup = function (_React$Component) {
+  _inherits(Signup, _React$Component);
+
+  function Signup() {
+    _classCallCheck(this, Signup);
+
+    return _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this));
+  }
+
+  _createClass(Signup, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'form',
+        { className: 'form-group', name: 'signup' },
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Name'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'firstname', placeholder: 'First Name' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col' },
+              _react2.default.createElement('input', { type: 'name', className: 'form-control', id: 'lastname', placeholder: 'Last Name' })
+            )
+          )
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Undergraduate or Graduate Student'
+          ),
+          _react2.default.createElement('input', { type: 'degree', className: 'form-control', id: 'inputDegree', placeholder: 'Degree' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'School'
+          ),
+          _react2.default.createElement('input', { type: 'school', className: 'form-control', id: 'inputSchool', placeholder: 'School' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'School Email'
+          ),
+          _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputEmail', placeholder: 'Email' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Major'
+          ),
+          _react2.default.createElement('input', { type: 'major', className: 'form-control', id: 'inputMajor', placeholder: 'Major' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Year'
+          ),
+          _react2.default.createElement('input', { type: 'year', className: 'form-control', id: 'inputYear', placeholder: 'Year' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Country'
+          ),
+          _react2.default.createElement('input', { type: 'country', className: 'form-control', id: 'inputCountry', placeholder: 'Country' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Username'
+          ),
+          _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'inputUsername', placeholder: 'Username' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Password'
+          ),
+          _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword', placeholder: 'Password' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Confirm Password'
+          ),
+          _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'comfirmPassword', placeholder: 'Confirm Password' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', role: 'button' },
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { to: '/form', style: { textDecoration: 'none', color: 'white' } },
+            'Sign Up'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Signup;
+}(_react2.default.Component);
+
+var Login = function (_React$Component2) {
+  _inherits(Login, _React$Component2);
+
+  function Login() {
+    _classCallCheck(this, Login);
+
+    return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this));
+  }
+
+  _createClass(Login, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'form',
+        { className: 'form-group', name: 'login' },
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Username'
+          ),
+          _react2.default.createElement('input', { className: 'form-control', id: 'inputName', placeholder: 'Username' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          { className: 'form-group' },
+          _react2.default.createElement(
+            'label',
+            null,
+            'Password'
+          ),
+          _react2.default.createElement('input', { className: 'form-control', id: 'inputPassword', placeholder: 'Password' })
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', role: 'button' },
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { to: '/about', style: { textDecoration: 'none', color: 'white' } },
+            'Login'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Login;
+}(_react2.default.Component);
+
+/***/ }),
+
+/***/ 241:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(23);
+
+var _reactRouter = __webpack_require__(19);
+
+var _Profile = __webpack_require__(121);
+
+var _Profile2 = _interopRequireDefault(_Profile);
+
+var _SearchBar = __webpack_require__(37);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_React$Component) {
+  _inherits(About, _React$Component);
+
+  function About() {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
+  }
+
+  _createClass(About, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement(
+          'h1',
+          { style: { marginLeft: '2%' } },
+          'About'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'center',
+          null,
+          _react2.default.createElement(
+            'p',
+            null,
+            'This is an interactive platform where international students and domestic students can find friends.'
+          )
+        )
+      );
+    }
+  }]);
+
+  return About;
+}(_react2.default.Component);
+
+exports.default = About;
+
+/***/ }),
+
+/***/ 242:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(23);
+
+var _reactRouter = __webpack_require__(19);
+
+var _SearchBar = __webpack_require__(37);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var formStyle = {
+  marginLeft: '5%',
+  marginRight: '5%',
+  fontSize: '20px'
+};
+
+var FormQuestion = function FormQuestion(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'What are the people you want to connect with?'
+    ),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you want to meet somone in person, online, or both?',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.one
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you want to connect with Undergraduates, Graduates Students, or both?',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.two
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you want to connect with people in the same year as you, different, or both?',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer:'
+      ),
+      props.question.three
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you want to connect with people from the same country, different, or both?',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.four
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you want to connect with people in the same major, different, or both?',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.five
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you want to connect with people in the same school/college as you, different, or both?',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.six
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you want to connect with someone who has a car on campus?',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.seven
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you want to connect with people who share the same ethnicity?',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.eight
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'Knowledge about the University'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you have any knowledge of the school before you started? If yes please describe below.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.nine
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you know the city/town of where your school is located? If yes please descibe below.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.ten
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Do you have a job(s) on campus? If yes please descibe the position and what you do below.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.eleven
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Are their resources on campus that you found helpful/not helpful? If yes please descibe the position and what you do below.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.tweleve
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Are you involved with any clubs/organizations on campus? If yes please descibe the position and what you do below.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.thirteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'What are your hobbies?'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Select all hobbies that apply to you.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      ' ',
+      props.question.categories
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.fourteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h3',
+      { style: { marginLeft: '2%' } },
+      'What are you hoping to get out of this website?'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Are you looking for help or are you willing to help? Please describe.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.fifteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'Are there any challenges you are coping with? Please describe.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.sixteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'How can someone help you with your challenges? Please describe.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.seventeen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'div',
+      { className: 'viewForm', style: formStyle },
+      'How are you able to help someone with their challenges? Please describe.',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'strong',
+        null,
+        'My Answer: '
+      ),
+      props.question.eighteen
+    ),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null)
+  );
+};
+
+function FormPage(props) {
+  var formQuestions = props.questionform.map(function (question) {
+    return _react2.default.createElement(FormQuestion, { key: question._id, question: question });
+  });
+
+  return _react2.default.createElement(
+    'div',
+    { id: 'question-air' },
+    formQuestions
+  );
+}
+
+var Survey = function (_React$Component) {
+  _inherits(Survey, _React$Component);
+
+  function Survey() {
+    _classCallCheck(this, Survey);
+
+    var _this = _possibleConstructorReturn(this, (Survey.__proto__ || Object.getPrototypeOf(Survey)).call(this));
+
+    _this.loadData = _this.loadData.bind(_this);
+
+    _this.state = {
+      questionform: []
+    };
+
+    return _this;
+  }
+
+  _createClass(Survey, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.loadData();
+    }
+  }, {
+    key: 'loadData',
+    value: function loadData() {
+      var _this2 = this;
+
+      var question = this.state.questionform;
+      fetch("api/questionform").then(function (res) {
+        if (res.ok) {
+          res.json().then(function (json) {
+            var questionform = [];
+            json.records.forEach(function (question) {
+              questionform.push(question);
+            });
+            _this2.setState({ questionform: questionform });
+          });
+        }
+      }).catch(function (err) {
+        alert("There was a problem: " + err.message);
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement(
+          'h1',
+          { style: { marginLeft: '2%' } },
+          'My Survey'
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(FormPage, { questionform: this.state.questionform }),
+          _react2.default.createElement(
+            'center',
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'button',
+                  { className: 'btn btn-dark', role: 'button' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/form', style: { textDecoration: 'none', color: 'white' } },
+                    'New Survery'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'button',
+                  { className: 'btn btn-dark', role: 'button' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/*', style: { textDecoration: 'none', color: 'white' } },
+                    'Edit'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col' },
+                _react2.default.createElement(
+                  'button',
+                  { className: 'btn btn-dark', role: 'button', Link: '/connect' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+                    'Find Friends'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement('br', null)
+          )
+        )
+      );
+    }
+  }]);
+
+  return Survey;
+}(_react2.default.Component);
+
+exports.default = Survey;
+
+/***/ }),
+
+/***/ 243:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(23);
+
+var _reactRouter = __webpack_require__(19);
+
+var _FriendFilter = __webpack_require__(244);
+
+var _FriendFilter2 = _interopRequireDefault(_FriendFilter);
+
+var _SearchBar = __webpack_require__(37);
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// NEW
+// (1) Added a function to delete an issue given the issue ID.
+// (2) Added a button to the interface to provide the delete functionality.
+var FriendCard = function FriendCard(props) {
+  return _react2.default.createElement(
+    _reactRouter.Link,
+    { to: '/profile', style: { textDecoration: 'none', color: 'black' } },
+    _react2.default.createElement(
+      'div',
+      { className: 'card border-dark mb-3', style: { width: '400px', marginLeft: '25%' } },
+      _react2.default.createElement(
+        'div',
+        { className: 'card-body h-100' },
+        _react2.default.createElement(
+          'h5',
+          { className: 'card-title' },
+          'Name:',
+          props.friend.name,
+          ' '
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2', id: 'academic' },
+          'Academic:',
+          props.friend.status
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2', id: 'school' },
+          'School: ',
+          props.friend.school
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2', id: 'year' },
+          'Year: ',
+          props.friend.year
+        ),
+        _react2.default.createElement(
+          'h6',
+          { className: 'card-subtitle mb-2', id: 'rate' },
+          'Rate: ',
+          props.friend.rate
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'card-text', id: 'bio' },
+          'Bio: ',
+          props.friend.bio
+        ),
+        _react2.default.createElement('br', null)
+      )
+    )
+  );
+};
+
+FriendCard.propTypes = {
+  friend: _react2.default.PropTypes.object.isRequired
+};
+// NEW END
+
+function FriendTable(props) {
+  var friendCard = props.friends.map(function (friend) {
+    return _react2.default.createElement(FriendCard, { key: friend._id, friend: friend });
+  });
+  return _react2.default.createElement(
+    'div',
+    { className: 'card-deck' },
+    friendCard
+  );
+}
+
+// NEW
+FriendTable.propTypes = {
+  friends: _react2.default.PropTypes.array.isRequired
+};
+// NEW END
+
+var FriendList = function (_React$Component) {
+  _inherits(FriendList, _React$Component);
+
+  function FriendList() {
+    _classCallCheck(this, FriendList);
+
+    var _this = _possibleConstructorReturn(this, (FriendList.__proto__ || Object.getPrototypeOf(FriendList)).call(this));
+
+    _this.state = { friends: [] };
+
+    _this.loadData = _this.loadData.bind(_this);
+    _this.setFilter = _this.setFilter.bind(_this);
+    return _this;
+  }
+
+  _createClass(FriendList, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.loadData();
+    }
+
+    // This method is part of the React component "lifecycle". It is invoked
+    // when a component property is updated. In this case, we are using it to
+    // load new data when the props.location object is changed. In particular,
+    // when we click on a link that causes react router to change the view to
+    // the IssueList and the URL changes (for example, a search query) it
+    // causes the componentDidUpdate() method to be invoked.
+
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      var oldQuery = prevProps.location.query;
+      var newQuery = this.props.location.query;
+      if (oldQuery.status === newQuery.status && oldQuery.rate_gte === newQuery.rate_gte && oldQuery.rate_lte === newQuery.rate_lte) {
+        return;
+      }
+      this.loadData();
+    }
+  }, {
+    key: 'loadData',
+    value: function loadData() {
+      var _this2 = this;
+
+      // Note: React Router automatically adds a "location" property to a react
+      //       object's "props". The object that the "location" property refers
+      //       to also has a "search" property which is the query string of the
+      //       URL, including the '?' character  -  which is why we do not need
+      //       to add it to the string in the `fetch()` call.
+      fetch('/api/friends' + this.props.location.search).then(function (response) {
+        if (response.ok) {
+          response.json().then(function (data) {
+            var friends = [];
+            data.records.forEach(function (friend) {
+              friends.push(friend);
+            });
+            _this2.setState({ friends: data.records });
+          });
+        }
+      }).catch(function (err) {
+        alert("Error in fetching data from server:", err);
+      });
+    }
+  }, {
+    key: 'setFilter',
+    value: function setFilter(query) {
+      this.props.router.push({ pathname: this.props.location.pathname, query: query });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          _SearchBar2.default,
+          null,
+          ' '
+        ),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(_FriendFilter2.default, { setFilter: this.setFilter, initFilter: this.props.location.query }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(FriendTable, { friends: this.state.friends })
+      );
+    }
+  }]);
+
+  return FriendList;
+}(_react2.default.Component);
+
+exports.default = FriendList;
+
+
+FriendList.propTypes = {
+  location: _react2.default.PropTypes.object.isRequired,
+  router: _react2.default.PropTypes.object
+};
+
+/***/ }),
+
+/***/ 244:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var inputStyle = {
+  //   marginRight: '5%',
+  marginLeft: '2%'
+};
+
+var FriendFilter = function (_React$Component) {
+  _inherits(FriendFilter, _React$Component);
+
+  function FriendFilter(props) {
+    _classCallCheck(this, FriendFilter);
+
+    var _this = _possibleConstructorReturn(this, (FriendFilter.__proto__ || Object.getPrototypeOf(FriendFilter)).call(this, props));
+
+    _this.state = {
+      status: props.initFilter.status || '',
+      rate_gte: props.initFilter.rate_gte || '',
+      rate_lte: props.initFilter.rate_lte || '',
+      changed: false
+    };
+
+    _this.onChangeStatus = _this.onChangeStatus.bind(_this);
+    _this.onChangeRateGte = _this.onChangeRateGte.bind(_this);
+    _this.onChangeRateLte = _this.onChangeRateLte.bind(_this);
+    _this.applyFilter = _this.applyFilter.bind(_this);
+    _this.resetFilter = _this.resetFilter.bind(_this);
+    _this.clearFilter = _this.clearFilter.bind(_this);
+    return _this;
+  }
+
+  _createClass(FriendFilter, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(newProps) {
+      this.setState({
+        status: newProps.initFilter.status || '',
+        rate_gte: newProps.initFilter.rate_gte || '',
+        rate_lte: newProps.initFilter.rate_lte || '',
+        changed: false
+      });
+    }
+  }, {
+    key: 'resetFilter',
+    value: function resetFilter() {
+      this.setState({
+        status: this.props.initFilter.status || '',
+        rate_gte: this.props.initFilter.rate_gte || '',
+        rate_lte: this.props.initFilter.rate_lte || '',
+        changed: false
+      });
+    }
+  }, {
+    key: 'onChangeStatus',
+    value: function onChangeStatus(e) {
+      this.setState({ status: e.target.value, changed: true });
+    }
+  }, {
+    key: 'onChangeRateGte',
+    value: function onChangeRateGte(e) {
+      var rateString = e.target.value;
+      if (rateString.match(/^(\d*\.)?\d+$/)) {
+        this.setState({ rate_gte: e.target.value, changed: true });
+      }
+    }
+  }, {
+    key: 'onChangeRateLte',
+    value: function onChangeRateLte(e) {
+      var rateString = e.target.value;
+      if (rateString.match(/^(\d*\.)?\d+$/)) {
+        this.setState({ rate_lte: e.target.value, changed: true });
+      }
+    }
+  }, {
+    key: 'clearFilter',
+    value: function clearFilter(e) {
+      this.props.setFilter({});
+    }
+  }, {
+    key: 'applyFilter',
+    value: function applyFilter() {
+      var newFilter = {};
+      if (this.state.status) newFilter.status = this.state.status;
+      if (this.state.rate_gte) newFilter.rate_gte = this.state.rate_gte;
+      if (this.state.rate_lte) newFilter.rate_lte = this.state.rate_lte;
+      this.props.setFilter(newFilter);
+    }
+  }, {
+    key: 'clearFilter',
+    value: function clearFilter() {
+      this.props.setFilter({});
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'label',
+          { style: inputStyle },
+          'Academic:'
+        ),
+        _react2.default.createElement(
+          'select',
+          { value: this.state.status, onChange: this.onChangeStatus, style: { marginLeft: '4px' } },
+          _react2.default.createElement(
+            'option',
+            { value: '' },
+            '(Any)'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'Undergraduate' },
+            'Undergraduate'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'Graduate' },
+            'Graduate'
+          )
+        ),
+        '\xA0 Rate between:',
+        _react2.default.createElement('input', { size: 5, value: this.state.rate_gte, onChange: this.onChangeRateGte }),
+        '\xA0-\xA0',
+        _react2.default.createElement('input', { size: 5, value: this.state.rate_lte, onChange: this.onChangeRateLte }),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', style: inputStyle, onClick: this.applyFilter },
+          'Apply'
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', style: inputStyle, onClick: this.resetFilter, disabled: !this.state.changed },
+          'Reset'
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'btn btn-dark', style: inputStyle, onClick: this.clearFilter },
+          'Clear'
+        )
+      );
+    }
+  }]);
+
+  return FriendFilter;
+}(_react2.default.Component);
+
+exports.default = FriendFilter;
+
+
+FriendFilter.propTypes = {
+  setFilter: _react2.default.PropTypes.func.isRequired,
+  initFilter: _react2.default.PropTypes.object.isRequired
+};
+
+/***/ }),
+
+/***/ 37:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(23);
+
+var _reactRouter = __webpack_require__(19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2715,258 +2996,7 @@ var SearchBar = function (_React$Component) {
 
 exports.default = SearchBar;
 
-/***/ }),
-
-/***/ 79:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(20);
-
-var _reactRouter = __webpack_require__(15);
-
-var _SearchBar = __webpack_require__(31);
-
-var _SearchBar2 = _interopRequireDefault(_SearchBar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // NEW: added the import for react.
-
-
-var profile = {
-  border: "2px solid black",
-  marginTop: "10px",
-  marginLeft: "5%",
-  fontSize: "20px",
-  height: "100px",
-  width: "100px"
-};
-var formStyle = {
-  width: '500px'
-};
-
-var Profile = function (_React$Component) {
-  _inherits(Profile, _React$Component);
-
-  function Profile() {
-    _classCallCheck(this, Profile);
-
-    return _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this));
-  }
-
-  _createClass(Profile, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          _SearchBar2.default,
-          null,
-          ' '
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'row', style: { marginLeft: '85%' } },
-          _react2.default.createElement(
-            'div',
-            { className: 'col' },
-            _react2.default.createElement(
-              'button',
-              { className: 'btn btn-dark', role: 'button' },
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/rate', style: { textDecoration: 'none', color: 'white' } },
-                'Rate'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'col' },
-            _react2.default.createElement(
-              'button',
-              { className: 'btn btn-dark', role: 'button' },
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/chat', style: { textDecoration: 'none', color: 'white' } },
-                'Chat'
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'h1',
-          { style: { marginLeft: '5%' } },
-          'Profile'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'div',
-          { className: 'picture', style: profile },
-          'Profile picture'
-        ),
-        _react2.default.createElement('br', null),
-        ' ',
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'form',
-          { style: { marginLeft: '5%' } },
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  'Email address'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement('input', { type: 'text', className: 'form-control-plaintext', id: 'staticEmail', defaultValue: 'emailexamplel@umass.edu', style: formStyle })
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  'Degree'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'ethencity', style: formStyle })
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  'School'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'school', style: formStyle })
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  'Country'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'country', style: formStyle })
-              )
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'form-group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  'Bio:'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col' },
-                _react2.default.createElement('textarea', { className: 'form-control form-control-lg', id: 'exampleFormControlTextarea1', rows: '3', style: formStyle })
-              )
-            )
-          )
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'button',
-          { className: 'btn btn-dark', role: 'button', style: { marginLeft: '5%' } },
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { to: '*', style: { textDecoration: 'none', color: 'white' } },
-            'Edit'
-          )
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null)
-      );
-    }
-  }]);
-
-  return Profile;
-}(_react2.default.Component);
-
-exports.default = Profile;
-
 /***/ })
 
-},[126]);
+},[122]);
 //# sourceMappingURL=app.bundle.js.map

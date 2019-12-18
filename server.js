@@ -112,6 +112,10 @@ app.get('/api/friends', (req, res) => {
   const filter = {};
   if (req.query.status) filter.status = req.query.status;
 
+  if (req.query.rate_lte || req.query.rate_gte) filter.rate = {};
+  if (req.query.rate_lte) filter.rate.$lte = parseInt(req.query.rate_lte, 10);
+  if (req.query.rate_gte) filter.rate.$gte = parseInt(req.query.rate_gte, 10);
+
   db.collection('friends').find(filter).toArray().then(friends => {
     const metadata = { total_count: friends.length };
     res.json({ _metadata: metadata, records: friends })

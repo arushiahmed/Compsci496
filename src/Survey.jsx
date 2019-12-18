@@ -55,6 +55,7 @@ const formStyle = {
             <div className="viewForm" style={formStyle}>How can someone help you with your challenges? Please describe.<br></br><strong>My Answer: </strong>{props.question.seventeen}</div><br></br>
             <hr />
             <div className="viewForm" style={formStyle}>How are you able to help someone with their challenges? Please describe.<br></br><strong>My Answer: </strong>{props.question.eighteen}</div><br></br>
+            <hr />  
        </div>
      
   
@@ -117,7 +118,6 @@ export default class Survey extends React.Component {
           <br></br><br></br>
           <div>
           <FormPage questionform={this.state.questionform} />
-            <hr />
             <center>
             <div className = "row">
                 <div className="col">

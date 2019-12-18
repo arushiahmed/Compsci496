@@ -77,7 +77,9 @@ export default class FriendList extends React.Component {
   componentDidUpdate(prevProps) {
     const oldQuery = prevProps.location.query;
     const newQuery = this.props.location.query;
-    if (oldQuery.status === newQuery.status) 
+    if (oldQuery.status === newQuery.status && 
+        oldQuery.rate_gte === newQuery.rate_gte
+      && oldQuery.rate_lte === newQuery.rate_lte) 
     {
       return;
     }

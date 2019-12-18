@@ -17,7 +17,7 @@ db.friends.insert([
     status: 'Undergraduate',
     school: 'University of Massachusetts Amherst',
     year: '2021',
-    rate:  '4.5',
+    rate:  4.5,
     bio: 'I am a biology and chemestry majory from Hong Kong.',
   },
 
@@ -27,7 +27,7 @@ db.friends.insert([
     status: 'Undergraduate',
     school: 'University of Massachusetts Amherst',
     year: '2022',
-    rate: '4',
+    rate: 4,
     bio: 'I am computer enginnering major from Japan.', 
   },
 
@@ -37,7 +37,7 @@ db.friends.insert([
     status: 'Undergraduate',
     school: 'University of Massachusetts Amherst',
     year: '2020',
-    rate:  '3.5',
+    rate:  3.5,
     bio: 'I am computer enginnering major from Mass.', 
   },
   
@@ -47,7 +47,7 @@ db.friends.insert([
     status: 'Graduate',
     school: 'University of Massachusetts Amherst',
     year: '2021',
-    rate:  '5',
+    rate:  5,
     bio: 'I am computer science major from Ireland',
   },
 
@@ -57,7 +57,7 @@ db.friends.insert([
     status: 'Graduate',
     school: 'University of Massachusetts Amherst',
     year: '2020',
-    rate: '5',
+    rate: 5,
     bio: 'I am computer science major from Itlay',
   },
 
@@ -66,7 +66,7 @@ db.friends.insert([
     status: 'Graduate',
     school: 'University of Massachusetts Amherst',
     year: '2023',
-    rate: '3.5',
+    rate: 3.5,
     bio: 'I am a biology major from Cananda.',
   },
 
