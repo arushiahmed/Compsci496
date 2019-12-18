@@ -1,13 +1,12 @@
 # About This Application
 
-Welcome to Intermingle. This is an interactive platform where international students and domestic students can find friends. 
-Majority of this website is not implemented. Below is a list of the pages of the site, how a user would interact with the page, and what needs to be implemented on the page. 
+Welcome to Intermingle. One of the biggest adjustments for students is going away from home to college. For international students, it is more of an adjustment than for domestic students. These students have to adjust going to school away from their family but also experiencing a new culture. This adjustment can cause stress for these students that affect their academic performance and their experience living in the United States. This application is for both international and domestic student to find people and connect within their University.
 
 # Pages and Description
 
 1. Welcome: This is the home page where users either signin and signup. If the user is signing up then they would fill out the form that will directly take them to the survey once completed. The signin page is for returning users where they fill in their username (set to their email) and the password where they will be directed to the about page.
 
-2. About: The about page will give them the infomation about the application. The about page will have contain content from the About.md file as well.
+2. About: The about page will give them the infomation about the application and its purpose. When a returning user signing in, it will direct them to the about page. **Note:** the content is the same as the About.md file as well.
 
 3. Connect With Friends: This page is where users will look for friends. Each person has their own card that gives the user the name, if they are a undergraduate or graduate student, school, the year based on graduation, their overall rating, and the bio that describes who they are. This page also has two filters implemented. One filter is where users can look for either undergraduates or graduate students and the second filter is if the user is trying to find friends from a certain rating. If the user likes a person, then they can click on their card that will direct them to their profile to find the chat button to start a conversation with them. Their is also a rating button where the user can go rate the person and also see other reviews about how others describe this person. Currently the list of friends is mock data running from mongo scripts/init.mongo.js. 
 
