@@ -19,7 +19,8 @@ const textStyle = {
 const formStyle = {
   marginLeft: '2%',
   marginRight: '2%',
-  fontSize: '20px'
+  fontSize: '20px',
+  cursor: 'pointer',
 }
 
 //Checkboxes
@@ -189,15 +190,15 @@ handleCheck(e){
               <label>Do you want to meet somone in person, online, or both?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="In person" checked={this.state.one === 'In person'} onChange={this.oneChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="In person" checked={this.state.one === 'In person'} onChange={this.oneChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio1">In person</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="Online" checked={this.state.one === 'Online'} onChange={this.oneChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}}type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="Online" checked={this.state.one === 'Online'} onChange={this.oneChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio1">Online</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="Both" checked={this.state.one === 'Both'} onChange={this.oneChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="Both" checked={this.state.one === 'Both'} onChange={this.oneChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio1">Both</label>
               </div>
             </div>
@@ -208,15 +209,15 @@ handleCheck(e){
               <label>Do you want to connect with Undergraduates, Graduates Students, or both?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="Undergraduates" checked={this.state.two === 'Undergraduates'} onChange={this.twoChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="Undergraduates" checked={this.state.two === 'Undergraduates'} onChange={this.twoChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio1">Undergraduates</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="Graduates" checked={this.state.two === 'Graduates'} onChange={this.twoChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="Graduates" checked={this.state.two === 'Graduates'} onChange={this.twoChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio2">Graduates</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="Both" checked={this.state.two === 'Both'} onChange={this.twoChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="Both" checked={this.state.two === 'Both'} onChange={this.twoChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio2">Both</label>
                 </div>
             </div>
@@ -227,15 +228,15 @@ handleCheck(e){
               <label>Do you want to connect with people in the same year as you, different, or both?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Same" checked={this.state.three === 'Same'} onChange={this.threeChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Same" checked={this.state.three === 'Same'} onChange={this.threeChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio3">Same</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Different" checked={this.state.three === 'Different'} onChange={this.threeChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Different" checked={this.state.three === 'Different'} onChange={this.threeChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio3">Different</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Both" checked={this.state.three === 'Both'} onChange={this.threeChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Both" checked={this.state.three === 'Both'} onChange={this.threeChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio3">Both</label>
                 </div>
             </div>
@@ -246,15 +247,15 @@ handleCheck(e){
               <label>Do you want to connect with people from the same country, different, or both?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="Same" checked={this.state.four === 'Same'} onChange={this.fourChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="Same" checked={this.state.four === 'Same'} onChange={this.fourChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio1">Same</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="Different" checked={this.state.four === 'Different'} onChange={this.fourChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="Different" checked={this.state.four === 'Different'} onChange={this.fourChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio4">Different</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="Both" checked={this.state.four === 'Both'} onChange={this.fourChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="Both" checked={this.state.four === 'Both'} onChange={this.fourChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio4">Both</label>
                 </div>
             </div>
@@ -265,15 +266,15 @@ handleCheck(e){
               <label>Do you want to connect with people in the same major, different, or both?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Same" checked={this.state.five === 'Same'} onChange={this.fiveChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Same" checked={this.state.five === 'Same'} onChange={this.fiveChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio5">Same</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Different" checked={this.state.five === 'Different'} onChange={this.fiveChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Different" checked={this.state.five === 'Different'} onChange={this.fiveChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio5">Different</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Both" checked={this.state.five === 'Both'} onChange={this.fiveChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Both" checked={this.state.five === 'Both'} onChange={this.fiveChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio5">Both</label>
                 </div>
             </div>
@@ -284,15 +285,15 @@ handleCheck(e){
               <label>Do you want to connect with people in the same school/college as you, different, or both?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="Same" checked={this.state.six === 'Same'} onChange={this.sixChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="Same" checked={this.state.six === 'Same'} onChange={this.sixChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio6">Same</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="Different" checked={this.state.six === 'Different'} onChange={this.sixChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="Different" checked={this.state.six === 'Different'} onChange={this.sixChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio6">Different</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="Both" checked={this.state.six === 'Both'} onChange={this.sixChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="Both" checked={this.state.six === 'Both'} onChange={this.sixChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio2">Both</label>
                 </div>
             </div>
@@ -303,15 +304,15 @@ handleCheck(e){
               <label>Do you want to connect with someone who has a car on campus?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="Yes" checked={this.state.seven === 'Yes'} onChange={this.sevenChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="Yes" checked={this.state.seven === 'Yes'} onChange={this.sevenChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio7">Yes </label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="No" checked={this.state.seven === 'No'} onChange={this.sevenChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="No" checked={this.state.seven === 'No'} onChange={this.sevenChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio7">No</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="Both" checked={this.state.seven === 'Both'} onChange={this.sevenChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="Both" checked={this.state.seven === 'Both'} onChange={this.sevenChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio7">Both</label>
                 </div>
             </div>
@@ -322,11 +323,11 @@ handleCheck(e){
               <label>Do you want to connect with people who share the same ethnicity?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Same" checked={this.state.eight === 'Same'} onChange={this.eightChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Same" checked={this.state.eight === 'Same'} onChange={this.eightChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">Same</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                <input className="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Different" checked={this.state.eight === 'Different'} onChange={this.eightChange}/>
+                <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Different" checked={this.state.eight === 'Different'} onChange={this.eightChange}/>
                 <label className="form-check-label" htmlFor="inlineRadio8">Different</label>
                 </div>
             </div>
@@ -552,7 +553,7 @@ handleCheck(e){
   <div className="form-group">
               <div className="row" style={textStyle}>
                 <div className="col">
-                <label>If there is a hobbie that was not listest above, please type your answers here and describe more details about your choosen hobbies.</label>
+                <label>If there is a hobbie that was not listest above, please type your answers here and  more details about your choosen hobbies.</label>
                 </div>
                 <div className="col">
                   <textarea type="text" className="form-control" id="openSix" style={inputStyle}/>
