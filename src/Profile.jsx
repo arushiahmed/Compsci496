@@ -15,7 +15,8 @@ const profile = {
 }
 const formStyle =
 {
-  width: '500px'
+  width: '500px',
+  marginRight: '15%',
 }
 
 export default class Profile extends React.Component {
@@ -41,7 +42,8 @@ export default class Profile extends React.Component {
             Profile picture
           </div>
           <br></br> <br></br>
-          <form style={{marginLeft: '5%'}}>
+          <center>
+          <form style={{marginLeft: '20%', marginRight:'20%', fontSize: '16px'}}>
           <div className="form-group">
             <div className = "row">
               <div className="col">
@@ -96,10 +98,11 @@ export default class Profile extends React.Component {
               </div> 
           </div> 
           </div>
-           </form>
-           <br></br>
+          <br></br>
            <button className="btn btn-dark"role="button" style={{marginLeft: '5%'}}><Link to="*" style={{ textDecoration: 'none', color: 'white'}} >Edit</Link></button>
-        <br></br>
+          <br></br>
+           </form>
+           </center>
         <br></br>
       </div>
     );
