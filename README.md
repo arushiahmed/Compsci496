@@ -3,7 +3,7 @@
 # Application Name: Intermingle
 
 # OverView:
-One of the biggest adjustments for students is going away from home to college. For international students, it is more of an adjustment than for domestic students. These students have to adjust going to school away from their family but also experiencing a new culture. This adjustment can cause stress for these students that affect their academic performance and their experience living in the United States. This application is for both international and domestic student to find people and connect within their University.To learn more about this application click [here](About.md)
+One of the biggest adjustments for students is going away from home to college. For international students, it is more of an adjustment than for domestic students. These students have to adjust going to school away from their family but also experiencing a new culture. This adjustment can cause stress for these students that affect their academic performance and their experience living in the United States. This application is for both international and domestic student to find people and connect within their University. To learn more about this application click [here](About.md)
 
 
 # Application Initialization
