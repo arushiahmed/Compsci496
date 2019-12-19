@@ -6,7 +6,7 @@ Welcome to Intermingle. One of the biggest adjustments for students is going awa
 
 1. Welcome: This is the home page where users either signin and signup. If the user is signing up then they would fill out the form that will directly take them to the survey once completed. The signin page is for returning users where they fill in their username (set to their email) and the password where they will be directed to the about page.
 
-2. About: The about page will give them the infomation about the application and its purpose. When a returning user signing in, it will direct them to the about page. **Note:** the content is the same as the About.md file as well.
+2. About: The about page will give them the infomation about the application and its purpose. When a returning user signing in, it will direct them to the about page. 
 
 3. Connect With Friends: This page is where users will look for friends. Each person has their own card that gives the user the name, if they are a undergraduate or graduate student, school, the year based on graduation, their overall rating, and the bio that describes who they are. This page also has two filters implemented. One filter is where users can look for either undergraduates or graduate students and the second filter is if the user is trying to find friends from a certain rating. If the user likes a person, then they can click on their card that will direct them to their profile to find the chat button to start a conversation with them. Their is also a rating button where the user can go rate the person and also see other reviews about how others describe this person. Currently the list of friends is mock data running from mongo scripts/init.mongo.js. 
 
