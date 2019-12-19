@@ -30,15 +30,6 @@ db.friends.insert([
   },
 
   {
-    name: 'Kumble R. Subbaswamy',
-    status: 'Graduate',
-    school: 'University of Massachusetts Amherst',
-    year: '2020',
-    rate: 4.5,
-    bio: 'I am a Physics major, finishing up my last year, and American Indain. I am open to helping others get throught the transition from undergraduate to gradschool. I like water sports and playing board games for real life.' ,
-  },
-
-  {
     name: 'Grade Scope',
     status: 'Undergraduate',
     school: 'University of Massachusetts Amherst',
@@ -46,7 +37,6 @@ db.friends.insert([
     rate: 1.5,
     bio: 'I am Finance Major from New York. I like reading, writing, and watching movies. I am willing to help anyone out that needs infomation about the school. Just a warning I am a New York Gaints Fan!!!',
   },
-
   {
  
     name: 'Moodle Course',
@@ -75,7 +65,6 @@ db.friends.insert([
     rate: 4,
     bio: 'I am a Sports Management from Massachusetts. I am part of ROTC and happy to give more infomation about ROTC and how it helped me throughout college. If I am not doing school work I am at every UMass home game such as football and hockey.',
   },
-
   {
     name: 'Echo Three-Sixty',
     status: 'Undergraduate',
@@ -83,6 +72,15 @@ db.friends.insert([
     year: '2024',
     rate: 2.5,
     bio: 'I am  aPsychology Major from Germany. I enjoy making videos for people and part of the theater club. I am willing to help people wether it is school related or not. I am looking for a friend(s) that are interseted in traveling around the state.'
+  },
+
+  {
+    name: 'Kumble R. Subbaswamy',
+    status: 'Graduate',
+    school: 'University of Massachusetts Amherst',
+    year: '2020',
+    rate: 4.5,
+    bio: 'I am a Physics major, finishing up my last year, and American Indain. I am open to helping others get throught the transition from undergraduate to gradschool. I like water sports and playing board games for real life.' ,
   },
 
   {

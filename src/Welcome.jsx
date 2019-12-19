@@ -88,8 +88,8 @@ export default class Welcome extends React.createClass ({
                   <center style={content}>
                  <br></br> <br></br>
                       <div id="buttons">
-                        <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Sign Up</button>
-                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Register</button>
+                        <button id="signupButton" onClick={this.switch.bind(null,"signup")} className="btn btn-dark" style={signUp}>Register</button>
+                        <button id="loginButton" onClick={this.switch.bind(null,"login")} className="btn btn-dark" style={loginPage}>Login</button>
                        </div>
                        <br></br><br></br><br></br>
                         {this.state.signup?<Signup/>:null}
@@ -138,7 +138,7 @@ class Signup extends React.Component {
         ))}
         
           <div className="form-group">
-            <h3>Sign Up</h3>
+            <h3>Register</h3>
             <br></br><br></br>
           <label>Name</label>
             <div className="row">
@@ -211,7 +211,7 @@ class Login extends React.Component {
           return (
                <form className="form-group" name="login">
                     <div className="form-group">
-                      <h3>Register</h3>
+                      <h3>Login</h3>
                       <br></br><br></br>
                       <label>Username</label>
                       <input className="form-control" id="inputName" placeholder="Username"/>
