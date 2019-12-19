@@ -84,7 +84,7 @@ export default class Welcome extends React.createClass ({
       render:function(){
               return (
                 <div style={bodyPage}>
-                  <h1 style={{marginLeft: '2%', marginTop: '15px',}}>Welcome to Intermingle</h1> 
+                  <h1 style={{marginLeft: '2%', marginTop: '5px',}}>Welcome to Intermingle</h1> 
                   <center style={content}>
                  <br></br> <br></br>
                       <div id="buttons">
@@ -222,7 +222,7 @@ class Login extends React.Component {
                       <input className="form-control" id="inputPassword" placeholder="Password"/>
                     </div>  
                     <br></br>
-                    <button className="btn btn-dark" role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>Sign In</Link></button>
+                    <button className="btn btn-dark" role="button"><Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>Register</Link></button>
                 </form>
                            
               );

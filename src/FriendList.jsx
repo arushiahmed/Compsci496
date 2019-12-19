@@ -117,8 +117,7 @@ export default class FriendList extends React.Component {
     return (
       <div>
         <SearchBar> </SearchBar>
-        <br></br>
-        <h1 style={{marginLeft: '2%'}}>Connect With Friends</h1>
+        <h1 style={{marginLeft: '2%', marginTop: '25px'}}>Connect With Friends</h1>
         <br></br><br></br>
         <FriendFilter setFilter={this.setFilter} initFilter={this.props.location.query} />
         <br></br><br></br>

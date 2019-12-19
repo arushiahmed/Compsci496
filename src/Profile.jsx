@@ -28,7 +28,6 @@ export default class Profile extends React.Component {
     return (
       <div>
         <SearchBar> </SearchBar>
-        <br></br>
         <div className = "row" style={{marginLeft: '85%'}}>
               <div className="col" >
               <button className="btn btn-dark"role="button"><Link to="/*" style={{ textDecoration: 'none', color: 'white' }}>Rate</Link></button>
@@ -44,7 +43,7 @@ export default class Profile extends React.Component {
           </div>
           <br></br> <br></br>
           <center>
-          <form style={{marginLeft: '20%', marginRight:'20%', fontSize: '16px'}}>
+          <form style={{marginLeft: '20%', marginRight:'20%', fontSize: '18px'}}>
           <div className="form-group">
             <div className = "row">
               <div className="col">

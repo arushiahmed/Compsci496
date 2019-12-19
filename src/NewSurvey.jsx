@@ -221,7 +221,6 @@ handleCheck(e){
     return (
       <div>
         <SearchBar> </SearchBar>  
-        <br></br> 
         <h1 style={{marginLeft: '2%'}}>Survery</h1>
         <br></br><br></br>
       <form className="form-group" name="question" onSubmit={this.handleSubmit}>
