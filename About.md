@@ -18,7 +18,7 @@ Welcome to Intermingle. One of the biggest adjustments for students is going awa
 
 There is still more implementation needed to be done or errros that need to be fixed for Intermingle. Below is a list of what feature that need to be implemented and errors need to be fixed.
 
-# H1 List of implementation
+## List of implementation
 
   1. **Rate Component:** The purpose of having a rate feature if letting people know how helpful and how reliable is this person. When a user goes to another person profile, they will see a rate button. When rate button is active it will give a serious of questions about the person such has, "I enjoy the conversation I have with this person", "This person is a good listener", and more. Based on these questions, the user will rate the person on a scale from one to five where one is not good to five be excellent.
   
@@ -34,7 +34,7 @@ There is still more implementation needed to be done or errros that need to be f
     
  7. **Search Bar:** The purpose of the search bar is for users to find certain information. It is more effective for Connect with Friends page when users want to find a certain person.
  
- # H1 Errors in the system
+ ## Errors in the system
  
   1. Survey: Currently the website displays an empty survey. When a user fills out a survey, it should replace the blank survey with the new one. When the users saves the sur- vey, they will see the both the new survey and the blank survey. Every time the user fills out a new survey, it will display all the surveys they have done in the last.
 
