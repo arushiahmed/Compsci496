@@ -49,7 +49,7 @@ const formStyle = {
           <div className="viewForm" style={formStyle}>3b. If there is a hobbie that was not listest above, type your answers here. Please explain more about your hobbies.<br></br><strong>My Answer: </strong>{props.question.openOne}</div><br></br>
           <hr />
           <h3 style={{marginLeft: '2%'}}>4. What are you hoping to get out of this website?</h3>
-            <div className="viewForm" style={formStyle}>4a. Getting help or receiving help?<br></br><strong>My Answer: </strong>{props.question.fourteen}}</div><br></br>
+            <div className="viewForm" style={formStyle}>4a. Getting help or receiving help?<br></br><strong>My Answer: </strong>{props.question.fourteen}</div><br></br>
             <hr />
             <div className="viewForm" style={formStyle}>4b. Someone that has a car?.<br></br><strong>My Answer: </strong>{props.question.fifteen}</div><br></br>
             <hr />

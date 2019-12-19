@@ -1248,8 +1248,7 @@ var FormQuestion = function FormQuestion(props) {
         null,
         'My Answer: '
       ),
-      props.question.fourteen,
-      '}'
+      props.question.fourteen
     ),
     _react2.default.createElement('br', null),
     _react2.default.createElement('hr', null),
@@ -1513,7 +1512,8 @@ var NewSurvey = function (_React$Component) {
       openOne: ' ',
       fourteen: '',
       fifteen: '',
-      sixteen: ''
+      sixteen: '',
+      seventeen: ''
     };
 
     _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -1529,7 +1529,9 @@ var NewSurvey = function (_React$Component) {
     _this.nineChange = _this.nineChange.bind(_this);
     _this.tenChange = _this.tenChange.bind(_this);
     _this.elevenChange = _this.elevenChange.bind(_this);
+    _this.tweleveChange = _this.tweleveChange.bind(_this);
     _this.thirteenChange = _this.thirteenChange.bind(_this);
+    _this.fourteenChange = _this.fourteenChange.bind(_this);
     _this.fifteenChange = _this.fifteenChange.bind(_this);
     _this.sixteenChange = _this.sixteenChange.bind(_this);
     _this.seventeenChange = _this.seventeenChange.bind(_this);
@@ -1617,6 +1619,11 @@ var NewSurvey = function (_React$Component) {
       this.setState({ thirteen: e.target.value });
     }
   }, {
+    key: 'fourteenChange',
+    value: function fourteenChange(e) {
+      this.setState({ fourteen: e.target.value });
+    }
+  }, {
     key: 'fifteenChange',
     value: function fifteenChange(e) {
       this.setState({ fifteen: e.target.value });
@@ -1654,7 +1661,8 @@ var NewSurvey = function (_React$Component) {
         "categories": form.defaultCheck.value,
         "fourteen": form.inlineRadio14.value,
         "fifteen": form.inlineRadio15.value,
-        "sixteen": form.inlineRadio16.value
+        "sixteen": form.inlineRadio16.value,
+        "seventeen": form.inlineRadio17.value
       };
 
       fetch('/api/questionform', {
@@ -2062,7 +2070,7 @@ var NewSurvey = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'Well', checked: this.state.eight === 'Different', onChange: this.eightChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'Well', checked: this.state.eight === 'Well', onChange: this.eightChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
@@ -2072,17 +2080,17 @@ var NewSurvey = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'Half', checked: this.state.eight === 'Different', onChange: this.eightChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'In The Middle', checked: this.state.eight === 'In The Middle', onChange: this.eightChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
-                  'Half'
+                  'In The Middle'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'Very Little', checked: this.state.eight === 'Different', onChange: this.eightChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'Very Little', checked: this.state.eight === 'Very Little', onChange: this.eightChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
@@ -2092,7 +2100,7 @@ var NewSurvey = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'None', checked: this.state.eight === 'Different', onChange: this.eightChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions8', id: 'inlineRadio8', value: 'None', checked: this.state.eight === 'None', onChange: this.eightChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
@@ -2129,7 +2137,7 @@ var NewSurvey = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'Well', checked: this.state.nine === 'Different', onChange: this.nineChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'Well', checked: this.state.nine === 'Well', onChange: this.nineChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
@@ -2139,17 +2147,17 @@ var NewSurvey = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'Half', checked: this.state.nine === 'Different', onChange: this.nineChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'In The Middle', checked: this.state.nine === 'In The Middle', onChange: this.nineChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
-                  'Half'
+                  'In The Middle'
                 )
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'Very Little', checked: this.state.nine === 'Different', onChange: this.nineChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'Very Little', checked: this.state.nine === 'Very Little', onChange: this.nineChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
@@ -2159,7 +2167,7 @@ var NewSurvey = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'None', checked: this.state.nine === 'Different', onChange: this.nineChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions9', id: 'inlineRadio9', value: 'None', checked: this.state.nine === 'None', onChange: this.nineChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
@@ -2223,7 +2231,7 @@ var NewSurvey = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions11', id: 'inlineRadio12', value: 'Yes', checked: this.state.eleven === 'Yes', onChange: this.elevenChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions11', id: 'inlineRadio11', value: 'Yes', checked: this.state.eleven === 'Yes', onChange: this.elevenChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },
@@ -2233,7 +2241,7 @@ var NewSurvey = function (_React$Component) {
               _react2.default.createElement(
                 'div',
                 { className: 'form-check form-check-inline', style: formStyle },
-                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions11', id: 'inlineRadio12', value: 'No', checked: this.state.eleven === 'No', onChange: this.elevenChange }),
+                _react2.default.createElement('input', { className: 'form-check-input', style: { cursor: 'pointer' }, type: 'radio', name: 'inlineRadioOptions11', id: 'inlineRadio11', value: 'No', checked: this.state.eleven === 'No', onChange: this.elevenChange }),
                 _react2.default.createElement(
                   'label',
                   { className: 'form-check-label', htmlFor: 'inlineRadio8' },

@@ -72,6 +72,7 @@ const formStyle = {
       fourteen: '',
       fifteen: '',
       sixteen: '',
+      seventeen: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -87,7 +88,9 @@ const formStyle = {
     this.nineChange = this.nineChange.bind(this);
     this.tenChange = this.tenChange.bind(this);
     this.elevenChange = this.elevenChange.bind(this);
+    this.tweleveChange = this.tweleveChange.bind(this);
     this.thirteenChange = this.thirteenChange.bind(this);
+    this.fourteenChange = this.fourteenChange.bind(this);
     this.fifteenChange = this.fifteenChange.bind(this); 
     this.sixteenChange = this.sixteenChange.bind(this);
     this.seventeenChange = this.seventeenChange.bind(this);
@@ -155,6 +158,10 @@ handleCheck(e){
     this.setState({thirteen: e.target.value});
   }
 
+  fourteenChange(e){
+    this.setState({fourteen: e.target.value});
+  }
+
   fifteenChange(e){
     this.setState({fifteen: e.target.value});
   }
@@ -190,6 +197,7 @@ handleCheck(e){
         "fourteen": form.inlineRadio14.value,
         "fifteen": form.inlineRadio15.value,
         "sixteen": form.inlineRadio16.value,
+        "seventeen": form.inlineRadio17.value,
     }
 
       fetch('/api/questionform', {
@@ -365,19 +373,19 @@ handleCheck(e){
                   <label className="form-check-label" htmlFor="inlineRadio8">Very Well</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Well" checked={this.state.eight === 'Different'} onChange={this.eightChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Well" checked={this.state.eight === 'Well'} onChange={this.eightChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">Well</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Half" checked={this.state.eight === 'Different'} onChange={this.eightChange}/>
-                  <label className="form-check-label" htmlFor="inlineRadio8">Half</label>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="In The Middle" checked={this.state.eight === 'In The Middle'} onChange={this.eightChange}/>
+                  <label className="form-check-label" htmlFor="inlineRadio8">In The Middle</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Very Little" checked={this.state.eight === 'Different'} onChange={this.eightChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="Very Little" checked={this.state.eight === 'Very Little'} onChange={this.eightChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">Very Little</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="None" checked={this.state.eight === 'Different'} onChange={this.eightChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions8" id="inlineRadio8" value="None" checked={this.state.eight === 'None'} onChange={this.eightChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">None</label>
                 </div>
             </div>
@@ -392,19 +400,19 @@ handleCheck(e){
                   <label className="form-check-label" htmlFor="inlineRadio8">Very Well</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="Well" checked={this.state.nine === 'Different'} onChange={this.nineChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="Well" checked={this.state.nine === 'Well'} onChange={this.nineChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">Well</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="Half" checked={this.state.nine === 'Different'} onChange={this.nineChange}/>
-                  <label className="form-check-label" htmlFor="inlineRadio8">Half</label>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="In The Middle" checked={this.state.nine === 'In The Middle'} onChange={this.nineChange}/>
+                  <label className="form-check-label" htmlFor="inlineRadio8">In The Middle</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="Very Little" checked={this.state.nine === 'Different'} onChange={this.nineChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="Very Little" checked={this.state.nine === 'Very Little'} onChange={this.nineChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">Very Little</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="None" checked={this.state.nine === 'Different'} onChange={this.nineChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions9" id="inlineRadio9" value="None" checked={this.state.nine === 'None'} onChange={this.nineChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">None</label>
                 </div>
             </div>
@@ -430,11 +438,11 @@ handleCheck(e){
               <label>2d. I have a job on campus?</label>
               </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions11" id="inlineRadio12" value="Yes" checked={this.state.eleven === 'Yes'} onChange={this.elevenChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions11" id="inlineRadio11" value="Yes" checked={this.state.eleven === 'Yes'} onChange={this.elevenChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">Yes</label>
                 </div>
                 <div className="form-check form-check-inline" style={formStyle}>
-                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions11" id="inlineRadio12" value="No" checked={this.state.eleven === 'No'} onChange={this.elevenChange}/>
+                  <input className="form-check-input" style={{cursor: 'pointer'}} type="radio" name="inlineRadioOptions11" id="inlineRadio11" value="No" checked={this.state.eleven === 'No'} onChange={this.elevenChange}/>
                   <label className="form-check-label" htmlFor="inlineRadio8">No</label>
                 </div>
             </div>
@@ -724,7 +732,7 @@ handleCheck(e){
                <button className="btn btn-dark" type="submit" value="Submit">Save</button>
               </div>
           </div>   
-          </center>
+      </center>
     </form>
     <center> 
         <div className = "row">
