@@ -28,6 +28,7 @@ export default class Profile extends React.Component {
     return (
       <div>
         <SearchBar> </SearchBar>
+        <br></br>
         <div className = "row" style={{marginLeft: '85%'}}>
               <div className="col" >
               <button className="btn btn-dark"role="button"><Link to="/*" style={{ textDecoration: 'none', color: 'white' }}>Rate</Link></button>

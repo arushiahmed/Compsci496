@@ -21,6 +21,7 @@ export default class About extends React.Component {
     return (
       <div>
         <SearchBar></SearchBar>
+        <br></br>
         <h1 style={{marginLeft: '2%'}}>About</h1>
         <br></br><br></br>
         <center>

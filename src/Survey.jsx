@@ -115,6 +115,7 @@ export default class Survey extends React.Component {
     return (
       <div>
         <SearchBar></SearchBar>
+        <br></br>
         <h1 style={{marginLeft: '2%'}}>My Survey</h1>
           <br></br><br></br>
           <div>

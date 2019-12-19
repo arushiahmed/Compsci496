@@ -67,6 +67,7 @@ var Profile = function (_React$Component) {
           null,
           ' '
         ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'div',
           { className: 'row', style: { marginLeft: '85%' } },
@@ -847,6 +848,7 @@ var About = function (_React$Component) {
         'div',
         null,
         _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'h1',
           { style: { marginLeft: '2%' } },
@@ -1363,6 +1365,7 @@ var Survey = function (_React$Component) {
         'div',
         null,
         _react2.default.createElement(_SearchBar2.default, null),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'h1',
           { style: { marginLeft: '2%' } },
@@ -1695,10 +1698,11 @@ var NewSurvey = function (_React$Component) {
           null,
           ' '
         ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'h1',
           { style: { marginLeft: '2%' } },
-          'Survery Questions'
+          'Survery'
         ),
         _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
@@ -3159,6 +3163,12 @@ var FriendList = function (_React$Component) {
           ' '
         ),
         _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'h1',
+          { style: { marginLeft: '2%' } },
+          'Connect With Friends'
+        ),
+        _react2.default.createElement('br', null),
         _react2.default.createElement('br', null),
         _react2.default.createElement(_FriendFilter2.default, { setFilter: this.setFilter, initFilter: this.props.location.query }),
         _react2.default.createElement('br', null),
@@ -3405,63 +3415,43 @@ var SearchBar = function (_React$Component) {
         null,
         _react2.default.createElement(
           'div',
-          { className: 'container' },
+          { className: 'container', style: { maxWidth: '100%' } },
           _react2.default.createElement(
             'nav',
-            { className: 'navbar navbar-dark' },
+            { className: 'navbar fixed-top navbar-dark bg-dark', style: { maxWidth: '100%' } },
             _react2.default.createElement('a', { className: 'navbar-brand' }),
             _react2.default.createElement(
-              'button',
-              { className: 'btn btn-dark' },
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/about', style: { textDecoration: 'none', color: 'white' } },
-                'About'
-              )
+              _reactRouter.Link,
+              { to: '/about', style: { textDecoration: 'none', color: 'white' } },
+              'About'
             ),
             _react2.default.createElement(
-              'button',
-              { className: 'btn btn-dark' },
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
-                'Connect With Students'
-              )
+              _reactRouter.Link,
+              { to: '/connect', style: { textDecoration: 'none', color: 'white' } },
+              'Connect With Students'
             ),
             _react2.default.createElement(
-              'button',
-              { className: 'btn btn-dark' },
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/userSurvey', style: { textDecoration: 'none', color: 'white' } },
-                'Survery'
-              )
+              _reactRouter.Link,
+              { to: '/userSurvey', style: { textDecoration: 'none', color: 'white' } },
+              'Survery'
             ),
             _react2.default.createElement(
-              'button',
-              { className: 'btn btn-dark' },
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/profile', style: { textDecoration: 'none', color: 'white' } },
-                'Profile'
-              )
+              _reactRouter.Link,
+              { to: '/profile', style: { textDecoration: 'none', color: 'white' } },
+              'Profile'
             ),
             _react2.default.createElement(
-              'button',
-              { className: 'btn btn-dark' },
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/', style: { textDecoration: 'none', color: 'white' } },
-                'Sign Out'
-              )
+              _reactRouter.Link,
+              { to: '/', style: { textDecoration: 'none', color: 'white' } },
+              'Sign Out'
             ),
             _react2.default.createElement(
               'form',
               { className: 'form-inline' },
-              _react2.default.createElement('input', { className: 'form-control mr-sm-2', type: 'search', placeholder: 'Search', 'aria-label': 'Search' }),
+              _react2.default.createElement('input', { className: 'form-control mr-lg-2', type: 'search', placeholder: 'Search', 'aria-label': 'Search' }),
               _react2.default.createElement(
                 'button',
-                { className: 'btn btn-outline-dark my-2 my-sm-0', type: 'submit' },
+                { className: 'btn btn-outline-info my-2 my-lg-0', type: 'submit' },
                 'Search'
               )
             )

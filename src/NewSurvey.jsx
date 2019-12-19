@@ -220,8 +220,9 @@ handleCheck(e){
   render() {
     return (
       <div>
-        <SearchBar> </SearchBar>   
-        <h1 style={{marginLeft: '2%'}}>Survery Questions</h1>
+        <SearchBar> </SearchBar>  
+        <br></br> 
+        <h1 style={{marginLeft: '2%'}}>Survery</h1>
         <br></br><br></br>
       <form className="form-group" name="question" onSubmit={this.handleSubmit}>
       <h3 style={{marginLeft: '2%'}}>1. What are the people you want to connect with?</h3>
