@@ -63,7 +63,7 @@ db.friends.insert([
     school: 'University of Massachusetts Amherst',
     year: '2020',
     rate: 4,
-    bio: 'I am a Sports Management from Massachusetts. I am part of ROTC and happy to give more infomation about ROTC and how it helped me throughout college. If I am not doing school work I am at every UMass home game such as football and hockey.',
+    bio: 'I am a Sports Management from Massachusetts. I am part of ROTC and happy to give more infomation about ROTC. If I am not doing school work I am at every UMass home game such as football and hockey.',
   },
   {
     name: 'Echo Three-Sixty',
